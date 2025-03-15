@@ -67,7 +67,7 @@ chrome.storage.onChanged.addListener((changes, area) => {
 //   },
 // );
 
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+chrome.runtime.onMessage.addListener((message, _, sendResponse) => {
   if (message.action === CHROME_ACTION.GET_ACTIVE_TAB_URL) {
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
       if (tabs.length > 0) {

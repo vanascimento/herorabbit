@@ -49,5 +49,5 @@
     }
   ],
   "permissions": ["tabs", "activeTab", "scripting", "storage", "webRequest"],
-  "host_permissions": ["*localhost*"]
+  "host_permissions": ["http://*/*", "https://*/*"]
 }

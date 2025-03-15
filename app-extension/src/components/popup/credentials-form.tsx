@@ -5,7 +5,6 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { Button } from '../ui/button';
 import { Input } from '../ui/input';
 import { toast } from 'sonner';
-import { HERO_RABBIT_PREFIX } from '@/lib/constants';
 import { useEffect } from 'react';
 import { useSettings } from '@/hooks/useSettings';
 

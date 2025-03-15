@@ -2,14 +2,18 @@ import mainCSS from '@/entryPoints/main.css?inline';
 import contentCSS from '@/components/content/content.css?inline';
 import { waitForElement } from '@/lib/wait-for-element';
 import { createRoot } from 'react-dom/client';
-import { QueueOverviewChart } from '@/components/content/queue-and-streams/queue-dashboard';
+
 import { SettingsProvider } from '@/hooks/useSettings';
 import { HeroConfiguredProvider } from '@/providers/hero-configured-provider';
+import { QueuePizzaOverviewChart } from './queue-pizza-chart';
+import { Toaster } from '@/components/ui/sonner';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { QueueBarOverviewChart } from './queue-bar-chart';
 
 export const QUEUE_OVERVIEW_CHART_ID = 'queue-overview-chart';
 
 export function renderQueueDashboard() {
-  waitForElement('#main', (mainDiv) => {
+  waitForElement('#main', (_) => {
     // Check if the "Queues and Streams" tab is selected. If not, do nothing.
     // This component should only be rendered when the "Queues and Streams" tab is selected.
     const queueAndStreamTab = document.getElementById('queues-and-streams');
@@ -59,7 +63,21 @@ export function renderQueueDashboard() {
     createRoot(shadowRoot).render(
       <SettingsProvider defaultTheme="light" shadowRoot={shadowRoot}>
         <HeroConfiguredProvider>
-          <QueueOverviewChart />
+          <Tabs defaultValue="account">
+            <TabsList>
+              <TabsTrigger value="account">Bar</TabsTrigger>
+              <TabsTrigger value="password">Pizza</TabsTrigger>
+            </TabsList>
+            <TabsContent value="account">
+              {' '}
+              <QueueBarOverviewChart />
+            </TabsContent>
+            <TabsContent value="password">
+              {' '}
+              <QueuePizzaOverviewChart />
+            </TabsContent>
+          </Tabs>
+          <Toaster />
         </HeroConfiguredProvider>
       </SettingsProvider>,
     );

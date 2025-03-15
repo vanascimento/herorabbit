@@ -1,7 +1,6 @@
 import './popup.css';
 import { Button } from '@/components/ui/button.tsx';
 import { CircleHelp, Settings } from 'lucide-react';
-import CardSwitch from '@/components/ui/card-switch';
 import { useSettings } from '@/hooks/useSettings.tsx';
 import SafeImage from '@/components/ui/safe-image';
 import iconLight from '@/assets/images/icon-light.png';
@@ -12,7 +11,7 @@ import HeroRabbitActiveComponent from './hero-rabbit-active-card';
 import { useEffect, useState } from 'react';
 
 export default function Popup() {
-  const { settings, setSettings } = useSettings();
+  const { settings } = useSettings();
   const [isHeroConfigured, setIsHeroConfigured] = useState<boolean | undefined>(undefined);
 
   useEffect(() => {
