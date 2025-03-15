@@ -11,26 +11,34 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { QueueBarOverviewChart } from './queue-bar-chart';
 
 export const QUEUE_OVERVIEW_CHART_ID = 'queue-overview-chart';
+export const QUEUE_TABLE_LIST_ID = 'queue-table-list';
 
+const checkIfElementHasChildrenWithId = (element: Element, id: string) => {
+  return Array.from(element.children).some((child) => child.id == id);
+};
+
+export const renderTableOptions = () => {
+  const tr = document.querySelector('table thead tr');
+  if (tr) {
+    const th = document.createElement('th');
+    th.id = QUEUE_TABLE_LIST_ID;
+    th.textContent = 'Hero Actions';
+    if (!checkIfElementHasChildrenWithId(tr, th.id)) {
+      tr.insertBefore(th, tr.lastElementChild);
+    }
+  }
+};
 export function renderQueueDashboard() {
   waitForElement('#main', (_) => {
     // Check if the "Queues and Streams" tab is selected. If not, do nothing.
     // This component should only be rendered when the "Queues and Streams" tab is selected.
 
-
-    
     const queueAndStreamTab = document.getElementById('queues-and-streams');
     if (!queueAndStreamTab || !queueAndStreamTab.firstElementChild?.classList.contains('selected')) {
       return;
     }
+    renderTableOptions();
 
-    const tr = document.querySelector('table thead tr');
-    if (tr) {
-      const th = document.createElement('th');
-      th.textContent = 'Pizza';
-      tr.appendChild(th);
-    }
-    console.log(tr);
     // Check if the component is already rendered. If so, do nothing.
     let existingComponent = document.getElementById(QUEUE_OVERVIEW_CHART_ID);
     if (existingComponent) {

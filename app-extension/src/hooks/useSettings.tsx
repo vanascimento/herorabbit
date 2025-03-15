@@ -61,7 +61,7 @@ export function SettingsProvider({
         : document.getElementById(ROOT_CONTAINER_ID);
 
       if (!root) {
-        console.error(`No root with id "${ROOT_CONTAINER_ID}" found to toggle theme.`);
+        //console.error(`No root with id "${ROOT_CONTAINER_ID}" found to toggle theme.`);
         return;
       }
 
