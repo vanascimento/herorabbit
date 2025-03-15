@@ -1,7 +1,7 @@
-import { Bar, BarChart, CartesianGrid, LabelList, Pie, PieChart, XAxis, YAxis } from 'recharts';
+import { Bar, BarChart, LabelList, XAxis, YAxis } from 'recharts';
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { ChartContainer, ChartLegend, ChartTooltip, ChartTooltipContent } from '@/components/ui/chart';
+import { ChartContainer, ChartTooltip, ChartTooltipContent } from '@/components/ui/chart';
 import { useEffect, useState } from 'react';
 import { getRandomColor } from '@/lib/utils';
 import useCurrentRabbitmqCredentials from '@/hooks/useCurrentRabbitmqCredentials';

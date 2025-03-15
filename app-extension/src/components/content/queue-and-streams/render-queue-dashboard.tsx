@@ -16,6 +16,9 @@ export function renderQueueDashboard() {
   waitForElement('#main', (_) => {
     // Check if the "Queues and Streams" tab is selected. If not, do nothing.
     // This component should only be rendered when the "Queues and Streams" tab is selected.
+
+
+    
     const queueAndStreamTab = document.getElementById('queues-and-streams');
     if (!queueAndStreamTab || !queueAndStreamTab.firstElementChild?.classList.contains('selected')) {
       return;
