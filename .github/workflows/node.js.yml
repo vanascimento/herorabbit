@@ -1,0 +1,41 @@
+name: Build and Release Chrome Extension
+
+on:
+  push:
+    tags:
+      - "v*"  # Dispara a action quando um novo tag versionado (ex: v1.0.0) for criado
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'npm'
+          cache-dependency-path: app-extension/package-lock.json
+
+      - name: Instalar dependências
+        working-directory: app-extension
+        run: npm install
+
+      - name: Construir extensão
+        working-directory: app-extension
+        run: npm run build
+
+      - name: Compactar a pasta dist
+        run: |
+          cd app-extension
+          zip -r ../chrome-extension.zip dist
+
+      - name: Criar release no GitHub
+        uses: softprops/action-gh-release@v2
+        with:
+          files: chrome-extension.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
