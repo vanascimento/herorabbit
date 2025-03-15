@@ -3,8 +3,9 @@ name: Build and Release Chrome Extension
 on:
   push:
     tags:
-      - "v*"  # Dispara a action quando um novo tag versionado (ex: v1.0.0) for criado
-
+      - "v*" # Dispara a action quando um novo tag versionado (ex: v1.0.0) for criado
+permissions:
+  contents: write
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -17,7 +18,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
-          cache: 'npm'
+          cache: "npm"
           cache-dependency-path: app-extension/package-lock.json
 
       - name: Instalar dependências
