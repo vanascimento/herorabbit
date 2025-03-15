@@ -1,0 +1,15 @@
+dist
+build
+node_modules
+.gitignore
+.github
+.eslintignore
+.husky
+.nvmrc
+.prettierignore
+LICENSE
+*.md
+yarn.lock
+eslint.config.js
+**.config.js
+**.config.ts

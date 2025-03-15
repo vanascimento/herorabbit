@@ -1,0 +1,859 @@
+[
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "stringify",
+        "importPath": "flatted",
+        "description": "flatted",
+        "isExtraImport": true,
+        "detail": "flatted",
+        "documentation": {}
+    },
+    {
+        "label": "parse",
+        "importPath": "flatted",
+        "description": "flatted",
+        "isExtraImport": true,
+        "detail": "flatted",
+        "documentation": {}
+    },
+    {
+        "label": "stringify",
+        "importPath": "flatted",
+        "description": "flatted",
+        "isExtraImport": true,
+        "detail": "flatted",
+        "documentation": {}
+    },
+    {
+        "label": "parse",
+        "importPath": "flatted",
+        "description": "flatted",
+        "isExtraImport": true,
+        "detail": "flatted",
+        "documentation": {}
+    },
+    {
+        "label": "stringify",
+        "importPath": "flatted",
+        "description": "flatted",
+        "isExtraImport": true,
+        "detail": "flatted",
+        "documentation": {}
+    },
+    {
+        "label": "parse",
+        "importPath": "flatted",
+        "description": "flatted",
+        "isExtraImport": true,
+        "detail": "flatted",
+        "documentation": {}
+    },
+    {
+        "label": "pika",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pika",
+        "description": "pika",
+        "detail": "pika",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPBasicAuth",
+        "importPath": "requests.auth",
+        "description": "requests.auth",
+        "isExtraImport": true,
+        "detail": "requests.auth",
+        "documentation": {}
+    },
+    {
+        "label": "signal",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "signal",
+        "description": "signal",
+        "detail": "signal",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "_Known",
+        "kind": 6,
+        "importPath": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.flatted",
+        "description": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.flatted",
+        "peekOfCode": "class _Known:\n    def __init__(self):\n        self.key = []\n        self.value = []\nclass _String:\n    def __init__(self, value):\n        self.value = value\ndef _array_keys(value):\n    keys = []\n    i = 0",
+        "detail": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "_String",
+        "kind": 6,
+        "importPath": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.flatted",
+        "description": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.flatted",
+        "peekOfCode": "class _String:\n    def __init__(self, value):\n        self.value = value\ndef _array_keys(value):\n    keys = []\n    i = 0\n    for _ in value:\n        keys.append(i)\n        i += 1\n    return keys",
+        "detail": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "parse",
+        "kind": 2,
+        "importPath": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.flatted",
+        "description": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.flatted",
+        "peekOfCode": "def parse(value, *args, **kwargs):\n    json = _json.loads(value, *args, **kwargs)\n    wrapped = []\n    for value in json:\n        wrapped.append(_wrap(value))\n    input = []\n    for value in wrapped:\n        if isinstance(value, _String):\n            input.append(value.value)\n        else:",
+        "detail": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "stringify",
+        "kind": 2,
+        "importPath": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.flatted",
+        "description": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.flatted",
+        "peekOfCode": "def stringify(value, *args, **kwargs):\n    known = _Known()\n    input = []\n    output = []\n    i = int(_index(known, input, value))\n    while i < len(input):\n        output.append(_transform(known, input, input[i]))\n        i += 1\n    return _json.dumps(output, *args, **kwargs)",
+        "detail": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "stringify",
+        "kind": 2,
+        "importPath": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.test",
+        "description": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.test",
+        "peekOfCode": "def stringify(value):\n    return _stringify(value, separators=(',', ':'))\nassert stringify([None, None]) == '[[null,null]]'\na = []\no = {}\nassert stringify(a) == '[[]]'\nassert stringify(o) == '[{}]'\na.append(a)\no['o'] = o\nassert stringify(a) == '[[\"0\"]]'",
+        "detail": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.test",
+        "description": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.test",
+        "peekOfCode": "a = []\no = {}\nassert stringify(a) == '[[]]'\nassert stringify(o) == '[{}]'\na.append(a)\no['o'] = o\nassert stringify(a) == '[[\"0\"]]'\nassert stringify(o) == '[{\"o\":\"0\"}]'\nb = parse(stringify(a))\nassert isinstance(b, list) and b[0] == b",
+        "detail": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o",
+        "kind": 5,
+        "importPath": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.test",
+        "description": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.test",
+        "peekOfCode": "o = {}\nassert stringify(a) == '[[]]'\nassert stringify(o) == '[{}]'\na.append(a)\no['o'] = o\nassert stringify(a) == '[[\"0\"]]'\nassert stringify(o) == '[{\"o\":\"0\"}]'\nb = parse(stringify(a))\nassert isinstance(b, list) and b[0] == b\na.append(1)",
+        "detail": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o['o']",
+        "kind": 5,
+        "importPath": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.test",
+        "description": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.test",
+        "peekOfCode": "o['o'] = o\nassert stringify(a) == '[[\"0\"]]'\nassert stringify(o) == '[{\"o\":\"0\"}]'\nb = parse(stringify(a))\nassert isinstance(b, list) and b[0] == b\na.append(1)\na.append('two')\na.append(True)\no['one'] = 1\no['two'] = 'two'",
+        "detail": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "b",
+        "kind": 5,
+        "importPath": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.test",
+        "description": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.test",
+        "peekOfCode": "b = parse(stringify(a))\nassert isinstance(b, list) and b[0] == b\na.append(1)\na.append('two')\na.append(True)\no['one'] = 1\no['two'] = 'two'\no['three'] = True\nassert stringify(a) == '[[\"0\",1,\"1\",true],\"two\"]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true},\"two\"]'",
+        "detail": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o['one']",
+        "kind": 5,
+        "importPath": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.test",
+        "description": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.test",
+        "peekOfCode": "o['one'] = 1\no['two'] = 'two'\no['three'] = True\nassert stringify(a) == '[[\"0\",1,\"1\",true],\"two\"]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true},\"two\"]'\na.append(o)\no['a'] = a\nassert stringify(a) == '[[\"0\",1,\"1\",true,\"2\"],\"two\",{\"o\":\"2\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"0\"}]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"2\"},\"two\",[\"2\",1,\"1\",true,\"0\"]]'\na.append({'test': 'OK'})",
+        "detail": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o['two']",
+        "kind": 5,
+        "importPath": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.test",
+        "description": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.test",
+        "peekOfCode": "o['two'] = 'two'\no['three'] = True\nassert stringify(a) == '[[\"0\",1,\"1\",true],\"two\"]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true},\"two\"]'\na.append(o)\no['a'] = a\nassert stringify(a) == '[[\"0\",1,\"1\",true,\"2\"],\"two\",{\"o\":\"2\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"0\"}]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"2\"},\"two\",[\"2\",1,\"1\",true,\"0\"]]'\na.append({'test': 'OK'})\na.append([1, 2, 3])",
+        "detail": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o['three']",
+        "kind": 5,
+        "importPath": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.test",
+        "description": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.test",
+        "peekOfCode": "o['three'] = True\nassert stringify(a) == '[[\"0\",1,\"1\",true],\"two\"]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true},\"two\"]'\na.append(o)\no['a'] = a\nassert stringify(a) == '[[\"0\",1,\"1\",true,\"2\"],\"two\",{\"o\":\"2\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"0\"}]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"2\"},\"two\",[\"2\",1,\"1\",true,\"0\"]]'\na.append({'test': 'OK'})\na.append([1, 2, 3])\no['test'] = {'test': 'OK'}",
+        "detail": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o['a']",
+        "kind": 5,
+        "importPath": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.test",
+        "description": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.test",
+        "peekOfCode": "o['a'] = a\nassert stringify(a) == '[[\"0\",1,\"1\",true,\"2\"],\"two\",{\"o\":\"2\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"0\"}]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"2\"},\"two\",[\"2\",1,\"1\",true,\"0\"]]'\na.append({'test': 'OK'})\na.append([1, 2, 3])\no['test'] = {'test': 'OK'}\no['array'] = [1, 2, 3]\nassert stringify(a) == '[[\"0\",1,\"1\",true,\"2\",\"3\",\"4\"],\"two\",{\"o\":\"2\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"0\",\"test\":\"3\",\"array\":\"4\"},{\"test\":\"5\"},[1,2,3],\"OK\"]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"2\",\"test\":\"3\",\"array\":\"4\"},\"two\",[\"2\",1,\"1\",true,\"0\",\"3\",\"4\"],{\"test\":\"5\"},[1,2,3],\"OK\"]'\na2 = parse(stringify(a));",
+        "detail": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o['test']",
+        "kind": 5,
+        "importPath": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.test",
+        "description": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.test",
+        "peekOfCode": "o['test'] = {'test': 'OK'}\no['array'] = [1, 2, 3]\nassert stringify(a) == '[[\"0\",1,\"1\",true,\"2\",\"3\",\"4\"],\"two\",{\"o\":\"2\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"0\",\"test\":\"3\",\"array\":\"4\"},{\"test\":\"5\"},[1,2,3],\"OK\"]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"2\",\"test\":\"3\",\"array\":\"4\"},\"two\",[\"2\",1,\"1\",true,\"0\",\"3\",\"4\"],{\"test\":\"5\"},[1,2,3],\"OK\"]'\na2 = parse(stringify(a));\no2 = parse(stringify(o));\nassert a2[0] == a2\nassert o2['o'] == o2\nassert a2[1] == 1 and a2[2] == 'two' and a2[3] == True and isinstance(a2[4], dict)\nassert a2[4] == a2[4]['o'] and a2 == a2[4]['o']['a']",
+        "detail": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o['array']",
+        "kind": 5,
+        "importPath": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.test",
+        "description": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.test",
+        "peekOfCode": "o['array'] = [1, 2, 3]\nassert stringify(a) == '[[\"0\",1,\"1\",true,\"2\",\"3\",\"4\"],\"two\",{\"o\":\"2\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"0\",\"test\":\"3\",\"array\":\"4\"},{\"test\":\"5\"},[1,2,3],\"OK\"]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"2\",\"test\":\"3\",\"array\":\"4\"},\"two\",[\"2\",1,\"1\",true,\"0\",\"3\",\"4\"],{\"test\":\"5\"},[1,2,3],\"OK\"]'\na2 = parse(stringify(a));\no2 = parse(stringify(o));\nassert a2[0] == a2\nassert o2['o'] == o2\nassert a2[1] == 1 and a2[2] == 'two' and a2[3] == True and isinstance(a2[4], dict)\nassert a2[4] == a2[4]['o'] and a2 == a2[4]['o']['a']\nstr = parse('[{\"prop\":\"1\",\"a\":\"2\",\"b\":\"3\"},{\"value\":123},[\"4\",\"5\"],{\"e\":\"6\",\"t\":\"7\",\"p\":4},{},{\"b\":\"8\"},\"f\",{\"a\":\"9\"},[\"10\"],\"sup\",{\"a\":1,\"d\":2,\"c\":\"7\",\"z\":\"11\",\"h\":1},{\"g\":2,\"a\":\"7\",\"b\":\"12\",\"f\":6},{\"r\":4,\"u\":\"7\",\"c\":5}]')",
+        "detail": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "a2",
+        "kind": 5,
+        "importPath": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.test",
+        "description": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.test",
+        "peekOfCode": "a2 = parse(stringify(a));\no2 = parse(stringify(o));\nassert a2[0] == a2\nassert o2['o'] == o2\nassert a2[1] == 1 and a2[2] == 'two' and a2[3] == True and isinstance(a2[4], dict)\nassert a2[4] == a2[4]['o'] and a2 == a2[4]['o']['a']\nstr = parse('[{\"prop\":\"1\",\"a\":\"2\",\"b\":\"3\"},{\"value\":123},[\"4\",\"5\"],{\"e\":\"6\",\"t\":\"7\",\"p\":4},{},{\"b\":\"8\"},\"f\",{\"a\":\"9\"},[\"10\"],\"sup\",{\"a\":1,\"d\":2,\"c\":\"7\",\"z\":\"11\",\"h\":1},{\"g\":2,\"a\":\"7\",\"b\":\"12\",\"f\":6},{\"r\":4,\"u\":\"7\",\"c\":5}]')\nassert str['b']['t']['a'] == 'sup' and str['a'][1]['b'][0]['c'] == str['b']['t']\noo = parse('[{\"a\":\"1\",\"b\":\"0\",\"c\":\"2\"},{\"aa\":\"3\"},{\"ca\":\"4\",\"cb\":\"5\",\"cc\":\"6\",\"cd\":\"7\",\"ce\":\"8\",\"cf\":\"9\"},{\"aaa\":\"10\"},{\"caa\":\"4\"},{\"cba\":\"5\"},{\"cca\":\"2\"},{\"cda\":\"4\"},\"value2\",\"value3\",\"value1\"]');\nassert oo['a']['aa']['aaa'] == 'value1' and oo == oo['b'] and oo['c']['ca']['caa'] == oo['c']['ca']",
+        "detail": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o2",
+        "kind": 5,
+        "importPath": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.test",
+        "description": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.test",
+        "peekOfCode": "o2 = parse(stringify(o));\nassert a2[0] == a2\nassert o2['o'] == o2\nassert a2[1] == 1 and a2[2] == 'two' and a2[3] == True and isinstance(a2[4], dict)\nassert a2[4] == a2[4]['o'] and a2 == a2[4]['o']['a']\nstr = parse('[{\"prop\":\"1\",\"a\":\"2\",\"b\":\"3\"},{\"value\":123},[\"4\",\"5\"],{\"e\":\"6\",\"t\":\"7\",\"p\":4},{},{\"b\":\"8\"},\"f\",{\"a\":\"9\"},[\"10\"],\"sup\",{\"a\":1,\"d\":2,\"c\":\"7\",\"z\":\"11\",\"h\":1},{\"g\":2,\"a\":\"7\",\"b\":\"12\",\"f\":6},{\"r\":4,\"u\":\"7\",\"c\":5}]')\nassert str['b']['t']['a'] == 'sup' and str['a'][1]['b'][0]['c'] == str['b']['t']\noo = parse('[{\"a\":\"1\",\"b\":\"0\",\"c\":\"2\"},{\"aa\":\"3\"},{\"ca\":\"4\",\"cb\":\"5\",\"cc\":\"6\",\"cd\":\"7\",\"ce\":\"8\",\"cf\":\"9\"},{\"aaa\":\"10\"},{\"caa\":\"4\"},{\"cba\":\"5\"},{\"cca\":\"2\"},{\"cda\":\"4\"},\"value2\",\"value3\",\"value1\"]');\nassert oo['a']['aa']['aaa'] == 'value1' and oo == oo['b'] and oo['c']['ca']['caa'] == oo['c']['ca']\nprint('OK')",
+        "detail": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "str",
+        "kind": 5,
+        "importPath": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.test",
+        "description": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.test",
+        "peekOfCode": "str = parse('[{\"prop\":\"1\",\"a\":\"2\",\"b\":\"3\"},{\"value\":123},[\"4\",\"5\"],{\"e\":\"6\",\"t\":\"7\",\"p\":4},{},{\"b\":\"8\"},\"f\",{\"a\":\"9\"},[\"10\"],\"sup\",{\"a\":1,\"d\":2,\"c\":\"7\",\"z\":\"11\",\"h\":1},{\"g\":2,\"a\":\"7\",\"b\":\"12\",\"f\":6},{\"r\":4,\"u\":\"7\",\"c\":5}]')\nassert str['b']['t']['a'] == 'sup' and str['a'][1]['b'][0]['c'] == str['b']['t']\noo = parse('[{\"a\":\"1\",\"b\":\"0\",\"c\":\"2\"},{\"aa\":\"3\"},{\"ca\":\"4\",\"cb\":\"5\",\"cc\":\"6\",\"cd\":\"7\",\"ce\":\"8\",\"cf\":\"9\"},{\"aaa\":\"10\"},{\"caa\":\"4\"},{\"cba\":\"5\"},{\"cca\":\"2\"},{\"cda\":\"4\"},\"value2\",\"value3\",\"value1\"]');\nassert oo['a']['aa']['aaa'] == 'value1' and oo == oo['b'] and oo['c']['ca']['caa'] == oo['c']['ca']\nprint('OK')",
+        "detail": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "oo",
+        "kind": 5,
+        "importPath": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.test",
+        "description": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.test",
+        "peekOfCode": "oo = parse('[{\"a\":\"1\",\"b\":\"0\",\"c\":\"2\"},{\"aa\":\"3\"},{\"ca\":\"4\",\"cb\":\"5\",\"cc\":\"6\",\"cd\":\"7\",\"ce\":\"8\",\"cf\":\"9\"},{\"aaa\":\"10\"},{\"caa\":\"4\"},{\"cba\":\"5\"},{\"cca\":\"2\"},{\"cda\":\"4\"},\"value2\",\"value3\",\"value1\"]');\nassert oo['a']['aa']['aaa'] == 'value1' and oo == oo['b'] and oo['c']['ca']['caa'] == oo['c']['ca']\nprint('OK')",
+        "detail": "app.node_modules..pnpm.flat-cache@4.0.1.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "_Known",
+        "kind": 6,
+        "importPath": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.flatted",
+        "description": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.flatted",
+        "peekOfCode": "class _Known:\n    def __init__(self):\n        self.key = []\n        self.value = []\nclass _String:\n    def __init__(self, value):\n        self.value = value\ndef _array_keys(value):\n    keys = []\n    i = 0",
+        "detail": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "_String",
+        "kind": 6,
+        "importPath": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.flatted",
+        "description": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.flatted",
+        "peekOfCode": "class _String:\n    def __init__(self, value):\n        self.value = value\ndef _array_keys(value):\n    keys = []\n    i = 0\n    for _ in value:\n        keys.append(i)\n        i += 1\n    return keys",
+        "detail": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "parse",
+        "kind": 2,
+        "importPath": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.flatted",
+        "description": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.flatted",
+        "peekOfCode": "def parse(value, *args, **kwargs):\n    json = _json.loads(value, *args, **kwargs)\n    wrapped = []\n    for value in json:\n        wrapped.append(_wrap(value))\n    input = []\n    for value in wrapped:\n        if isinstance(value, _String):\n            input.append(value.value)\n        else:",
+        "detail": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "stringify",
+        "kind": 2,
+        "importPath": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.flatted",
+        "description": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.flatted",
+        "peekOfCode": "def stringify(value, *args, **kwargs):\n    known = _Known()\n    input = []\n    output = []\n    i = int(_index(known, input, value))\n    while i < len(input):\n        output.append(_transform(known, input, input[i]))\n        i += 1\n    return _json.dumps(output, *args, **kwargs)",
+        "detail": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "stringify",
+        "kind": 2,
+        "importPath": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.test",
+        "description": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.test",
+        "peekOfCode": "def stringify(value):\n    return _stringify(value, separators=(',', ':'))\nassert stringify([None, None]) == '[[null,null]]'\na = []\no = {}\nassert stringify(a) == '[[]]'\nassert stringify(o) == '[{}]'\na.append(a)\no['o'] = o\nassert stringify(a) == '[[\"0\"]]'",
+        "detail": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.test",
+        "description": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.test",
+        "peekOfCode": "a = []\no = {}\nassert stringify(a) == '[[]]'\nassert stringify(o) == '[{}]'\na.append(a)\no['o'] = o\nassert stringify(a) == '[[\"0\"]]'\nassert stringify(o) == '[{\"o\":\"0\"}]'\nb = parse(stringify(a))\nassert isinstance(b, list) and b[0] == b",
+        "detail": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o",
+        "kind": 5,
+        "importPath": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.test",
+        "description": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.test",
+        "peekOfCode": "o = {}\nassert stringify(a) == '[[]]'\nassert stringify(o) == '[{}]'\na.append(a)\no['o'] = o\nassert stringify(a) == '[[\"0\"]]'\nassert stringify(o) == '[{\"o\":\"0\"}]'\nb = parse(stringify(a))\nassert isinstance(b, list) and b[0] == b\na.append(1)",
+        "detail": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o['o']",
+        "kind": 5,
+        "importPath": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.test",
+        "description": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.test",
+        "peekOfCode": "o['o'] = o\nassert stringify(a) == '[[\"0\"]]'\nassert stringify(o) == '[{\"o\":\"0\"}]'\nb = parse(stringify(a))\nassert isinstance(b, list) and b[0] == b\na.append(1)\na.append('two')\na.append(True)\no['one'] = 1\no['two'] = 'two'",
+        "detail": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "b",
+        "kind": 5,
+        "importPath": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.test",
+        "description": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.test",
+        "peekOfCode": "b = parse(stringify(a))\nassert isinstance(b, list) and b[0] == b\na.append(1)\na.append('two')\na.append(True)\no['one'] = 1\no['two'] = 'two'\no['three'] = True\nassert stringify(a) == '[[\"0\",1,\"1\",true],\"two\"]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true},\"two\"]'",
+        "detail": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o['one']",
+        "kind": 5,
+        "importPath": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.test",
+        "description": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.test",
+        "peekOfCode": "o['one'] = 1\no['two'] = 'two'\no['three'] = True\nassert stringify(a) == '[[\"0\",1,\"1\",true],\"two\"]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true},\"two\"]'\na.append(o)\no['a'] = a\nassert stringify(a) == '[[\"0\",1,\"1\",true,\"2\"],\"two\",{\"o\":\"2\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"0\"}]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"2\"},\"two\",[\"2\",1,\"1\",true,\"0\"]]'\na.append({'test': 'OK'})",
+        "detail": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o['two']",
+        "kind": 5,
+        "importPath": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.test",
+        "description": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.test",
+        "peekOfCode": "o['two'] = 'two'\no['three'] = True\nassert stringify(a) == '[[\"0\",1,\"1\",true],\"two\"]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true},\"two\"]'\na.append(o)\no['a'] = a\nassert stringify(a) == '[[\"0\",1,\"1\",true,\"2\"],\"two\",{\"o\":\"2\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"0\"}]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"2\"},\"two\",[\"2\",1,\"1\",true,\"0\"]]'\na.append({'test': 'OK'})\na.append([1, 2, 3])",
+        "detail": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o['three']",
+        "kind": 5,
+        "importPath": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.test",
+        "description": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.test",
+        "peekOfCode": "o['three'] = True\nassert stringify(a) == '[[\"0\",1,\"1\",true],\"two\"]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true},\"two\"]'\na.append(o)\no['a'] = a\nassert stringify(a) == '[[\"0\",1,\"1\",true,\"2\"],\"two\",{\"o\":\"2\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"0\"}]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"2\"},\"two\",[\"2\",1,\"1\",true,\"0\"]]'\na.append({'test': 'OK'})\na.append([1, 2, 3])\no['test'] = {'test': 'OK'}",
+        "detail": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o['a']",
+        "kind": 5,
+        "importPath": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.test",
+        "description": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.test",
+        "peekOfCode": "o['a'] = a\nassert stringify(a) == '[[\"0\",1,\"1\",true,\"2\"],\"two\",{\"o\":\"2\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"0\"}]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"2\"},\"two\",[\"2\",1,\"1\",true,\"0\"]]'\na.append({'test': 'OK'})\na.append([1, 2, 3])\no['test'] = {'test': 'OK'}\no['array'] = [1, 2, 3]\nassert stringify(a) == '[[\"0\",1,\"1\",true,\"2\",\"3\",\"4\"],\"two\",{\"o\":\"2\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"0\",\"test\":\"3\",\"array\":\"4\"},{\"test\":\"5\"},[1,2,3],\"OK\"]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"2\",\"test\":\"3\",\"array\":\"4\"},\"two\",[\"2\",1,\"1\",true,\"0\",\"3\",\"4\"],{\"test\":\"5\"},[1,2,3],\"OK\"]'\na2 = parse(stringify(a));",
+        "detail": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o['test']",
+        "kind": 5,
+        "importPath": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.test",
+        "description": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.test",
+        "peekOfCode": "o['test'] = {'test': 'OK'}\no['array'] = [1, 2, 3]\nassert stringify(a) == '[[\"0\",1,\"1\",true,\"2\",\"3\",\"4\"],\"two\",{\"o\":\"2\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"0\",\"test\":\"3\",\"array\":\"4\"},{\"test\":\"5\"},[1,2,3],\"OK\"]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"2\",\"test\":\"3\",\"array\":\"4\"},\"two\",[\"2\",1,\"1\",true,\"0\",\"3\",\"4\"],{\"test\":\"5\"},[1,2,3],\"OK\"]'\na2 = parse(stringify(a));\no2 = parse(stringify(o));\nassert a2[0] == a2\nassert o2['o'] == o2\nassert a2[1] == 1 and a2[2] == 'two' and a2[3] == True and isinstance(a2[4], dict)\nassert a2[4] == a2[4]['o'] and a2 == a2[4]['o']['a']",
+        "detail": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o['array']",
+        "kind": 5,
+        "importPath": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.test",
+        "description": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.test",
+        "peekOfCode": "o['array'] = [1, 2, 3]\nassert stringify(a) == '[[\"0\",1,\"1\",true,\"2\",\"3\",\"4\"],\"two\",{\"o\":\"2\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"0\",\"test\":\"3\",\"array\":\"4\"},{\"test\":\"5\"},[1,2,3],\"OK\"]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"2\",\"test\":\"3\",\"array\":\"4\"},\"two\",[\"2\",1,\"1\",true,\"0\",\"3\",\"4\"],{\"test\":\"5\"},[1,2,3],\"OK\"]'\na2 = parse(stringify(a));\no2 = parse(stringify(o));\nassert a2[0] == a2\nassert o2['o'] == o2\nassert a2[1] == 1 and a2[2] == 'two' and a2[3] == True and isinstance(a2[4], dict)\nassert a2[4] == a2[4]['o'] and a2 == a2[4]['o']['a']\nstr = parse('[{\"prop\":\"1\",\"a\":\"2\",\"b\":\"3\"},{\"value\":123},[\"4\",\"5\"],{\"e\":\"6\",\"t\":\"7\",\"p\":4},{},{\"b\":\"8\"},\"f\",{\"a\":\"9\"},[\"10\"],\"sup\",{\"a\":1,\"d\":2,\"c\":\"7\",\"z\":\"11\",\"h\":1},{\"g\":2,\"a\":\"7\",\"b\":\"12\",\"f\":6},{\"r\":4,\"u\":\"7\",\"c\":5}]')",
+        "detail": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "a2",
+        "kind": 5,
+        "importPath": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.test",
+        "description": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.test",
+        "peekOfCode": "a2 = parse(stringify(a));\no2 = parse(stringify(o));\nassert a2[0] == a2\nassert o2['o'] == o2\nassert a2[1] == 1 and a2[2] == 'two' and a2[3] == True and isinstance(a2[4], dict)\nassert a2[4] == a2[4]['o'] and a2 == a2[4]['o']['a']\nstr = parse('[{\"prop\":\"1\",\"a\":\"2\",\"b\":\"3\"},{\"value\":123},[\"4\",\"5\"],{\"e\":\"6\",\"t\":\"7\",\"p\":4},{},{\"b\":\"8\"},\"f\",{\"a\":\"9\"},[\"10\"],\"sup\",{\"a\":1,\"d\":2,\"c\":\"7\",\"z\":\"11\",\"h\":1},{\"g\":2,\"a\":\"7\",\"b\":\"12\",\"f\":6},{\"r\":4,\"u\":\"7\",\"c\":5}]')\nassert str['b']['t']['a'] == 'sup' and str['a'][1]['b'][0]['c'] == str['b']['t']\noo = parse('[{\"a\":\"1\",\"b\":\"0\",\"c\":\"2\"},{\"aa\":\"3\"},{\"ca\":\"4\",\"cb\":\"5\",\"cc\":\"6\",\"cd\":\"7\",\"ce\":\"8\",\"cf\":\"9\"},{\"aaa\":\"10\"},{\"caa\":\"4\"},{\"cba\":\"5\"},{\"cca\":\"2\"},{\"cda\":\"4\"},\"value2\",\"value3\",\"value1\"]');\nassert oo['a']['aa']['aaa'] == 'value1' and oo == oo['b'] and oo['c']['ca']['caa'] == oo['c']['ca']",
+        "detail": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o2",
+        "kind": 5,
+        "importPath": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.test",
+        "description": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.test",
+        "peekOfCode": "o2 = parse(stringify(o));\nassert a2[0] == a2\nassert o2['o'] == o2\nassert a2[1] == 1 and a2[2] == 'two' and a2[3] == True and isinstance(a2[4], dict)\nassert a2[4] == a2[4]['o'] and a2 == a2[4]['o']['a']\nstr = parse('[{\"prop\":\"1\",\"a\":\"2\",\"b\":\"3\"},{\"value\":123},[\"4\",\"5\"],{\"e\":\"6\",\"t\":\"7\",\"p\":4},{},{\"b\":\"8\"},\"f\",{\"a\":\"9\"},[\"10\"],\"sup\",{\"a\":1,\"d\":2,\"c\":\"7\",\"z\":\"11\",\"h\":1},{\"g\":2,\"a\":\"7\",\"b\":\"12\",\"f\":6},{\"r\":4,\"u\":\"7\",\"c\":5}]')\nassert str['b']['t']['a'] == 'sup' and str['a'][1]['b'][0]['c'] == str['b']['t']\noo = parse('[{\"a\":\"1\",\"b\":\"0\",\"c\":\"2\"},{\"aa\":\"3\"},{\"ca\":\"4\",\"cb\":\"5\",\"cc\":\"6\",\"cd\":\"7\",\"ce\":\"8\",\"cf\":\"9\"},{\"aaa\":\"10\"},{\"caa\":\"4\"},{\"cba\":\"5\"},{\"cca\":\"2\"},{\"cda\":\"4\"},\"value2\",\"value3\",\"value1\"]');\nassert oo['a']['aa']['aaa'] == 'value1' and oo == oo['b'] and oo['c']['ca']['caa'] == oo['c']['ca']\nprint('OK')",
+        "detail": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "str",
+        "kind": 5,
+        "importPath": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.test",
+        "description": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.test",
+        "peekOfCode": "str = parse('[{\"prop\":\"1\",\"a\":\"2\",\"b\":\"3\"},{\"value\":123},[\"4\",\"5\"],{\"e\":\"6\",\"t\":\"7\",\"p\":4},{},{\"b\":\"8\"},\"f\",{\"a\":\"9\"},[\"10\"],\"sup\",{\"a\":1,\"d\":2,\"c\":\"7\",\"z\":\"11\",\"h\":1},{\"g\":2,\"a\":\"7\",\"b\":\"12\",\"f\":6},{\"r\":4,\"u\":\"7\",\"c\":5}]')\nassert str['b']['t']['a'] == 'sup' and str['a'][1]['b'][0]['c'] == str['b']['t']\noo = parse('[{\"a\":\"1\",\"b\":\"0\",\"c\":\"2\"},{\"aa\":\"3\"},{\"ca\":\"4\",\"cb\":\"5\",\"cc\":\"6\",\"cd\":\"7\",\"ce\":\"8\",\"cf\":\"9\"},{\"aaa\":\"10\"},{\"caa\":\"4\"},{\"cba\":\"5\"},{\"cca\":\"2\"},{\"cda\":\"4\"},\"value2\",\"value3\",\"value1\"]');\nassert oo['a']['aa']['aaa'] == 'value1' and oo == oo['b'] and oo['c']['ca']['caa'] == oo['c']['ca']\nprint('OK')",
+        "detail": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "oo",
+        "kind": 5,
+        "importPath": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.test",
+        "description": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.test",
+        "peekOfCode": "oo = parse('[{\"a\":\"1\",\"b\":\"0\",\"c\":\"2\"},{\"aa\":\"3\"},{\"ca\":\"4\",\"cb\":\"5\",\"cc\":\"6\",\"cd\":\"7\",\"ce\":\"8\",\"cf\":\"9\"},{\"aaa\":\"10\"},{\"caa\":\"4\"},{\"cba\":\"5\"},{\"cca\":\"2\"},{\"cda\":\"4\"},\"value2\",\"value3\",\"value1\"]');\nassert oo['a']['aa']['aaa'] == 'value1' and oo == oo['b'] and oo['c']['ca']['caa'] == oo['c']['ca']\nprint('OK')",
+        "detail": "app.node_modules..pnpm.flatted@3.3.1.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "_Known",
+        "kind": 6,
+        "importPath": "app.node_modules..pnpm.node_modules.flatted.python.flatted",
+        "description": "app.node_modules..pnpm.node_modules.flatted.python.flatted",
+        "peekOfCode": "class _Known:\n    def __init__(self):\n        self.key = []\n        self.value = []\nclass _String:\n    def __init__(self, value):\n        self.value = value\ndef _array_keys(value):\n    keys = []\n    i = 0",
+        "detail": "app.node_modules..pnpm.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "_String",
+        "kind": 6,
+        "importPath": "app.node_modules..pnpm.node_modules.flatted.python.flatted",
+        "description": "app.node_modules..pnpm.node_modules.flatted.python.flatted",
+        "peekOfCode": "class _String:\n    def __init__(self, value):\n        self.value = value\ndef _array_keys(value):\n    keys = []\n    i = 0\n    for _ in value:\n        keys.append(i)\n        i += 1\n    return keys",
+        "detail": "app.node_modules..pnpm.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "parse",
+        "kind": 2,
+        "importPath": "app.node_modules..pnpm.node_modules.flatted.python.flatted",
+        "description": "app.node_modules..pnpm.node_modules.flatted.python.flatted",
+        "peekOfCode": "def parse(value, *args, **kwargs):\n    json = _json.loads(value, *args, **kwargs)\n    wrapped = []\n    for value in json:\n        wrapped.append(_wrap(value))\n    input = []\n    for value in wrapped:\n        if isinstance(value, _String):\n            input.append(value.value)\n        else:",
+        "detail": "app.node_modules..pnpm.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "stringify",
+        "kind": 2,
+        "importPath": "app.node_modules..pnpm.node_modules.flatted.python.flatted",
+        "description": "app.node_modules..pnpm.node_modules.flatted.python.flatted",
+        "peekOfCode": "def stringify(value, *args, **kwargs):\n    known = _Known()\n    input = []\n    output = []\n    i = int(_index(known, input, value))\n    while i < len(input):\n        output.append(_transform(known, input, input[i]))\n        i += 1\n    return _json.dumps(output, *args, **kwargs)",
+        "detail": "app.node_modules..pnpm.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "stringify",
+        "kind": 2,
+        "importPath": "app.node_modules..pnpm.node_modules.flatted.python.test",
+        "description": "app.node_modules..pnpm.node_modules.flatted.python.test",
+        "peekOfCode": "def stringify(value):\n    return _stringify(value, separators=(',', ':'))\nassert stringify([None, None]) == '[[null,null]]'\na = []\no = {}\nassert stringify(a) == '[[]]'\nassert stringify(o) == '[{}]'\na.append(a)\no['o'] = o\nassert stringify(a) == '[[\"0\"]]'",
+        "detail": "app.node_modules..pnpm.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "app.node_modules..pnpm.node_modules.flatted.python.test",
+        "description": "app.node_modules..pnpm.node_modules.flatted.python.test",
+        "peekOfCode": "a = []\no = {}\nassert stringify(a) == '[[]]'\nassert stringify(o) == '[{}]'\na.append(a)\no['o'] = o\nassert stringify(a) == '[[\"0\"]]'\nassert stringify(o) == '[{\"o\":\"0\"}]'\nb = parse(stringify(a))\nassert isinstance(b, list) and b[0] == b",
+        "detail": "app.node_modules..pnpm.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o",
+        "kind": 5,
+        "importPath": "app.node_modules..pnpm.node_modules.flatted.python.test",
+        "description": "app.node_modules..pnpm.node_modules.flatted.python.test",
+        "peekOfCode": "o = {}\nassert stringify(a) == '[[]]'\nassert stringify(o) == '[{}]'\na.append(a)\no['o'] = o\nassert stringify(a) == '[[\"0\"]]'\nassert stringify(o) == '[{\"o\":\"0\"}]'\nb = parse(stringify(a))\nassert isinstance(b, list) and b[0] == b\na.append(1)",
+        "detail": "app.node_modules..pnpm.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o['o']",
+        "kind": 5,
+        "importPath": "app.node_modules..pnpm.node_modules.flatted.python.test",
+        "description": "app.node_modules..pnpm.node_modules.flatted.python.test",
+        "peekOfCode": "o['o'] = o\nassert stringify(a) == '[[\"0\"]]'\nassert stringify(o) == '[{\"o\":\"0\"}]'\nb = parse(stringify(a))\nassert isinstance(b, list) and b[0] == b\na.append(1)\na.append('two')\na.append(True)\no['one'] = 1\no['two'] = 'two'",
+        "detail": "app.node_modules..pnpm.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "b",
+        "kind": 5,
+        "importPath": "app.node_modules..pnpm.node_modules.flatted.python.test",
+        "description": "app.node_modules..pnpm.node_modules.flatted.python.test",
+        "peekOfCode": "b = parse(stringify(a))\nassert isinstance(b, list) and b[0] == b\na.append(1)\na.append('two')\na.append(True)\no['one'] = 1\no['two'] = 'two'\no['three'] = True\nassert stringify(a) == '[[\"0\",1,\"1\",true],\"two\"]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true},\"two\"]'",
+        "detail": "app.node_modules..pnpm.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o['one']",
+        "kind": 5,
+        "importPath": "app.node_modules..pnpm.node_modules.flatted.python.test",
+        "description": "app.node_modules..pnpm.node_modules.flatted.python.test",
+        "peekOfCode": "o['one'] = 1\no['two'] = 'two'\no['three'] = True\nassert stringify(a) == '[[\"0\",1,\"1\",true],\"two\"]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true},\"two\"]'\na.append(o)\no['a'] = a\nassert stringify(a) == '[[\"0\",1,\"1\",true,\"2\"],\"two\",{\"o\":\"2\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"0\"}]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"2\"},\"two\",[\"2\",1,\"1\",true,\"0\"]]'\na.append({'test': 'OK'})",
+        "detail": "app.node_modules..pnpm.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o['two']",
+        "kind": 5,
+        "importPath": "app.node_modules..pnpm.node_modules.flatted.python.test",
+        "description": "app.node_modules..pnpm.node_modules.flatted.python.test",
+        "peekOfCode": "o['two'] = 'two'\no['three'] = True\nassert stringify(a) == '[[\"0\",1,\"1\",true],\"two\"]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true},\"two\"]'\na.append(o)\no['a'] = a\nassert stringify(a) == '[[\"0\",1,\"1\",true,\"2\"],\"two\",{\"o\":\"2\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"0\"}]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"2\"},\"two\",[\"2\",1,\"1\",true,\"0\"]]'\na.append({'test': 'OK'})\na.append([1, 2, 3])",
+        "detail": "app.node_modules..pnpm.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o['three']",
+        "kind": 5,
+        "importPath": "app.node_modules..pnpm.node_modules.flatted.python.test",
+        "description": "app.node_modules..pnpm.node_modules.flatted.python.test",
+        "peekOfCode": "o['three'] = True\nassert stringify(a) == '[[\"0\",1,\"1\",true],\"two\"]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true},\"two\"]'\na.append(o)\no['a'] = a\nassert stringify(a) == '[[\"0\",1,\"1\",true,\"2\"],\"two\",{\"o\":\"2\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"0\"}]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"2\"},\"two\",[\"2\",1,\"1\",true,\"0\"]]'\na.append({'test': 'OK'})\na.append([1, 2, 3])\no['test'] = {'test': 'OK'}",
+        "detail": "app.node_modules..pnpm.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o['a']",
+        "kind": 5,
+        "importPath": "app.node_modules..pnpm.node_modules.flatted.python.test",
+        "description": "app.node_modules..pnpm.node_modules.flatted.python.test",
+        "peekOfCode": "o['a'] = a\nassert stringify(a) == '[[\"0\",1,\"1\",true,\"2\"],\"two\",{\"o\":\"2\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"0\"}]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"2\"},\"two\",[\"2\",1,\"1\",true,\"0\"]]'\na.append({'test': 'OK'})\na.append([1, 2, 3])\no['test'] = {'test': 'OK'}\no['array'] = [1, 2, 3]\nassert stringify(a) == '[[\"0\",1,\"1\",true,\"2\",\"3\",\"4\"],\"two\",{\"o\":\"2\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"0\",\"test\":\"3\",\"array\":\"4\"},{\"test\":\"5\"},[1,2,3],\"OK\"]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"2\",\"test\":\"3\",\"array\":\"4\"},\"two\",[\"2\",1,\"1\",true,\"0\",\"3\",\"4\"],{\"test\":\"5\"},[1,2,3],\"OK\"]'\na2 = parse(stringify(a));",
+        "detail": "app.node_modules..pnpm.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o['test']",
+        "kind": 5,
+        "importPath": "app.node_modules..pnpm.node_modules.flatted.python.test",
+        "description": "app.node_modules..pnpm.node_modules.flatted.python.test",
+        "peekOfCode": "o['test'] = {'test': 'OK'}\no['array'] = [1, 2, 3]\nassert stringify(a) == '[[\"0\",1,\"1\",true,\"2\",\"3\",\"4\"],\"two\",{\"o\":\"2\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"0\",\"test\":\"3\",\"array\":\"4\"},{\"test\":\"5\"},[1,2,3],\"OK\"]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"2\",\"test\":\"3\",\"array\":\"4\"},\"two\",[\"2\",1,\"1\",true,\"0\",\"3\",\"4\"],{\"test\":\"5\"},[1,2,3],\"OK\"]'\na2 = parse(stringify(a));\no2 = parse(stringify(o));\nassert a2[0] == a2\nassert o2['o'] == o2\nassert a2[1] == 1 and a2[2] == 'two' and a2[3] == True and isinstance(a2[4], dict)\nassert a2[4] == a2[4]['o'] and a2 == a2[4]['o']['a']",
+        "detail": "app.node_modules..pnpm.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o['array']",
+        "kind": 5,
+        "importPath": "app.node_modules..pnpm.node_modules.flatted.python.test",
+        "description": "app.node_modules..pnpm.node_modules.flatted.python.test",
+        "peekOfCode": "o['array'] = [1, 2, 3]\nassert stringify(a) == '[[\"0\",1,\"1\",true,\"2\",\"3\",\"4\"],\"two\",{\"o\":\"2\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"0\",\"test\":\"3\",\"array\":\"4\"},{\"test\":\"5\"},[1,2,3],\"OK\"]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"2\",\"test\":\"3\",\"array\":\"4\"},\"two\",[\"2\",1,\"1\",true,\"0\",\"3\",\"4\"],{\"test\":\"5\"},[1,2,3],\"OK\"]'\na2 = parse(stringify(a));\no2 = parse(stringify(o));\nassert a2[0] == a2\nassert o2['o'] == o2\nassert a2[1] == 1 and a2[2] == 'two' and a2[3] == True and isinstance(a2[4], dict)\nassert a2[4] == a2[4]['o'] and a2 == a2[4]['o']['a']\nstr = parse('[{\"prop\":\"1\",\"a\":\"2\",\"b\":\"3\"},{\"value\":123},[\"4\",\"5\"],{\"e\":\"6\",\"t\":\"7\",\"p\":4},{},{\"b\":\"8\"},\"f\",{\"a\":\"9\"},[\"10\"],\"sup\",{\"a\":1,\"d\":2,\"c\":\"7\",\"z\":\"11\",\"h\":1},{\"g\":2,\"a\":\"7\",\"b\":\"12\",\"f\":6},{\"r\":4,\"u\":\"7\",\"c\":5}]')",
+        "detail": "app.node_modules..pnpm.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "a2",
+        "kind": 5,
+        "importPath": "app.node_modules..pnpm.node_modules.flatted.python.test",
+        "description": "app.node_modules..pnpm.node_modules.flatted.python.test",
+        "peekOfCode": "a2 = parse(stringify(a));\no2 = parse(stringify(o));\nassert a2[0] == a2\nassert o2['o'] == o2\nassert a2[1] == 1 and a2[2] == 'two' and a2[3] == True and isinstance(a2[4], dict)\nassert a2[4] == a2[4]['o'] and a2 == a2[4]['o']['a']\nstr = parse('[{\"prop\":\"1\",\"a\":\"2\",\"b\":\"3\"},{\"value\":123},[\"4\",\"5\"],{\"e\":\"6\",\"t\":\"7\",\"p\":4},{},{\"b\":\"8\"},\"f\",{\"a\":\"9\"},[\"10\"],\"sup\",{\"a\":1,\"d\":2,\"c\":\"7\",\"z\":\"11\",\"h\":1},{\"g\":2,\"a\":\"7\",\"b\":\"12\",\"f\":6},{\"r\":4,\"u\":\"7\",\"c\":5}]')\nassert str['b']['t']['a'] == 'sup' and str['a'][1]['b'][0]['c'] == str['b']['t']\noo = parse('[{\"a\":\"1\",\"b\":\"0\",\"c\":\"2\"},{\"aa\":\"3\"},{\"ca\":\"4\",\"cb\":\"5\",\"cc\":\"6\",\"cd\":\"7\",\"ce\":\"8\",\"cf\":\"9\"},{\"aaa\":\"10\"},{\"caa\":\"4\"},{\"cba\":\"5\"},{\"cca\":\"2\"},{\"cda\":\"4\"},\"value2\",\"value3\",\"value1\"]');\nassert oo['a']['aa']['aaa'] == 'value1' and oo == oo['b'] and oo['c']['ca']['caa'] == oo['c']['ca']",
+        "detail": "app.node_modules..pnpm.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o2",
+        "kind": 5,
+        "importPath": "app.node_modules..pnpm.node_modules.flatted.python.test",
+        "description": "app.node_modules..pnpm.node_modules.flatted.python.test",
+        "peekOfCode": "o2 = parse(stringify(o));\nassert a2[0] == a2\nassert o2['o'] == o2\nassert a2[1] == 1 and a2[2] == 'two' and a2[3] == True and isinstance(a2[4], dict)\nassert a2[4] == a2[4]['o'] and a2 == a2[4]['o']['a']\nstr = parse('[{\"prop\":\"1\",\"a\":\"2\",\"b\":\"3\"},{\"value\":123},[\"4\",\"5\"],{\"e\":\"6\",\"t\":\"7\",\"p\":4},{},{\"b\":\"8\"},\"f\",{\"a\":\"9\"},[\"10\"],\"sup\",{\"a\":1,\"d\":2,\"c\":\"7\",\"z\":\"11\",\"h\":1},{\"g\":2,\"a\":\"7\",\"b\":\"12\",\"f\":6},{\"r\":4,\"u\":\"7\",\"c\":5}]')\nassert str['b']['t']['a'] == 'sup' and str['a'][1]['b'][0]['c'] == str['b']['t']\noo = parse('[{\"a\":\"1\",\"b\":\"0\",\"c\":\"2\"},{\"aa\":\"3\"},{\"ca\":\"4\",\"cb\":\"5\",\"cc\":\"6\",\"cd\":\"7\",\"ce\":\"8\",\"cf\":\"9\"},{\"aaa\":\"10\"},{\"caa\":\"4\"},{\"cba\":\"5\"},{\"cca\":\"2\"},{\"cda\":\"4\"},\"value2\",\"value3\",\"value1\"]');\nassert oo['a']['aa']['aaa'] == 'value1' and oo == oo['b'] and oo['c']['ca']['caa'] == oo['c']['ca']\nprint('OK')",
+        "detail": "app.node_modules..pnpm.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "str",
+        "kind": 5,
+        "importPath": "app.node_modules..pnpm.node_modules.flatted.python.test",
+        "description": "app.node_modules..pnpm.node_modules.flatted.python.test",
+        "peekOfCode": "str = parse('[{\"prop\":\"1\",\"a\":\"2\",\"b\":\"3\"},{\"value\":123},[\"4\",\"5\"],{\"e\":\"6\",\"t\":\"7\",\"p\":4},{},{\"b\":\"8\"},\"f\",{\"a\":\"9\"},[\"10\"],\"sup\",{\"a\":1,\"d\":2,\"c\":\"7\",\"z\":\"11\",\"h\":1},{\"g\":2,\"a\":\"7\",\"b\":\"12\",\"f\":6},{\"r\":4,\"u\":\"7\",\"c\":5}]')\nassert str['b']['t']['a'] == 'sup' and str['a'][1]['b'][0]['c'] == str['b']['t']\noo = parse('[{\"a\":\"1\",\"b\":\"0\",\"c\":\"2\"},{\"aa\":\"3\"},{\"ca\":\"4\",\"cb\":\"5\",\"cc\":\"6\",\"cd\":\"7\",\"ce\":\"8\",\"cf\":\"9\"},{\"aaa\":\"10\"},{\"caa\":\"4\"},{\"cba\":\"5\"},{\"cca\":\"2\"},{\"cda\":\"4\"},\"value2\",\"value3\",\"value1\"]');\nassert oo['a']['aa']['aaa'] == 'value1' and oo == oo['b'] and oo['c']['ca']['caa'] == oo['c']['ca']\nprint('OK')",
+        "detail": "app.node_modules..pnpm.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "oo",
+        "kind": 5,
+        "importPath": "app.node_modules..pnpm.node_modules.flatted.python.test",
+        "description": "app.node_modules..pnpm.node_modules.flatted.python.test",
+        "peekOfCode": "oo = parse('[{\"a\":\"1\",\"b\":\"0\",\"c\":\"2\"},{\"aa\":\"3\"},{\"ca\":\"4\",\"cb\":\"5\",\"cc\":\"6\",\"cd\":\"7\",\"ce\":\"8\",\"cf\":\"9\"},{\"aaa\":\"10\"},{\"caa\":\"4\"},{\"cba\":\"5\"},{\"cca\":\"2\"},{\"cda\":\"4\"},\"value2\",\"value3\",\"value1\"]');\nassert oo['a']['aa']['aaa'] == 'value1' and oo == oo['b'] and oo['c']['ca']['caa'] == oo['c']['ca']\nprint('OK')",
+        "detail": "app.node_modules..pnpm.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "_Known",
+        "kind": 6,
+        "importPath": "app-extension.node_modules.flatted.python.flatted",
+        "description": "app-extension.node_modules.flatted.python.flatted",
+        "peekOfCode": "class _Known:\n    def __init__(self):\n        self.key = []\n        self.value = []\nclass _String:\n    def __init__(self, value):\n        self.value = value\ndef _array_keys(value):\n    keys = []\n    i = 0",
+        "detail": "app-extension.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "_String",
+        "kind": 6,
+        "importPath": "app-extension.node_modules.flatted.python.flatted",
+        "description": "app-extension.node_modules.flatted.python.flatted",
+        "peekOfCode": "class _String:\n    def __init__(self, value):\n        self.value = value\ndef _array_keys(value):\n    keys = []\n    i = 0\n    for _ in value:\n        keys.append(i)\n        i += 1\n    return keys",
+        "detail": "app-extension.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "parse",
+        "kind": 2,
+        "importPath": "app-extension.node_modules.flatted.python.flatted",
+        "description": "app-extension.node_modules.flatted.python.flatted",
+        "peekOfCode": "def parse(value, *args, **kwargs):\n    json = _json.loads(value, *args, **kwargs)\n    wrapped = []\n    for value in json:\n        wrapped.append(_wrap(value))\n    input = []\n    for value in wrapped:\n        if isinstance(value, _String):\n            input.append(value.value)\n        else:",
+        "detail": "app-extension.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "stringify",
+        "kind": 2,
+        "importPath": "app-extension.node_modules.flatted.python.flatted",
+        "description": "app-extension.node_modules.flatted.python.flatted",
+        "peekOfCode": "def stringify(value, *args, **kwargs):\n    known = _Known()\n    input = []\n    output = []\n    i = int(_index(known, input, value))\n    while i < len(input):\n        output.append(_transform(known, input, input[i]))\n        i += 1\n    return _json.dumps(output, *args, **kwargs)",
+        "detail": "app-extension.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "create_user",
+        "kind": 2,
+        "importPath": "scripts.create_connections",
+        "description": "scripts.create_connections",
+        "peekOfCode": "def create_user(username, password):\n    url = f\"{RABBITMQ_API_URL}/users\"\n    payload = {\n        \"username\": username,\n        \"password\": password,\n        \"tags\": \"administrator\"  # Ou \"monitoring\" ou qualquer outro tipo de permissão, conforme necessário\n    }\n    response = requests.post(url, auth=HTTPBasicAuth(RABBITMQ_ADMIN_USER, RABBITMQ_ADMIN_PASS), headers=HEADERS, json=payload)\n    if response.status_code == 201:\n        print(f\"✅ Usuário {username} criado com sucesso!\")",
+        "detail": "scripts.create_connections",
+        "documentation": {}
+    },
+    {
+        "label": "create_connections",
+        "kind": 2,
+        "importPath": "scripts.create_connections",
+        "description": "scripts.create_connections",
+        "peekOfCode": "def create_connections(username, num_connections):\n    connections = []\n    for _ in range(num_connections):\n        credentials = pika.PlainCredentials(username, username)  # Supondo que a senha seja igual ao nome de usuário\n        connection = pika.BlockingConnection(pika.ConnectionParameters(host=RABBITMQ_HOST, credentials=credentials))\n        connections.append(connection)\n        print(f\"🔗 Conexão criada para o usuário {username}\")\n    return connections\n# Função para capturar o sinal de interrupção (Ctrl+C) e fechar conexões corretamente\ndef signal_handler(signal, frame):",
+        "detail": "scripts.create_connections",
+        "documentation": {}
+    },
+    {
+        "label": "signal_handler",
+        "kind": 2,
+        "importPath": "scripts.create_connections",
+        "description": "scripts.create_connections",
+        "peekOfCode": "def signal_handler(signal, frame):\n    print(\"\\n🔴 Interrompendo o script. Fechando as conexões...\")\n    for connection in connections_all:\n        for conn in connection:\n            conn.close()\n    print(\"✅ Todas as conexões fechadas. Script finalizado.\")\n    sys.exit(0)\n# Registra o sinal de interrupção para capturar Ctrl+C\nsignal.signal(signal.SIGINT, signal_handler)\n# Lista para armazenar todas as conexões",
+        "detail": "scripts.create_connections",
+        "documentation": {}
+    },
+    {
+        "label": "RABBITMQ_HOST",
+        "kind": 5,
+        "importPath": "scripts.create_connections",
+        "description": "scripts.create_connections",
+        "peekOfCode": "RABBITMQ_HOST = 'localhost'\nRABBITMQ_ADMIN_USER = 'admin'\nRABBITMQ_ADMIN_PASS = 'admin'\nRABBITMQ_API_URL = f'http://{RABBITMQ_HOST}:15672/api'\nHEADERS = {'Content-Type': 'application/json'}\n# Função para criar usuários no RabbitMQ via API HTTP\ndef create_user(username, password):\n    url = f\"{RABBITMQ_API_URL}/users\"\n    payload = {\n        \"username\": username,",
+        "detail": "scripts.create_connections",
+        "documentation": {}
+    },
+    {
+        "label": "RABBITMQ_ADMIN_USER",
+        "kind": 5,
+        "importPath": "scripts.create_connections",
+        "description": "scripts.create_connections",
+        "peekOfCode": "RABBITMQ_ADMIN_USER = 'admin'\nRABBITMQ_ADMIN_PASS = 'admin'\nRABBITMQ_API_URL = f'http://{RABBITMQ_HOST}:15672/api'\nHEADERS = {'Content-Type': 'application/json'}\n# Função para criar usuários no RabbitMQ via API HTTP\ndef create_user(username, password):\n    url = f\"{RABBITMQ_API_URL}/users\"\n    payload = {\n        \"username\": username,\n        \"password\": password,",
+        "detail": "scripts.create_connections",
+        "documentation": {}
+    },
+    {
+        "label": "RABBITMQ_ADMIN_PASS",
+        "kind": 5,
+        "importPath": "scripts.create_connections",
+        "description": "scripts.create_connections",
+        "peekOfCode": "RABBITMQ_ADMIN_PASS = 'admin'\nRABBITMQ_API_URL = f'http://{RABBITMQ_HOST}:15672/api'\nHEADERS = {'Content-Type': 'application/json'}\n# Função para criar usuários no RabbitMQ via API HTTP\ndef create_user(username, password):\n    url = f\"{RABBITMQ_API_URL}/users\"\n    payload = {\n        \"username\": username,\n        \"password\": password,\n        \"tags\": \"administrator\"  # Ou \"monitoring\" ou qualquer outro tipo de permissão, conforme necessário",
+        "detail": "scripts.create_connections",
+        "documentation": {}
+    },
+    {
+        "label": "RABBITMQ_API_URL",
+        "kind": 5,
+        "importPath": "scripts.create_connections",
+        "description": "scripts.create_connections",
+        "peekOfCode": "RABBITMQ_API_URL = f'http://{RABBITMQ_HOST}:15672/api'\nHEADERS = {'Content-Type': 'application/json'}\n# Função para criar usuários no RabbitMQ via API HTTP\ndef create_user(username, password):\n    url = f\"{RABBITMQ_API_URL}/users\"\n    payload = {\n        \"username\": username,\n        \"password\": password,\n        \"tags\": \"administrator\"  # Ou \"monitoring\" ou qualquer outro tipo de permissão, conforme necessário\n    }",
+        "detail": "scripts.create_connections",
+        "documentation": {}
+    },
+    {
+        "label": "HEADERS",
+        "kind": 5,
+        "importPath": "scripts.create_connections",
+        "description": "scripts.create_connections",
+        "peekOfCode": "HEADERS = {'Content-Type': 'application/json'}\n# Função para criar usuários no RabbitMQ via API HTTP\ndef create_user(username, password):\n    url = f\"{RABBITMQ_API_URL}/users\"\n    payload = {\n        \"username\": username,\n        \"password\": password,\n        \"tags\": \"administrator\"  # Ou \"monitoring\" ou qualquer outro tipo de permissão, conforme necessário\n    }\n    response = requests.post(url, auth=HTTPBasicAuth(RABBITMQ_ADMIN_USER, RABBITMQ_ADMIN_PASS), headers=HEADERS, json=payload)",
+        "detail": "scripts.create_connections",
+        "documentation": {}
+    },
+    {
+        "label": "connections_all",
+        "kind": 5,
+        "importPath": "scripts.create_connections",
+        "description": "scripts.create_connections",
+        "peekOfCode": "connections_all = []\n# Criar 10 usuários\nfor i in range(1, 11):\n    username = f\"user_{i}\"\n    password = f\"{username}_password\"\n    # Criar usuário no RabbitMQ via API\n    create_user(username, password)\n    # Criar entre 5 e 50 conexões para cada usuário\n    num_connections = random.randint(5, 50)\n    connections = create_connections(username, num_connections)",
+        "detail": "scripts.create_connections",
+        "documentation": {}
+    },
+    {
+        "label": "RABBITMQ_HOST",
+        "kind": 5,
+        "importPath": "scripts.create_exchanges_and_bindings",
+        "description": "scripts.create_exchanges_and_bindings",
+        "peekOfCode": "RABBITMQ_HOST = 'localhost'\nRABBITMQ_USER = 'admin'\nRABBITMQ_PASS = 'admin'\n# Definições\nNUM_EXCHANGES = 5\nNUM_QUEUES = 200  # Alterado de 10 para 200\nEXCHANGE_TYPES = ['direct', 'fanout', 'topic']\n# Chaves aleatórias para simular transações financeiras\nTRANSACTION_KEYS = [\"transaction_id\", \"amount\", \"currency\", \"timestamp\", \"status\", \"sender\", \"receiver\", \"location\", \"payment_method\", \"description\"]\n# Conectar ao RabbitMQ",
+        "detail": "scripts.create_exchanges_and_bindings",
+        "documentation": {}
+    },
+    {
+        "label": "RABBITMQ_USER",
+        "kind": 5,
+        "importPath": "scripts.create_exchanges_and_bindings",
+        "description": "scripts.create_exchanges_and_bindings",
+        "peekOfCode": "RABBITMQ_USER = 'admin'\nRABBITMQ_PASS = 'admin'\n# Definições\nNUM_EXCHANGES = 5\nNUM_QUEUES = 200  # Alterado de 10 para 200\nEXCHANGE_TYPES = ['direct', 'fanout', 'topic']\n# Chaves aleatórias para simular transações financeiras\nTRANSACTION_KEYS = [\"transaction_id\", \"amount\", \"currency\", \"timestamp\", \"status\", \"sender\", \"receiver\", \"location\", \"payment_method\", \"description\"]\n# Conectar ao RabbitMQ\ncredentials = pika.PlainCredentials(RABBITMQ_USER, RABBITMQ_PASS)",
+        "detail": "scripts.create_exchanges_and_bindings",
+        "documentation": {}
+    },
+    {
+        "label": "RABBITMQ_PASS",
+        "kind": 5,
+        "importPath": "scripts.create_exchanges_and_bindings",
+        "description": "scripts.create_exchanges_and_bindings",
+        "peekOfCode": "RABBITMQ_PASS = 'admin'\n# Definições\nNUM_EXCHANGES = 5\nNUM_QUEUES = 200  # Alterado de 10 para 200\nEXCHANGE_TYPES = ['direct', 'fanout', 'topic']\n# Chaves aleatórias para simular transações financeiras\nTRANSACTION_KEYS = [\"transaction_id\", \"amount\", \"currency\", \"timestamp\", \"status\", \"sender\", \"receiver\", \"location\", \"payment_method\", \"description\"]\n# Conectar ao RabbitMQ\ncredentials = pika.PlainCredentials(RABBITMQ_USER, RABBITMQ_PASS)\nconnection = pika.BlockingConnection(pika.ConnectionParameters(host=RABBITMQ_HOST, credentials=credentials))",
+        "detail": "scripts.create_exchanges_and_bindings",
+        "documentation": {}
+    },
+    {
+        "label": "NUM_EXCHANGES",
+        "kind": 5,
+        "importPath": "scripts.create_exchanges_and_bindings",
+        "description": "scripts.create_exchanges_and_bindings",
+        "peekOfCode": "NUM_EXCHANGES = 5\nNUM_QUEUES = 200  # Alterado de 10 para 200\nEXCHANGE_TYPES = ['direct', 'fanout', 'topic']\n# Chaves aleatórias para simular transações financeiras\nTRANSACTION_KEYS = [\"transaction_id\", \"amount\", \"currency\", \"timestamp\", \"status\", \"sender\", \"receiver\", \"location\", \"payment_method\", \"description\"]\n# Conectar ao RabbitMQ\ncredentials = pika.PlainCredentials(RABBITMQ_USER, RABBITMQ_PASS)\nconnection = pika.BlockingConnection(pika.ConnectionParameters(host=RABBITMQ_HOST, credentials=credentials))\nchannel = connection.channel()\n# Criar exchanges",
+        "detail": "scripts.create_exchanges_and_bindings",
+        "documentation": {}
+    },
+    {
+        "label": "NUM_QUEUES",
+        "kind": 5,
+        "importPath": "scripts.create_exchanges_and_bindings",
+        "description": "scripts.create_exchanges_and_bindings",
+        "peekOfCode": "NUM_QUEUES = 200  # Alterado de 10 para 200\nEXCHANGE_TYPES = ['direct', 'fanout', 'topic']\n# Chaves aleatórias para simular transações financeiras\nTRANSACTION_KEYS = [\"transaction_id\", \"amount\", \"currency\", \"timestamp\", \"status\", \"sender\", \"receiver\", \"location\", \"payment_method\", \"description\"]\n# Conectar ao RabbitMQ\ncredentials = pika.PlainCredentials(RABBITMQ_USER, RABBITMQ_PASS)\nconnection = pika.BlockingConnection(pika.ConnectionParameters(host=RABBITMQ_HOST, credentials=credentials))\nchannel = connection.channel()\n# Criar exchanges\nexchanges = []",
+        "detail": "scripts.create_exchanges_and_bindings",
+        "documentation": {}
+    },
+    {
+        "label": "EXCHANGE_TYPES",
+        "kind": 5,
+        "importPath": "scripts.create_exchanges_and_bindings",
+        "description": "scripts.create_exchanges_and_bindings",
+        "peekOfCode": "EXCHANGE_TYPES = ['direct', 'fanout', 'topic']\n# Chaves aleatórias para simular transações financeiras\nTRANSACTION_KEYS = [\"transaction_id\", \"amount\", \"currency\", \"timestamp\", \"status\", \"sender\", \"receiver\", \"location\", \"payment_method\", \"description\"]\n# Conectar ao RabbitMQ\ncredentials = pika.PlainCredentials(RABBITMQ_USER, RABBITMQ_PASS)\nconnection = pika.BlockingConnection(pika.ConnectionParameters(host=RABBITMQ_HOST, credentials=credentials))\nchannel = connection.channel()\n# Criar exchanges\nexchanges = []\nfor i in range(NUM_EXCHANGES):",
+        "detail": "scripts.create_exchanges_and_bindings",
+        "documentation": {}
+    },
+    {
+        "label": "TRANSACTION_KEYS",
+        "kind": 5,
+        "importPath": "scripts.create_exchanges_and_bindings",
+        "description": "scripts.create_exchanges_and_bindings",
+        "peekOfCode": "TRANSACTION_KEYS = [\"transaction_id\", \"amount\", \"currency\", \"timestamp\", \"status\", \"sender\", \"receiver\", \"location\", \"payment_method\", \"description\"]\n# Conectar ao RabbitMQ\ncredentials = pika.PlainCredentials(RABBITMQ_USER, RABBITMQ_PASS)\nconnection = pika.BlockingConnection(pika.ConnectionParameters(host=RABBITMQ_HOST, credentials=credentials))\nchannel = connection.channel()\n# Criar exchanges\nexchanges = []\nfor i in range(NUM_EXCHANGES):\n    exchange_name = f\"exchange_{i+1}\"\n    exchange_type = random.choice(EXCHANGE_TYPES)  # Tipo aleatório",
+        "detail": "scripts.create_exchanges_and_bindings",
+        "documentation": {}
+    },
+    {
+        "label": "credentials",
+        "kind": 5,
+        "importPath": "scripts.create_exchanges_and_bindings",
+        "description": "scripts.create_exchanges_and_bindings",
+        "peekOfCode": "credentials = pika.PlainCredentials(RABBITMQ_USER, RABBITMQ_PASS)\nconnection = pika.BlockingConnection(pika.ConnectionParameters(host=RABBITMQ_HOST, credentials=credentials))\nchannel = connection.channel()\n# Criar exchanges\nexchanges = []\nfor i in range(NUM_EXCHANGES):\n    exchange_name = f\"exchange_{i+1}\"\n    exchange_type = random.choice(EXCHANGE_TYPES)  # Tipo aleatório\n    channel.exchange_declare(exchange=exchange_name, exchange_type=exchange_type, durable=True)\n    exchanges.append(exchange_name)",
+        "detail": "scripts.create_exchanges_and_bindings",
+        "documentation": {}
+    },
+    {
+        "label": "connection",
+        "kind": 5,
+        "importPath": "scripts.create_exchanges_and_bindings",
+        "description": "scripts.create_exchanges_and_bindings",
+        "peekOfCode": "connection = pika.BlockingConnection(pika.ConnectionParameters(host=RABBITMQ_HOST, credentials=credentials))\nchannel = connection.channel()\n# Criar exchanges\nexchanges = []\nfor i in range(NUM_EXCHANGES):\n    exchange_name = f\"exchange_{i+1}\"\n    exchange_type = random.choice(EXCHANGE_TYPES)  # Tipo aleatório\n    channel.exchange_declare(exchange=exchange_name, exchange_type=exchange_type, durable=True)\n    exchanges.append(exchange_name)\n    print(f\"✅ Exchange criada: {exchange_name} ({exchange_type})\")",
+        "detail": "scripts.create_exchanges_and_bindings",
+        "documentation": {}
+    },
+    {
+        "label": "channel",
+        "kind": 5,
+        "importPath": "scripts.create_exchanges_and_bindings",
+        "description": "scripts.create_exchanges_and_bindings",
+        "peekOfCode": "channel = connection.channel()\n# Criar exchanges\nexchanges = []\nfor i in range(NUM_EXCHANGES):\n    exchange_name = f\"exchange_{i+1}\"\n    exchange_type = random.choice(EXCHANGE_TYPES)  # Tipo aleatório\n    channel.exchange_declare(exchange=exchange_name, exchange_type=exchange_type, durable=True)\n    exchanges.append(exchange_name)\n    print(f\"✅ Exchange criada: {exchange_name} ({exchange_type})\")\n# Criar filas",
+        "detail": "scripts.create_exchanges_and_bindings",
+        "documentation": {}
+    },
+    {
+        "label": "exchanges",
+        "kind": 5,
+        "importPath": "scripts.create_exchanges_and_bindings",
+        "description": "scripts.create_exchanges_and_bindings",
+        "peekOfCode": "exchanges = []\nfor i in range(NUM_EXCHANGES):\n    exchange_name = f\"exchange_{i+1}\"\n    exchange_type = random.choice(EXCHANGE_TYPES)  # Tipo aleatório\n    channel.exchange_declare(exchange=exchange_name, exchange_type=exchange_type, durable=True)\n    exchanges.append(exchange_name)\n    print(f\"✅ Exchange criada: {exchange_name} ({exchange_type})\")\n# Criar filas\nqueues = []\nfor i in range(NUM_QUEUES):",
+        "detail": "scripts.create_exchanges_and_bindings",
+        "documentation": {}
+    },
+    {
+        "label": "queues",
+        "kind": 5,
+        "importPath": "scripts.create_exchanges_and_bindings",
+        "description": "scripts.create_exchanges_and_bindings",
+        "peekOfCode": "queues = []\nfor i in range(NUM_QUEUES):\n    queue_name = f\"queue_{i+1}\"\n    channel.queue_declare(queue=queue_name, durable=True)\n    queues.append(queue_name)\n    print(f\"✅ Fila criada: {queue_name}\")\n# Criar bindings aleatórios entre exchanges e filas\nfor queue in queues:\n    num_bindings = random.randint(1, 3)  # Cada fila terá entre 1 e 3 bindings\n    for _ in range(num_bindings):",
+        "detail": "scripts.create_exchanges_and_bindings",
+        "documentation": {}
+    }
+]
