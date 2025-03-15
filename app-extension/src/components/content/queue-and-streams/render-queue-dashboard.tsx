@@ -21,6 +21,13 @@ export function renderQueueDashboard() {
       return;
     }
 
+    const tr = document.querySelector('table thead tr');
+    if (tr) {
+      const th = document.createElement('th');
+      th.textContent = 'Pizza';
+      tr.appendChild(th);
+    }
+    console.log(tr);
     // Check if the component is already rendered. If so, do nothing.
     let existingComponent = document.getElementById(QUEUE_OVERVIEW_CHART_ID);
     if (existingComponent) {
@@ -69,11 +76,9 @@ export function renderQueueDashboard() {
               <TabsTrigger value="password">Pizza</TabsTrigger>
             </TabsList>
             <TabsContent value="account">
-              {' '}
               <QueueBarOverviewChart />
             </TabsContent>
             <TabsContent value="password">
-              {' '}
               <QueuePizzaOverviewChart />
             </TabsContent>
           </Tabs>
