@@ -1,5 +1,3 @@
-import mainCSS from '@/entryPoints/main.css?inline';
-import contentCSS from '@/components/content/content.css?inline';
 import { waitForElement } from '@/lib/wait-for-element';
 import { createRoot } from 'react-dom/client';
 
@@ -9,10 +7,9 @@ import { QueuePizzaOverviewChart } from './queue-pizza-chart';
 import { Toaster } from '@/components/ui/sonner';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { QueueBarOverviewChart } from './queue-bar-chart';
-import renderRoot from '@/entryPoints/render/render-root';
-import { Button } from '@/components/ui/button';
 import { GetTailwindBackStyles } from '@/lib/tailwind-custom';
 import DownloadMessagesFromQueueButton from '@/components/management/download-messages-from-queue-button';
+import { CHROME_ACTION } from '@/lib/chrome-actions';
 
 export const QUEUE_OVERVIEW_CHART_ID = 'queue-overview-chart';
 export const QUEUE_TABLE_LIST_ID = 'queue-table-list';
@@ -23,11 +20,12 @@ const checkIfElementHasChildrenWithId = (element: Element, id: string) => {
   return Array.from(element.children).some((child) => child.id == id);
 };
 
-export const renderTableOptions = () => {
+export const renderTableOptions = async () => {
   const queueAndStreamTab = document.getElementById('queues-and-streams');
   if (!queueAndStreamTab || !queueAndStreamTab.firstElementChild?.classList.contains('selected')) {
     return;
   }
+
   const topTr = document.querySelector('table thead tr');
   if (topTr) {
     const th = document.createElement('th');
@@ -75,22 +73,22 @@ export const renderTableOptions = () => {
     managementTd.appendChild(root);
     row.appendChild(managementTd);
   });
-  // for (let row in tableRows) {
-  //   const td = document.createElement('td');
-  //   td.textContent = 'Action';
-  //   tableRows[row].appendChild(td);
-
-  //   const td2 = document.createElement('td');
-  //   const div2 = document.createElement('div');
-  //   td2.appendChild(div2);
-
-  //   td2.textContent = 'Management';
-  //   //createRoot(div2).render(<button>Management Button</button>);
-  //   tableRows[row].appendChild(td2);
-  // }
 };
-export function renderQueueDashboard() {
-  waitForElement('#main', (_) => {
+
+const GetCurrentPathname = async () => {
+  return new Promise<string | null>((resolve) => {
+    chrome.runtime.sendMessage({ action: CHROME_ACTION.GET_ACTIVE_TAB_URL_PATH }, (response) => {
+      if (response && response.pathname) {
+        resolve(response.pathname);
+      } else {
+        resolve(null);
+      }
+    });
+  });
+};
+export async function renderQueueDashboard() {
+  const pathname = await GetCurrentPathname();
+  waitForElement('#main', async (_) => {
     // Check if the "Queues and Streams" tab is selected. If not, do nothing.
     // This component should only be rendered when the "Queues and Streams" tab is selected.
 
@@ -98,6 +96,7 @@ export function renderQueueDashboard() {
     if (!queueAndStreamTab || !queueAndStreamTab.firstElementChild?.classList.contains('selected')) {
       return;
     }
+
     renderTableOptions();
 
     // Check if the component is already rendered. If so, do nothing.
@@ -126,7 +125,7 @@ export function renderQueueDashboard() {
         <HeroConfiguredProvider>
           <Tabs defaultValue="account">
             <TabsList>
-              <TabsTrigger value="account">Bar</TabsTrigger>
+              <TabsTrigger value="account">Bar {pathname}</TabsTrigger>
               <TabsTrigger value="password">Pizza</TabsTrigger>
             </TabsList>
             <TabsContent value="account">

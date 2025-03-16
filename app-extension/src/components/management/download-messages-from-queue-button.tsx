@@ -22,7 +22,7 @@ export default function DownloadMessagesFromQueueButton({ QueueName }: DownloadM
 
     const textData = JSON.stringify(data);
     const blob = new Blob([textData], { type: 'text/plain;charset=utf-8' });
-    saveAs(blob, 'data.txt');
+    saveAs(blob, `${QueueName}_${new Date().getTime()}.txt`);
   };
   return (
     <button onClick={downloadAllMessagesFromQueue}>

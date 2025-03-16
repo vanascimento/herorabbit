@@ -57,16 +57,6 @@ chrome.storage.onChanged.addListener((changes, area) => {
   }
 });
 
-// chrome.webRequest.onBeforeRequest.addListener(
-//   (details) => {
-//     console.log('[background.js] onBeforeRequest', details);
-//     return { cancel: true };
-//   },
-//   {
-//     urls: ['<all_urls>'],
-//   },
-// );
-
 chrome.runtime.onMessage.addListener((message, _, sendResponse) => {
   if (message.action === CHROME_ACTION.GET_ACTIVE_TAB_URL) {
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
@@ -77,6 +67,18 @@ chrome.runtime.onMessage.addListener((message, _, sendResponse) => {
       }
     });
     return true; // Mantém o canal de resposta aberto para `sendResponse`
+  }
+
+  if (message.action == CHROME_ACTION.GET_ACTIVE_TAB_URL_PATH) {
+    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+      if (tabs.length > 0) {
+        const url = new URL(tabs[0].url!);
+        sendResponse({ pathname: url.pathname });
+      } else {
+        sendResponse({ pathname: null });
+      }
+    });
+    return true;
   }
 });
 
