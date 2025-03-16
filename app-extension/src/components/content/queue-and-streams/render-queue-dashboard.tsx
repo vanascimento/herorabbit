@@ -8,72 +8,11 @@ import { Toaster } from '@/components/ui/sonner';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { QueueBarOverviewChart } from './queue-bar-chart';
 import { GetTailwindBackStyles } from '@/lib/tailwind-custom';
-import DownloadMessagesFromQueueButton from '@/components/management/download-messages-from-queue-button';
 import { CHROME_ACTION } from '@/lib/chrome-actions';
+import { renderTableOptions } from './render-queue-and-streams-table-options';
 
 export const QUEUE_OVERVIEW_CHART_ID = 'queue-overview-chart';
 export const QUEUE_TABLE_LIST_ID = 'queue-table-list';
-const QUEUE_HEROACTIONS_ACTIONS_ID = 'queue-heroactions-actions';
-const QUEUE_HEROACTIONS_MANAGEMENT_ID = 'queue-heroactions-management';
-
-const checkIfElementHasChildrenWithId = (element: Element, id: string) => {
-  return Array.from(element.children).some((child) => child.id == id);
-};
-
-export const renderTableOptions = async () => {
-  const queueAndStreamTab = document.getElementById('queues-and-streams');
-  if (!queueAndStreamTab || !queueAndStreamTab.firstElementChild?.classList.contains('selected')) {
-    return;
-  }
-
-  const topTr = document.querySelector('table thead tr');
-  if (topTr) {
-    const th = document.createElement('th');
-    th.id = QUEUE_TABLE_LIST_ID;
-    th.colSpan = 2;
-    th.textContent = 'Hero Actions';
-    if (!checkIfElementHasChildrenWithId(topTr, th.id)) {
-      topTr.insertBefore(th, topTr.lastElementChild);
-    }
-  }
-
-  const secondTr = document.querySelector('table thead tr:nth-child(2)');
-  if (secondTr) {
-    const queueActionHeader = document.createElement('th');
-    queueActionHeader.id = QUEUE_HEROACTIONS_ACTIONS_ID;
-    queueActionHeader.textContent = 'Actions';
-    if (!checkIfElementHasChildrenWithId(secondTr, queueActionHeader.id)) {
-      secondTr.appendChild(queueActionHeader);
-    }
-
-    const queroManagementHeader = document.createElement('th');
-    queroManagementHeader.id = QUEUE_HEROACTIONS_MANAGEMENT_ID;
-    queroManagementHeader.textContent = 'Management';
-    if (!checkIfElementHasChildrenWithId(secondTr, queroManagementHeader.id)) {
-      secondTr.appendChild(queroManagementHeader);
-    }
-  }
-
-  const tableRows = document.querySelectorAll('table tbody tr');
-  tableRows.forEach((row) => {
-    const actionTd = document.createElement('td');
-    actionTd.textContent = 'Action';
-    row.appendChild(actionTd);
-
-    const managementTd = document.createElement('td');
-
-    const root = document.createElement('div');
-    const shadowRoot = GetTailwindBackStyles(root);
-
-    createRoot(shadowRoot).render(
-      <SettingsProvider defaultTheme="light" shadowRoot={shadowRoot}>
-        <DownloadMessagesFromQueueButton QueueName={row.children[1].textContent!} />
-      </SettingsProvider>,
-    );
-    managementTd.appendChild(root);
-    row.appendChild(managementTd);
-  });
-};
 
 const GetCurrentPathname = async () => {
   return new Promise<string | null>((resolve) => {
@@ -86,6 +25,9 @@ const GetCurrentPathname = async () => {
     });
   });
 };
+/**
+ * Render the main chart for queue and streams dashboard.
+ */
 export async function renderQueueDashboard() {
   const pathname = await GetCurrentPathname();
   waitForElement('#main', async (_) => {

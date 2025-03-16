@@ -14,3 +14,13 @@ export const getRandomColor = () => {
   }
   return color;
 };
+
+/**
+ * Check if an element has children with a specific id.
+ * @param element  The element to check.
+ * @param id  The id to check.
+ * @returns  True if the element has children with the specified id, false otherwise.
+ */
+export const checkIfElementHasChildrenWithId = (element: Element, id: string) => {
+  return Array.from(element.children).some((child) => child.id == id);
+};

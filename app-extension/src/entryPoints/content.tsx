@@ -1,8 +1,8 @@
+import { renderTableOptions } from '@/components/content/queue-and-streams/render-queue-and-streams-table-options';
 import {
   QUEUE_OVERVIEW_CHART_ID,
   QUEUE_TABLE_LIST_ID,
   renderQueueDashboard,
-  renderTableOptions,
 } from '@/components/content/queue-and-streams/render-queue-dashboard';
 
 renderQueueDashboard();

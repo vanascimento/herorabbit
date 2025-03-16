@@ -12,11 +12,17 @@ type QueueData = {
   name: string;
   messages: number;
 };
+
+const DEFAULT_TOP_ITEMS = 10;
+
 export function QueueBarOverviewChart() {
   const [queueData, setQueueData] = useState<QueueData[]>([]);
   const { currentCredentials } = useCurrentRabbitmqCredentials();
-  const [topItems, setTopItems] = useState<number>(10);
+  const [topItems, setTopItems] = useState<number>(DEFAULT_TOP_ITEMS);
 
+  /**
+   * Fetch quantity of messages by queue
+   */
   const updateQueueData = async () => {
     let toastId = toast.loading('Loading queue data...');
     try {

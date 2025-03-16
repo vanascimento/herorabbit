@@ -1,6 +1,11 @@
 import mainCSS from '@/entryPoints/main.css?inline';
 import contentCSS from '@/components/content/content.css?inline';
 
+/**
+ * Create a shadow root for the element and apply tailwind css styles.
+ * @param element The element to apply the shadow root.
+ * @returns The shadow root created.
+ */
 export const GetTailwindBackStyles = (element: HTMLElement) => {
   const shadowRoot = element.attachShadow({ mode: 'open' });
   shadowRoot.adoptedStyleSheets = [];
