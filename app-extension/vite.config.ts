@@ -11,38 +11,37 @@ const manifest = manifestJson as unknown as ManifestV3Export;
 
 // https://vite.dev/config/
 export default defineConfig({
-    plugins: [
-      react(),
-      crx({ manifest, browser: 'chrome' }),
-      viteStaticCopy({
-        targets: [
-          {
-            src: 'src/assets/fonts/*/**/*.{woff,woff2,ttf}',
-            dest: './assets/fonts',
-          },
-        ],
-      }),
-    ],
-    resolve: {
-      alias: {
-        '@': path.resolve(__dirname, './src'),
-      },
+  plugins: [
+    react(),
+    crx({ manifest, browser: 'chrome' }),
+    viteStaticCopy({
+      targets: [
+        {
+          src: 'src/assets/fonts/*/**/*.{woff,woff2,ttf}',
+          dest: './assets/fonts',
+        },
+      ],
+    }),
+  ],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
     },
-    build: {
-      sourcemap: true,
-      copyPublicDir: false,
-      emptyOutDir: true,
-      modulePreload: {
-        polyfill: false,
-      },
-      manifest: false,
-      rollupOptions: {
-        output: {
-          entryFileNames: '[name].js',
-          chunkFileNames: '[name].js',
-          assetFileNames: '[name].[ext]',
-        }
+  },
+  build: {
+    sourcemap: true,
+    copyPublicDir: false,
+    emptyOutDir: true,
+    modulePreload: {
+      polyfill: false,
+    },
+    manifest: false,
+    rollupOptions: {
+      output: {
+        entryFileNames: '[name].js',
+        chunkFileNames: '[name].js',
+        assetFileNames: '[name].[ext]',
       },
     },
   },
-);
+});

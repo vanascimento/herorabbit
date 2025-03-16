@@ -30,8 +30,6 @@ chrome.runtime.onSuspend.addListener(() => {
 });
 
 chrome.runtime.onMessage.addListener((message) => {
-  console.log('[background.js] onMessage: ', message);
-
   if (message?.type === MESSAGE_TYPES.OPEN_OPTIONS) {
     chrome.runtime.openOptionsPage();
   }
@@ -67,18 +65,6 @@ chrome.runtime.onMessage.addListener((message, _, sendResponse) => {
       }
     });
     return true; // Mantém o canal de resposta aberto para `sendResponse`
-  }
-
-  if (message.action == CHROME_ACTION.GET_ACTIVE_TAB_URL_PATH) {
-    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-      if (tabs.length > 0) {
-        const url = new URL(tabs[0].url!);
-        sendResponse({ pathname: url.pathname });
-      } else {
-        sendResponse({ pathname: null });
-      }
-    });
-    return true;
   }
 });
 

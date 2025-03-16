@@ -1,27 +1,26 @@
 import { useEffect, useState } from 'react';
 import { useSettings } from './useSettings';
-import { CHROME_ACTION } from '@/lib/chrome-actions';
+import { RabbitMqCredentials } from '@/components/popup/credentials-form';
+import { getCurrentTabUrl, useGetCurrentTabUrl } from './useCurrentTabUrl';
 
-export type RabbitmqCredentials = {
-  username: string;
-  password: string;
-};
 export default function useCurrentRabbitmqCredentials() {
   const { settings } = useSettings();
-  const [currentCredentials, setCurrentCredentials] = useState<RabbitmqCredentials | null | undefined>(null);
+  const [currentCredentials, setCurrentCredentials] = useState<RabbitMqCredentials | null | undefined>(null);
+  const { url } = useGetCurrentTabUrl();
 
   useEffect(() => {
-    chrome.runtime.sendMessage({ action: CHROME_ACTION.GET_ACTIVE_TAB_URL }, (response) => {
-      if (response && response.url) {
-        const credentials = settings?.credentials?.find((credential) => response.url.includes(credential.host));
-        if (credentials) {
-          setCurrentCredentials(credentials);
-        } else {
-          setCurrentCredentials(null);
-        }
-      }
-    });
-  }, [settings]);
+    const credentials = settings?.credentials?.find((credential) => url?.includes(credential.host));
+    if (credentials) {
+      setCurrentCredentials(credentials);
+    } else {
+      setCurrentCredentials(null);
+    }
+  }, [url]);
 
   return { currentCredentials };
+}
+
+export async function getCurrentRabbitmqCredentials() {
+  let currentUrl = await getCurrentTabUrl();
+  return currentUrl;
 }

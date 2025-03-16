@@ -4,6 +4,7 @@ import { GetTailwindBackStyles } from '@/lib/tailwind-custom';
 import { createRoot } from 'react-dom/client';
 import { SettingsProvider } from '@/hooks/useSettings';
 import DownloadMessagesFromQueueButton from '@/components/management/download-messages-from-queue-button';
+import { getCurrentRabbitmqCredentials } from '@/hooks/useCurrentRabbitmqCredentials';
 
 export const QUEUE_HEROACTIONS_ACTIONS_ID = 'queue-heroactions-actions';
 export const QUEUE_HEROACTIONS_MANAGEMENT_ID = 'queue-heroactions-management';
@@ -15,6 +16,11 @@ export const QUEUE_HEROACTIONS_MANAGEMENT_ID = 'queue-heroactions-management';
 export const renderTableOptions = async () => {
   const queueAndStreamTab = document.getElementById('queues-and-streams');
   if (!queueAndStreamTab || !queueAndStreamTab.firstElementChild?.classList.contains('selected')) {
+    return;
+  }
+
+  const currentUrl = await getCurrentRabbitmqCredentials();
+  if (!currentUrl?.endsWith('/#/queues')) {
     return;
   }
 
