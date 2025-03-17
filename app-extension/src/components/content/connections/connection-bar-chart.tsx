@@ -63,7 +63,10 @@ export function ConnectionBarOverviewChart() {
     userConnectionsList.push({ user: key, connections: value, fill: getRandomColor() });
   });
 
-  let topUserConnectionsList = userConnectionsList.sort((a, b) => b.connections - a.connections).slice(0, topItems);
+  let topUserConnectionsList = userConnectionsList
+    .sort((a, b) => b.connections - a.connections)
+    .slice(0, topItems)
+    .filter((item) => item.connections > 0);
 
   return (
     <Card className="flex flex-col ext-w-1/3 m-2 rounded-sm">

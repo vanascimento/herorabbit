@@ -103,7 +103,16 @@
         "kind": 2,
         "importPath": "scripts.create_connections",
         "description": "scripts.create_connections",
-        "peekOfCode": "def create_connections_and_channels(username):\n    connections = []\n    num_connections = random.randint(10, 100)\n    for _ in range(num_connections):\n        try:\n            connection = pika.BlockingConnection(\n                pika.ConnectionParameters(host=RABBITMQ_HOST, credentials=pika.PlainCredentials(username, \"password\"),\n                                          client_properties={\n                                                \"connection_name\": f\"connection of {username}\"\n                                          })",
+        "peekOfCode": "def create_connections_and_channels(username):\n    connections = []\n    num_connections = random.randint(10, 100)\n    for _ in range(num_connections):\n        try:\n            connection = pika.BlockingConnection(\n                pika.ConnectionParameters(\n                    host=RABBITMQ_HOST,\n                    credentials=pika.PlainCredentials(username, \"password\"),\n                    client_properties={\"connection_name\": f\"connection of {username}\"},",
+        "detail": "scripts.create_connections",
+        "documentation": {}
+    },
+    {
+        "label": "keep_alive",
+        "kind": 2,
+        "importPath": "scripts.create_connections",
+        "description": "scripts.create_connections",
+        "peekOfCode": "def keep_alive():\n    while True:\n        time.sleep(20)\n        for conn in all_connections:\n            try:\n                if conn.is_closed:\n                    print(\"Reconectando uma conexão fechada...\")\n                    all_connections.remove(conn)\n                    all_connections.extend(create_connections_and_channels(\"user_simulate_connection\"))\n                else:",
         "detail": "scripts.create_connections",
         "documentation": {}
     },
@@ -185,6 +194,15 @@
         "importPath": "scripts.create_connections",
         "description": "scripts.create_connections",
         "peekOfCode": "threads = []\nfor i in range(NUM_USERS):\n    user = f\"user_simulate_connection_{i}\"\n    create_user(user)\n    thread = threading.Thread(target=lambda: all_connections.extend(create_connections_and_channels(user)))\n    thread.start()\n    threads.append(thread)\n# Aguarde todas as threads finalizarem\nfor thread in threads:\n    thread.join()",
+        "detail": "scripts.create_connections",
+        "documentation": {}
+    },
+    {
+        "label": "keep_alive_thread",
+        "kind": 5,
+        "importPath": "scripts.create_connections",
+        "description": "scripts.create_connections",
+        "peekOfCode": "keep_alive_thread = threading.Thread(target=keep_alive, daemon=True)\nkeep_alive_thread.start()\n# Manter as conexões abertas\ntry:\n    while True:\n        time.sleep(10)\nexcept KeyboardInterrupt:\n    print(\"Encerrando conexões...\")\n    for conn in all_connections:\n        if conn.is_open:",
         "detail": "scripts.create_connections",
         "documentation": {}
     },

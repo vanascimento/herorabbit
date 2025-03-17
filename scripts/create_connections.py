@@ -41,10 +41,13 @@ def create_connections_and_channels(username):
     for _ in range(num_connections):
         try:
             connection = pika.BlockingConnection(
-                pika.ConnectionParameters(host=RABBITMQ_HOST, credentials=pika.PlainCredentials(username, "password"),
-                                          client_properties={
-                                                "connection_name": f"connection of {username}"
-                                          })
+                pika.ConnectionParameters(
+                    host=RABBITMQ_HOST,
+                    credentials=pika.PlainCredentials(username, "password"),
+                    client_properties={"connection_name": f"connection of {username}"},
+                    heartbeat=30,  # Mantém a conexão ativa
+                    blocked_connection_timeout=300  # Tempo máximo antes de timeout
+                )
             )
             connections.append(connection)
             num_channels = random.randint(10, 100)
@@ -72,6 +75,29 @@ for thread in threads:
 
 print("Todas as conexões e canais foram criados. Pressione Ctrl+C para encerrar.")
 
+# Mantém conexões ativas enviando mensagens periódicas
+def keep_alive():
+    while True:
+        time.sleep(20)
+        for conn in all_connections:
+            try:
+                if conn.is_closed:
+                    print("Reconectando uma conexão fechada...")
+                    all_connections.remove(conn)
+                    all_connections.extend(create_connections_and_channels("user_simulate_connection"))
+                else:
+                    channel = conn.channel()
+                    channel.basic_publish(exchange='', routing_key='keep_alive', body='ping')
+                    print("Keep-alive enviado")
+            except Exception as e:
+                print(f"Erro no keep-alive: {e}")
+                all_connections.remove(conn)
+                all_connections.extend(create_connections_and_channels("user_simulate_connection"))
+
+# Iniciar thread de keep-alive
+keep_alive_thread = threading.Thread(target=keep_alive, daemon=True)
+keep_alive_thread.start()
+
 # Manter as conexões abertas
 try:
     while True:
@@ -79,5 +105,6 @@ try:
 except KeyboardInterrupt:
     print("Encerrando conexões...")
     for conn in all_connections:
-        conn.close()
+        if conn.is_open:
+            conn.close()
     print("Finalizado.")
