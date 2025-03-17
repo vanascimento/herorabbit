@@ -1,3 +1,7 @@
+import {
+  CONNECTION_OVERVIEW_CHART_ID,
+  renderConnectionDashboard,
+} from '@/components/content/connections/render-connection-dashboard';
 import { renderTableOptions } from '@/components/content/queue-and-streams/render-queue-and-streams-table-options';
 import {
   QUEUE_OVERVIEW_CHART_ID,
@@ -9,6 +13,10 @@ renderQueueDashboard();
 //renderSidePanel();
 
 const observer = new MutationObserver(() => {
+  if (!document.getElementById(CONNECTION_OVERVIEW_CHART_ID)) {
+    renderConnectionDashboard();
+  }
+
   if (!document.getElementById(QUEUE_OVERVIEW_CHART_ID)) {
     renderQueueDashboard();
   }

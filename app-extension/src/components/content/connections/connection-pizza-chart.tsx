@@ -8,28 +8,33 @@ import useCurrentRabbitmqCredentials from '@/hooks/useCurrentRabbitmqCredentials
 import { Input } from '@/components/ui/input';
 import { toast } from 'sonner';
 
-type QueueData = {
-  name: string;
-  messages: number;
+type ConnectionData = {
+  user_provided_name: string;
+  connection_name: string;
+  product: string;
 };
 
 const DEFAULT_TOP_ITEMS = 10;
-export function QueuePizzaOverviewChart() {
-  const [queueData, setQueueData] = useState<QueueData[]>([]);
+
+export function ConnectionPizzaOverviewChart() {
+  const [connectionsData, setConnectionsData] = useState<ConnectionData[]>([]);
   const { currentCredentials } = useCurrentRabbitmqCredentials();
   const [topItems, setTopItems] = useState<number>(DEFAULT_TOP_ITEMS);
 
+  /**
+   * Fetch quantity of messages by queue
+   */
   const updateQueueData = async () => {
     let toastId = toast.loading('Loading queue data...');
     try {
       const base64Credentials = btoa(`${currentCredentials?.username}:${currentCredentials?.password}`);
-      let response = await fetch('/api/queues', {
+      let response = await fetch('/api/connections', {
         headers: {
           Authorization: `Basic ${base64Credentials}`,
         },
       });
       let data = await response.json();
-      setQueueData(data as QueueData[]);
+      setConnectionsData(data as ConnectionData[]);
     } catch (error) {
       toast.error('Failed to load queue data', { id: toastId });
     } finally {
@@ -42,22 +47,31 @@ export function QueuePizzaOverviewChart() {
     updateQueueData();
   }, [currentCredentials]);
 
-  const orderedQueueData = queueData.sort((a, b) => b.messages - a.messages);
-  const firstFiveQueues = orderedQueueData.slice(0, topItems);
+  const userConnectionsMap = new Map<string, number>();
 
-  const firstFiveQueuesWithFillColor = firstFiveQueues.map((item) => ({ ...item, fill: getRandomColor() }));
-  const allQueues = [
-    ...firstFiveQueuesWithFillColor,
-    //  other
-  ];
+  connectionsData.forEach((connection) => {
+    const { user_provided_name } = connection;
+    if (userConnectionsMap.has(user_provided_name)) {
+      userConnectionsMap.set(user_provided_name, userConnectionsMap.get(user_provided_name)! + 1);
+    } else {
+      userConnectionsMap.set(user_provided_name, 1);
+    }
+  });
+
+  const userConnectionsList: { name: string; connections: number; fill: string }[] = [];
+  userConnectionsMap.forEach((value, key) => {
+    userConnectionsList.push({ name: key, connections: value, fill: getRandomColor() });
+  });
+
+  let topUserConnectionsList = userConnectionsList.sort((a, b) => b.connections - a.connections).slice(0, topItems);
 
   return (
     <Card className="flex flex-col ext-w-1/3 m-2 rounded-sm">
       <CardHeader>
         <div className=" ext-flex ext-flex-row ext-justify-between ">
           <div>
-            <CardTitle>Messages by queue</CardTitle>
-            <CardDescription>Current top {topItems} total messages by queue</CardDescription>
+            <CardTitle>Connections by user</CardTitle>
+            <CardDescription>Current top {topItems} total connections by user</CardDescription>
           </div>
           <div className="ext-flex ext-flex-row ext-self-end">
             <Input
@@ -74,10 +88,10 @@ export function QueuePizzaOverviewChart() {
         <ChartContainer config={{}} className="ext-mx-auto ext-aspect-square ext-max-h-[500px]">
           <PieChart>
             <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
-            <Pie data={allQueues} dataKey="messages">
-              <LabelList dataKey="messages" fontSize={12} color="white" />
+            <Pie data={topUserConnectionsList} dataKey="connections">
+              <LabelList dataKey="connections" fontSize={12} color="white" />
             </Pie>
-            <ChartLegend name="Legenda" orientation="vertical" />
+            <ChartLegend orientation="vertical" />
           </PieChart>
         </ChartContainer>
       </CardContent>
