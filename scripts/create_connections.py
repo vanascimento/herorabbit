@@ -1,76 +1,83 @@
+import requests
 import pika
 import random
-import json
 import time
-import requests
-from requests.auth import HTTPBasicAuth
-import signal
-import sys
+import threading
 
 # Configurações do RabbitMQ
-RABBITMQ_HOST = 'localhost'
-RABBITMQ_ADMIN_USER = 'admin'
-RABBITMQ_ADMIN_PASS = 'admin'
-RABBITMQ_API_URL = f'http://{RABBITMQ_HOST}:15672/api'
-HEADERS = {'Content-Type': 'application/json'}
+RABBITMQ_API = "http://localhost:15672/api/users"
+RABBITMQ_VHOST_API = "http://localhost:15672/api/permissions/%2F"
+RABBITMQ_VHOST = "%2F"
+RABBITMQ_HOST = "localhost"
+USERNAME = "admin"
+PASSWORD = "admin"
+NUM_USERS = 30
 
-# Função para criar usuários no RabbitMQ via API HTTP
-def create_user(username, password):
-    url = f"{RABBITMQ_API_URL}/users"
-    payload = {
-        "username": username,
-        "password": password,
-        "tags": "administrator"  # Ou "monitoring" ou qualquer outro tipo de permissão, conforme necessário
-    }
-    response = requests.post(url, auth=HTTPBasicAuth(RABBITMQ_ADMIN_USER, RABBITMQ_ADMIN_PASS), headers=HEADERS, json=payload)
-
-    if response.status_code == 201:
-        print(f"✅ Usuário {username} criado com sucesso!")
+# Criar usuários no RabbitMQ
+def create_user(username):
+    url = f"{RABBITMQ_API}/{username}"
+    user_data = {"password": "password", "tags": ""}
+    response = requests.put(url, json=user_data, auth=(USERNAME, PASSWORD))
+    if response.status_code in [200, 201, 204]:
+        print(f"Usuário {username} criado com sucesso.")
+    elif response.status_code == 400:
+        print(f"Usuário {username} já existe.")
     else:
-        print(f"❌ Falha ao criar usuário {username}: {response.text}")
+        print(f"Erro ao criar usuário {username}: {response.text}")
+    
+    # Conceder permissões ao vhost
+    permissions_url = f"{RABBITMQ_VHOST_API}/{username}"
+    permissions_data = {"configure": ".*", "write": ".*", "read": ".*"}
+    response = requests.put(permissions_url, json=permissions_data, auth=(USERNAME, PASSWORD))
+    if response.status_code in [200, 201, 204]:
+        print(f"Permissões concedidas ao usuário {username} no vhost /")
+    else:
+        print(f"Erro ao conceder permissões para {username}: {response.text}")
 
-# Função para criar e manter conexões no RabbitMQ usando pika
-def create_connections(username, num_connections):
+# Criar conexões e canais
+def create_connections_and_channels(username):
     connections = []
+    num_connections = random.randint(10, 100)
     for _ in range(num_connections):
-        credentials = pika.PlainCredentials(username, username)  # Supondo que a senha seja igual ao nome de usuário
-        connection = pika.BlockingConnection(pika.ConnectionParameters(host=RABBITMQ_HOST, credentials=credentials))
-        connections.append(connection)
-        print(f"🔗 Conexão criada para o usuário {username}")
-
+        try:
+            connection = pika.BlockingConnection(
+                pika.ConnectionParameters(host=RABBITMQ_HOST, credentials=pika.PlainCredentials(username, "password"),
+                                          client_properties={
+                                                "connection_name": f"connection of {username}"
+                                          })
+            )
+            connections.append(connection)
+            num_channels = random.randint(10, 100)
+            for _ in range(num_channels):
+                channel = connection.channel()
+                channel.queue_declare(queue=f"queue_{username}")
+        except Exception as e:
+            print(f"Erro ao criar conexão para {username}: {e}")
     return connections
 
-# Função para capturar o sinal de interrupção (Ctrl+C) e fechar conexões corretamente
-def signal_handler(signal, frame):
-    print("\n🔴 Interrompendo o script. Fechando as conexões...")
-    for connection in connections_all:
-        for conn in connection:
-            conn.close()
-    print("✅ Todas as conexões fechadas. Script finalizado.")
-    sys.exit(0)
+# Criar usuários e abrir conexões
+all_connections = []
+threads = []
 
-# Registra o sinal de interrupção para capturar Ctrl+C
-signal.signal(signal.SIGINT, signal_handler)
+for i in range(NUM_USERS):
+    user = f"user_simulate_connection_{i}"
+    create_user(user)
+    thread = threading.Thread(target=lambda: all_connections.extend(create_connections_and_channels(user)))
+    thread.start()
+    threads.append(thread)
 
-# Lista para armazenar todas as conexões
-connections_all = []
+# Aguarde todas as threads finalizarem
+for thread in threads:
+    thread.join()
 
-# Criar 10 usuários
-for i in range(1, 11):
-    username = f"user_{i}"
-    password = f"{username}_password"
-    
-    # Criar usuário no RabbitMQ via API
-    create_user(username, password)
-    
-    # Criar entre 5 e 50 conexões para cada usuário
-    num_connections = random.randint(5, 50)
-    connections = create_connections(username, num_connections)
-    connections_all.append(connections)
+print("Todas as conexões e canais foram criados. Pressione Ctrl+C para encerrar.")
 
-    print(f"✅ Conexões abertas para o usuário {username}, aguardando Ctrl+C para finalizar.\n")
-
-# Manter o script rodando até o usuário interromper
-print("\n🎯 Script em execução. Pressione Ctrl+C para interromper.")
-while True:
-    time.sleep(1)  # Mantém o script rodando sem consumir muita CPU
+# Manter as conexões abertas
+try:
+    while True:
+        time.sleep(10)
+except KeyboardInterrupt:
+    print("Encerrando conexões...")
+    for conn in all_connections:
+        conn.close()
+    print("Finalizado.")
