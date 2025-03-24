@@ -2,11 +2,12 @@ import { LabelList, Pie, PieChart } from 'recharts';
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { ChartContainer, ChartLegend, ChartTooltip, ChartTooltipContent } from '@/components/ui/chart';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { getRandomColor } from '@/lib/utils';
 import useCurrentRabbitmqCredentials from '@/hooks/useCurrentRabbitmqCredentials';
 import { Input } from '@/components/ui/input';
 import { toast } from 'sonner';
+import { QueueAndStreamDataContext } from './queue-and-streams-data-provider';
 
 type QueueData = {
   name: string;
@@ -15,34 +16,10 @@ type QueueData = {
 
 const DEFAULT_TOP_ITEMS = 10;
 export function QueuePizzaOverviewChart() {
-  const [queueData, setQueueData] = useState<QueueData[]>([]);
-  const { currentCredentials } = useCurrentRabbitmqCredentials();
   const [topItems, setTopItems] = useState<number>(DEFAULT_TOP_ITEMS);
+  const { queuesData } = useContext(QueueAndStreamDataContext);
 
-  const updateQueueData = async () => {
-    let toastId = toast.loading('Loading queue data...');
-    try {
-      const base64Credentials = btoa(`${currentCredentials?.username}:${currentCredentials?.password}`);
-      let response = await fetch('/api/queues', {
-        headers: {
-          Authorization: `Basic ${base64Credentials}`,
-        },
-      });
-      let data = await response.json();
-      setQueueData(data as QueueData[]);
-    } catch (error) {
-      toast.error('Failed to load queue data', { id: toastId });
-    } finally {
-      toast.dismiss(toastId);
-    }
-  };
-
-  useEffect(() => {
-    if (!currentCredentials) return;
-    updateQueueData();
-  }, [currentCredentials]);
-
-  const orderedQueueData = queueData.sort((a, b) => b.messages - a.messages);
+  const orderedQueueData = queuesData.sort((a, b) => b.messages - a.messages);
   const firstFiveQueues = orderedQueueData.slice(0, topItems);
 
   const firstFiveQueuesWithFillColor = firstFiveQueues

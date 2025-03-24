@@ -11,6 +11,7 @@ import { GetTailwindBackStyles } from '@/lib/tailwind-custom';
 import { CHROME_ACTION } from '@/lib/chrome-actions';
 import { renderTableOptions } from './render-queue-and-streams-table-options';
 import { HeroRenderProtectedUrlPath } from '@/providers/hero-render-protected-url';
+import QueueAndStreamDataProvider from './queue-and-streams-data-provider';
 
 export const QUEUE_OVERVIEW_CHART_ID = 'queue-overview-chart';
 export const QUEUE_TABLE_LIST_ID = 'queue-table-list';
@@ -72,12 +73,14 @@ export async function renderQueueDashboard() {
                 <TabsTrigger value="account">Bar {pathname}</TabsTrigger>
                 <TabsTrigger value="password">Pizza</TabsTrigger>
               </TabsList>
-              <TabsContent value="account">
-                <QueueBarOverviewChart />
-              </TabsContent>
-              <TabsContent value="password">
-                <QueuePizzaOverviewChart />
-              </TabsContent>
+              <QueueAndStreamDataProvider>
+                <TabsContent value="account">
+                  <QueueBarOverviewChart />
+                </TabsContent>
+                <TabsContent value="password">
+                  <QueuePizzaOverviewChart />
+                </TabsContent>
+              </QueueAndStreamDataProvider>
             </Tabs>
             <Toaster />
           </HeroRenderProtectedUrlPath>

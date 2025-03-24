@@ -2,11 +2,12 @@ import { LabelList, Pie, PieChart } from 'recharts';
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { ChartContainer, ChartLegend, ChartTooltip, ChartTooltipContent } from '@/components/ui/chart';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { getRandomColor } from '@/lib/utils';
 import useCurrentRabbitmqCredentials from '@/hooks/useCurrentRabbitmqCredentials';
 import { Input } from '@/components/ui/input';
 import { toast } from 'sonner';
+import { ConnectionDataContext } from './connection-data-provider';
 
 type ConnectionData = {
   user: string;
@@ -17,35 +18,9 @@ type ConnectionData = {
 const DEFAULT_TOP_ITEMS = 10;
 
 export function ConnectionPizzaOverviewChart() {
-  const [connectionsData, setConnectionsData] = useState<ConnectionData[]>([]);
-  const { currentCredentials } = useCurrentRabbitmqCredentials();
   const [topItems, setTopItems] = useState<number>(DEFAULT_TOP_ITEMS);
-
-  /**
-   * Fetch quantity of messages by queue
-   */
-  const updateQueueData = async () => {
-    let toastId = toast.loading('Loading queue data...');
-    try {
-      const base64Credentials = btoa(`${currentCredentials?.username}:${currentCredentials?.password}`);
-      let response = await fetch('/api/connections', {
-        headers: {
-          Authorization: `Basic ${base64Credentials}`,
-        },
-      });
-      let data = await response.json();
-      setConnectionsData(data as ConnectionData[]);
-    } catch (error) {
-      toast.error('Failed to load queue data', { id: toastId });
-    } finally {
-      toast.dismiss(toastId);
-    }
-  };
-
-  useEffect(() => {
-    if (!currentCredentials) return;
-    updateQueueData();
-  }, [currentCredentials]);
+  const { connectionsData } = useContext(ConnectionDataContext);
+  const [userFilter, setUserFilter] = useState<string | undefined>(undefined);
 
   const userConnectionsMap = new Map<string, number>();
 
@@ -65,6 +40,7 @@ export function ConnectionPizzaOverviewChart() {
 
   let topUserConnectionsList = userConnectionsList
     .sort((a, b) => b.connections - a.connections)
+    .filter((item) => !userFilter || item.name.includes(userFilter))
     .slice(0, topItems)
     .filter((item) => item.connections > 0);
 
@@ -76,7 +52,15 @@ export function ConnectionPizzaOverviewChart() {
             <CardTitle>Connections by user</CardTitle>
             <CardDescription>Current top {topItems} total connections by user</CardDescription>
           </div>
-          <div className="ext-flex ext-flex-row ext-self-end">
+          <div className="ext-flex ext-flex-row ext-self-end ext-space-x-4">
+            <Input
+              placeholder="Filter by user"
+              value={userFilter}
+              onChange={(value) => setUserFilter(value.target.value)}
+              onWheel={(e) => e.preventDefault()}
+              className=" ext-text-center ext-rounded-sm"
+              type="text"
+            />
             <Input
               onChange={(value) => setTopItems(Number(value.target.value))}
               onWheel={(e) => e.preventDefault()}

@@ -9,6 +9,7 @@ import { ConnectionBarOverviewChart } from './connection-bar-chart';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Toaster } from '@/components/ui/sonner';
 import { ConnectionPizzaOverviewChart } from './connection-pizza-chart';
+import ConnectionDataProvider from './connection-data-provider';
 
 export const CONNECTION_OVERVIEW_CHART_ID = 'connection-overview-chart';
 export const CONNECTION_TABLE_LIST_ID = 'connection-table-list';
@@ -51,19 +52,21 @@ export async function renderConnectionDashboard() {
       <SettingsProvider defaultTheme="light" shadowRoot={shadowRoot}>
         <HeroConfiguredProvider>
           <HeroRenderProtectedUrlPath path="/#/connections">
-            <Tabs defaultValue="bar">
-              <TabsList>
-                <TabsTrigger value="bar">Bar </TabsTrigger>
-                <TabsTrigger value="pizza">Pizza</TabsTrigger>
-              </TabsList>
-              <TabsContent value="bar">
-                <ConnectionBarOverviewChart />
-              </TabsContent>
-              <TabsContent value="pizza">
-                <ConnectionPizzaOverviewChart />
-              </TabsContent>
-            </Tabs>
-            <Toaster />
+            <ConnectionDataProvider>
+              <Tabs defaultValue="bar">
+                <TabsList>
+                  <TabsTrigger value="bar">Bar </TabsTrigger>
+                  <TabsTrigger value="pizza">Pizza</TabsTrigger>
+                </TabsList>
+                <TabsContent value="bar">
+                  <ConnectionBarOverviewChart />
+                </TabsContent>
+                <TabsContent value="pizza">
+                  <ConnectionPizzaOverviewChart />
+                </TabsContent>
+              </Tabs>
+              <Toaster />
+            </ConnectionDataProvider>
           </HeroRenderProtectedUrlPath>
         </HeroConfiguredProvider>
       </SettingsProvider>,
