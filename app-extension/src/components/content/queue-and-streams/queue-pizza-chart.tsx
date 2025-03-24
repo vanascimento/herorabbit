@@ -2,28 +2,23 @@ import { LabelList, Pie, PieChart } from 'recharts';
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { ChartContainer, ChartLegend, ChartTooltip, ChartTooltipContent } from '@/components/ui/chart';
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useState } from 'react';
 import { getRandomColor } from '@/lib/utils';
-import useCurrentRabbitmqCredentials from '@/hooks/useCurrentRabbitmqCredentials';
 import { Input } from '@/components/ui/input';
-import { toast } from 'sonner';
 import { QueueAndStreamDataContext } from './queue-and-streams-data-provider';
-
-type QueueData = {
-  name: string;
-  messages: number;
-};
 
 const DEFAULT_TOP_ITEMS = 10;
 export function QueuePizzaOverviewChart() {
   const [topItems, setTopItems] = useState<number>(DEFAULT_TOP_ITEMS);
   const { queuesData } = useContext(QueueAndStreamDataContext);
+  const [queueNameFilter, setQueueNameFilter] = useState<string | undefined>(undefined);
 
   const orderedQueueData = queuesData.sort((a, b) => b.messages - a.messages);
   const firstFiveQueues = orderedQueueData.slice(0, topItems);
 
   const firstFiveQueuesWithFillColor = firstFiveQueues
     .map((item) => ({ ...item, fill: getRandomColor() }))
+    .filter((item) => !queueNameFilter || item.name.includes(queueNameFilter))
     .filter((item) => item.messages > 0);
   const allQueues = [
     ...firstFiveQueuesWithFillColor,
@@ -38,7 +33,15 @@ export function QueuePizzaOverviewChart() {
             <CardTitle>Messages by queue</CardTitle>
             <CardDescription>Current top {topItems} total messages by queue</CardDescription>
           </div>
-          <div className="ext-flex ext-flex-row ext-self-end">
+          <div className="ext-flex ext-flex-row ext-self-end ext-space-x-4">
+            <Input
+              placeholder="Filter by queue"
+              value={queueNameFilter}
+              onChange={(value) => setQueueNameFilter(value.target.value)}
+              onWheel={(e) => e.preventDefault()}
+              className=" ext-text-center ext-rounded-sm"
+              type="text"
+            />
             <Input
               onChange={(value) => setTopItems(Number(value.target.value))}
               onWheel={(e) => e.preventDefault()}

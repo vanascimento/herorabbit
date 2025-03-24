@@ -1,5 +1,5 @@
 import useCurrentRabbitmqCredentials from '@/hooks/useCurrentRabbitmqCredentials';
-import { ConnectionData, QueueData } from '@/models/connections';
+import { QueueData } from '@/models/connections';
 import { createContext, ReactNode, useEffect, useState } from 'react';
 import { toast } from 'sonner';
 

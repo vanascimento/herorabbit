@@ -2,18 +2,10 @@ import { LabelList, Pie, PieChart } from 'recharts';
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { ChartContainer, ChartLegend, ChartTooltip, ChartTooltipContent } from '@/components/ui/chart';
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useState } from 'react';
 import { getRandomColor } from '@/lib/utils';
-import useCurrentRabbitmqCredentials from '@/hooks/useCurrentRabbitmqCredentials';
 import { Input } from '@/components/ui/input';
-import { toast } from 'sonner';
 import { ConnectionDataContext } from './connection-data-provider';
-
-type ConnectionData = {
-  user: string;
-  connection_name: string;
-  product: string;
-};
 
 const DEFAULT_TOP_ITEMS = 10;
 
