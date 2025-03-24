@@ -9,7 +9,7 @@ import { Input } from '@/components/ui/input';
 import { toast } from 'sonner';
 
 type ConnectionData = {
-  user_provided_name: string;
+  user: string;
   connection_name: string;
   product: string;
 };
@@ -50,11 +50,11 @@ export function ConnectionBarOverviewChart() {
   const userConnectionsMap = new Map<string, number>();
 
   connectionsData.forEach((connection) => {
-    const { user_provided_name } = connection;
-    if (userConnectionsMap.has(user_provided_name)) {
-      userConnectionsMap.set(user_provided_name, userConnectionsMap.get(user_provided_name)! + 1);
+    const { user } = connection;
+    if (userConnectionsMap.has(user)) {
+      userConnectionsMap.set(user, userConnectionsMap.get(user)! + 1);
     } else {
-      userConnectionsMap.set(user_provided_name, 1);
+      userConnectionsMap.set(user, 1);
     }
   });
 
@@ -69,7 +69,7 @@ export function ConnectionBarOverviewChart() {
     .filter((item) => item.connections > 0);
 
   return (
-    <Card className="flex flex-col ext-w-1/3 m-2 rounded-sm">
+    <Card className="flex flex-col ext-w-1/2 m-2 rounded-sm">
       <CardHeader>
         <div className=" ext-flex ext-flex-row ext-justify-between ">
           <div>
@@ -88,7 +88,7 @@ export function ConnectionBarOverviewChart() {
         </div>
       </CardHeader>
       <CardContent className="ext-flex-1 ext-pb-0">
-        <ChartContainer config={{}} className="ext-mx-auto ext-aspect-square ext-max-h-[500px]">
+        <ChartContainer config={{}} className=" ext-max-h-[500px]">
           <BarChart accessibilityLayer data={topUserConnectionsList} layout="vertical" margin={{ right: 16 }}>
             <YAxis dataKey="user" type="category" tickLine={false} tickMargin={10} axisLine={false} hide />
             <XAxis dataKey="connections" type="number" hide />

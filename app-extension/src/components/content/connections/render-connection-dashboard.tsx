@@ -47,28 +47,6 @@ export async function renderConnectionDashboard() {
 
     const shadowRoot = GetTailwindBackStyles(root);
 
-    // createRoot(shadowRoot).render(
-    //   <SettingsProvider defaultTheme="light" shadowRoot={shadowRoot}>
-    //     <HeroConfiguredProvider>
-    //       <HeroRenderProtectedUrlPath path="/#/queues">
-    //         <Tabs defaultValue="bar">
-    //           <TabsList>
-    //             <TabsTrigger value="bar">Bar </TabsTrigger>
-    //             <TabsTrigger value="pizza">Pizza</TabsTrigger>
-    //           </TabsList>
-    //           <TabsContent value="bar">
-    //             <ConnectionBarOverviewChart />
-    //           </TabsContent>
-    //           <TabsContent value="pizza">
-    //             <ConnectionPizzaOverviewChart />
-    //           </TabsContent>
-    //         </Tabs>
-    //         <Toaster />
-    //       </HeroRenderProtectedUrlPath>
-    //     </HeroConfiguredProvider>
-    //   </SettingsProvider>,
-    // );
-
     createRoot(shadowRoot).render(
       <SettingsProvider defaultTheme="light" shadowRoot={shadowRoot}>
         <HeroConfiguredProvider>
