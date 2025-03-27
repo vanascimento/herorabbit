@@ -24,8 +24,8 @@ export const renderTableOptions = async () => {
     return;
   }
 
-  // findthe table primary header and add Hero Actions column
-  const topTr = document.querySelector('table thead tr');
+  // findthe table primary header and add Hero Actions column. Only tables that have the class 'updatable' are the ones we want to add the column to
+  const topTr = document.querySelector('.updatable table thead tr');
   if (topTr) {
     const th = document.createElement('th');
     th.id = QUEUE_TABLE_LIST_ID;
@@ -36,8 +36,8 @@ export const renderTableOptions = async () => {
     }
   }
 
-  // find the secondary header and add Actions and Management
-  const secondTr = document.querySelector('table thead tr:nth-child(2)');
+  // find the secondary header and add Actions and Management. Only tables that have the class 'updatable' are the ones we want to add the column to
+  const secondTr = document.querySelector('.updatable table thead tr:nth-child(2)');
   if (secondTr) {
     const queueActionHeader = document.createElement('th');
     queueActionHeader.id = QUEUE_HEROACTIONS_ACTIONS_ID;
@@ -53,11 +53,12 @@ export const renderTableOptions = async () => {
     const queroManagementHeader = document.createElement('th');
     queroManagementHeader.id = QUEUE_HEROACTIONS_MANAGEMENT_ID;
     queroManagementHeader.textContent = 'Management';
+    queroManagementHeader.className = 'bold';
     secondTr.appendChild(queroManagementHeader);
   }
 
-  //for each row in the table, add the download button
-  const tableRows = document.querySelectorAll('table tbody tr');
+  //for each row in the table, add the download button. Only tables that have the class 'updatable' are the ones we want to add the button to
+  const tableRows = document.querySelectorAll('.updatable table tbody tr');
   tableRows.forEach((row) => {
     const actionTd = document.createElement('td');
     actionTd.id = `queue-actions-${row.children[1].textContent}`;

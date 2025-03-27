@@ -97,3 +97,11 @@ export const useSettings = () => {
 
   return context;
 };
+
+export async function GetGeneralSettings(): Promise<GeneralSettings | null> {
+  let items = await chrome?.storage?.sync.get();
+  if (items && items[GENERAL_SETTINGS_KEY]) {
+    return items[GENERAL_SETTINGS_KEY] as GeneralSettings;
+  }
+  return null;
+}

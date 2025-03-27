@@ -22,5 +22,6 @@ export default function useCurrentRabbitmqCredentials() {
 
 export async function getCurrentRabbitmqCredentials() {
   let currentUrl = await getCurrentTabUrl();
+
   return currentUrl;
 }

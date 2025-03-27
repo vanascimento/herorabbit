@@ -8,11 +8,26 @@ import {
   QUEUE_TABLE_LIST_ID,
   renderQueueDashboard,
 } from '@/components/content/queue-and-streams/render-queue-dashboard';
+import { getCurrentTabUrl } from '@/hooks/useCurrentTabUrl';
+import { GetGeneralSettings } from '@/hooks/useSettings';
 
-renderQueueDashboard();
-//renderSidePanel();
+async function renderAll() {
+  const settings = await GetGeneralSettings();
+  const currentUrl = await getCurrentTabUrl();
+  if (!settings) {
+    console.debug('settings is null');
+  }
 
-const observer = new MutationObserver(() => {
+  if (!currentUrl) {
+    console.debug('currentUrl is null');
+  }
+
+  const isRabbitMq = settings?.credentials?.some((credential) => currentUrl?.includes(credential.host));
+  if (!isRabbitMq) {
+    console.debug('currentUrl is not a registered rabbitmq');
+    return;
+  }
+
   if (!document.getElementById(CONNECTION_OVERVIEW_CHART_ID)) {
     renderConnectionDashboard();
   }
@@ -24,6 +39,14 @@ const observer = new MutationObserver(() => {
   if (!document.getElementById(QUEUE_TABLE_LIST_ID)) {
     renderTableOptions();
   }
+
+  console.debug('renderAll done');
+}
+//renderSidePanel();
+
+const observer = new MutationObserver(() => {
+  renderAll();
 });
 
 observer.observe(document.body, { childList: true, subtree: true });
+renderAll();
