@@ -26,7 +26,7 @@ export function QueuePizzaOverviewChart() {
   ];
 
   return (
-    <Card className="flex flex-col ext-w-1/3 m-2 rounded-sm">
+    <Card className="flex flex-col ext-w-1/2 m-2 rounded-sm">
       <CardHeader>
         <div className=" ext-flex ext-flex-row ext-justify-between ">
           <div>

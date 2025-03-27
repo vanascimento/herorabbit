@@ -9,12 +9,15 @@ import { useSettings } from '@/hooks/useSettings.tsx';
 import iconDark from '@/assets/images/icon-dark.png';
 import iconLight from '@/assets/images/icon-light.png';
 import SafeImage from '@/components/ui/safe-image';
+import GeneralPageOption from './general-page';
+import AppearancePageOption from './apperance-page';
+import ContactUsPage from './contact-us-page';
 
 type MenuItemTypes = 'General' | 'Appearance' | 'Contact';
 
 export default function Options() {
   const { settings, setSettings } = useSettings();
-  const [currentMenu, setCurrentMenu] = useState<MenuItemTypes>('General');
+  const [currentMenu, setCurrentMenu] = useState<MenuItemTypes>('Contact');
   const menuItemClass = 'ext-text-sm ext-py-2 ext-px-3 ext-rounded-xl ext-font-normal ext-mt-2 ext-cursor-pointer';
 
   function handleMenuClick(value: unknown) {
@@ -27,12 +30,18 @@ export default function Options() {
         <div className="ext-w-full ext-flex ext-flex-col ext-px-2">
           {/* HEADER */}
           <div className="ext-flex ext-flex-row ext-justify-between ext-py-7">
-            <div className="ext-flex ext-flex-row ext-items-center">
-              <SafeImage className="ext-pl-3" width={45} src={settings.theme === 'dark' ? iconLight : iconDark} />
-              <p
-                className={`ext-text-center ext-text-2xl ext-ml-2 ext-font-black ${settings.theme === 'dark' ? 'ext-text-white' : 'ext-text-black'}`}
-              >
-                Extension
+            <div className="ext-flex ext-flex-col ext-justify-start">
+              <div className="ext-flex ext-flex-row ext-items-start">
+                <SafeImage className="ext-pr-3" width={45} src={settings.theme === 'dark' ? iconLight : iconDark} />
+                <p
+                  className={`ext-text-center ext-text-2xl  ext-font-black ${settings.theme === 'dark' ? 'ext-text-white' : 'ext-text-black'}`}
+                >
+                  Hero Rabbit
+                </p>
+              </div>
+
+              <p className="ext-text-muted-foreground">
+                Improving your <span className="ext-text-orange-500 ">RabbitMQ</span>{' '}
               </p>
             </div>
           </div>
@@ -43,15 +52,15 @@ export default function Options() {
             <div className="ext-flex ext-w-56">
               <Command value={currentMenu}>
                 <CommandList>
-                  <CommandItem className={menuItemClass} value="General" onSelect={handleMenuClick}>
+                  {/* <CommandItem className={menuItemClass} value="General" onSelect={handleMenuClick}>
                     <Settings /> <span>General</span>
                   </CommandItem>
                   <CommandItem className={menuItemClass} value="Appearance" onSelect={handleMenuClick}>
                     <Palette /> <span>Appearance</span>
                   </CommandItem>
-                  <CommandSeparator className="ext-my-3" />
+                  <CommandSeparator className="ext-my-3" /> */}
                   <CommandItem className={menuItemClass} value="Contact" onSelect={handleMenuClick}>
-                    <MessageCircleMore /> <span>Contact Us</span>
+                    <MessageCircleMore /> <span>Contact Me</span>
                   </CommandItem>
                 </CommandList>
               </Command>
@@ -62,38 +71,32 @@ export default function Options() {
               <div className="ext-flex ext-flex-col ext-gap-3">
                 {currentMenu === 'General' && (
                   <>
-                    <CardSwitch
-                      title={'Hide Floating Button'}
-                      checked={settings.hide_sidebar_button}
-                      onChecked={() => setSettings({ hide_sidebar_button: !settings.hide_sidebar_button })}
-                      subtitle={'Hide Floating Button in all content page.'}
+                    <GeneralPageOption
+                      floatingButton={settings.hide_sidebar_button}
+                      setFloatingButton={(value) => setSettings({ hide_sidebar_button: value })}
                     />
                   </>
                 )}
                 {currentMenu === 'Appearance' && (
                   <>
-                    <CardSwitch
-                      title={'Dark Mode'}
-                      checked={settings.theme === 'dark'}
-                      onChecked={(checked) => setSettings({ theme: checked ? 'dark' : 'light' })}
-                      subtitle={'Switch between dark mode applied to all extension modules.'}
+                    <AppearancePageOption
+                      darkTheme={settings.theme === 'dark'}
+                      setDarkTheme={(value) =>
+                        setSettings({
+                          theme: value ? 'dark' : 'light',
+                        })
+                      }
                     />
                   </>
                 )}
-                {currentMenu === 'Contact' && (
-                  <>
-                    <NativeCard title="Catact Us">
-                      <p className="ext-text-xs ext-pt-4">Contact us on</p>
-                    </NativeCard>
-                  </>
-                )}
+                {currentMenu === 'Contact' && <ContactUsPage />}
               </div>
             </div>
           </div>
 
           {/* FOOTER */}
           <div className="ext-flex ext-flex-col ext-justify-center ext-w-full ext-items-center ext-pt-4 ext-pb-14">
-            <p className="ext-text-xs">Made with ❤️ by Ahmed Dinar</p>
+            <p className="ext-text-xs">Experiments from a lazy programmer</p>
             <p className="ext-text-xs">Version {chrome?.runtime?.getManifest().version}</p>
           </div>
         </div>

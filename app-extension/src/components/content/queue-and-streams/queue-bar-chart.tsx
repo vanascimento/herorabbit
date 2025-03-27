@@ -26,7 +26,7 @@ export function QueueBarOverviewChart() {
   ];
 
   return (
-    <Card className="flex flex-col ext-w-1/3 m-2 rounded-sm">
+    <Card className="flex flex-col ext-w-1/2 m-2 rounded-sm">
       <CardHeader>
         <div className=" ext-flex ext-flex-row ext-justify-between ">
           <div>
@@ -53,7 +53,7 @@ export function QueueBarOverviewChart() {
         </div>
       </CardHeader>
       <CardContent className="ext-flex-1 ext-pb-0">
-        <ChartContainer config={{}} className="ext-mx-auto ext-aspect-square ext-max-h-[500px]">
+        <ChartContainer config={{}} className=" ext-aspect-square ext-max-h-[500px]">
           <BarChart accessibilityLayer data={allQueues} layout="vertical" margin={{ right: 16 }}>
             <YAxis dataKey="name" type="category" tickLine={false} tickMargin={10} axisLine={false} hide />
             <XAxis dataKey="messages" type="number" hide />

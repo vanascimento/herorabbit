@@ -2,8 +2,8 @@
   "manifest_version": 3,
   "short_name": "Hero Rabbit",
   "name": "Hero Rabbit",
-  "version": "0.0.1",
-  "description": "Hero Rabbit with React, Vite, Typescript & Tailwind CSS",
+  "version": "beta 0.0.1",
+  "description": "Improving your RabbitMQ",
   "author": "Victor Nascimento <victooyooth@gmail.com>",
   "action": {
     "default_icon": {
@@ -13,7 +13,7 @@
       "128": "public/icon128.png"
     },
     "default_popup": "popup.html",
-    "default_title": "Hero Rabbit with React, Vite, Typescript & Tailwind CSS"
+    "default_title": "Improving your RabbitMQ"
   },
   "icons": {
     "16": "public/icon16.png",
