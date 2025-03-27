@@ -1,10 +1,8 @@
 import './options.css';
-import { MessageCircleMore, Palette, Settings } from 'lucide-react';
-import { Command, CommandItem, CommandList, CommandSeparator } from '@/components/ui/command.tsx';
+import { MessageCircleMore } from 'lucide-react';
+import { Command, CommandItem, CommandList } from '@/components/ui/command.tsx';
 import { useState } from 'react';
 
-import CardSwitch from '@/components/ui/card-switch';
-import NativeCard from '@/components/ui/native-card';
 import { useSettings } from '@/hooks/useSettings.tsx';
 import iconDark from '@/assets/images/icon-dark.png';
 import iconLight from '@/assets/images/icon-light.png';

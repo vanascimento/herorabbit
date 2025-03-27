@@ -5,19 +5,19 @@ import { ChartContainer, ChartTooltip, ChartTooltipContent } from '@/components/
 import { useContext, useState } from 'react';
 import { getRandomColor } from '@/lib/utils';
 import { Input } from '@/components/ui/input';
-import { ConnectionDataContext } from './connection-data-provider';
+import { ChannelDataContext } from './channel-data-provider';
 
 const DEFAULT_TOP_ITEMS = 10;
 
-export function ConnectionBarOverviewChart() {
+export function ChannelByUserBarOverviewChart() {
   const [topItems, setTopItems] = useState<number>(DEFAULT_TOP_ITEMS);
   const [userFilter, setUserFilter] = useState<string | undefined>(undefined);
 
-  const { connectionsData } = useContext(ConnectionDataContext);
+  const { channelsData } = useContext(ChannelDataContext);
 
   const userConnectionsMap = new Map<string, number>();
 
-  connectionsData.forEach((connection) => {
+  channelsData.forEach((connection) => {
     const { user } = connection;
     if (userConnectionsMap.has(user)) {
       userConnectionsMap.set(user, userConnectionsMap.get(user)! + 1);
@@ -42,8 +42,8 @@ export function ConnectionBarOverviewChart() {
       <CardHeader>
         <div className=" ext-flex ext-flex-row ext-justify-between ">
           <div>
-            <CardTitle>Connections by user</CardTitle>
-            <CardDescription>Current top {topItems} total connections by user</CardDescription>
+            <CardTitle>Channels by user</CardTitle>
+            <CardDescription>Current top {topItems} total channels by user</CardDescription>
           </div>
           <div className="ext-flex ext-flex-row ext-self-end ext-space-x-4">
             <Input
@@ -65,7 +65,7 @@ export function ConnectionBarOverviewChart() {
         </div>
       </CardHeader>
       <CardContent className="ext-flex-1 ext-pb-0">
-        <ChartContainer config={{}} className="ext-aspect-square ext-max-h-[500px]">
+        <ChartContainer config={{}} className=" ext-max-h-[500px]">
           <BarChart accessibilityLayer data={topUserConnectionsList} layout="vertical" margin={{ right: 16 }}>
             <YAxis dataKey="user" type="category" tickLine={false} tickMargin={10} axisLine={false} hide />
             <XAxis dataKey="connections" type="number" hide />

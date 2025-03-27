@@ -64,7 +64,7 @@ export function ConnectionPizzaOverviewChart() {
         </div>
       </CardHeader>
       <CardContent className="ext-flex-1 ext-pb-0">
-        <ChartContainer config={{}} className="ext-max-h-[500px]">
+        <ChartContainer config={{}} className=" ext-aspect-square ext-max-h-[500px]">
           <PieChart>
             <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
             <Pie data={topUserConnectionsList} dataKey="connections">

@@ -8,3 +8,12 @@ export type QueueData = {
   name: string;
   messages: number;
 };
+
+export type ChannelData = {
+  user: string;
+  name: string;
+  connection_details: {
+    name: string;
+  };
+  consumer_count: number;
+};

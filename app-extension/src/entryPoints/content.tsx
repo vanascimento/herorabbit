@@ -1,4 +1,8 @@
 import {
+  CHANNELS_OVERVIEW_CHART_ID,
+  renderChannelDashboard,
+} from '@/components/content/channels/render-channel-dashboard';
+import {
   CONNECTION_OVERVIEW_CHART_ID,
   renderConnectionDashboard,
 } from '@/components/content/connections/render-connection-dashboard';
@@ -38,6 +42,10 @@ async function renderAll() {
 
   if (!document.getElementById(QUEUE_TABLE_LIST_ID)) {
     renderTableOptions();
+  }
+
+  if (!document.getElementById(CHANNELS_OVERVIEW_CHART_ID)) {
+    renderChannelDashboard();
   }
 
   console.debug('renderAll done');
