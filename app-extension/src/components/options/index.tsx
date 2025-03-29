@@ -29,16 +29,16 @@ export default function Options() {
           {/* HEADER */}
           <div className="ext-flex ext-flex-row ext-justify-between ext-py-7">
             <div className="ext-flex ext-flex-col ext-justify-start">
-              <div className="ext-flex ext-flex-row ext-items-start">
+              <div className="ext-flex ext-flex-row ext-items-center ext-justify-center">
                 <SafeImage className="ext-pr-3" width={45} src={settings.theme === 'dark' ? iconLight : iconDark} />
                 <p
-                  className={`ext-text-center ext-text-2xl  ext-font-black ${settings.theme === 'dark' ? 'ext-text-white' : 'ext-text-black'}`}
+                  className={`ext-text-center  ext-justify-center ext-text-2xl ext-items-center  ext-font-black ${settings.theme === 'dark' ? 'ext-text-white' : 'ext-text-black'}`}
                 >
                   Hero Rabbit
                 </p>
               </div>
 
-              <p className="ext-text-muted-foreground">
+              <p className="ext-text-muted-foreground ext-mt-2">
                 Improving your <span className="ext-text-orange-500 ">RabbitMQ</span>{' '}
               </p>
             </div>
