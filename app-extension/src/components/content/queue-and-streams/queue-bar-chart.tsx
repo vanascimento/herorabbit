@@ -17,7 +17,7 @@ export function QueueBarOverviewChart() {
   const firstFiveQueues = orderedQueueData.slice(0, topItems);
 
   const firstFiveQueuesWithFillColor = firstFiveQueues
-    .map((item) => ({ ...item, fill: getRandomColor() }))
+    .map((item) => ({ ...item, fill: getRandomColor(item.name) }))
     .filter((item) => !queueNameFilter || item.name.includes(queueNameFilter))
     .filter((item) => item.messages > 0);
   const allQueues = [

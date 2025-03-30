@@ -28,7 +28,7 @@ export function ChannelByUserBarOverviewChart() {
 
   const userConnectionsList: { user: string; connections: number; fill: string }[] = [];
   userConnectionsMap.forEach((value, key) => {
-    userConnectionsList.push({ user: key, connections: value, fill: getRandomColor() });
+    userConnectionsList.push({ user: key, connections: value, fill: getRandomColor(key) });
   });
 
   let topUserConnectionsList = userConnectionsList

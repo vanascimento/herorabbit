@@ -6,12 +6,28 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export const getRandomColor = () => {
+/**
+ * Returns a random color given a seed string.
+ * @param seed string for hash algorithm to select a color
+ * @returns a random color in hex format
+ */
+export const getRandomColor = (seed?: string) => {
   const letters = '0123456789ABCDEF';
   let color = '#';
-  for (let i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
+
+  let hash = 0;
+  if (seed) {
+    for (let i = 0; i < seed.length; i++) {
+      hash = seed.charCodeAt(i) + ((hash << 5) - hash);
+    }
+  } else {
+    hash = Math.floor(Math.random() * 0xffffff);
   }
+
+  for (let i = 0; i < 6; i++) {
+    color += letters[(hash >> (i * 4)) & 0xf];
+  }
+
   return color;
 };
 

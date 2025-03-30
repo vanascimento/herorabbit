@@ -27,7 +27,7 @@ export function ChannelByUserPizzaOverviewChart() {
 
   const userConnectionsList: { name: string; connections: number; fill: string }[] = [];
   userConnectionsMap.forEach((value, key) => {
-    userConnectionsList.push({ name: key, connections: value, fill: getRandomColor() });
+    userConnectionsList.push({ name: key, connections: value, fill: getRandomColor(key) });
   });
 
   let topUserConnectionsList = userConnectionsList
