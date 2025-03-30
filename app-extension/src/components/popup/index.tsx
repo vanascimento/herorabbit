@@ -1,6 +1,6 @@
 import './popup.css';
 import { Button } from '@/components/ui/button.tsx';
-import { CircleHelp, GithubIcon, Link, Settings } from 'lucide-react';
+import { GithubIcon, Settings } from 'lucide-react';
 import { useSettings } from '@/hooks/useSettings.tsx';
 import SafeImage from '@/components/ui/safe-image';
 import iconLight from '@/assets/images/icon-light.png';

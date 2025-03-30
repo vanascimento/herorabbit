@@ -1,6 +1,5 @@
 import { renderQueueDashboard } from '@/components/content/queue-and-streams/render-queue-dashboard';
 import { Switch } from '@/components/ui/switch';
-import { renderAll } from '@/entryPoints/content';
 import { useSettings } from '@/hooks/useSettings';
 import { GeneralSettings } from '@/lib/types';
 import { useState } from 'react';

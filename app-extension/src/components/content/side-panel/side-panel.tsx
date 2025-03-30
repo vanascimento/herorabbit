@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import { ChevronsRight, CircleHelp, CircleX, Github, GithubIcon, LucideGithub, Settings } from 'lucide-react';
+import { ChevronsRight, CircleX, GithubIcon, Settings } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import CardSwitch from '@/components/ui/card-switch';

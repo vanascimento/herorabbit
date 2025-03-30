@@ -1,12 +1,7 @@
 import { UploadCloudIcon } from 'lucide-react';
-import useCurrentRabbitmqCredentials from '@/hooks/useCurrentRabbitmqCredentials';
 import { useRef } from 'react';
 
-interface ImportMessagesToQueueButtonProps {
-  QueueName: string;
-}
-export default function ImportMessagesToQueueButton({ QueueName }: ImportMessagesToQueueButtonProps) {
-  const { currentCredentials } = useCurrentRabbitmqCredentials();
+export default function ImportMessagesToQueueButton() {
   const fileInputRef = useRef<HTMLInputElement | null>(null);
 
   const handleClick = () => {
