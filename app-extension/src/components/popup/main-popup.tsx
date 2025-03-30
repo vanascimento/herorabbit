@@ -1,9 +1,9 @@
 import { useSettings } from '@/hooks/useSettings';
 import { Button } from '../ui/button';
-import { Card, CardFooter, CardHeader } from '../ui/card';
 import { useEffect, useState } from 'react';
+import ConfigurationToggles from './configs/configurations-toggles';
 
-export default function HeroRabbitActiveComponent() {
+export default function MainPopup() {
   const { settings, setSettings } = useSettings();
   const [currentOrigin, setCurrentOrigin] = useState<string | undefined>(undefined);
 
@@ -18,14 +18,14 @@ export default function HeroRabbitActiveComponent() {
     setSettings({ ...settings, credentials: newCredentials });
   };
   return (
-    <Card className="ext-shadow-none">
-      <CardHeader>Welcome</CardHeader>
-
-      <CardFooter>
-        <Button className="ext-w-full" onClick={handleLogout}>
-          LogOut
-        </Button>
-      </CardFooter>
-    </Card>
+    <div className="ext-flex ext-flex-col  ext-h-full ext-justify-between  ">
+      <div className="ext-w-full ext-text-muted-foreground">
+        <h1 className="ext-w-full">Welcome to Hero Rabbit. Your best `duct tape solution` for RabbitMQ </h1>
+        <ConfigurationToggles />
+      </div>
+      <Button size="sm" className="ext-w-full ext-self-baseline" onClick={handleLogout}>
+        LogOut
+      </Button>
+    </div>
   );
 }

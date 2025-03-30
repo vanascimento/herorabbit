@@ -11,7 +11,7 @@ RABBITMQ_VHOST = "%2F"
 RABBITMQ_HOST = "localhost"
 USERNAME = "admin"
 PASSWORD = "admin"
-NUM_USERS = 5
+NUM_USERS = 15
 
 # Criar usuários no RabbitMQ
 def create_user(username):
@@ -37,7 +37,7 @@ def create_user(username):
 # Criar conexões e canais
 def create_connections_and_channels(username):
     connections = []
-    num_connections = random.randint(1, 5)
+    num_connections = random.randint(1, 10)
     for _ in range(num_connections):
         try:
             connection = pika.BlockingConnection(

@@ -7,8 +7,8 @@ import iconLight from '@/assets/images/icon-light.png';
 import iconDark from '@/assets/images/icon-dark.png';
 import CredentialsForm from './credentials-form';
 import { Toaster } from '../ui/sonner';
-import HeroRabbitActiveComponent from './hero-rabbit-active-card';
 import { useEffect, useState } from 'react';
+import MainPopup from './main-popup';
 
 export default function Popup() {
   const { settings } = useSettings();
@@ -29,14 +29,14 @@ export default function Popup() {
     }
 
     if (isHeroConfigured) {
-      return <HeroRabbitActiveComponent />;
+      return <MainPopup />;
     }
     if (isHeroConfigured === false) {
       return <CredentialsForm />;
     }
   };
   return (
-    <div className="ext-h-[600px] ext-w-96 ext-bg-white ext-flex ext-flex-col ext-border-0 ext-p-0 ext-m-0">
+    <div className="ext-h-[600px]  ext-w-[400px] ext-bg-white ext-flex ext-flex-col ext-border-0 ext-p-0 ext-m-0">
       <div className="ext-w-full ext-h-full ext-flex ext-flex-col ext-justify-between ext-py-3 ext-px-3 ext-bg-background ext-text-foreground">
         {/* HEADER */}
         <div className="ext-flex ext-flex-row ext-justify-between ext-items-center">

@@ -94,7 +94,7 @@ export default function CredentialsForm() {
             <FormItem className="ext-px-1">
               <FormLabel>Password</FormLabel>
               <FormControl>
-                <Input {...field} disabled={form.formState.isSubmitting} className="ext-rounded-sm" />
+                <Input {...field} type="password" disabled={form.formState.isSubmitting} className="ext-rounded-sm" />
               </FormControl>
               <FormMessage>{form.formState.errors.password?.message}</FormMessage>
               <FormDescription>Password to interact with rabbitmq</FormDescription>

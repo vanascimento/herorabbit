@@ -5,6 +5,7 @@ import { createRoot } from 'react-dom/client';
 import { SettingsProvider } from '@/hooks/useSettings';
 import DownloadMessagesFromQueueButton from '@/components/management/download-messages-from-queue-button';
 import { getCurrentRabbitmqCredentials } from '@/hooks/useCurrentRabbitmqCredentials';
+import ImportMessagesToQueueButton from '@/components/management/import-messages-from-queue-button';
 
 export const QUEUE_HEROACTIONS_ACTIONS_ID = 'queue-heroactions-actions';
 export const QUEUE_HEROACTIONS_MANAGEMENT_ID = 'queue-heroactions-management';
@@ -73,7 +74,10 @@ export const renderTableOptions = async () => {
 
     createRoot(shadowRoot).render(
       <SettingsProvider defaultTheme="light" shadowRoot={shadowRoot}>
-        <DownloadMessagesFromQueueButton QueueName={row.children[1].textContent!} />
+        <div className="ext-w-full ext-flex ext-justify-evenly">
+          <DownloadMessagesFromQueueButton QueueName={row.children[1].textContent!} />
+          <ImportMessagesToQueueButton QueueName={row.children[1].textContent!} />
+        </div>
       </SettingsProvider>,
     );
     managementTd.appendChild(root);
