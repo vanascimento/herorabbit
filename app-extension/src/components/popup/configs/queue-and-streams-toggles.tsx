@@ -34,7 +34,7 @@ export default function ConnectionToggles() {
                 queue_chart: value,
               },
             };
-            setSettings(newSettingsValue);
+            await setSettings(newSettingsValue);
             setLocalSettingsState(newSettingsValue);
             renderQueueDashboard();
           }}

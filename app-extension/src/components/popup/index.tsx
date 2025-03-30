@@ -1,6 +1,6 @@
 import './popup.css';
 import { Button } from '@/components/ui/button.tsx';
-import { CircleHelp, Settings } from 'lucide-react';
+import { CircleHelp, GithubIcon, Link, Settings } from 'lucide-react';
 import { useSettings } from '@/hooks/useSettings.tsx';
 import SafeImage from '@/components/ui/safe-image';
 import iconLight from '@/assets/images/icon-light.png';
@@ -34,6 +34,10 @@ export default function Popup() {
     if (isHeroConfigured === false) {
       return <CredentialsForm />;
     }
+  };
+
+  const openGitHub = () => {
+    window.open('https://github.com/vanascimento/herorabbit', '_blank');
   };
   return (
     <div className="ext-h-[600px]  ext-w-[400px] ext-bg-white ext-flex ext-flex-col ext-border-0 ext-p-0 ext-m-0">
@@ -71,8 +75,9 @@ export default function Popup() {
         {/* FOOTER */}
         <div className="ext-flex">
           <div className="ext-flex ext-flex-row ext-justify-between ext-items-center ext-w-full">
-            <Button size="sm" variant="ghost">
-              <CircleHelp size={12} />
+            <Button className="hover:ext-text-orange-900" size="sm" variant="ghost" onClick={openGitHub}>
+              <GithubIcon size={16} />
+              Contribute
             </Button>
             <p className="ext-text-xs">Version {chrome?.runtime?.getManifest().version}</p>
           </div>

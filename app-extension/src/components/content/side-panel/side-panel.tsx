@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import { ChevronsRight, CircleHelp, CircleX, Settings } from 'lucide-react';
+import { ChevronsRight, CircleHelp, CircleX, Github, GithubIcon, LucideGithub, Settings } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import CardSwitch from '@/components/ui/card-switch';
@@ -94,8 +94,9 @@ export default function SidePanel() {
           <div className="ext-flex">
             <div className="ext-flex ext-flex-row ext-justify-between ext-items-center ext-w-full">
               <Button size="sm" variant="ghost">
-                <CircleHelp size={12} />
+                <GithubIcon size={16} />
               </Button>
+              <Button></Button>
               <p className="ext-text-xs">Version 0.0.1</p>
             </div>
           </div>

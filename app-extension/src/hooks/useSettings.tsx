@@ -90,10 +90,10 @@ export function SettingsProvider({
   const value = {
     settings,
     refreshSettings: fetchSettings,
-    setSettings: (updatedSettings: Partial<GeneralSettings>) => {
+    setSettings: async (updatedSettings: Partial<GeneralSettings>) => {
       const newSettings = { ...settings, ...updatedSettings };
       setSettings(newSettings);
-      chrome?.storage?.sync
+      await chrome?.storage?.sync
         .set({ [GENERAL_SETTINGS_KEY]: newSettings })
         .then(() => console.log('[useSettings.js] UPDATE_GENERAL_SETTINGS'));
     },

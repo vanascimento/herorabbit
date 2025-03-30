@@ -2,7 +2,7 @@ import { checkIfElementHasChildrenWithId } from '@/lib/utils';
 import { QUEUE_TABLE_LIST_ID } from './render-queue-dashboard';
 import { GetTailwindBackStyles } from '@/lib/tailwind-custom';
 import { createRoot } from 'react-dom/client';
-import { SettingsProvider } from '@/hooks/useSettings';
+import { GetGeneralSettings, SettingsProvider } from '@/hooks/useSettings';
 import DownloadMessagesFromQueueButton from '@/components/management/download-messages-from-queue-button';
 import { getCurrentRabbitmqCredentials } from '@/hooks/useCurrentRabbitmqCredentials';
 import ImportMessagesToQueueButton from '@/components/management/import-messages-from-queue-button';
@@ -15,6 +15,15 @@ export const QUEUE_HEROACTIONS_MANAGEMENT_ID = 'queue-heroactions-management';
  * @returns
  */
 export const renderTableOptions = async () => {
+  const settings = await GetGeneralSettings();
+  if (settings?.toggleSettings.download_messages === false) {
+    const queueTableOptions = document.getElementById(QUEUE_HEROACTIONS_ACTIONS_ID);
+    if (queueTableOptions) {
+      queueTableOptions.remove();
+    }
+
+    return;
+  }
   const queueAndStreamTab = document.getElementById('queues-and-streams');
   if (!queueAndStreamTab || !queueAndStreamTab.firstElementChild?.classList.contains('selected')) {
     return;

@@ -43,9 +43,11 @@ export async function renderQueueDashboard() {
     }
 
     const settings = await GetGeneralSettings();
-    if (!settings?.toggleSettings.queue_chart) {
+    if (settings?.toggleSettings.queue_chart === false) {
       let queue_overview = document.getElementById(QUEUE_OVERVIEW_CHART_ID);
-
+      if (queue_overview) {
+        queue_overview.remove();
+      }
       return;
     }
 
