@@ -51,7 +51,7 @@ export default function CredentialsForm() {
         toast.error(`Error saving credentials,verify your credential`, { id: toastId });
       }
     } catch (error) {
-      toast.error(`Error saving credentials`, { id: toastId });
+      toast.error(`Error saving credentials. Verify if you are in a rabbitmq management dashboard`, { id: toastId });
     }
   };
 

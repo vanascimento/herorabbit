@@ -36,6 +36,19 @@ def create_user(username):
 
 # Criar conexões e canais
 def create_connections_and_channels(username):
+    """
+    Creates connections and channels for a given username.
+
+    Args:
+        username (str): The username for which connections and channels are created.
+
+    Returns:
+        list: A list of created connections.
+
+    Raises:
+        Exception: If an error occurs while creating a connection.
+
+    """
     connections = []
     num_connections = random.randint(1, 10)
     for _ in range(num_connections):
