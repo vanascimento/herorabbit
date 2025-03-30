@@ -1,7 +1,7 @@
 import { waitForElement } from '@/lib/wait-for-element';
 import { createRoot } from 'react-dom/client';
 
-import { SettingsProvider } from '@/hooks/useSettings';
+import { GetGeneralSettings, SettingsProvider } from '@/hooks/useSettings';
 import { HeroConfiguredProvider } from '@/providers/hero-configured-provider';
 import { QueuePizzaOverviewChart } from './queue-pizza-chart';
 import { Toaster } from '@/components/ui/sonner';
@@ -32,12 +32,20 @@ const GetCurrentPathname = async () => {
  */
 export async function renderQueueDashboard() {
   const pathname = await GetCurrentPathname();
+
   waitForElement('#main', async (_) => {
     // Check if the "Queues and Streams" tab is selected. If not, do nothing.
     // This component should only be rendered when the "Queues and Streams" tab is selected.
 
     const queueAndStreamTab = document.getElementById('queues-and-streams');
     if (!queueAndStreamTab || !queueAndStreamTab.firstElementChild?.classList.contains('selected')) {
+      return;
+    }
+
+    const settings = await GetGeneralSettings();
+    if (!settings?.toggleSettings.queue_chart) {
+      let queue_overview = document.getElementById(QUEUE_OVERVIEW_CHART_ID);
+
       return;
     }
 

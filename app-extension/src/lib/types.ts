@@ -1,3 +1,4 @@
+import { QueueAndStreamsToggles } from '@/components/popup/configs/queue-and-streams-toggles';
 import { RabbitMqCredentials } from '@/components/popup/credentials-form';
 
 export enum MESSAGE_TYPES {
@@ -18,4 +19,5 @@ export interface GeneralSettings {
   theme: Theme;
   hide_sidebar_button: boolean;
   credentials: RabbitMqCredentials[];
+  toggleSettings: QueueAndStreamsToggles;
 }

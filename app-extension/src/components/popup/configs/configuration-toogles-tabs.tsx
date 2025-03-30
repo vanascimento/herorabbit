@@ -1,14 +1,15 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import QueueAndStreamsToggles from './queue-and-streams-toggles';
 
 enum CONFIGURATION_TABS_ENUM {
   CONNECTIONS = 'connections',
   CHANNELS = 'channels',
   QUEUES = 'queues',
 }
-export default function ConfigurationToggles() {
+export default function ConfigurationTogglesTabs() {
   return (
     <Tabs defaultValue={CONFIGURATION_TABS_ENUM.CONNECTIONS} className="ext-my-2">
-      <TabsList className="ext-rounded-sm">
+      <TabsList className="ext-rounded-sm ext-w-full ">
         <TabsTrigger value={CONFIGURATION_TABS_ENUM.CONNECTIONS} className="ext-rounded-sm">
           Connections
         </TabsTrigger>
@@ -22,7 +23,9 @@ export default function ConfigurationToggles() {
       <TabsContent
         className="ext-flex ext-flex-row ext-space-x-10 ext-my-10"
         value={CONFIGURATION_TABS_ENUM.CONNECTIONS}
-      ></TabsContent>
+      >
+        <QueueAndStreamsToggles />
+      </TabsContent>
       <TabsContent
         className="ext-flex ext-flex-row ext-space-x-10 ext-my-10"
         value={CONFIGURATION_TABS_ENUM.CHANNELS}

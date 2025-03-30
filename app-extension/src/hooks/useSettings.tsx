@@ -12,6 +12,7 @@ type SettingsProviderProps = {
 type SettingsProviderState = {
   settings: GeneralSettings;
   setSettings: (updatedSettings: Partial<GeneralSettings>) => void;
+  refreshSettings: () => Promise<GeneralSettings>;
 };
 
 const initialSettingsState: SettingsProviderState = {
@@ -19,8 +20,13 @@ const initialSettingsState: SettingsProviderState = {
     theme: 'light',
     hide_sidebar_button: false,
     credentials: [],
+    toggleSettings: {
+      download_messages: true,
+      queue_chart: true,
+    },
   },
   setSettings: () => null,
+  refreshSettings: () => Promise.resolve(initialSettingsState.settings),
 };
 
 const SettingsProviderContext = createContext<SettingsProviderState>(initialSettingsState);
@@ -37,13 +43,22 @@ export function SettingsProvider({
     ...(defaultTheme && { theme: defaultTheme }),
   });
 
+  const fetchSettings: () => Promise<GeneralSettings> = () => {
+    return new Promise<GeneralSettings>((resolve, reject) => {
+      chrome?.storage?.sync.get().then((items) => {
+        if (items && items[GENERAL_SETTINGS_KEY]) {
+          let newSettings = { ...settings, ...items[GENERAL_SETTINGS_KEY] };
+          setSettings(newSettings);
+          resolve(newSettings);
+        } else {
+          reject(null);
+        }
+      });
+    });
+  };
   // Read persisted settings from chrome.storage
   useEffect(() => {
-    chrome?.storage?.sync.get().then((items) => {
-      if (items && items[GENERAL_SETTINGS_KEY]) {
-        setSettings({ ...settings, ...items[GENERAL_SETTINGS_KEY] });
-      }
-    });
+    fetchSettings();
   }, []);
 
   // If settings updated globally from any component
@@ -74,6 +89,7 @@ export function SettingsProvider({
 
   const value = {
     settings,
+    refreshSettings: fetchSettings,
     setSettings: (updatedSettings: Partial<GeneralSettings>) => {
       const newSettings = { ...settings, ...updatedSettings };
       setSettings(newSettings);

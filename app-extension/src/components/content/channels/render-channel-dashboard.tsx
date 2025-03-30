@@ -1,7 +1,7 @@
 import { waitForElement } from '@/lib/wait-for-element';
 import { createRoot } from 'react-dom/client';
 
-import { SettingsProvider } from '@/hooks/useSettings';
+import { GetGeneralSettings, SettingsProvider } from '@/hooks/useSettings';
 import { HeroConfiguredProvider } from '@/providers/hero-configured-provider';
 import { GetTailwindBackStyles } from '@/lib/tailwind-custom';
 import { HeroRenderProtectedUrlPath } from '@/providers/hero-render-protected-url';

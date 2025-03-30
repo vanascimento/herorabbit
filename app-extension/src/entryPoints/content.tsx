@@ -15,7 +15,7 @@ import {
 import { getCurrentTabUrl } from '@/hooks/useCurrentTabUrl';
 import { GetGeneralSettings } from '@/hooks/useSettings';
 
-async function renderAll() {
+export async function renderAll() {
   const settings = await GetGeneralSettings();
   const currentUrl = await getCurrentTabUrl();
   if (!settings) {
