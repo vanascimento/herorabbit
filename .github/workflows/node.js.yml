@@ -19,19 +19,19 @@ jobs:
         with:
           node-version: 18
           cache: "npm"
-          cache-dependency-path: app-extension/package-lock.json
+          cache-dependency-path: extension/package-lock.json
 
       - name: Instalar dependências
-        working-directory: app-extension
+        working-directory: extension
         run: npm install
 
       - name: Construir extensão
-        working-directory: app-extension
+        working-directory: extension
         run: npm run build
 
       - name: Compactar a pasta dist
         run: |
-          cd app-extension
+          cd extension
           zip -r ../chrome-extension.zip dist
 
       - name: Criar release no GitHub
