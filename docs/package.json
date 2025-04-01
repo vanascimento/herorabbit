@@ -4,7 +4,7 @@
   "description": "Nextra docs starter with search included.",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && npm run postbuild",
     "start": "next start",
     "export": "next build && next export",
     "postbuild": "pagefind --site .next/server/app --output-path public/_pagefind"

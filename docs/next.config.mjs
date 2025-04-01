@@ -9,4 +9,7 @@ export default withNextra({
   // ... Other Next.js config options
   // output: 'export'
   output: "export",
+  images: {
+    unoptimized: true,
+  },
 });
