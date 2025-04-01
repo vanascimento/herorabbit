@@ -13,12 +13,12 @@ const navbar = (
   <Navbar
     logo={
       <>
-        <img
+        {/* <img
           src={"/images/general/rabbitmq-logo.svg"}
           alt="Logo"
           width={25}
           height={20}
-        />
+        /> */}
         <span style={{ marginLeft: ".4em", fontWeight: 800 }}>Hero Rabbit</span>
       </>
     }
