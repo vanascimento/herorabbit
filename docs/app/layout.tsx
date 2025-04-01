@@ -2,8 +2,6 @@ import { Footer, Layout, Navbar } from "nextra-theme-docs";
 import { Banner, Head } from "nextra/components";
 import { getPageMap } from "nextra/page-map";
 import "nextra-theme-docs/style.css";
-import Link from "next/link";
-import RabbitMQLogo from "../public/images/general/rabbitmq-logo.svg";
 
 export const metadata = {
   // Define your metadata here
@@ -15,7 +13,12 @@ const navbar = (
   <Navbar
     logo={
       <>
-        <img src={RabbitMQLogo} alt="Logo" width={25} height={20} />
+        <img
+          src={"/images/general/rabbitmq-logo.svg"}
+          alt="Logo"
+          width={25}
+          height={20}
+        />
         <span style={{ marginLeft: ".4em", fontWeight: 800 }}>Hero Rabbit</span>
       </>
     }
