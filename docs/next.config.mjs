@@ -1,4 +1,5 @@
 import nextra from "nextra";
+const isProd = process.env.NODE_ENV === "production";
 
 const withNextra = nextra({
   search: true,
@@ -12,6 +13,6 @@ export default withNextra({
   images: {
     unoptimized: true,
   },
-  basePath: "./herorabbit",
-  assetPrefix: "./",
+  basePath: isProd ? "/herorabbit" : "",
+  assetPrefix: isProd ? "/herorabbit/" : "",
 });
