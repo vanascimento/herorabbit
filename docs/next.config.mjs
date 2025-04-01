@@ -12,6 +12,6 @@ export default withNextra({
   images: {
     unoptimized: true,
   },
-  basePath: "",
-  assetPrefix: "./herorabbit",
+  basePath: "./herorabbit",
+  assetPrefix: "./",
 });
