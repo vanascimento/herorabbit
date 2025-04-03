@@ -3,10 +3,12 @@ import { Button } from '../ui/button';
 import { useEffect, useState } from 'react';
 import { Separator } from '../ui/separator';
 import ConfigurationTogglesTabs from './configs/configuration-toogles-tabs';
+import useCurrentRabbitmqCredentials from '@/hooks/useCurrentRabbitmqCredentials';
 
 export default function MainPopup() {
   const { settings, setSettings } = useSettings();
   const [currentOrigin, setCurrentOrigin] = useState<string | undefined>(undefined);
+  const { currentCredentials } = useCurrentRabbitmqCredentials();
 
   useEffect(() => {
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
@@ -22,6 +24,7 @@ export default function MainPopup() {
     <div className="ext-flex ext-flex-col  ext-h-full ext-justify-between  ">
       <div className="ext-w-full ext-text-muted-foreground">
         <h1 className="ext-w-full ext-text-sm">Welcome to Hero Rabbit. Your best `duct tape solution` for RabbitMQ </h1>
+        <span className="ext-text-orange-500">{currentCredentials?.management_version}</span>
         <Separator orientation="horizontal" className="ext-my-2" />
         <ConfigurationTogglesTabs />
       </div>

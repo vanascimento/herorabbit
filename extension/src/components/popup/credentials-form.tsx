@@ -5,13 +5,15 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { Button } from '../ui/button';
 import { Input } from '../ui/input';
 import { toast } from 'sonner';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useSettings } from '@/hooks/useSettings';
+import { cn } from '@/lib/utils';
 
 const CredentialsFormSchema = z.object({
   username: z.string().nonempty(),
   password: z.string().nonempty(),
   host: z.string().url(),
+  management_version: z.string().optional(),
 });
 
 export type RabbitMqCredentials = z.infer<typeof CredentialsFormSchema>;
@@ -25,6 +27,8 @@ export default function CredentialsForm() {
       host: '',
     },
   });
+
+  const [connectionSuccess, setConnectionSuccess] = useState(false);
 
   const { setSettings, settings } = useSettings();
 
@@ -42,11 +46,18 @@ export default function CredentialsForm() {
       let response = await fetch(`${data.host}/api/overview`, {
         headers: { Authorization: `Basic ${base64Credentials}` },
       });
+
       if (response.ok) {
+        let overviewResponse = await response.json();
+        form.setValue('management_version', overviewResponse.management_version);
         let newCredentials = settings.credentials.filter((cred) => cred.host !== data.host);
-        setSettings({ ...settings, credentials: [...newCredentials, data] });
-        // localStorage.setItem(`${HERO_RABBIT_PREFIX}_credentials_${data.host}`, JSON.stringify(data));
-        toast.success('Saved', { id: toastId });
+        if (connectionSuccess) {
+          setSettings({ ...settings, credentials: [...newCredentials, data] });
+          toast.success('Saved', { id: toastId });
+        } else {
+          toast.success('Connection success', { id: toastId });
+          setConnectionSuccess(true);
+        }
       } else if (response.status === 401) {
         toast.error(`Error saving credentials,verify your credential`, { id: toastId });
       }
@@ -65,9 +76,23 @@ export default function CredentialsForm() {
             <FormItem className="ext-px-1">
               <FormLabel>Host</FormLabel>
               <FormControl>
-                <Input {...field} disabled={form.formState.isSubmitting} className="ext-rounded-sm" />
+                <Input {...field} disabled={true} className="ext-rounded-sm" />
               </FormControl>
               <FormDescription>Http address to access rabbitmq</FormDescription>
+              <FormMessage>{form.formState.errors.host?.message}</FormMessage>
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="management_version"
+          render={({ field }) => (
+            <FormItem className="ext-px-1">
+              <FormLabel>Management Version</FormLabel>
+              <FormControl>
+                <Input {...field} disabled={true} className="ext-rounded-sm" />
+              </FormControl>
+              <FormDescription>Version of rabbitmq management plugin</FormDescription>
               <FormMessage>{form.formState.errors.host?.message}</FormMessage>
             </FormItem>
           )}
@@ -102,8 +127,13 @@ export default function CredentialsForm() {
           )}
         />
 
-        <Button type="submit" className="ext-w-full">
-          Save
+        <Button
+          type="submit"
+          className={cn('ext-w-full', {
+            'ext-bg-orange-500 hover:ext-bg-orange-700': connectionSuccess,
+          })}
+        >
+          {connectionSuccess ? 'Save' : 'Test Connection'}
         </Button>
       </form>
     </Form>

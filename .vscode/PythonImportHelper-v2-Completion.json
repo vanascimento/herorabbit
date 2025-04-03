@@ -1,0 +1,2075 @@
+[
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "TTFont",
+        "importPath": "fontTools.ttLib",
+        "description": "fontTools.ttLib",
+        "isExtraImport": true,
+        "detail": "fontTools.ttLib",
+        "documentation": {}
+    },
+    {
+        "label": "sfnt",
+        "importPath": "fontTools.ttLib",
+        "description": "fontTools.ttLib",
+        "isExtraImport": true,
+        "detail": "fontTools.ttLib",
+        "documentation": {}
+    },
+    {
+        "label": "TTFont",
+        "importPath": "fontTools.ttLib",
+        "description": "fontTools.ttLib",
+        "isExtraImport": true,
+        "detail": "fontTools.ttLib",
+        "documentation": {}
+    },
+    {
+        "label": "TTFont",
+        "importPath": "fontTools.ttLib",
+        "description": "fontTools.ttLib",
+        "isExtraImport": true,
+        "detail": "fontTools.ttLib",
+        "documentation": {}
+    },
+    {
+        "label": "sfnt",
+        "importPath": "fontTools.ttLib",
+        "description": "fontTools.ttLib",
+        "isExtraImport": true,
+        "detail": "fontTools.ttLib",
+        "documentation": {}
+    },
+    {
+        "label": "TTFont",
+        "importPath": "fontTools.ttLib",
+        "description": "fontTools.ttLib",
+        "isExtraImport": true,
+        "detail": "fontTools.ttLib",
+        "documentation": {}
+    },
+    {
+        "label": "TTFont",
+        "importPath": "fontTools.ttLib",
+        "description": "fontTools.ttLib",
+        "isExtraImport": true,
+        "detail": "fontTools.ttLib",
+        "documentation": {}
+    },
+    {
+        "label": "sfnt",
+        "importPath": "fontTools.ttLib",
+        "description": "fontTools.ttLib",
+        "isExtraImport": true,
+        "detail": "fontTools.ttLib",
+        "documentation": {}
+    },
+    {
+        "label": "TTFont",
+        "importPath": "fontTools.ttLib",
+        "description": "fontTools.ttLib",
+        "isExtraImport": true,
+        "detail": "fontTools.ttLib",
+        "documentation": {}
+    },
+    {
+        "label": "TTFont",
+        "importPath": "fontTools.ttLib",
+        "description": "fontTools.ttLib",
+        "isExtraImport": true,
+        "detail": "fontTools.ttLib",
+        "documentation": {}
+    },
+    {
+        "label": "sfnt",
+        "importPath": "fontTools.ttLib",
+        "description": "fontTools.ttLib",
+        "isExtraImport": true,
+        "detail": "fontTools.ttLib",
+        "documentation": {}
+    },
+    {
+        "label": "TTFont",
+        "importPath": "fontTools.ttLib",
+        "description": "fontTools.ttLib",
+        "isExtraImport": true,
+        "detail": "fontTools.ttLib",
+        "documentation": {}
+    },
+    {
+        "label": "TTFont",
+        "importPath": "fontTools.ttLib",
+        "description": "fontTools.ttLib",
+        "isExtraImport": true,
+        "detail": "fontTools.ttLib",
+        "documentation": {}
+    },
+    {
+        "label": "sfnt",
+        "importPath": "fontTools.ttLib",
+        "description": "fontTools.ttLib",
+        "isExtraImport": true,
+        "detail": "fontTools.ttLib",
+        "documentation": {}
+    },
+    {
+        "label": "TTFont",
+        "importPath": "fontTools.ttLib",
+        "description": "fontTools.ttLib",
+        "isExtraImport": true,
+        "detail": "fontTools.ttLib",
+        "documentation": {}
+    },
+    {
+        "label": "TTFont",
+        "importPath": "fontTools.ttLib",
+        "description": "fontTools.ttLib",
+        "isExtraImport": true,
+        "detail": "fontTools.ttLib",
+        "documentation": {}
+    },
+    {
+        "label": "sfnt",
+        "importPath": "fontTools.ttLib",
+        "description": "fontTools.ttLib",
+        "isExtraImport": true,
+        "detail": "fontTools.ttLib",
+        "documentation": {}
+    },
+    {
+        "label": "TTFont",
+        "importPath": "fontTools.ttLib",
+        "description": "fontTools.ttLib",
+        "isExtraImport": true,
+        "detail": "fontTools.ttLib",
+        "documentation": {}
+    },
+    {
+        "label": "timestampNow",
+        "importPath": "fontTools.misc.timeTools",
+        "description": "fontTools.misc.timeTools",
+        "isExtraImport": true,
+        "detail": "fontTools.misc.timeTools",
+        "documentation": {}
+    },
+    {
+        "label": "timestampNow",
+        "importPath": "fontTools.misc.timeTools",
+        "description": "fontTools.misc.timeTools",
+        "isExtraImport": true,
+        "detail": "fontTools.misc.timeTools",
+        "documentation": {}
+    },
+    {
+        "label": "timestampNow",
+        "importPath": "fontTools.misc.timeTools",
+        "description": "fontTools.misc.timeTools",
+        "isExtraImport": true,
+        "detail": "fontTools.misc.timeTools",
+        "documentation": {}
+    },
+    {
+        "label": "timestampNow",
+        "importPath": "fontTools.misc.timeTools",
+        "description": "fontTools.misc.timeTools",
+        "isExtraImport": true,
+        "detail": "fontTools.misc.timeTools",
+        "documentation": {}
+    },
+    {
+        "label": "timestampNow",
+        "importPath": "fontTools.misc.timeTools",
+        "description": "fontTools.misc.timeTools",
+        "isExtraImport": true,
+        "detail": "fontTools.misc.timeTools",
+        "documentation": {}
+    },
+    {
+        "label": "timestampNow",
+        "importPath": "fontTools.misc.timeTools",
+        "description": "fontTools.misc.timeTools",
+        "isExtraImport": true,
+        "detail": "fontTools.misc.timeTools",
+        "documentation": {}
+    },
+    {
+        "label": "collections",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "collections",
+        "description": "collections",
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "parse_tfm",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "parse_tfm",
+        "description": "parse_tfm",
+        "detail": "parse_tfm",
+        "documentation": {}
+    },
+    {
+        "label": "subprocess",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "subprocess",
+        "description": "subprocess",
+        "detail": "subprocess",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "pika",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pika",
+        "description": "pika",
+        "detail": "pika",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "threading",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "threading",
+        "description": "threading",
+        "detail": "threading",
+        "documentation": {}
+    },
+    {
+        "label": "sfnt.USE_ZOPFLI",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "sfnt.USE_ZOPFLI = True\nif len(sys.argv) < 2:\n    print(\"Usage: %s <font file>\" % sys.argv[0])\n    sys.exit(1)\nfont_file = sys.argv[1]\nfont_name = os.path.splitext(os.path.basename(font_file))[0]\nfont = TTFont(font_file, recalcBBoxes=False, recalcTimestamp=False)\n# fix timestamp to the epoch\nfont['head'].created = 0\nfont['head'].modified = 0",
+        "detail": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font_file",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font_file = sys.argv[1]\nfont_name = os.path.splitext(os.path.basename(font_file))[0]\nfont = TTFont(font_file, recalcBBoxes=False, recalcTimestamp=False)\n# fix timestamp to the epoch\nfont['head'].created = 0\nfont['head'].modified = 0\n# remove fontforge timestamps\nif 'FFTM' in font:\n    del font['FFTM']\n# remove redundant GDEF table",
+        "detail": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font_name",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font_name = os.path.splitext(os.path.basename(font_file))[0]\nfont = TTFont(font_file, recalcBBoxes=False, recalcTimestamp=False)\n# fix timestamp to the epoch\nfont['head'].created = 0\nfont['head'].modified = 0\n# remove fontforge timestamps\nif 'FFTM' in font:\n    del font['FFTM']\n# remove redundant GDEF table\nif 'GDEF' in font:",
+        "detail": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font = TTFont(font_file, recalcBBoxes=False, recalcTimestamp=False)\n# fix timestamp to the epoch\nfont['head'].created = 0\nfont['head'].modified = 0\n# remove fontforge timestamps\nif 'FFTM' in font:\n    del font['FFTM']\n# remove redundant GDEF table\nif 'GDEF' in font:\n    del font['GDEF']",
+        "detail": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font['head'].created",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font['head'].created = 0\nfont['head'].modified = 0\n# remove fontforge timestamps\nif 'FFTM' in font:\n    del font['FFTM']\n# remove redundant GDEF table\nif 'GDEF' in font:\n    del font['GDEF']\n# remove Macintosh table\n# https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6cmap.html",
+        "detail": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font['head'].modified",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font['head'].modified = 0\n# remove fontforge timestamps\nif 'FFTM' in font:\n    del font['FFTM']\n# remove redundant GDEF table\nif 'GDEF' in font:\n    del font['GDEF']\n# remove Macintosh table\n# https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6cmap.html\nfont['name'].names = [record for record in font['name'].names if record.platformID != 1]",
+        "detail": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font['name'].names",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font['name'].names = [record for record in font['name'].names if record.platformID != 1]\nfont['cmap'].tables = [table for table in font['cmap'].tables if table.platformID != 1]\n# fix OS/2 and hhea metrics\nglyf = font['glyf']\nascent = int(max(glyf[c].yMax for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMax\")))\ndescent = -int(min(glyf[c].yMin for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMin\")))\nfont['OS/2'].usWinAscent = ascent\nfont['OS/2'].usWinDescent = descent\nfont['hhea'].ascent = ascent\nfont['hhea'].descent = -descent",
+        "detail": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font['cmap'].tables",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font['cmap'].tables = [table for table in font['cmap'].tables if table.platformID != 1]\n# fix OS/2 and hhea metrics\nglyf = font['glyf']\nascent = int(max(glyf[c].yMax for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMax\")))\ndescent = -int(min(glyf[c].yMin for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMin\")))\nfont['OS/2'].usWinAscent = ascent\nfont['OS/2'].usWinDescent = descent\nfont['hhea'].ascent = ascent\nfont['hhea'].descent = -descent\n# save TTF",
+        "detail": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "glyf",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "glyf = font['glyf']\nascent = int(max(glyf[c].yMax for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMax\")))\ndescent = -int(min(glyf[c].yMin for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMin\")))\nfont['OS/2'].usWinAscent = ascent\nfont['OS/2'].usWinDescent = descent\nfont['hhea'].ascent = ascent\nfont['hhea'].descent = -descent\n# save TTF\nfont.save(font_file, reorderTables=None)\n# save WOFF",
+        "detail": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "ascent",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "ascent = int(max(glyf[c].yMax for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMax\")))\ndescent = -int(min(glyf[c].yMin for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMin\")))\nfont['OS/2'].usWinAscent = ascent\nfont['OS/2'].usWinDescent = descent\nfont['hhea'].ascent = ascent\nfont['hhea'].descent = -descent\n# save TTF\nfont.save(font_file, reorderTables=None)\n# save WOFF\nfont.flavor = 'woff'",
+        "detail": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "descent",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "descent = -int(min(glyf[c].yMin for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMin\")))\nfont['OS/2'].usWinAscent = ascent\nfont['OS/2'].usWinDescent = descent\nfont['hhea'].ascent = ascent\nfont['hhea'].descent = -descent\n# save TTF\nfont.save(font_file, reorderTables=None)\n# save WOFF\nfont.flavor = 'woff'\nfont.save(os.path.join('woff', font_name + '.woff'), reorderTables=None)",
+        "detail": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font['OS/2'].usWinAscent",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font['OS/2'].usWinAscent = ascent\nfont['OS/2'].usWinDescent = descent\nfont['hhea'].ascent = ascent\nfont['hhea'].descent = -descent\n# save TTF\nfont.save(font_file, reorderTables=None)\n# save WOFF\nfont.flavor = 'woff'\nfont.save(os.path.join('woff', font_name + '.woff'), reorderTables=None)\n# save WOFF2",
+        "detail": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font['OS/2'].usWinDescent",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font['OS/2'].usWinDescent = descent\nfont['hhea'].ascent = ascent\nfont['hhea'].descent = -descent\n# save TTF\nfont.save(font_file, reorderTables=None)\n# save WOFF\nfont.flavor = 'woff'\nfont.save(os.path.join('woff', font_name + '.woff'), reorderTables=None)\n# save WOFF2\nfont.flavor = 'woff2'",
+        "detail": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font['hhea'].ascent",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font['hhea'].ascent = ascent\nfont['hhea'].descent = -descent\n# save TTF\nfont.save(font_file, reorderTables=None)\n# save WOFF\nfont.flavor = 'woff'\nfont.save(os.path.join('woff', font_name + '.woff'), reorderTables=None)\n# save WOFF2\nfont.flavor = 'woff2'\nfont.save(os.path.join('woff2', font_name + '.woff2'), reorderTables=None)",
+        "detail": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font['hhea'].descent",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font['hhea'].descent = -descent\n# save TTF\nfont.save(font_file, reorderTables=None)\n# save WOFF\nfont.flavor = 'woff'\nfont.save(os.path.join('woff', font_name + '.woff'), reorderTables=None)\n# save WOFF2\nfont.flavor = 'woff2'\nfont.save(os.path.join('woff2', font_name + '.woff2'), reorderTables=None)",
+        "detail": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font.flavor",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font.flavor = 'woff'\nfont.save(os.path.join('woff', font_name + '.woff'), reorderTables=None)\n# save WOFF2\nfont.flavor = 'woff2'\nfont.save(os.path.join('woff2', font_name + '.woff2'), reorderTables=None)",
+        "detail": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font.flavor",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font.flavor = 'woff2'\nfont.save(os.path.join('woff2', font_name + '.woff2'), reorderTables=None)",
+        "detail": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "find_font_path",
+        "kind": 2,
+        "importPath": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.metrics.extract_tfms",
+        "description": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.metrics.extract_tfms",
+        "peekOfCode": "def find_font_path(font_name):\n    try:\n        font_path = subprocess.check_output(['kpsewhich', font_name])\n    except OSError:\n        raise RuntimeError(\"Couldn't find kpsewhich program, make sure you\" +\n                           \" have TeX installed\")\n    except subprocess.CalledProcessError:\n        raise RuntimeError(\"Couldn't find font metrics: '%s'\" % font_name)\n    return font_path.strip()\ndef main():",
+        "detail": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.metrics.extract_tfms",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.metrics.extract_tfms",
+        "description": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.metrics.extract_tfms",
+        "peekOfCode": "def main():\n    mapping = json.load(sys.stdin)\n    fonts = [\n        'cmbsy10.tfm',\n        'cmbx10.tfm',\n        'cmbxti10.tfm',\n        'cmex10.tfm',\n        'cmmi10.tfm',\n        'cmmib10.tfm',\n        'cmr10.tfm',",
+        "detail": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.metrics.extract_tfms",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.metrics.extract_ttfs",
+        "description": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.metrics.extract_ttfs",
+        "peekOfCode": "def main():\n    start_json = json.load(sys.stdin)\n    for font in start_json:\n        fontInfo = TTFont(\"../../fonts/KaTeX_\" + font + \".ttf\")\n        glyf = fontInfo[\"glyf\"]\n        widths = fontInfo.getGlyphSet()\n        unitsPerEm = float(fontInfo[\"head\"].unitsPerEm)\n        # We keep ALL Unicode cmaps, not just fontInfo[\"cmap\"].getcmap(3, 1).\n        # This is playing it extra safe, since it reports inconsistencies.\n        # Platform 0 is Unicode, platform 3 is Windows. For platform 3,",
+        "detail": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.metrics.extract_ttfs",
+        "documentation": {}
+    },
+    {
+        "label": "metrics_to_extract",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.metrics.extract_ttfs",
+        "description": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.metrics.extract_ttfs",
+        "peekOfCode": "metrics_to_extract = {\n    # Font name\n    \"AMS-Regular\": {\n        u\"\\u21e2\": None,  # \\dashrightarrow\n        u\"\\u21e0\": None,  # \\dashleftarrow\n    },\n    \"Main-Regular\": {\n        # Skew and italic metrics can't be easily parsed from the TTF. Instead,\n        # we map each character to a \"base character\", which is a character\n        # from the same font with correct italic and skew metrics. A character",
+        "detail": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.metrics.extract_ttfs",
+        "documentation": {}
+    },
+    {
+        "label": "props",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.metrics.format_json",
+        "description": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.metrics.format_json",
+        "peekOfCode": "props = ['depth', 'height', 'italic', 'skew']\nif len(sys.argv) > 1:\n    if sys.argv[1] == '--width':\n        props.append('width')\ndata = json.load(sys.stdin)\nsys.stdout.write(\n  \"// This file is GENERATED by buildMetrics.sh. DO NOT MODIFY.\\n\")\nsep = \"export default {\\n    \"\nfor font in sorted(data):\n    sys.stdout.write(sep + json.dumps(font))",
+        "detail": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.metrics.format_json",
+        "documentation": {}
+    },
+    {
+        "label": "data",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.metrics.format_json",
+        "description": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.metrics.format_json",
+        "peekOfCode": "data = json.load(sys.stdin)\nsys.stdout.write(\n  \"// This file is GENERATED by buildMetrics.sh. DO NOT MODIFY.\\n\")\nsep = \"export default {\\n    \"\nfor font in sorted(data):\n    sys.stdout.write(sep + json.dumps(font))\n    sep = \": {\\n        \"\n    for glyph in sorted(data[font], key=int):\n        sys.stdout.write(sep + json.dumps(glyph) + \": \")\n        values = [value if value != 0.0 else 0 for value in",
+        "detail": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.metrics.format_json",
+        "documentation": {}
+    },
+    {
+        "label": "sep",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.metrics.format_json",
+        "description": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.metrics.format_json",
+        "peekOfCode": "sep = \"export default {\\n    \"\nfor font in sorted(data):\n    sys.stdout.write(sep + json.dumps(font))\n    sep = \": {\\n        \"\n    for glyph in sorted(data[font], key=int):\n        sys.stdout.write(sep + json.dumps(glyph) + \": \")\n        values = [value if value != 0.0 else 0 for value in\n                  [data[font][glyph][key] for key in props]]\n        sys.stdout.write(json.dumps(values))\n        sep = \",\\n        \"",
+        "detail": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.metrics.format_json",
+        "documentation": {}
+    },
+    {
+        "label": "CharInfoWord",
+        "kind": 6,
+        "importPath": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.metrics.parse_tfm",
+        "description": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.metrics.parse_tfm",
+        "peekOfCode": "class CharInfoWord(object):\n    def __init__(self, word):\n        b1, b2, b3, b4 = (word >> 24,\n                          (word & 0xff0000) >> 16,\n                          (word & 0xff00) >> 8,\n                          word & 0xff)\n        self.width_index = b1\n        self.height_index = b2 >> 4\n        self.depth_index = b2 & 0x0f\n        self.italic_index = (b3 & 0b11111100) >> 2",
+        "detail": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.metrics.parse_tfm",
+        "documentation": {}
+    },
+    {
+        "label": "LigKernProgram",
+        "kind": 6,
+        "importPath": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.metrics.parse_tfm",
+        "description": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.metrics.parse_tfm",
+        "peekOfCode": "class LigKernProgram(object):\n    def __init__(self, program):\n        self.program = program\n    def execute(self, start, next_char):\n        curr_instruction = start\n        while True:\n            instruction = self.program[curr_instruction]\n            (skip, inst_next_char, op, remainder) = instruction\n            if inst_next_char == next_char:\n                if op < 128:",
+        "detail": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.metrics.parse_tfm",
+        "documentation": {}
+    },
+    {
+        "label": "TfmCharMetrics",
+        "kind": 6,
+        "importPath": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.metrics.parse_tfm",
+        "description": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.metrics.parse_tfm",
+        "peekOfCode": "class TfmCharMetrics(object):\n    def __init__(self, width, height, depth, italic, kern_table):\n        self.width = width\n        self.height = height\n        self.depth = depth\n        self.italic_correction = italic\n        self.kern_table = kern_table\nclass TfmFile(object):\n    def __init__(self, start_char, end_char, char_info, width_table,\n                 height_table, depth_table, italic_table, ligkern_table,",
+        "detail": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.metrics.parse_tfm",
+        "documentation": {}
+    },
+    {
+        "label": "TfmFile",
+        "kind": 6,
+        "importPath": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.metrics.parse_tfm",
+        "description": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.metrics.parse_tfm",
+        "peekOfCode": "class TfmFile(object):\n    def __init__(self, start_char, end_char, char_info, width_table,\n                 height_table, depth_table, italic_table, ligkern_table,\n                 kern_table):\n        self.start_char = start_char\n        self.end_char = end_char\n        self.char_info = char_info\n        self.width_table = width_table\n        self.height_table = height_table\n        self.depth_table = depth_table",
+        "detail": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.metrics.parse_tfm",
+        "documentation": {}
+    },
+    {
+        "label": "TfmReader",
+        "kind": 6,
+        "importPath": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.metrics.parse_tfm",
+        "description": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.metrics.parse_tfm",
+        "peekOfCode": "class TfmReader(object):\n    def __init__(self, f):\n        self.f = f\n    def read_byte(self):\n        return ord(self.f.read(1))\n    def read_halfword(self):\n        b1 = self.read_byte()\n        b2 = self.read_byte()\n        return (b1 << 8) | b2\n    def read_word(self):",
+        "detail": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.metrics.parse_tfm",
+        "documentation": {}
+    },
+    {
+        "label": "read_tfm_file",
+        "kind": 2,
+        "importPath": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.metrics.parse_tfm",
+        "description": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.metrics.parse_tfm",
+        "peekOfCode": "def read_tfm_file(file_name):\n    with open(file_name, 'rb') as f:\n        reader = TfmReader(f)\n        # file_size\n        reader.read_halfword()\n        header_size = reader.read_halfword()\n        start_char = reader.read_halfword()\n        end_char = reader.read_halfword()\n        width_table_size = reader.read_halfword()\n        height_table_size = reader.read_halfword()",
+        "detail": "docs.node_modules..pnpm.katex@0.16.21.node_modules.katex.src.metrics.parse_tfm",
+        "documentation": {}
+    },
+    {
+        "label": "sfnt.USE_ZOPFLI",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "sfnt.USE_ZOPFLI = True\nif len(sys.argv) < 2:\n    print(\"Usage: %s <font file>\" % sys.argv[0])\n    sys.exit(1)\nfont_file = sys.argv[1]\nfont_name = os.path.splitext(os.path.basename(font_file))[0]\nfont = TTFont(font_file, recalcBBoxes=False, recalcTimestamp=False)\n# fix timestamp to the epoch\nfont['head'].created = 0\nfont['head'].modified = 0",
+        "detail": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font_file",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font_file = sys.argv[1]\nfont_name = os.path.splitext(os.path.basename(font_file))[0]\nfont = TTFont(font_file, recalcBBoxes=False, recalcTimestamp=False)\n# fix timestamp to the epoch\nfont['head'].created = 0\nfont['head'].modified = 0\n# remove fontforge timestamps\nif 'FFTM' in font:\n    del font['FFTM']\n# remove redundant GDEF table",
+        "detail": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font_name",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font_name = os.path.splitext(os.path.basename(font_file))[0]\nfont = TTFont(font_file, recalcBBoxes=False, recalcTimestamp=False)\n# fix timestamp to the epoch\nfont['head'].created = 0\nfont['head'].modified = 0\n# remove fontforge timestamps\nif 'FFTM' in font:\n    del font['FFTM']\n# remove redundant GDEF table\nif 'GDEF' in font:",
+        "detail": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font = TTFont(font_file, recalcBBoxes=False, recalcTimestamp=False)\n# fix timestamp to the epoch\nfont['head'].created = 0\nfont['head'].modified = 0\n# remove fontforge timestamps\nif 'FFTM' in font:\n    del font['FFTM']\n# remove redundant GDEF table\nif 'GDEF' in font:\n    del font['GDEF']",
+        "detail": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font['head'].created",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font['head'].created = 0\nfont['head'].modified = 0\n# remove fontforge timestamps\nif 'FFTM' in font:\n    del font['FFTM']\n# remove redundant GDEF table\nif 'GDEF' in font:\n    del font['GDEF']\n# remove Macintosh table\n# https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6cmap.html",
+        "detail": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font['head'].modified",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font['head'].modified = 0\n# remove fontforge timestamps\nif 'FFTM' in font:\n    del font['FFTM']\n# remove redundant GDEF table\nif 'GDEF' in font:\n    del font['GDEF']\n# remove Macintosh table\n# https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6cmap.html\nfont['name'].names = [record for record in font['name'].names if record.platformID != 1]",
+        "detail": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font['name'].names",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font['name'].names = [record for record in font['name'].names if record.platformID != 1]\nfont['cmap'].tables = [table for table in font['cmap'].tables if table.platformID != 1]\n# fix OS/2 and hhea metrics\nglyf = font['glyf']\nascent = int(max(glyf[c].yMax for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMax\")))\ndescent = -int(min(glyf[c].yMin for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMin\")))\nfont['OS/2'].usWinAscent = ascent\nfont['OS/2'].usWinDescent = descent\nfont['hhea'].ascent = ascent\nfont['hhea'].descent = -descent",
+        "detail": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font['cmap'].tables",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font['cmap'].tables = [table for table in font['cmap'].tables if table.platformID != 1]\n# fix OS/2 and hhea metrics\nglyf = font['glyf']\nascent = int(max(glyf[c].yMax for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMax\")))\ndescent = -int(min(glyf[c].yMin for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMin\")))\nfont['OS/2'].usWinAscent = ascent\nfont['OS/2'].usWinDescent = descent\nfont['hhea'].ascent = ascent\nfont['hhea'].descent = -descent\n# save TTF",
+        "detail": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "glyf",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "glyf = font['glyf']\nascent = int(max(glyf[c].yMax for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMax\")))\ndescent = -int(min(glyf[c].yMin for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMin\")))\nfont['OS/2'].usWinAscent = ascent\nfont['OS/2'].usWinDescent = descent\nfont['hhea'].ascent = ascent\nfont['hhea'].descent = -descent\n# save TTF\nfont.save(font_file, reorderTables=None)\n# save WOFF",
+        "detail": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "ascent",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "ascent = int(max(glyf[c].yMax for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMax\")))\ndescent = -int(min(glyf[c].yMin for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMin\")))\nfont['OS/2'].usWinAscent = ascent\nfont['OS/2'].usWinDescent = descent\nfont['hhea'].ascent = ascent\nfont['hhea'].descent = -descent\n# save TTF\nfont.save(font_file, reorderTables=None)\n# save WOFF\nfont.flavor = 'woff'",
+        "detail": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "descent",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "descent = -int(min(glyf[c].yMin for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMin\")))\nfont['OS/2'].usWinAscent = ascent\nfont['OS/2'].usWinDescent = descent\nfont['hhea'].ascent = ascent\nfont['hhea'].descent = -descent\n# save TTF\nfont.save(font_file, reorderTables=None)\n# save WOFF\nfont.flavor = 'woff'\nfont.save(os.path.join('woff', font_name + '.woff'), reorderTables=None)",
+        "detail": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font['OS/2'].usWinAscent",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font['OS/2'].usWinAscent = ascent\nfont['OS/2'].usWinDescent = descent\nfont['hhea'].ascent = ascent\nfont['hhea'].descent = -descent\n# save TTF\nfont.save(font_file, reorderTables=None)\n# save WOFF\nfont.flavor = 'woff'\nfont.save(os.path.join('woff', font_name + '.woff'), reorderTables=None)\n# save WOFF2",
+        "detail": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font['OS/2'].usWinDescent",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font['OS/2'].usWinDescent = descent\nfont['hhea'].ascent = ascent\nfont['hhea'].descent = -descent\n# save TTF\nfont.save(font_file, reorderTables=None)\n# save WOFF\nfont.flavor = 'woff'\nfont.save(os.path.join('woff', font_name + '.woff'), reorderTables=None)\n# save WOFF2\nfont.flavor = 'woff2'",
+        "detail": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font['hhea'].ascent",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font['hhea'].ascent = ascent\nfont['hhea'].descent = -descent\n# save TTF\nfont.save(font_file, reorderTables=None)\n# save WOFF\nfont.flavor = 'woff'\nfont.save(os.path.join('woff', font_name + '.woff'), reorderTables=None)\n# save WOFF2\nfont.flavor = 'woff2'\nfont.save(os.path.join('woff2', font_name + '.woff2'), reorderTables=None)",
+        "detail": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font['hhea'].descent",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font['hhea'].descent = -descent\n# save TTF\nfont.save(font_file, reorderTables=None)\n# save WOFF\nfont.flavor = 'woff'\nfont.save(os.path.join('woff', font_name + '.woff'), reorderTables=None)\n# save WOFF2\nfont.flavor = 'woff2'\nfont.save(os.path.join('woff2', font_name + '.woff2'), reorderTables=None)",
+        "detail": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font.flavor",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font.flavor = 'woff'\nfont.save(os.path.join('woff', font_name + '.woff'), reorderTables=None)\n# save WOFF2\nfont.flavor = 'woff2'\nfont.save(os.path.join('woff2', font_name + '.woff2'), reorderTables=None)",
+        "detail": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font.flavor",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font.flavor = 'woff2'\nfont.save(os.path.join('woff2', font_name + '.woff2'), reorderTables=None)",
+        "detail": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "find_font_path",
+        "kind": 2,
+        "importPath": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.metrics.extract_tfms",
+        "description": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.metrics.extract_tfms",
+        "peekOfCode": "def find_font_path(font_name):\n    try:\n        font_path = subprocess.check_output(['kpsewhich', font_name])\n    except OSError:\n        raise RuntimeError(\"Couldn't find kpsewhich program, make sure you\" +\n                           \" have TeX installed\")\n    except subprocess.CalledProcessError:\n        raise RuntimeError(\"Couldn't find font metrics: '%s'\" % font_name)\n    return font_path.strip()\ndef main():",
+        "detail": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.metrics.extract_tfms",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.metrics.extract_tfms",
+        "description": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.metrics.extract_tfms",
+        "peekOfCode": "def main():\n    mapping = json.load(sys.stdin)\n    fonts = [\n        'cmbsy10.tfm',\n        'cmbx10.tfm',\n        'cmbxti10.tfm',\n        'cmex10.tfm',\n        'cmmi10.tfm',\n        'cmmib10.tfm',\n        'cmr10.tfm',",
+        "detail": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.metrics.extract_tfms",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.metrics.extract_ttfs",
+        "description": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.metrics.extract_ttfs",
+        "peekOfCode": "def main():\n    start_json = json.load(sys.stdin)\n    for font in start_json:\n        fontInfo = TTFont(\"../../fonts/KaTeX_\" + font + \".ttf\")\n        glyf = fontInfo[\"glyf\"]\n        widths = fontInfo.getGlyphSet()\n        unitsPerEm = float(fontInfo[\"head\"].unitsPerEm)\n        # We keep ALL Unicode cmaps, not just fontInfo[\"cmap\"].getcmap(3, 1).\n        # This is playing it extra safe, since it reports inconsistencies.\n        # Platform 0 is Unicode, platform 3 is Windows. For platform 3,",
+        "detail": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.metrics.extract_ttfs",
+        "documentation": {}
+    },
+    {
+        "label": "metrics_to_extract",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.metrics.extract_ttfs",
+        "description": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.metrics.extract_ttfs",
+        "peekOfCode": "metrics_to_extract = {\n    # Font name\n    \"AMS-Regular\": {\n        u\"\\u21e2\": None,  # \\dashrightarrow\n        u\"\\u21e0\": None,  # \\dashleftarrow\n    },\n    \"Main-Regular\": {\n        # Skew and italic metrics can't be easily parsed from the TTF. Instead,\n        # we map each character to a \"base character\", which is a character\n        # from the same font with correct italic and skew metrics. A character",
+        "detail": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.metrics.extract_ttfs",
+        "documentation": {}
+    },
+    {
+        "label": "props",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.metrics.format_json",
+        "description": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.metrics.format_json",
+        "peekOfCode": "props = ['depth', 'height', 'italic', 'skew']\nif len(sys.argv) > 1:\n    if sys.argv[1] == '--width':\n        props.append('width')\ndata = json.load(sys.stdin)\nsys.stdout.write(\n  \"// This file is GENERATED by buildMetrics.sh. DO NOT MODIFY.\\n\")\nsep = \"export default {\\n    \"\nfor font in sorted(data):\n    sys.stdout.write(sep + json.dumps(font))",
+        "detail": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.metrics.format_json",
+        "documentation": {}
+    },
+    {
+        "label": "data",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.metrics.format_json",
+        "description": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.metrics.format_json",
+        "peekOfCode": "data = json.load(sys.stdin)\nsys.stdout.write(\n  \"// This file is GENERATED by buildMetrics.sh. DO NOT MODIFY.\\n\")\nsep = \"export default {\\n    \"\nfor font in sorted(data):\n    sys.stdout.write(sep + json.dumps(font))\n    sep = \": {\\n        \"\n    for glyph in sorted(data[font], key=int):\n        sys.stdout.write(sep + json.dumps(glyph) + \": \")\n        values = [value if value != 0.0 else 0 for value in",
+        "detail": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.metrics.format_json",
+        "documentation": {}
+    },
+    {
+        "label": "sep",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.metrics.format_json",
+        "description": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.metrics.format_json",
+        "peekOfCode": "sep = \"export default {\\n    \"\nfor font in sorted(data):\n    sys.stdout.write(sep + json.dumps(font))\n    sep = \": {\\n        \"\n    for glyph in sorted(data[font], key=int):\n        sys.stdout.write(sep + json.dumps(glyph) + \": \")\n        values = [value if value != 0.0 else 0 for value in\n                  [data[font][glyph][key] for key in props]]\n        sys.stdout.write(json.dumps(values))\n        sep = \",\\n        \"",
+        "detail": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.metrics.format_json",
+        "documentation": {}
+    },
+    {
+        "label": "CharInfoWord",
+        "kind": 6,
+        "importPath": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.metrics.parse_tfm",
+        "description": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.metrics.parse_tfm",
+        "peekOfCode": "class CharInfoWord(object):\n    def __init__(self, word):\n        b1, b2, b3, b4 = (word >> 24,\n                          (word & 0xff0000) >> 16,\n                          (word & 0xff00) >> 8,\n                          word & 0xff)\n        self.width_index = b1\n        self.height_index = b2 >> 4\n        self.depth_index = b2 & 0x0f\n        self.italic_index = (b3 & 0b11111100) >> 2",
+        "detail": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.metrics.parse_tfm",
+        "documentation": {}
+    },
+    {
+        "label": "LigKernProgram",
+        "kind": 6,
+        "importPath": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.metrics.parse_tfm",
+        "description": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.metrics.parse_tfm",
+        "peekOfCode": "class LigKernProgram(object):\n    def __init__(self, program):\n        self.program = program\n    def execute(self, start, next_char):\n        curr_instruction = start\n        while True:\n            instruction = self.program[curr_instruction]\n            (skip, inst_next_char, op, remainder) = instruction\n            if inst_next_char == next_char:\n                if op < 128:",
+        "detail": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.metrics.parse_tfm",
+        "documentation": {}
+    },
+    {
+        "label": "TfmCharMetrics",
+        "kind": 6,
+        "importPath": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.metrics.parse_tfm",
+        "description": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.metrics.parse_tfm",
+        "peekOfCode": "class TfmCharMetrics(object):\n    def __init__(self, width, height, depth, italic, kern_table):\n        self.width = width\n        self.height = height\n        self.depth = depth\n        self.italic_correction = italic\n        self.kern_table = kern_table\nclass TfmFile(object):\n    def __init__(self, start_char, end_char, char_info, width_table,\n                 height_table, depth_table, italic_table, ligkern_table,",
+        "detail": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.metrics.parse_tfm",
+        "documentation": {}
+    },
+    {
+        "label": "TfmFile",
+        "kind": 6,
+        "importPath": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.metrics.parse_tfm",
+        "description": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.metrics.parse_tfm",
+        "peekOfCode": "class TfmFile(object):\n    def __init__(self, start_char, end_char, char_info, width_table,\n                 height_table, depth_table, italic_table, ligkern_table,\n                 kern_table):\n        self.start_char = start_char\n        self.end_char = end_char\n        self.char_info = char_info\n        self.width_table = width_table\n        self.height_table = height_table\n        self.depth_table = depth_table",
+        "detail": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.metrics.parse_tfm",
+        "documentation": {}
+    },
+    {
+        "label": "TfmReader",
+        "kind": 6,
+        "importPath": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.metrics.parse_tfm",
+        "description": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.metrics.parse_tfm",
+        "peekOfCode": "class TfmReader(object):\n    def __init__(self, f):\n        self.f = f\n    def read_byte(self):\n        return ord(self.f.read(1))\n    def read_halfword(self):\n        b1 = self.read_byte()\n        b2 = self.read_byte()\n        return (b1 << 8) | b2\n    def read_word(self):",
+        "detail": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.metrics.parse_tfm",
+        "documentation": {}
+    },
+    {
+        "label": "read_tfm_file",
+        "kind": 2,
+        "importPath": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.metrics.parse_tfm",
+        "description": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.metrics.parse_tfm",
+        "peekOfCode": "def read_tfm_file(file_name):\n    with open(file_name, 'rb') as f:\n        reader = TfmReader(f)\n        # file_size\n        reader.read_halfword()\n        header_size = reader.read_halfword()\n        start_char = reader.read_halfword()\n        end_char = reader.read_halfword()\n        width_table_size = reader.read_halfword()\n        height_table_size = reader.read_halfword()",
+        "detail": "docs.node_modules..pnpm.mermaid@11.4.1.node_modules.katex.src.metrics.parse_tfm",
+        "documentation": {}
+    },
+    {
+        "label": "sfnt.USE_ZOPFLI",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "sfnt.USE_ZOPFLI = True\nif len(sys.argv) < 2:\n    print(\"Usage: %s <font file>\" % sys.argv[0])\n    sys.exit(1)\nfont_file = sys.argv[1]\nfont_name = os.path.splitext(os.path.basename(font_file))[0]\nfont = TTFont(font_file, recalcBBoxes=False, recalcTimestamp=False)\n# fix timestamp to the epoch\nfont['head'].created = 0\nfont['head'].modified = 0",
+        "detail": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font_file",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font_file = sys.argv[1]\nfont_name = os.path.splitext(os.path.basename(font_file))[0]\nfont = TTFont(font_file, recalcBBoxes=False, recalcTimestamp=False)\n# fix timestamp to the epoch\nfont['head'].created = 0\nfont['head'].modified = 0\n# remove fontforge timestamps\nif 'FFTM' in font:\n    del font['FFTM']\n# remove redundant GDEF table",
+        "detail": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font_name",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font_name = os.path.splitext(os.path.basename(font_file))[0]\nfont = TTFont(font_file, recalcBBoxes=False, recalcTimestamp=False)\n# fix timestamp to the epoch\nfont['head'].created = 0\nfont['head'].modified = 0\n# remove fontforge timestamps\nif 'FFTM' in font:\n    del font['FFTM']\n# remove redundant GDEF table\nif 'GDEF' in font:",
+        "detail": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font = TTFont(font_file, recalcBBoxes=False, recalcTimestamp=False)\n# fix timestamp to the epoch\nfont['head'].created = 0\nfont['head'].modified = 0\n# remove fontforge timestamps\nif 'FFTM' in font:\n    del font['FFTM']\n# remove redundant GDEF table\nif 'GDEF' in font:\n    del font['GDEF']",
+        "detail": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font['head'].created",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font['head'].created = 0\nfont['head'].modified = 0\n# remove fontforge timestamps\nif 'FFTM' in font:\n    del font['FFTM']\n# remove redundant GDEF table\nif 'GDEF' in font:\n    del font['GDEF']\n# remove Macintosh table\n# https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6cmap.html",
+        "detail": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font['head'].modified",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font['head'].modified = 0\n# remove fontforge timestamps\nif 'FFTM' in font:\n    del font['FFTM']\n# remove redundant GDEF table\nif 'GDEF' in font:\n    del font['GDEF']\n# remove Macintosh table\n# https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6cmap.html\nfont['name'].names = [record for record in font['name'].names if record.platformID != 1]",
+        "detail": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font['name'].names",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font['name'].names = [record for record in font['name'].names if record.platformID != 1]\nfont['cmap'].tables = [table for table in font['cmap'].tables if table.platformID != 1]\n# fix OS/2 and hhea metrics\nglyf = font['glyf']\nascent = int(max(glyf[c].yMax for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMax\")))\ndescent = -int(min(glyf[c].yMin for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMin\")))\nfont['OS/2'].usWinAscent = ascent\nfont['OS/2'].usWinDescent = descent\nfont['hhea'].ascent = ascent\nfont['hhea'].descent = -descent",
+        "detail": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font['cmap'].tables",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font['cmap'].tables = [table for table in font['cmap'].tables if table.platformID != 1]\n# fix OS/2 and hhea metrics\nglyf = font['glyf']\nascent = int(max(glyf[c].yMax for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMax\")))\ndescent = -int(min(glyf[c].yMin for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMin\")))\nfont['OS/2'].usWinAscent = ascent\nfont['OS/2'].usWinDescent = descent\nfont['hhea'].ascent = ascent\nfont['hhea'].descent = -descent\n# save TTF",
+        "detail": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "glyf",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "glyf = font['glyf']\nascent = int(max(glyf[c].yMax for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMax\")))\ndescent = -int(min(glyf[c].yMin for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMin\")))\nfont['OS/2'].usWinAscent = ascent\nfont['OS/2'].usWinDescent = descent\nfont['hhea'].ascent = ascent\nfont['hhea'].descent = -descent\n# save TTF\nfont.save(font_file, reorderTables=None)\n# save WOFF",
+        "detail": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "ascent",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "ascent = int(max(glyf[c].yMax for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMax\")))\ndescent = -int(min(glyf[c].yMin for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMin\")))\nfont['OS/2'].usWinAscent = ascent\nfont['OS/2'].usWinDescent = descent\nfont['hhea'].ascent = ascent\nfont['hhea'].descent = -descent\n# save TTF\nfont.save(font_file, reorderTables=None)\n# save WOFF\nfont.flavor = 'woff'",
+        "detail": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "descent",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "descent = -int(min(glyf[c].yMin for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMin\")))\nfont['OS/2'].usWinAscent = ascent\nfont['OS/2'].usWinDescent = descent\nfont['hhea'].ascent = ascent\nfont['hhea'].descent = -descent\n# save TTF\nfont.save(font_file, reorderTables=None)\n# save WOFF\nfont.flavor = 'woff'\nfont.save(os.path.join('woff', font_name + '.woff'), reorderTables=None)",
+        "detail": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font['OS/2'].usWinAscent",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font['OS/2'].usWinAscent = ascent\nfont['OS/2'].usWinDescent = descent\nfont['hhea'].ascent = ascent\nfont['hhea'].descent = -descent\n# save TTF\nfont.save(font_file, reorderTables=None)\n# save WOFF\nfont.flavor = 'woff'\nfont.save(os.path.join('woff', font_name + '.woff'), reorderTables=None)\n# save WOFF2",
+        "detail": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font['OS/2'].usWinDescent",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font['OS/2'].usWinDescent = descent\nfont['hhea'].ascent = ascent\nfont['hhea'].descent = -descent\n# save TTF\nfont.save(font_file, reorderTables=None)\n# save WOFF\nfont.flavor = 'woff'\nfont.save(os.path.join('woff', font_name + '.woff'), reorderTables=None)\n# save WOFF2\nfont.flavor = 'woff2'",
+        "detail": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font['hhea'].ascent",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font['hhea'].ascent = ascent\nfont['hhea'].descent = -descent\n# save TTF\nfont.save(font_file, reorderTables=None)\n# save WOFF\nfont.flavor = 'woff'\nfont.save(os.path.join('woff', font_name + '.woff'), reorderTables=None)\n# save WOFF2\nfont.flavor = 'woff2'\nfont.save(os.path.join('woff2', font_name + '.woff2'), reorderTables=None)",
+        "detail": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font['hhea'].descent",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font['hhea'].descent = -descent\n# save TTF\nfont.save(font_file, reorderTables=None)\n# save WOFF\nfont.flavor = 'woff'\nfont.save(os.path.join('woff', font_name + '.woff'), reorderTables=None)\n# save WOFF2\nfont.flavor = 'woff2'\nfont.save(os.path.join('woff2', font_name + '.woff2'), reorderTables=None)",
+        "detail": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font.flavor",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font.flavor = 'woff'\nfont.save(os.path.join('woff', font_name + '.woff'), reorderTables=None)\n# save WOFF2\nfont.flavor = 'woff2'\nfont.save(os.path.join('woff2', font_name + '.woff2'), reorderTables=None)",
+        "detail": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font.flavor",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font.flavor = 'woff2'\nfont.save(os.path.join('woff2', font_name + '.woff2'), reorderTables=None)",
+        "detail": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "find_font_path",
+        "kind": 2,
+        "importPath": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.metrics.extract_tfms",
+        "description": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.metrics.extract_tfms",
+        "peekOfCode": "def find_font_path(font_name):\n    try:\n        font_path = subprocess.check_output(['kpsewhich', font_name])\n    except OSError:\n        raise RuntimeError(\"Couldn't find kpsewhich program, make sure you\" +\n                           \" have TeX installed\")\n    except subprocess.CalledProcessError:\n        raise RuntimeError(\"Couldn't find font metrics: '%s'\" % font_name)\n    return font_path.strip()\ndef main():",
+        "detail": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.metrics.extract_tfms",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.metrics.extract_tfms",
+        "description": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.metrics.extract_tfms",
+        "peekOfCode": "def main():\n    mapping = json.load(sys.stdin)\n    fonts = [\n        'cmbsy10.tfm',\n        'cmbx10.tfm',\n        'cmbxti10.tfm',\n        'cmex10.tfm',\n        'cmmi10.tfm',\n        'cmmib10.tfm',\n        'cmr10.tfm',",
+        "detail": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.metrics.extract_tfms",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.metrics.extract_ttfs",
+        "description": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.metrics.extract_ttfs",
+        "peekOfCode": "def main():\n    start_json = json.load(sys.stdin)\n    for font in start_json:\n        fontInfo = TTFont(\"../../fonts/KaTeX_\" + font + \".ttf\")\n        glyf = fontInfo[\"glyf\"]\n        widths = fontInfo.getGlyphSet()\n        unitsPerEm = float(fontInfo[\"head\"].unitsPerEm)\n        # We keep ALL Unicode cmaps, not just fontInfo[\"cmap\"].getcmap(3, 1).\n        # This is playing it extra safe, since it reports inconsistencies.\n        # Platform 0 is Unicode, platform 3 is Windows. For platform 3,",
+        "detail": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.metrics.extract_ttfs",
+        "documentation": {}
+    },
+    {
+        "label": "metrics_to_extract",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.metrics.extract_ttfs",
+        "description": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.metrics.extract_ttfs",
+        "peekOfCode": "metrics_to_extract = {\n    # Font name\n    \"AMS-Regular\": {\n        u\"\\u21e2\": None,  # \\dashrightarrow\n        u\"\\u21e0\": None,  # \\dashleftarrow\n    },\n    \"Main-Regular\": {\n        # Skew and italic metrics can't be easily parsed from the TTF. Instead,\n        # we map each character to a \"base character\", which is a character\n        # from the same font with correct italic and skew metrics. A character",
+        "detail": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.metrics.extract_ttfs",
+        "documentation": {}
+    },
+    {
+        "label": "props",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.metrics.format_json",
+        "description": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.metrics.format_json",
+        "peekOfCode": "props = ['depth', 'height', 'italic', 'skew']\nif len(sys.argv) > 1:\n    if sys.argv[1] == '--width':\n        props.append('width')\ndata = json.load(sys.stdin)\nsys.stdout.write(\n  \"// This file is GENERATED by buildMetrics.sh. DO NOT MODIFY.\\n\")\nsep = \"export default {\\n    \"\nfor font in sorted(data):\n    sys.stdout.write(sep + json.dumps(font))",
+        "detail": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.metrics.format_json",
+        "documentation": {}
+    },
+    {
+        "label": "data",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.metrics.format_json",
+        "description": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.metrics.format_json",
+        "peekOfCode": "data = json.load(sys.stdin)\nsys.stdout.write(\n  \"// This file is GENERATED by buildMetrics.sh. DO NOT MODIFY.\\n\")\nsep = \"export default {\\n    \"\nfor font in sorted(data):\n    sys.stdout.write(sep + json.dumps(font))\n    sep = \": {\\n        \"\n    for glyph in sorted(data[font], key=int):\n        sys.stdout.write(sep + json.dumps(glyph) + \": \")\n        values = [value if value != 0.0 else 0 for value in",
+        "detail": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.metrics.format_json",
+        "documentation": {}
+    },
+    {
+        "label": "sep",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.metrics.format_json",
+        "description": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.metrics.format_json",
+        "peekOfCode": "sep = \"export default {\\n    \"\nfor font in sorted(data):\n    sys.stdout.write(sep + json.dumps(font))\n    sep = \": {\\n        \"\n    for glyph in sorted(data[font], key=int):\n        sys.stdout.write(sep + json.dumps(glyph) + \": \")\n        values = [value if value != 0.0 else 0 for value in\n                  [data[font][glyph][key] for key in props]]\n        sys.stdout.write(json.dumps(values))\n        sep = \",\\n        \"",
+        "detail": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.metrics.format_json",
+        "documentation": {}
+    },
+    {
+        "label": "CharInfoWord",
+        "kind": 6,
+        "importPath": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.metrics.parse_tfm",
+        "description": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.metrics.parse_tfm",
+        "peekOfCode": "class CharInfoWord(object):\n    def __init__(self, word):\n        b1, b2, b3, b4 = (word >> 24,\n                          (word & 0xff0000) >> 16,\n                          (word & 0xff00) >> 8,\n                          word & 0xff)\n        self.width_index = b1\n        self.height_index = b2 >> 4\n        self.depth_index = b2 & 0x0f\n        self.italic_index = (b3 & 0b11111100) >> 2",
+        "detail": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.metrics.parse_tfm",
+        "documentation": {}
+    },
+    {
+        "label": "LigKernProgram",
+        "kind": 6,
+        "importPath": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.metrics.parse_tfm",
+        "description": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.metrics.parse_tfm",
+        "peekOfCode": "class LigKernProgram(object):\n    def __init__(self, program):\n        self.program = program\n    def execute(self, start, next_char):\n        curr_instruction = start\n        while True:\n            instruction = self.program[curr_instruction]\n            (skip, inst_next_char, op, remainder) = instruction\n            if inst_next_char == next_char:\n                if op < 128:",
+        "detail": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.metrics.parse_tfm",
+        "documentation": {}
+    },
+    {
+        "label": "TfmCharMetrics",
+        "kind": 6,
+        "importPath": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.metrics.parse_tfm",
+        "description": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.metrics.parse_tfm",
+        "peekOfCode": "class TfmCharMetrics(object):\n    def __init__(self, width, height, depth, italic, kern_table):\n        self.width = width\n        self.height = height\n        self.depth = depth\n        self.italic_correction = italic\n        self.kern_table = kern_table\nclass TfmFile(object):\n    def __init__(self, start_char, end_char, char_info, width_table,\n                 height_table, depth_table, italic_table, ligkern_table,",
+        "detail": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.metrics.parse_tfm",
+        "documentation": {}
+    },
+    {
+        "label": "TfmFile",
+        "kind": 6,
+        "importPath": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.metrics.parse_tfm",
+        "description": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.metrics.parse_tfm",
+        "peekOfCode": "class TfmFile(object):\n    def __init__(self, start_char, end_char, char_info, width_table,\n                 height_table, depth_table, italic_table, ligkern_table,\n                 kern_table):\n        self.start_char = start_char\n        self.end_char = end_char\n        self.char_info = char_info\n        self.width_table = width_table\n        self.height_table = height_table\n        self.depth_table = depth_table",
+        "detail": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.metrics.parse_tfm",
+        "documentation": {}
+    },
+    {
+        "label": "TfmReader",
+        "kind": 6,
+        "importPath": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.metrics.parse_tfm",
+        "description": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.metrics.parse_tfm",
+        "peekOfCode": "class TfmReader(object):\n    def __init__(self, f):\n        self.f = f\n    def read_byte(self):\n        return ord(self.f.read(1))\n    def read_halfword(self):\n        b1 = self.read_byte()\n        b2 = self.read_byte()\n        return (b1 << 8) | b2\n    def read_word(self):",
+        "detail": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.metrics.parse_tfm",
+        "documentation": {}
+    },
+    {
+        "label": "read_tfm_file",
+        "kind": 2,
+        "importPath": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.metrics.parse_tfm",
+        "description": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.metrics.parse_tfm",
+        "peekOfCode": "def read_tfm_file(file_name):\n    with open(file_name, 'rb') as f:\n        reader = TfmReader(f)\n        # file_size\n        reader.read_halfword()\n        header_size = reader.read_halfword()\n        start_char = reader.read_halfword()\n        end_char = reader.read_halfword()\n        width_table_size = reader.read_halfword()\n        height_table_size = reader.read_halfword()",
+        "detail": "docs.node_modules..pnpm.micromark-extension-math@3.1.0.node_modules.katex.src.metrics.parse_tfm",
+        "documentation": {}
+    },
+    {
+        "label": "sfnt.USE_ZOPFLI",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "sfnt.USE_ZOPFLI = True\nif len(sys.argv) < 2:\n    print(\"Usage: %s <font file>\" % sys.argv[0])\n    sys.exit(1)\nfont_file = sys.argv[1]\nfont_name = os.path.splitext(os.path.basename(font_file))[0]\nfont = TTFont(font_file, recalcBBoxes=False, recalcTimestamp=False)\n# fix timestamp to the epoch\nfont['head'].created = 0\nfont['head'].modified = 0",
+        "detail": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font_file",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font_file = sys.argv[1]\nfont_name = os.path.splitext(os.path.basename(font_file))[0]\nfont = TTFont(font_file, recalcBBoxes=False, recalcTimestamp=False)\n# fix timestamp to the epoch\nfont['head'].created = 0\nfont['head'].modified = 0\n# remove fontforge timestamps\nif 'FFTM' in font:\n    del font['FFTM']\n# remove redundant GDEF table",
+        "detail": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font_name",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font_name = os.path.splitext(os.path.basename(font_file))[0]\nfont = TTFont(font_file, recalcBBoxes=False, recalcTimestamp=False)\n# fix timestamp to the epoch\nfont['head'].created = 0\nfont['head'].modified = 0\n# remove fontforge timestamps\nif 'FFTM' in font:\n    del font['FFTM']\n# remove redundant GDEF table\nif 'GDEF' in font:",
+        "detail": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font = TTFont(font_file, recalcBBoxes=False, recalcTimestamp=False)\n# fix timestamp to the epoch\nfont['head'].created = 0\nfont['head'].modified = 0\n# remove fontforge timestamps\nif 'FFTM' in font:\n    del font['FFTM']\n# remove redundant GDEF table\nif 'GDEF' in font:\n    del font['GDEF']",
+        "detail": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font['head'].created",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font['head'].created = 0\nfont['head'].modified = 0\n# remove fontforge timestamps\nif 'FFTM' in font:\n    del font['FFTM']\n# remove redundant GDEF table\nif 'GDEF' in font:\n    del font['GDEF']\n# remove Macintosh table\n# https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6cmap.html",
+        "detail": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font['head'].modified",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font['head'].modified = 0\n# remove fontforge timestamps\nif 'FFTM' in font:\n    del font['FFTM']\n# remove redundant GDEF table\nif 'GDEF' in font:\n    del font['GDEF']\n# remove Macintosh table\n# https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6cmap.html\nfont['name'].names = [record for record in font['name'].names if record.platformID != 1]",
+        "detail": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font['name'].names",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font['name'].names = [record for record in font['name'].names if record.platformID != 1]\nfont['cmap'].tables = [table for table in font['cmap'].tables if table.platformID != 1]\n# fix OS/2 and hhea metrics\nglyf = font['glyf']\nascent = int(max(glyf[c].yMax for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMax\")))\ndescent = -int(min(glyf[c].yMin for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMin\")))\nfont['OS/2'].usWinAscent = ascent\nfont['OS/2'].usWinDescent = descent\nfont['hhea'].ascent = ascent\nfont['hhea'].descent = -descent",
+        "detail": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font['cmap'].tables",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font['cmap'].tables = [table for table in font['cmap'].tables if table.platformID != 1]\n# fix OS/2 and hhea metrics\nglyf = font['glyf']\nascent = int(max(glyf[c].yMax for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMax\")))\ndescent = -int(min(glyf[c].yMin for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMin\")))\nfont['OS/2'].usWinAscent = ascent\nfont['OS/2'].usWinDescent = descent\nfont['hhea'].ascent = ascent\nfont['hhea'].descent = -descent\n# save TTF",
+        "detail": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "glyf",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "glyf = font['glyf']\nascent = int(max(glyf[c].yMax for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMax\")))\ndescent = -int(min(glyf[c].yMin for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMin\")))\nfont['OS/2'].usWinAscent = ascent\nfont['OS/2'].usWinDescent = descent\nfont['hhea'].ascent = ascent\nfont['hhea'].descent = -descent\n# save TTF\nfont.save(font_file, reorderTables=None)\n# save WOFF",
+        "detail": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "ascent",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "ascent = int(max(glyf[c].yMax for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMax\")))\ndescent = -int(min(glyf[c].yMin for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMin\")))\nfont['OS/2'].usWinAscent = ascent\nfont['OS/2'].usWinDescent = descent\nfont['hhea'].ascent = ascent\nfont['hhea'].descent = -descent\n# save TTF\nfont.save(font_file, reorderTables=None)\n# save WOFF\nfont.flavor = 'woff'",
+        "detail": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "descent",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "descent = -int(min(glyf[c].yMin for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMin\")))\nfont['OS/2'].usWinAscent = ascent\nfont['OS/2'].usWinDescent = descent\nfont['hhea'].ascent = ascent\nfont['hhea'].descent = -descent\n# save TTF\nfont.save(font_file, reorderTables=None)\n# save WOFF\nfont.flavor = 'woff'\nfont.save(os.path.join('woff', font_name + '.woff'), reorderTables=None)",
+        "detail": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font['OS/2'].usWinAscent",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font['OS/2'].usWinAscent = ascent\nfont['OS/2'].usWinDescent = descent\nfont['hhea'].ascent = ascent\nfont['hhea'].descent = -descent\n# save TTF\nfont.save(font_file, reorderTables=None)\n# save WOFF\nfont.flavor = 'woff'\nfont.save(os.path.join('woff', font_name + '.woff'), reorderTables=None)\n# save WOFF2",
+        "detail": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font['OS/2'].usWinDescent",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font['OS/2'].usWinDescent = descent\nfont['hhea'].ascent = ascent\nfont['hhea'].descent = -descent\n# save TTF\nfont.save(font_file, reorderTables=None)\n# save WOFF\nfont.flavor = 'woff'\nfont.save(os.path.join('woff', font_name + '.woff'), reorderTables=None)\n# save WOFF2\nfont.flavor = 'woff2'",
+        "detail": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font['hhea'].ascent",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font['hhea'].ascent = ascent\nfont['hhea'].descent = -descent\n# save TTF\nfont.save(font_file, reorderTables=None)\n# save WOFF\nfont.flavor = 'woff'\nfont.save(os.path.join('woff', font_name + '.woff'), reorderTables=None)\n# save WOFF2\nfont.flavor = 'woff2'\nfont.save(os.path.join('woff2', font_name + '.woff2'), reorderTables=None)",
+        "detail": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font['hhea'].descent",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font['hhea'].descent = -descent\n# save TTF\nfont.save(font_file, reorderTables=None)\n# save WOFF\nfont.flavor = 'woff'\nfont.save(os.path.join('woff', font_name + '.woff'), reorderTables=None)\n# save WOFF2\nfont.flavor = 'woff2'\nfont.save(os.path.join('woff2', font_name + '.woff2'), reorderTables=None)",
+        "detail": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font.flavor",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font.flavor = 'woff'\nfont.save(os.path.join('woff', font_name + '.woff'), reorderTables=None)\n# save WOFF2\nfont.flavor = 'woff2'\nfont.save(os.path.join('woff2', font_name + '.woff2'), reorderTables=None)",
+        "detail": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font.flavor",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font.flavor = 'woff2'\nfont.save(os.path.join('woff2', font_name + '.woff2'), reorderTables=None)",
+        "detail": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "find_font_path",
+        "kind": 2,
+        "importPath": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.metrics.extract_tfms",
+        "description": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.metrics.extract_tfms",
+        "peekOfCode": "def find_font_path(font_name):\n    try:\n        font_path = subprocess.check_output(['kpsewhich', font_name])\n    except OSError:\n        raise RuntimeError(\"Couldn't find kpsewhich program, make sure you\" +\n                           \" have TeX installed\")\n    except subprocess.CalledProcessError:\n        raise RuntimeError(\"Couldn't find font metrics: '%s'\" % font_name)\n    return font_path.strip()\ndef main():",
+        "detail": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.metrics.extract_tfms",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.metrics.extract_tfms",
+        "description": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.metrics.extract_tfms",
+        "peekOfCode": "def main():\n    mapping = json.load(sys.stdin)\n    fonts = [\n        'cmbsy10.tfm',\n        'cmbx10.tfm',\n        'cmbxti10.tfm',\n        'cmex10.tfm',\n        'cmmi10.tfm',\n        'cmmib10.tfm',\n        'cmr10.tfm',",
+        "detail": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.metrics.extract_tfms",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.metrics.extract_ttfs",
+        "description": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.metrics.extract_ttfs",
+        "peekOfCode": "def main():\n    start_json = json.load(sys.stdin)\n    for font in start_json:\n        fontInfo = TTFont(\"../../fonts/KaTeX_\" + font + \".ttf\")\n        glyf = fontInfo[\"glyf\"]\n        widths = fontInfo.getGlyphSet()\n        unitsPerEm = float(fontInfo[\"head\"].unitsPerEm)\n        # We keep ALL Unicode cmaps, not just fontInfo[\"cmap\"].getcmap(3, 1).\n        # This is playing it extra safe, since it reports inconsistencies.\n        # Platform 0 is Unicode, platform 3 is Windows. For platform 3,",
+        "detail": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.metrics.extract_ttfs",
+        "documentation": {}
+    },
+    {
+        "label": "metrics_to_extract",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.metrics.extract_ttfs",
+        "description": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.metrics.extract_ttfs",
+        "peekOfCode": "metrics_to_extract = {\n    # Font name\n    \"AMS-Regular\": {\n        u\"\\u21e2\": None,  # \\dashrightarrow\n        u\"\\u21e0\": None,  # \\dashleftarrow\n    },\n    \"Main-Regular\": {\n        # Skew and italic metrics can't be easily parsed from the TTF. Instead,\n        # we map each character to a \"base character\", which is a character\n        # from the same font with correct italic and skew metrics. A character",
+        "detail": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.metrics.extract_ttfs",
+        "documentation": {}
+    },
+    {
+        "label": "props",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.metrics.format_json",
+        "description": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.metrics.format_json",
+        "peekOfCode": "props = ['depth', 'height', 'italic', 'skew']\nif len(sys.argv) > 1:\n    if sys.argv[1] == '--width':\n        props.append('width')\ndata = json.load(sys.stdin)\nsys.stdout.write(\n  \"// This file is GENERATED by buildMetrics.sh. DO NOT MODIFY.\\n\")\nsep = \"export default {\\n    \"\nfor font in sorted(data):\n    sys.stdout.write(sep + json.dumps(font))",
+        "detail": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.metrics.format_json",
+        "documentation": {}
+    },
+    {
+        "label": "data",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.metrics.format_json",
+        "description": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.metrics.format_json",
+        "peekOfCode": "data = json.load(sys.stdin)\nsys.stdout.write(\n  \"// This file is GENERATED by buildMetrics.sh. DO NOT MODIFY.\\n\")\nsep = \"export default {\\n    \"\nfor font in sorted(data):\n    sys.stdout.write(sep + json.dumps(font))\n    sep = \": {\\n        \"\n    for glyph in sorted(data[font], key=int):\n        sys.stdout.write(sep + json.dumps(glyph) + \": \")\n        values = [value if value != 0.0 else 0 for value in",
+        "detail": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.metrics.format_json",
+        "documentation": {}
+    },
+    {
+        "label": "sep",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.metrics.format_json",
+        "description": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.metrics.format_json",
+        "peekOfCode": "sep = \"export default {\\n    \"\nfor font in sorted(data):\n    sys.stdout.write(sep + json.dumps(font))\n    sep = \": {\\n        \"\n    for glyph in sorted(data[font], key=int):\n        sys.stdout.write(sep + json.dumps(glyph) + \": \")\n        values = [value if value != 0.0 else 0 for value in\n                  [data[font][glyph][key] for key in props]]\n        sys.stdout.write(json.dumps(values))\n        sep = \",\\n        \"",
+        "detail": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.metrics.format_json",
+        "documentation": {}
+    },
+    {
+        "label": "CharInfoWord",
+        "kind": 6,
+        "importPath": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.metrics.parse_tfm",
+        "description": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.metrics.parse_tfm",
+        "peekOfCode": "class CharInfoWord(object):\n    def __init__(self, word):\n        b1, b2, b3, b4 = (word >> 24,\n                          (word & 0xff0000) >> 16,\n                          (word & 0xff00) >> 8,\n                          word & 0xff)\n        self.width_index = b1\n        self.height_index = b2 >> 4\n        self.depth_index = b2 & 0x0f\n        self.italic_index = (b3 & 0b11111100) >> 2",
+        "detail": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.metrics.parse_tfm",
+        "documentation": {}
+    },
+    {
+        "label": "LigKernProgram",
+        "kind": 6,
+        "importPath": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.metrics.parse_tfm",
+        "description": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.metrics.parse_tfm",
+        "peekOfCode": "class LigKernProgram(object):\n    def __init__(self, program):\n        self.program = program\n    def execute(self, start, next_char):\n        curr_instruction = start\n        while True:\n            instruction = self.program[curr_instruction]\n            (skip, inst_next_char, op, remainder) = instruction\n            if inst_next_char == next_char:\n                if op < 128:",
+        "detail": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.metrics.parse_tfm",
+        "documentation": {}
+    },
+    {
+        "label": "TfmCharMetrics",
+        "kind": 6,
+        "importPath": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.metrics.parse_tfm",
+        "description": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.metrics.parse_tfm",
+        "peekOfCode": "class TfmCharMetrics(object):\n    def __init__(self, width, height, depth, italic, kern_table):\n        self.width = width\n        self.height = height\n        self.depth = depth\n        self.italic_correction = italic\n        self.kern_table = kern_table\nclass TfmFile(object):\n    def __init__(self, start_char, end_char, char_info, width_table,\n                 height_table, depth_table, italic_table, ligkern_table,",
+        "detail": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.metrics.parse_tfm",
+        "documentation": {}
+    },
+    {
+        "label": "TfmFile",
+        "kind": 6,
+        "importPath": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.metrics.parse_tfm",
+        "description": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.metrics.parse_tfm",
+        "peekOfCode": "class TfmFile(object):\n    def __init__(self, start_char, end_char, char_info, width_table,\n                 height_table, depth_table, italic_table, ligkern_table,\n                 kern_table):\n        self.start_char = start_char\n        self.end_char = end_char\n        self.char_info = char_info\n        self.width_table = width_table\n        self.height_table = height_table\n        self.depth_table = depth_table",
+        "detail": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.metrics.parse_tfm",
+        "documentation": {}
+    },
+    {
+        "label": "TfmReader",
+        "kind": 6,
+        "importPath": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.metrics.parse_tfm",
+        "description": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.metrics.parse_tfm",
+        "peekOfCode": "class TfmReader(object):\n    def __init__(self, f):\n        self.f = f\n    def read_byte(self):\n        return ord(self.f.read(1))\n    def read_halfword(self):\n        b1 = self.read_byte()\n        b2 = self.read_byte()\n        return (b1 << 8) | b2\n    def read_word(self):",
+        "detail": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.metrics.parse_tfm",
+        "documentation": {}
+    },
+    {
+        "label": "read_tfm_file",
+        "kind": 2,
+        "importPath": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.metrics.parse_tfm",
+        "description": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.metrics.parse_tfm",
+        "peekOfCode": "def read_tfm_file(file_name):\n    with open(file_name, 'rb') as f:\n        reader = TfmReader(f)\n        # file_size\n        reader.read_halfword()\n        header_size = reader.read_halfword()\n        start_char = reader.read_halfword()\n        end_char = reader.read_halfword()\n        width_table_size = reader.read_halfword()\n        height_table_size = reader.read_halfword()",
+        "detail": "docs.node_modules..pnpm.nextra@4.2.16_acorn@8.14.1_next@15.2.1_react-dom@19.0.0_react@19.0.0__react@19.0.0__rea_400ea2335f9fee878fc970466982862b.node_modules.katex.src.metrics.parse_tfm",
+        "documentation": {}
+    },
+    {
+        "label": "sfnt.USE_ZOPFLI",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "sfnt.USE_ZOPFLI = True\nif len(sys.argv) < 2:\n    print(\"Usage: %s <font file>\" % sys.argv[0])\n    sys.exit(1)\nfont_file = sys.argv[1]\nfont_name = os.path.splitext(os.path.basename(font_file))[0]\nfont = TTFont(font_file, recalcBBoxes=False, recalcTimestamp=False)\n# fix timestamp to the epoch\nfont['head'].created = 0\nfont['head'].modified = 0",
+        "detail": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font_file",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font_file = sys.argv[1]\nfont_name = os.path.splitext(os.path.basename(font_file))[0]\nfont = TTFont(font_file, recalcBBoxes=False, recalcTimestamp=False)\n# fix timestamp to the epoch\nfont['head'].created = 0\nfont['head'].modified = 0\n# remove fontforge timestamps\nif 'FFTM' in font:\n    del font['FFTM']\n# remove redundant GDEF table",
+        "detail": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font_name",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font_name = os.path.splitext(os.path.basename(font_file))[0]\nfont = TTFont(font_file, recalcBBoxes=False, recalcTimestamp=False)\n# fix timestamp to the epoch\nfont['head'].created = 0\nfont['head'].modified = 0\n# remove fontforge timestamps\nif 'FFTM' in font:\n    del font['FFTM']\n# remove redundant GDEF table\nif 'GDEF' in font:",
+        "detail": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font = TTFont(font_file, recalcBBoxes=False, recalcTimestamp=False)\n# fix timestamp to the epoch\nfont['head'].created = 0\nfont['head'].modified = 0\n# remove fontforge timestamps\nif 'FFTM' in font:\n    del font['FFTM']\n# remove redundant GDEF table\nif 'GDEF' in font:\n    del font['GDEF']",
+        "detail": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font['head'].created",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font['head'].created = 0\nfont['head'].modified = 0\n# remove fontforge timestamps\nif 'FFTM' in font:\n    del font['FFTM']\n# remove redundant GDEF table\nif 'GDEF' in font:\n    del font['GDEF']\n# remove Macintosh table\n# https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6cmap.html",
+        "detail": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font['head'].modified",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font['head'].modified = 0\n# remove fontforge timestamps\nif 'FFTM' in font:\n    del font['FFTM']\n# remove redundant GDEF table\nif 'GDEF' in font:\n    del font['GDEF']\n# remove Macintosh table\n# https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6cmap.html\nfont['name'].names = [record for record in font['name'].names if record.platformID != 1]",
+        "detail": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font['name'].names",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font['name'].names = [record for record in font['name'].names if record.platformID != 1]\nfont['cmap'].tables = [table for table in font['cmap'].tables if table.platformID != 1]\n# fix OS/2 and hhea metrics\nglyf = font['glyf']\nascent = int(max(glyf[c].yMax for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMax\")))\ndescent = -int(min(glyf[c].yMin for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMin\")))\nfont['OS/2'].usWinAscent = ascent\nfont['OS/2'].usWinDescent = descent\nfont['hhea'].ascent = ascent\nfont['hhea'].descent = -descent",
+        "detail": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font['cmap'].tables",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font['cmap'].tables = [table for table in font['cmap'].tables if table.platformID != 1]\n# fix OS/2 and hhea metrics\nglyf = font['glyf']\nascent = int(max(glyf[c].yMax for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMax\")))\ndescent = -int(min(glyf[c].yMin for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMin\")))\nfont['OS/2'].usWinAscent = ascent\nfont['OS/2'].usWinDescent = descent\nfont['hhea'].ascent = ascent\nfont['hhea'].descent = -descent\n# save TTF",
+        "detail": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "glyf",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "glyf = font['glyf']\nascent = int(max(glyf[c].yMax for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMax\")))\ndescent = -int(min(glyf[c].yMin for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMin\")))\nfont['OS/2'].usWinAscent = ascent\nfont['OS/2'].usWinDescent = descent\nfont['hhea'].ascent = ascent\nfont['hhea'].descent = -descent\n# save TTF\nfont.save(font_file, reorderTables=None)\n# save WOFF",
+        "detail": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "ascent",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "ascent = int(max(glyf[c].yMax for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMax\")))\ndescent = -int(min(glyf[c].yMin for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMin\")))\nfont['OS/2'].usWinAscent = ascent\nfont['OS/2'].usWinDescent = descent\nfont['hhea'].ascent = ascent\nfont['hhea'].descent = -descent\n# save TTF\nfont.save(font_file, reorderTables=None)\n# save WOFF\nfont.flavor = 'woff'",
+        "detail": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "descent",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "descent = -int(min(glyf[c].yMin for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMin\")))\nfont['OS/2'].usWinAscent = ascent\nfont['OS/2'].usWinDescent = descent\nfont['hhea'].ascent = ascent\nfont['hhea'].descent = -descent\n# save TTF\nfont.save(font_file, reorderTables=None)\n# save WOFF\nfont.flavor = 'woff'\nfont.save(os.path.join('woff', font_name + '.woff'), reorderTables=None)",
+        "detail": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font['OS/2'].usWinAscent",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font['OS/2'].usWinAscent = ascent\nfont['OS/2'].usWinDescent = descent\nfont['hhea'].ascent = ascent\nfont['hhea'].descent = -descent\n# save TTF\nfont.save(font_file, reorderTables=None)\n# save WOFF\nfont.flavor = 'woff'\nfont.save(os.path.join('woff', font_name + '.woff'), reorderTables=None)\n# save WOFF2",
+        "detail": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font['OS/2'].usWinDescent",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font['OS/2'].usWinDescent = descent\nfont['hhea'].ascent = ascent\nfont['hhea'].descent = -descent\n# save TTF\nfont.save(font_file, reorderTables=None)\n# save WOFF\nfont.flavor = 'woff'\nfont.save(os.path.join('woff', font_name + '.woff'), reorderTables=None)\n# save WOFF2\nfont.flavor = 'woff2'",
+        "detail": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font['hhea'].ascent",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font['hhea'].ascent = ascent\nfont['hhea'].descent = -descent\n# save TTF\nfont.save(font_file, reorderTables=None)\n# save WOFF\nfont.flavor = 'woff'\nfont.save(os.path.join('woff', font_name + '.woff'), reorderTables=None)\n# save WOFF2\nfont.flavor = 'woff2'\nfont.save(os.path.join('woff2', font_name + '.woff2'), reorderTables=None)",
+        "detail": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font['hhea'].descent",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font['hhea'].descent = -descent\n# save TTF\nfont.save(font_file, reorderTables=None)\n# save WOFF\nfont.flavor = 'woff'\nfont.save(os.path.join('woff', font_name + '.woff'), reorderTables=None)\n# save WOFF2\nfont.flavor = 'woff2'\nfont.save(os.path.join('woff2', font_name + '.woff2'), reorderTables=None)",
+        "detail": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font.flavor",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font.flavor = 'woff'\nfont.save(os.path.join('woff', font_name + '.woff'), reorderTables=None)\n# save WOFF2\nfont.flavor = 'woff2'\nfont.save(os.path.join('woff2', font_name + '.woff2'), reorderTables=None)",
+        "detail": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font.flavor",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font.flavor = 'woff2'\nfont.save(os.path.join('woff2', font_name + '.woff2'), reorderTables=None)",
+        "detail": "docs.node_modules..pnpm.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "find_font_path",
+        "kind": 2,
+        "importPath": "docs.node_modules..pnpm.node_modules.katex.src.metrics.extract_tfms",
+        "description": "docs.node_modules..pnpm.node_modules.katex.src.metrics.extract_tfms",
+        "peekOfCode": "def find_font_path(font_name):\n    try:\n        font_path = subprocess.check_output(['kpsewhich', font_name])\n    except OSError:\n        raise RuntimeError(\"Couldn't find kpsewhich program, make sure you\" +\n                           \" have TeX installed\")\n    except subprocess.CalledProcessError:\n        raise RuntimeError(\"Couldn't find font metrics: '%s'\" % font_name)\n    return font_path.strip()\ndef main():",
+        "detail": "docs.node_modules..pnpm.node_modules.katex.src.metrics.extract_tfms",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "docs.node_modules..pnpm.node_modules.katex.src.metrics.extract_tfms",
+        "description": "docs.node_modules..pnpm.node_modules.katex.src.metrics.extract_tfms",
+        "peekOfCode": "def main():\n    mapping = json.load(sys.stdin)\n    fonts = [\n        'cmbsy10.tfm',\n        'cmbx10.tfm',\n        'cmbxti10.tfm',\n        'cmex10.tfm',\n        'cmmi10.tfm',\n        'cmmib10.tfm',\n        'cmr10.tfm',",
+        "detail": "docs.node_modules..pnpm.node_modules.katex.src.metrics.extract_tfms",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "docs.node_modules..pnpm.node_modules.katex.src.metrics.extract_ttfs",
+        "description": "docs.node_modules..pnpm.node_modules.katex.src.metrics.extract_ttfs",
+        "peekOfCode": "def main():\n    start_json = json.load(sys.stdin)\n    for font in start_json:\n        fontInfo = TTFont(\"../../fonts/KaTeX_\" + font + \".ttf\")\n        glyf = fontInfo[\"glyf\"]\n        widths = fontInfo.getGlyphSet()\n        unitsPerEm = float(fontInfo[\"head\"].unitsPerEm)\n        # We keep ALL Unicode cmaps, not just fontInfo[\"cmap\"].getcmap(3, 1).\n        # This is playing it extra safe, since it reports inconsistencies.\n        # Platform 0 is Unicode, platform 3 is Windows. For platform 3,",
+        "detail": "docs.node_modules..pnpm.node_modules.katex.src.metrics.extract_ttfs",
+        "documentation": {}
+    },
+    {
+        "label": "metrics_to_extract",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.node_modules.katex.src.metrics.extract_ttfs",
+        "description": "docs.node_modules..pnpm.node_modules.katex.src.metrics.extract_ttfs",
+        "peekOfCode": "metrics_to_extract = {\n    # Font name\n    \"AMS-Regular\": {\n        u\"\\u21e2\": None,  # \\dashrightarrow\n        u\"\\u21e0\": None,  # \\dashleftarrow\n    },\n    \"Main-Regular\": {\n        # Skew and italic metrics can't be easily parsed from the TTF. Instead,\n        # we map each character to a \"base character\", which is a character\n        # from the same font with correct italic and skew metrics. A character",
+        "detail": "docs.node_modules..pnpm.node_modules.katex.src.metrics.extract_ttfs",
+        "documentation": {}
+    },
+    {
+        "label": "props",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.node_modules.katex.src.metrics.format_json",
+        "description": "docs.node_modules..pnpm.node_modules.katex.src.metrics.format_json",
+        "peekOfCode": "props = ['depth', 'height', 'italic', 'skew']\nif len(sys.argv) > 1:\n    if sys.argv[1] == '--width':\n        props.append('width')\ndata = json.load(sys.stdin)\nsys.stdout.write(\n  \"// This file is GENERATED by buildMetrics.sh. DO NOT MODIFY.\\n\")\nsep = \"export default {\\n    \"\nfor font in sorted(data):\n    sys.stdout.write(sep + json.dumps(font))",
+        "detail": "docs.node_modules..pnpm.node_modules.katex.src.metrics.format_json",
+        "documentation": {}
+    },
+    {
+        "label": "data",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.node_modules.katex.src.metrics.format_json",
+        "description": "docs.node_modules..pnpm.node_modules.katex.src.metrics.format_json",
+        "peekOfCode": "data = json.load(sys.stdin)\nsys.stdout.write(\n  \"// This file is GENERATED by buildMetrics.sh. DO NOT MODIFY.\\n\")\nsep = \"export default {\\n    \"\nfor font in sorted(data):\n    sys.stdout.write(sep + json.dumps(font))\n    sep = \": {\\n        \"\n    for glyph in sorted(data[font], key=int):\n        sys.stdout.write(sep + json.dumps(glyph) + \": \")\n        values = [value if value != 0.0 else 0 for value in",
+        "detail": "docs.node_modules..pnpm.node_modules.katex.src.metrics.format_json",
+        "documentation": {}
+    },
+    {
+        "label": "sep",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.node_modules.katex.src.metrics.format_json",
+        "description": "docs.node_modules..pnpm.node_modules.katex.src.metrics.format_json",
+        "peekOfCode": "sep = \"export default {\\n    \"\nfor font in sorted(data):\n    sys.stdout.write(sep + json.dumps(font))\n    sep = \": {\\n        \"\n    for glyph in sorted(data[font], key=int):\n        sys.stdout.write(sep + json.dumps(glyph) + \": \")\n        values = [value if value != 0.0 else 0 for value in\n                  [data[font][glyph][key] for key in props]]\n        sys.stdout.write(json.dumps(values))\n        sep = \",\\n        \"",
+        "detail": "docs.node_modules..pnpm.node_modules.katex.src.metrics.format_json",
+        "documentation": {}
+    },
+    {
+        "label": "CharInfoWord",
+        "kind": 6,
+        "importPath": "docs.node_modules..pnpm.node_modules.katex.src.metrics.parse_tfm",
+        "description": "docs.node_modules..pnpm.node_modules.katex.src.metrics.parse_tfm",
+        "peekOfCode": "class CharInfoWord(object):\n    def __init__(self, word):\n        b1, b2, b3, b4 = (word >> 24,\n                          (word & 0xff0000) >> 16,\n                          (word & 0xff00) >> 8,\n                          word & 0xff)\n        self.width_index = b1\n        self.height_index = b2 >> 4\n        self.depth_index = b2 & 0x0f\n        self.italic_index = (b3 & 0b11111100) >> 2",
+        "detail": "docs.node_modules..pnpm.node_modules.katex.src.metrics.parse_tfm",
+        "documentation": {}
+    },
+    {
+        "label": "LigKernProgram",
+        "kind": 6,
+        "importPath": "docs.node_modules..pnpm.node_modules.katex.src.metrics.parse_tfm",
+        "description": "docs.node_modules..pnpm.node_modules.katex.src.metrics.parse_tfm",
+        "peekOfCode": "class LigKernProgram(object):\n    def __init__(self, program):\n        self.program = program\n    def execute(self, start, next_char):\n        curr_instruction = start\n        while True:\n            instruction = self.program[curr_instruction]\n            (skip, inst_next_char, op, remainder) = instruction\n            if inst_next_char == next_char:\n                if op < 128:",
+        "detail": "docs.node_modules..pnpm.node_modules.katex.src.metrics.parse_tfm",
+        "documentation": {}
+    },
+    {
+        "label": "TfmCharMetrics",
+        "kind": 6,
+        "importPath": "docs.node_modules..pnpm.node_modules.katex.src.metrics.parse_tfm",
+        "description": "docs.node_modules..pnpm.node_modules.katex.src.metrics.parse_tfm",
+        "peekOfCode": "class TfmCharMetrics(object):\n    def __init__(self, width, height, depth, italic, kern_table):\n        self.width = width\n        self.height = height\n        self.depth = depth\n        self.italic_correction = italic\n        self.kern_table = kern_table\nclass TfmFile(object):\n    def __init__(self, start_char, end_char, char_info, width_table,\n                 height_table, depth_table, italic_table, ligkern_table,",
+        "detail": "docs.node_modules..pnpm.node_modules.katex.src.metrics.parse_tfm",
+        "documentation": {}
+    },
+    {
+        "label": "TfmFile",
+        "kind": 6,
+        "importPath": "docs.node_modules..pnpm.node_modules.katex.src.metrics.parse_tfm",
+        "description": "docs.node_modules..pnpm.node_modules.katex.src.metrics.parse_tfm",
+        "peekOfCode": "class TfmFile(object):\n    def __init__(self, start_char, end_char, char_info, width_table,\n                 height_table, depth_table, italic_table, ligkern_table,\n                 kern_table):\n        self.start_char = start_char\n        self.end_char = end_char\n        self.char_info = char_info\n        self.width_table = width_table\n        self.height_table = height_table\n        self.depth_table = depth_table",
+        "detail": "docs.node_modules..pnpm.node_modules.katex.src.metrics.parse_tfm",
+        "documentation": {}
+    },
+    {
+        "label": "TfmReader",
+        "kind": 6,
+        "importPath": "docs.node_modules..pnpm.node_modules.katex.src.metrics.parse_tfm",
+        "description": "docs.node_modules..pnpm.node_modules.katex.src.metrics.parse_tfm",
+        "peekOfCode": "class TfmReader(object):\n    def __init__(self, f):\n        self.f = f\n    def read_byte(self):\n        return ord(self.f.read(1))\n    def read_halfword(self):\n        b1 = self.read_byte()\n        b2 = self.read_byte()\n        return (b1 << 8) | b2\n    def read_word(self):",
+        "detail": "docs.node_modules..pnpm.node_modules.katex.src.metrics.parse_tfm",
+        "documentation": {}
+    },
+    {
+        "label": "read_tfm_file",
+        "kind": 2,
+        "importPath": "docs.node_modules..pnpm.node_modules.katex.src.metrics.parse_tfm",
+        "description": "docs.node_modules..pnpm.node_modules.katex.src.metrics.parse_tfm",
+        "peekOfCode": "def read_tfm_file(file_name):\n    with open(file_name, 'rb') as f:\n        reader = TfmReader(f)\n        # file_size\n        reader.read_halfword()\n        header_size = reader.read_halfword()\n        start_char = reader.read_halfword()\n        end_char = reader.read_halfword()\n        width_table_size = reader.read_halfword()\n        height_table_size = reader.read_halfword()",
+        "detail": "docs.node_modules..pnpm.node_modules.katex.src.metrics.parse_tfm",
+        "documentation": {}
+    },
+    {
+        "label": "sfnt.USE_ZOPFLI",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "sfnt.USE_ZOPFLI = True\nif len(sys.argv) < 2:\n    print(\"Usage: %s <font file>\" % sys.argv[0])\n    sys.exit(1)\nfont_file = sys.argv[1]\nfont_name = os.path.splitext(os.path.basename(font_file))[0]\nfont = TTFont(font_file, recalcBBoxes=False, recalcTimestamp=False)\n# fix timestamp to the epoch\nfont['head'].created = 0\nfont['head'].modified = 0",
+        "detail": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font_file",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font_file = sys.argv[1]\nfont_name = os.path.splitext(os.path.basename(font_file))[0]\nfont = TTFont(font_file, recalcBBoxes=False, recalcTimestamp=False)\n# fix timestamp to the epoch\nfont['head'].created = 0\nfont['head'].modified = 0\n# remove fontforge timestamps\nif 'FFTM' in font:\n    del font['FFTM']\n# remove redundant GDEF table",
+        "detail": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font_name",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font_name = os.path.splitext(os.path.basename(font_file))[0]\nfont = TTFont(font_file, recalcBBoxes=False, recalcTimestamp=False)\n# fix timestamp to the epoch\nfont['head'].created = 0\nfont['head'].modified = 0\n# remove fontforge timestamps\nif 'FFTM' in font:\n    del font['FFTM']\n# remove redundant GDEF table\nif 'GDEF' in font:",
+        "detail": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font = TTFont(font_file, recalcBBoxes=False, recalcTimestamp=False)\n# fix timestamp to the epoch\nfont['head'].created = 0\nfont['head'].modified = 0\n# remove fontforge timestamps\nif 'FFTM' in font:\n    del font['FFTM']\n# remove redundant GDEF table\nif 'GDEF' in font:\n    del font['GDEF']",
+        "detail": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font['head'].created",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font['head'].created = 0\nfont['head'].modified = 0\n# remove fontforge timestamps\nif 'FFTM' in font:\n    del font['FFTM']\n# remove redundant GDEF table\nif 'GDEF' in font:\n    del font['GDEF']\n# remove Macintosh table\n# https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6cmap.html",
+        "detail": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font['head'].modified",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font['head'].modified = 0\n# remove fontforge timestamps\nif 'FFTM' in font:\n    del font['FFTM']\n# remove redundant GDEF table\nif 'GDEF' in font:\n    del font['GDEF']\n# remove Macintosh table\n# https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6cmap.html\nfont['name'].names = [record for record in font['name'].names if record.platformID != 1]",
+        "detail": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font['name'].names",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font['name'].names = [record for record in font['name'].names if record.platformID != 1]\nfont['cmap'].tables = [table for table in font['cmap'].tables if table.platformID != 1]\n# fix OS/2 and hhea metrics\nglyf = font['glyf']\nascent = int(max(glyf[c].yMax for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMax\")))\ndescent = -int(min(glyf[c].yMin for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMin\")))\nfont['OS/2'].usWinAscent = ascent\nfont['OS/2'].usWinDescent = descent\nfont['hhea'].ascent = ascent\nfont['hhea'].descent = -descent",
+        "detail": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font['cmap'].tables",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font['cmap'].tables = [table for table in font['cmap'].tables if table.platformID != 1]\n# fix OS/2 and hhea metrics\nglyf = font['glyf']\nascent = int(max(glyf[c].yMax for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMax\")))\ndescent = -int(min(glyf[c].yMin for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMin\")))\nfont['OS/2'].usWinAscent = ascent\nfont['OS/2'].usWinDescent = descent\nfont['hhea'].ascent = ascent\nfont['hhea'].descent = -descent\n# save TTF",
+        "detail": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "glyf",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "glyf = font['glyf']\nascent = int(max(glyf[c].yMax for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMax\")))\ndescent = -int(min(glyf[c].yMin for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMin\")))\nfont['OS/2'].usWinAscent = ascent\nfont['OS/2'].usWinDescent = descent\nfont['hhea'].ascent = ascent\nfont['hhea'].descent = -descent\n# save TTF\nfont.save(font_file, reorderTables=None)\n# save WOFF",
+        "detail": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "ascent",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "ascent = int(max(glyf[c].yMax for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMax\")))\ndescent = -int(min(glyf[c].yMin for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMin\")))\nfont['OS/2'].usWinAscent = ascent\nfont['OS/2'].usWinDescent = descent\nfont['hhea'].ascent = ascent\nfont['hhea'].descent = -descent\n# save TTF\nfont.save(font_file, reorderTables=None)\n# save WOFF\nfont.flavor = 'woff'",
+        "detail": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "descent",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "descent = -int(min(glyf[c].yMin for c in font.getGlyphOrder() if hasattr(glyf[c], \"yMin\")))\nfont['OS/2'].usWinAscent = ascent\nfont['OS/2'].usWinDescent = descent\nfont['hhea'].ascent = ascent\nfont['hhea'].descent = -descent\n# save TTF\nfont.save(font_file, reorderTables=None)\n# save WOFF\nfont.flavor = 'woff'\nfont.save(os.path.join('woff', font_name + '.woff'), reorderTables=None)",
+        "detail": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font['OS/2'].usWinAscent",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font['OS/2'].usWinAscent = ascent\nfont['OS/2'].usWinDescent = descent\nfont['hhea'].ascent = ascent\nfont['hhea'].descent = -descent\n# save TTF\nfont.save(font_file, reorderTables=None)\n# save WOFF\nfont.flavor = 'woff'\nfont.save(os.path.join('woff', font_name + '.woff'), reorderTables=None)\n# save WOFF2",
+        "detail": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font['OS/2'].usWinDescent",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font['OS/2'].usWinDescent = descent\nfont['hhea'].ascent = ascent\nfont['hhea'].descent = -descent\n# save TTF\nfont.save(font_file, reorderTables=None)\n# save WOFF\nfont.flavor = 'woff'\nfont.save(os.path.join('woff', font_name + '.woff'), reorderTables=None)\n# save WOFF2\nfont.flavor = 'woff2'",
+        "detail": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font['hhea'].ascent",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font['hhea'].ascent = ascent\nfont['hhea'].descent = -descent\n# save TTF\nfont.save(font_file, reorderTables=None)\n# save WOFF\nfont.flavor = 'woff'\nfont.save(os.path.join('woff', font_name + '.woff'), reorderTables=None)\n# save WOFF2\nfont.flavor = 'woff2'\nfont.save(os.path.join('woff2', font_name + '.woff2'), reorderTables=None)",
+        "detail": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font['hhea'].descent",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font['hhea'].descent = -descent\n# save TTF\nfont.save(font_file, reorderTables=None)\n# save WOFF\nfont.flavor = 'woff'\nfont.save(os.path.join('woff', font_name + '.woff'), reorderTables=None)\n# save WOFF2\nfont.flavor = 'woff2'\nfont.save(os.path.join('woff2', font_name + '.woff2'), reorderTables=None)",
+        "detail": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font.flavor",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font.flavor = 'woff'\nfont.save(os.path.join('woff', font_name + '.woff'), reorderTables=None)\n# save WOFF2\nfont.flavor = 'woff2'\nfont.save(os.path.join('woff2', font_name + '.woff2'), reorderTables=None)",
+        "detail": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "font.flavor",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "description": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "peekOfCode": "font.flavor = 'woff2'\nfont.save(os.path.join('woff2', font_name + '.woff2'), reorderTables=None)",
+        "detail": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.fonts.generate_fonts",
+        "documentation": {}
+    },
+    {
+        "label": "find_font_path",
+        "kind": 2,
+        "importPath": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.metrics.extract_tfms",
+        "description": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.metrics.extract_tfms",
+        "peekOfCode": "def find_font_path(font_name):\n    try:\n        font_path = subprocess.check_output(['kpsewhich', font_name])\n    except OSError:\n        raise RuntimeError(\"Couldn't find kpsewhich program, make sure you\" +\n                           \" have TeX installed\")\n    except subprocess.CalledProcessError:\n        raise RuntimeError(\"Couldn't find font metrics: '%s'\" % font_name)\n    return font_path.strip()\ndef main():",
+        "detail": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.metrics.extract_tfms",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.metrics.extract_tfms",
+        "description": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.metrics.extract_tfms",
+        "peekOfCode": "def main():\n    mapping = json.load(sys.stdin)\n    fonts = [\n        'cmbsy10.tfm',\n        'cmbx10.tfm',\n        'cmbxti10.tfm',\n        'cmex10.tfm',\n        'cmmi10.tfm',\n        'cmmib10.tfm',\n        'cmr10.tfm',",
+        "detail": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.metrics.extract_tfms",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.metrics.extract_ttfs",
+        "description": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.metrics.extract_ttfs",
+        "peekOfCode": "def main():\n    start_json = json.load(sys.stdin)\n    for font in start_json:\n        fontInfo = TTFont(\"../../fonts/KaTeX_\" + font + \".ttf\")\n        glyf = fontInfo[\"glyf\"]\n        widths = fontInfo.getGlyphSet()\n        unitsPerEm = float(fontInfo[\"head\"].unitsPerEm)\n        # We keep ALL Unicode cmaps, not just fontInfo[\"cmap\"].getcmap(3, 1).\n        # This is playing it extra safe, since it reports inconsistencies.\n        # Platform 0 is Unicode, platform 3 is Windows. For platform 3,",
+        "detail": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.metrics.extract_ttfs",
+        "documentation": {}
+    },
+    {
+        "label": "metrics_to_extract",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.metrics.extract_ttfs",
+        "description": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.metrics.extract_ttfs",
+        "peekOfCode": "metrics_to_extract = {\n    # Font name\n    \"AMS-Regular\": {\n        u\"\\u21e2\": None,  # \\dashrightarrow\n        u\"\\u21e0\": None,  # \\dashleftarrow\n    },\n    \"Main-Regular\": {\n        # Skew and italic metrics can't be easily parsed from the TTF. Instead,\n        # we map each character to a \"base character\", which is a character\n        # from the same font with correct italic and skew metrics. A character",
+        "detail": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.metrics.extract_ttfs",
+        "documentation": {}
+    },
+    {
+        "label": "props",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.metrics.format_json",
+        "description": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.metrics.format_json",
+        "peekOfCode": "props = ['depth', 'height', 'italic', 'skew']\nif len(sys.argv) > 1:\n    if sys.argv[1] == '--width':\n        props.append('width')\ndata = json.load(sys.stdin)\nsys.stdout.write(\n  \"// This file is GENERATED by buildMetrics.sh. DO NOT MODIFY.\\n\")\nsep = \"export default {\\n    \"\nfor font in sorted(data):\n    sys.stdout.write(sep + json.dumps(font))",
+        "detail": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.metrics.format_json",
+        "documentation": {}
+    },
+    {
+        "label": "data",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.metrics.format_json",
+        "description": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.metrics.format_json",
+        "peekOfCode": "data = json.load(sys.stdin)\nsys.stdout.write(\n  \"// This file is GENERATED by buildMetrics.sh. DO NOT MODIFY.\\n\")\nsep = \"export default {\\n    \"\nfor font in sorted(data):\n    sys.stdout.write(sep + json.dumps(font))\n    sep = \": {\\n        \"\n    for glyph in sorted(data[font], key=int):\n        sys.stdout.write(sep + json.dumps(glyph) + \": \")\n        values = [value if value != 0.0 else 0 for value in",
+        "detail": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.metrics.format_json",
+        "documentation": {}
+    },
+    {
+        "label": "sep",
+        "kind": 5,
+        "importPath": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.metrics.format_json",
+        "description": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.metrics.format_json",
+        "peekOfCode": "sep = \"export default {\\n    \"\nfor font in sorted(data):\n    sys.stdout.write(sep + json.dumps(font))\n    sep = \": {\\n        \"\n    for glyph in sorted(data[font], key=int):\n        sys.stdout.write(sep + json.dumps(glyph) + \": \")\n        values = [value if value != 0.0 else 0 for value in\n                  [data[font][glyph][key] for key in props]]\n        sys.stdout.write(json.dumps(values))\n        sep = \",\\n        \"",
+        "detail": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.metrics.format_json",
+        "documentation": {}
+    },
+    {
+        "label": "CharInfoWord",
+        "kind": 6,
+        "importPath": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.metrics.parse_tfm",
+        "description": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.metrics.parse_tfm",
+        "peekOfCode": "class CharInfoWord(object):\n    def __init__(self, word):\n        b1, b2, b3, b4 = (word >> 24,\n                          (word & 0xff0000) >> 16,\n                          (word & 0xff00) >> 8,\n                          word & 0xff)\n        self.width_index = b1\n        self.height_index = b2 >> 4\n        self.depth_index = b2 & 0x0f\n        self.italic_index = (b3 & 0b11111100) >> 2",
+        "detail": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.metrics.parse_tfm",
+        "documentation": {}
+    },
+    {
+        "label": "LigKernProgram",
+        "kind": 6,
+        "importPath": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.metrics.parse_tfm",
+        "description": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.metrics.parse_tfm",
+        "peekOfCode": "class LigKernProgram(object):\n    def __init__(self, program):\n        self.program = program\n    def execute(self, start, next_char):\n        curr_instruction = start\n        while True:\n            instruction = self.program[curr_instruction]\n            (skip, inst_next_char, op, remainder) = instruction\n            if inst_next_char == next_char:\n                if op < 128:",
+        "detail": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.metrics.parse_tfm",
+        "documentation": {}
+    },
+    {
+        "label": "TfmCharMetrics",
+        "kind": 6,
+        "importPath": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.metrics.parse_tfm",
+        "description": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.metrics.parse_tfm",
+        "peekOfCode": "class TfmCharMetrics(object):\n    def __init__(self, width, height, depth, italic, kern_table):\n        self.width = width\n        self.height = height\n        self.depth = depth\n        self.italic_correction = italic\n        self.kern_table = kern_table\nclass TfmFile(object):\n    def __init__(self, start_char, end_char, char_info, width_table,\n                 height_table, depth_table, italic_table, ligkern_table,",
+        "detail": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.metrics.parse_tfm",
+        "documentation": {}
+    },
+    {
+        "label": "TfmFile",
+        "kind": 6,
+        "importPath": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.metrics.parse_tfm",
+        "description": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.metrics.parse_tfm",
+        "peekOfCode": "class TfmFile(object):\n    def __init__(self, start_char, end_char, char_info, width_table,\n                 height_table, depth_table, italic_table, ligkern_table,\n                 kern_table):\n        self.start_char = start_char\n        self.end_char = end_char\n        self.char_info = char_info\n        self.width_table = width_table\n        self.height_table = height_table\n        self.depth_table = depth_table",
+        "detail": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.metrics.parse_tfm",
+        "documentation": {}
+    },
+    {
+        "label": "TfmReader",
+        "kind": 6,
+        "importPath": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.metrics.parse_tfm",
+        "description": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.metrics.parse_tfm",
+        "peekOfCode": "class TfmReader(object):\n    def __init__(self, f):\n        self.f = f\n    def read_byte(self):\n        return ord(self.f.read(1))\n    def read_halfword(self):\n        b1 = self.read_byte()\n        b2 = self.read_byte()\n        return (b1 << 8) | b2\n    def read_word(self):",
+        "detail": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.metrics.parse_tfm",
+        "documentation": {}
+    },
+    {
+        "label": "read_tfm_file",
+        "kind": 2,
+        "importPath": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.metrics.parse_tfm",
+        "description": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.metrics.parse_tfm",
+        "peekOfCode": "def read_tfm_file(file_name):\n    with open(file_name, 'rb') as f:\n        reader = TfmReader(f)\n        # file_size\n        reader.read_halfword()\n        header_size = reader.read_halfword()\n        start_char = reader.read_halfword()\n        end_char = reader.read_halfword()\n        width_table_size = reader.read_halfword()\n        height_table_size = reader.read_halfword()",
+        "detail": "docs.node_modules..pnpm.rehype-katex@7.0.1.node_modules.katex.src.metrics.parse_tfm",
+        "documentation": {}
+    },
+    {
+        "label": "_Known",
+        "kind": 6,
+        "importPath": "extension.node_modules.flatted.python.flatted",
+        "description": "extension.node_modules.flatted.python.flatted",
+        "peekOfCode": "class _Known:\n    def __init__(self):\n        self.key = []\n        self.value = []\nclass _String:\n    def __init__(self, value):\n        self.value = value\ndef _array_keys(value):\n    keys = []\n    i = 0",
+        "detail": "extension.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "_String",
+        "kind": 6,
+        "importPath": "extension.node_modules.flatted.python.flatted",
+        "description": "extension.node_modules.flatted.python.flatted",
+        "peekOfCode": "class _String:\n    def __init__(self, value):\n        self.value = value\ndef _array_keys(value):\n    keys = []\n    i = 0\n    for _ in value:\n        keys.append(i)\n        i += 1\n    return keys",
+        "detail": "extension.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "parse",
+        "kind": 2,
+        "importPath": "extension.node_modules.flatted.python.flatted",
+        "description": "extension.node_modules.flatted.python.flatted",
+        "peekOfCode": "def parse(value, *args, **kwargs):\n    json = _json.loads(value, *args, **kwargs)\n    wrapped = []\n    for value in json:\n        wrapped.append(_wrap(value))\n    input = []\n    for value in wrapped:\n        if isinstance(value, _String):\n            input.append(value.value)\n        else:",
+        "detail": "extension.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "stringify",
+        "kind": 2,
+        "importPath": "extension.node_modules.flatted.python.flatted",
+        "description": "extension.node_modules.flatted.python.flatted",
+        "peekOfCode": "def stringify(value, *args, **kwargs):\n    known = _Known()\n    input = []\n    output = []\n    i = int(_index(known, input, value))\n    while i < len(input):\n        output.append(_transform(known, input, input[i]))\n        i += 1\n    return _json.dumps(output, *args, **kwargs)",
+        "detail": "extension.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "create_user",
+        "kind": 2,
+        "importPath": "scripts.simulate_connections",
+        "description": "scripts.simulate_connections",
+        "peekOfCode": "def create_user(username):\n    url = f\"{RABBITMQ_API}/{username}\"\n    user_data = {\"password\": \"password\", \"tags\": \"\"}\n    response = requests.put(url, json=user_data, auth=(USERNAME, PASSWORD))\n    if response.status_code in [200, 201, 204]:\n        print(f\"Usuário {username} criado com sucesso.\")\n    elif response.status_code == 400:\n        print(f\"Usuário {username} já existe.\")\n    else:\n        print(f\"Erro ao criar usuário {username}: {response.text}\")",
+        "detail": "scripts.simulate_connections",
+        "documentation": {}
+    },
+    {
+        "label": "create_connections_and_channels",
+        "kind": 2,
+        "importPath": "scripts.simulate_connections",
+        "description": "scripts.simulate_connections",
+        "peekOfCode": "def create_connections_and_channels(username):\n    \"\"\"\n    Creates connections and channels for a given username.\n    Args:\n        username (str): The username for which connections and channels are created.\n    Returns:\n        list: A list of created connections.\n    Raises:\n        Exception: If an error occurs while creating a connection.\n    \"\"\"",
+        "detail": "scripts.simulate_connections",
+        "documentation": {}
+    },
+    {
+        "label": "keep_alive",
+        "kind": 2,
+        "importPath": "scripts.simulate_connections",
+        "description": "scripts.simulate_connections",
+        "peekOfCode": "def keep_alive():\n    while True:\n        time.sleep(20)\n        for conn in all_connections:\n            try:\n                if conn.is_closed:\n                    print(\"Reconectando uma conexão fechada...\")\n                    all_connections.remove(conn)\n                    all_connections.extend(create_connections_and_channels(\"user_simulate_connection\"))\n                else:",
+        "detail": "scripts.simulate_connections",
+        "documentation": {}
+    },
+    {
+        "label": "RABBITMQ_API",
+        "kind": 5,
+        "importPath": "scripts.simulate_connections",
+        "description": "scripts.simulate_connections",
+        "peekOfCode": "RABBITMQ_API = \"http://localhost:15672/api/users\"\nRABBITMQ_VHOST_API = \"http://localhost:15672/api/permissions/%2F\"\nRABBITMQ_VHOST = \"%2F\"\nRABBITMQ_HOST = \"localhost\"\nUSERNAME = \"admin\"\nPASSWORD = \"admin\"\nNUM_USERS = 15\n# Criar usuários no RabbitMQ\ndef create_user(username):\n    url = f\"{RABBITMQ_API}/{username}\"",
+        "detail": "scripts.simulate_connections",
+        "documentation": {}
+    },
+    {
+        "label": "RABBITMQ_VHOST_API",
+        "kind": 5,
+        "importPath": "scripts.simulate_connections",
+        "description": "scripts.simulate_connections",
+        "peekOfCode": "RABBITMQ_VHOST_API = \"http://localhost:15672/api/permissions/%2F\"\nRABBITMQ_VHOST = \"%2F\"\nRABBITMQ_HOST = \"localhost\"\nUSERNAME = \"admin\"\nPASSWORD = \"admin\"\nNUM_USERS = 15\n# Criar usuários no RabbitMQ\ndef create_user(username):\n    url = f\"{RABBITMQ_API}/{username}\"\n    user_data = {\"password\": \"password\", \"tags\": \"\"}",
+        "detail": "scripts.simulate_connections",
+        "documentation": {}
+    },
+    {
+        "label": "RABBITMQ_VHOST",
+        "kind": 5,
+        "importPath": "scripts.simulate_connections",
+        "description": "scripts.simulate_connections",
+        "peekOfCode": "RABBITMQ_VHOST = \"%2F\"\nRABBITMQ_HOST = \"localhost\"\nUSERNAME = \"admin\"\nPASSWORD = \"admin\"\nNUM_USERS = 15\n# Criar usuários no RabbitMQ\ndef create_user(username):\n    url = f\"{RABBITMQ_API}/{username}\"\n    user_data = {\"password\": \"password\", \"tags\": \"\"}\n    response = requests.put(url, json=user_data, auth=(USERNAME, PASSWORD))",
+        "detail": "scripts.simulate_connections",
+        "documentation": {}
+    },
+    {
+        "label": "RABBITMQ_HOST",
+        "kind": 5,
+        "importPath": "scripts.simulate_connections",
+        "description": "scripts.simulate_connections",
+        "peekOfCode": "RABBITMQ_HOST = \"localhost\"\nUSERNAME = \"admin\"\nPASSWORD = \"admin\"\nNUM_USERS = 15\n# Criar usuários no RabbitMQ\ndef create_user(username):\n    url = f\"{RABBITMQ_API}/{username}\"\n    user_data = {\"password\": \"password\", \"tags\": \"\"}\n    response = requests.put(url, json=user_data, auth=(USERNAME, PASSWORD))\n    if response.status_code in [200, 201, 204]:",
+        "detail": "scripts.simulate_connections",
+        "documentation": {}
+    },
+    {
+        "label": "USERNAME",
+        "kind": 5,
+        "importPath": "scripts.simulate_connections",
+        "description": "scripts.simulate_connections",
+        "peekOfCode": "USERNAME = \"admin\"\nPASSWORD = \"admin\"\nNUM_USERS = 15\n# Criar usuários no RabbitMQ\ndef create_user(username):\n    url = f\"{RABBITMQ_API}/{username}\"\n    user_data = {\"password\": \"password\", \"tags\": \"\"}\n    response = requests.put(url, json=user_data, auth=(USERNAME, PASSWORD))\n    if response.status_code in [200, 201, 204]:\n        print(f\"Usuário {username} criado com sucesso.\")",
+        "detail": "scripts.simulate_connections",
+        "documentation": {}
+    },
+    {
+        "label": "PASSWORD",
+        "kind": 5,
+        "importPath": "scripts.simulate_connections",
+        "description": "scripts.simulate_connections",
+        "peekOfCode": "PASSWORD = \"admin\"\nNUM_USERS = 15\n# Criar usuários no RabbitMQ\ndef create_user(username):\n    url = f\"{RABBITMQ_API}/{username}\"\n    user_data = {\"password\": \"password\", \"tags\": \"\"}\n    response = requests.put(url, json=user_data, auth=(USERNAME, PASSWORD))\n    if response.status_code in [200, 201, 204]:\n        print(f\"Usuário {username} criado com sucesso.\")\n    elif response.status_code == 400:",
+        "detail": "scripts.simulate_connections",
+        "documentation": {}
+    },
+    {
+        "label": "NUM_USERS",
+        "kind": 5,
+        "importPath": "scripts.simulate_connections",
+        "description": "scripts.simulate_connections",
+        "peekOfCode": "NUM_USERS = 15\n# Criar usuários no RabbitMQ\ndef create_user(username):\n    url = f\"{RABBITMQ_API}/{username}\"\n    user_data = {\"password\": \"password\", \"tags\": \"\"}\n    response = requests.put(url, json=user_data, auth=(USERNAME, PASSWORD))\n    if response.status_code in [200, 201, 204]:\n        print(f\"Usuário {username} criado com sucesso.\")\n    elif response.status_code == 400:\n        print(f\"Usuário {username} já existe.\")",
+        "detail": "scripts.simulate_connections",
+        "documentation": {}
+    },
+    {
+        "label": "all_connections",
+        "kind": 5,
+        "importPath": "scripts.simulate_connections",
+        "description": "scripts.simulate_connections",
+        "peekOfCode": "all_connections = []\nthreads = []\nfor i in range(NUM_USERS):\n    user = f\"user_simulate_connection_{i}\"\n    create_user(user)\n    thread = threading.Thread(target=lambda: all_connections.extend(create_connections_and_channels(user)))\n    thread.start()\n    threads.append(thread)\n# Aguarde todas as threads finalizarem\nfor thread in threads:",
+        "detail": "scripts.simulate_connections",
+        "documentation": {}
+    },
+    {
+        "label": "threads",
+        "kind": 5,
+        "importPath": "scripts.simulate_connections",
+        "description": "scripts.simulate_connections",
+        "peekOfCode": "threads = []\nfor i in range(NUM_USERS):\n    user = f\"user_simulate_connection_{i}\"\n    create_user(user)\n    thread = threading.Thread(target=lambda: all_connections.extend(create_connections_and_channels(user)))\n    thread.start()\n    threads.append(thread)\n# Aguarde todas as threads finalizarem\nfor thread in threads:\n    thread.join()",
+        "detail": "scripts.simulate_connections",
+        "documentation": {}
+    },
+    {
+        "label": "keep_alive_thread",
+        "kind": 5,
+        "importPath": "scripts.simulate_connections",
+        "description": "scripts.simulate_connections",
+        "peekOfCode": "keep_alive_thread = threading.Thread(target=keep_alive, daemon=True)\nkeep_alive_thread.start()\n# Manter as conexões abertas\ntry:\n    while True:\n        time.sleep(10)\nexcept KeyboardInterrupt:\n    print(\"Encerrando conexões...\")\n    for conn in all_connections:\n        if conn.is_open:",
+        "detail": "scripts.simulate_connections",
+        "documentation": {}
+    },
+    {
+        "label": "simulate_exchange_queues_and_messages",
+        "kind": 2,
+        "importPath": "scripts.simulate_exchange_queues_and_messages",
+        "description": "scripts.simulate_exchange_queues_and_messages",
+        "peekOfCode": "def simulate_exchange_queues_and_messages():\n    \"\"\"\n    Simulates the creation of exchanges, queues, and messages in RabbitMQ.\n    This script connects to a RabbitMQ server and performs the following steps:\n    1. Creates a specified number of exchanges with random types (direct, fanout, or topic).\n    2. Creates a specified number of queues.\n    3. Creates random bindings between exchanges and queues.\n    4. Generates and publishes random messages to each queue.\n    The script uses the pika library to interact with RabbitMQ.\n    Note: Make sure to update the RabbitMQ host, username, and password before running the script.",
+        "detail": "scripts.simulate_exchange_queues_and_messages",
+        "documentation": {}
+    }
+]
