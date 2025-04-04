@@ -5,6 +5,14 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "inlineSources": true,
+    "preserveConstEnums": true,
+    "noEmitOnError": false,
+    "removeComments": false,
+    "downlevelIteration": false
   }
 }

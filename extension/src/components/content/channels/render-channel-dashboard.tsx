@@ -10,6 +10,7 @@ import { Toaster } from '@/components/ui/sonner';
 import ChannelDataProvider from './channel-data-provider';
 import { ChannelByUserBarOverviewChart } from './channel-byuser-bar-chart';
 import { ChannelByUserPizzaOverviewChart } from './channel-byuser-pizza-chart';
+import { VersionMapperElements } from '@/lib/version-mapper-elements';
 
 export const CHANNELS_OVERVIEW_CHART_ID = 'channels-overview-chart';
 export const CHANNELS_TABLE_LIST_ID = 'channels-table-list';
@@ -17,13 +18,14 @@ export const CHANNELS_TABLE_LIST_ID = 'channels-table-list';
 /**
  * Render the main chart for queue and streams dashboard.
  */
-export async function renderChannelDashboard() {
+export async function renderChannelDashboard(mapper: VersionMapperElements) {
   waitForElement('#main', async (_) => {
     // Check if the "Queues and Streams" tab is selected. If not, do nothing.
     // This component should only be rendered when the "Queues and Streams" tab is selected.
 
-    const connectionsTab = document.getElementById('channels');
-    if (!connectionsTab || !connectionsTab.firstElementChild?.classList.contains('selected')) {
+    const connectionsTab = mapper.GetNodeOfChannelsTab(document);
+    if (!connectionsTab) {
+      console.debug('Channels tab is not selected or was not founded. Cancelling renderChannelDashboard');
       return;
     }
 
@@ -73,5 +75,5 @@ export async function renderChannelDashboard() {
       </SettingsProvider>,
     );
   });
-  console.info('Channel dashboard rendered');
+  console.debug('Channel dashboard rendered');
 }

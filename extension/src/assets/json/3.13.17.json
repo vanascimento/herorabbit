@@ -1,0 +1,7 @@
+{
+  "version": "4.0.7",
+  "CONNECTIONS_TAB_ID": "connections",
+  "CONNECTIONS_MAIN_CONTAINER_ID": "main",
+  "QUEUES_TAB_ID": "queues-and-streams",
+  "CHANNELS_TAB_ID": "channels"
+}

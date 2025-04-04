@@ -12,12 +12,16 @@ import {
   QUEUE_TABLE_LIST_ID,
   renderQueueDashboard,
 } from '@/components/content/queue-and-streams/render-queue-dashboard';
+import { getCurrentRabbitmqCredentials } from '@/hooks/useCurrentRabbitmqCredentials';
 import { getCurrentTabUrl } from '@/hooks/useCurrentTabUrl';
 import { GetGeneralSettings } from '@/hooks/useSettings';
+import { BuildInterfaceMapperElements } from '@/lib/version-mapper-elements';
 
 export async function renderAll() {
   const settings = await GetGeneralSettings();
   const currentUrl = await getCurrentTabUrl();
+  const currentCredentials = await getCurrentRabbitmqCredentials();
+
   if (!settings) {
     console.debug('settings is null');
   }
@@ -28,24 +32,26 @@ export async function renderAll() {
 
   const isRabbitMq = settings?.credentials?.some((credential) => currentUrl?.includes(credential.host));
   if (!isRabbitMq) {
-    console.debug('currentUrl is not a registered rabbitmq');
+    console.debug('currentUrl is not a registered rabbitmq. Cancelling renderAll');
     return;
   }
 
+  const mapperElements = await BuildInterfaceMapperElements(currentCredentials?.management_version!);
+
   if (!document.getElementById(CONNECTION_OVERVIEW_CHART_ID)) {
-    renderConnectionDashboard();
+    renderConnectionDashboard(mapperElements);
   }
 
   if (!document.getElementById(QUEUE_OVERVIEW_CHART_ID)) {
-    renderQueueDashboard();
+    renderQueueDashboard(mapperElements);
   }
 
   if (!document.getElementById(QUEUE_TABLE_LIST_ID)) {
-    renderTableOptions();
+    renderTableOptions(mapperElements);
   }
 
   if (!document.getElementById(CHANNELS_OVERVIEW_CHART_ID)) {
-    renderChannelDashboard();
+    renderChannelDashboard(mapperElements);
   }
 
   console.debug('renderAll done');

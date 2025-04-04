@@ -2,6 +2,7 @@ import { renderQueueDashboard } from '@/components/content/queue-and-streams/ren
 import { Switch } from '@/components/ui/switch';
 import { useSettings } from '@/hooks/useSettings';
 import { GeneralSettings } from '@/lib/types';
+import { BuildInterfaceMapperElements } from '@/lib/version-mapper-elements';
 import { useState } from 'react';
 import { z } from 'zod';
 
@@ -34,8 +35,9 @@ export default function ConnectionToggles() {
               },
             };
             await setSettings(newSettingsValue);
+            const adapter = await BuildInterfaceMapperElements(settings.credentials[0].management_version!);
             setLocalSettingsState(newSettingsValue);
-            renderQueueDashboard();
+            renderQueueDashboard(adapter);
           }}
           aria-readonly
         />

@@ -4,8 +4,9 @@ import { GetTailwindBackStyles } from '@/lib/tailwind-custom';
 import { createRoot } from 'react-dom/client';
 import { GetGeneralSettings, SettingsProvider } from '@/hooks/useSettings';
 import DownloadMessagesFromQueueButton from '@/components/management/download-messages-from-queue-button';
-import { getCurrentRabbitmqCredentials } from '@/hooks/useCurrentRabbitmqCredentials';
 import ImportMessagesToQueueButton from '@/components/management/import-messages-from-queue-button';
+import { getCurrentTabUrl } from '@/hooks/useCurrentTabUrl';
+import { VersionMapperElements } from '@/lib/version-mapper-elements';
 
 export const QUEUE_HEROACTIONS_ACTIONS_ID = 'queue-heroactions-actions';
 export const QUEUE_HEROACTIONS_MANAGEMENT_ID = 'queue-heroactions-management';
@@ -14,7 +15,7 @@ export const QUEUE_HEROACTIONS_MANAGEMENT_ID = 'queue-heroactions-management';
  * Render the table options for the queues and streams table.
  * @returns
  */
-export const renderTableOptions = async () => {
+export const renderTableOptions = async (mapper: VersionMapperElements) => {
   const settings = await GetGeneralSettings();
   if (settings?.toggleSettings.download_messages === false) {
     const queueTableOptions = document.getElementById(QUEUE_HEROACTIONS_ACTIONS_ID);
@@ -24,13 +25,14 @@ export const renderTableOptions = async () => {
 
     return;
   }
-  const queueAndStreamTab = document.getElementById('queues-and-streams');
-  if (!queueAndStreamTab || !queueAndStreamTab.firstElementChild?.classList.contains('selected')) {
+  const queueAndStreamTab = mapper.GetNodeOfQueuesTabIfisSelected(document);
+  if (!queueAndStreamTab) {
+    console.debug('Queues tab is not selected or was not founded. Cancelling renderTableOptions');
     return;
   }
 
-  const currentUrl = await getCurrentRabbitmqCredentials();
-  if (!currentUrl?.endsWith('/#/queues')) {
+  const currentUrl = await getCurrentTabUrl();
+  if (currentUrl && !currentUrl.endsWith('/#/queues')) {
     return;
   }
 
@@ -69,22 +71,25 @@ export const renderTableOptions = async () => {
 
   //for each row in the table, add the download button. Only tables that have the class 'updatable' are the ones we want to add the button to
   const tableRows = document.querySelectorAll('.updatable table tbody tr');
+
+  let nameIndex = findIndexOfNameColumn();
+
   tableRows.forEach((row) => {
     const actionTd = document.createElement('td');
-    actionTd.id = `queue-actions-${row.children[1].textContent}`;
+    actionTd.id = `queue-actions-${row.children[nameIndex].textContent}`;
     actionTd.textContent = 'Action';
     row.appendChild(actionTd);
 
     const managementTd = document.createElement('td');
 
     const root = document.createElement('div');
-    root.id = `queue-management-${row.children[1].textContent}`;
+    root.id = `queue-management-${row.children[nameIndex].textContent}`;
     const shadowRoot = GetTailwindBackStyles(root);
 
     createRoot(shadowRoot).render(
       <SettingsProvider defaultTheme="light" shadowRoot={shadowRoot}>
         <div className="ext-w-full ext-flex ext-justify-evenly">
-          <DownloadMessagesFromQueueButton QueueName={row.children[1].textContent!} />
+          <DownloadMessagesFromQueueButton QueueName={row.children[nameIndex].textContent!} />
           <ImportMessagesToQueueButton />
         </div>
       </SettingsProvider>,
@@ -92,4 +97,17 @@ export const renderTableOptions = async () => {
     managementTd.appendChild(root);
     row.appendChild(managementTd);
   });
+};
+
+const findIndexOfNameColumn = (): number => {
+  const tableHead = document.querySelectorAll('.updatable table thead tr a');
+
+  let nameIndex = 0;
+  for (let i = 0; i < tableHead.length; i++) {
+    if (tableHead[i].textContent === 'Name') {
+      nameIndex = i;
+      break;
+    }
+  }
+  return nameIndex;
 };

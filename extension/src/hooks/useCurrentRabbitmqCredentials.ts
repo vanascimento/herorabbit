@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useSettings } from './useSettings';
+import { GetGeneralSettings, useSettings } from './useSettings';
 import { RabbitMqCredentials } from '@/components/popup/credentials-form';
 import { getCurrentTabUrl, useGetCurrentTabUrl } from './useCurrentTabUrl';
 
@@ -22,6 +22,20 @@ export default function useCurrentRabbitmqCredentials() {
 
 export async function getCurrentRabbitmqCredentials() {
   let currentUrl = await getCurrentTabUrl();
+  const settings = await GetGeneralSettings();
+  if (!settings) {
+    console.debug('settings is null');
+    return null;
+  }
+  if (!currentUrl) {
+    console.debug('currentUrl is null');
+    return null;
+  }
+  const currentCredentials = settings.credentials.find((credential) => currentUrl.includes(credential.host));
+  if (!currentCredentials) {
+    console.debug('currentCredentials is null');
+    return null;
+  }
 
-  return currentUrl;
+  return currentCredentials;
 }

@@ -24,7 +24,15 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "inlineSources": true,
+    "preserveConstEnums": true,
+    "noEmitOnError": false,
+    "removeComments": false,
+    "downlevelIteration": false
   },
   "include": ["src"]
 }

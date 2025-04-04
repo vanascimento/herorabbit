@@ -12,6 +12,7 @@ import { CHROME_ACTION } from '@/lib/chrome-actions';
 import { renderTableOptions } from './render-queue-and-streams-table-options';
 import { HeroRenderProtectedUrlPath } from '@/providers/hero-render-protected-url';
 import QueueAndStreamDataProvider from './queue-and-streams-data-provider';
+import { VersionMapperElements } from '@/lib/version-mapper-elements';
 
 export const QUEUE_OVERVIEW_CHART_ID = 'queue-overview-chart';
 export const QUEUE_TABLE_LIST_ID = 'queue-table-list';
@@ -30,15 +31,16 @@ const GetCurrentPathname = async () => {
 /**
  * Render the main chart for queue and streams dashboard.
  */
-export async function renderQueueDashboard() {
+export async function renderQueueDashboard(mapper: VersionMapperElements) {
   const pathname = await GetCurrentPathname();
 
   waitForElement('#main', async (_) => {
     // Check if the "Queues and Streams" tab is selected. If not, do nothing.
     // This component should only be rendered when the "Queues and Streams" tab is selected.
 
-    const queueAndStreamTab = document.getElementById('queues-and-streams');
-    if (!queueAndStreamTab || !queueAndStreamTab.firstElementChild?.classList.contains('selected')) {
+    const queueAndStreamTab = mapper.GetNodeOfQueuesTabIfisSelected(document);
+    if (!queueAndStreamTab) {
+      console.debug('Queues and Streams tab is not selected or was not founded. Cancelling renderQueueDashboard');
       return;
     }
 
@@ -51,7 +53,7 @@ export async function renderQueueDashboard() {
       return;
     }
 
-    renderTableOptions();
+    renderTableOptions(mapper);
 
     // Check if the component is already rendered. If so, do nothing.
     let existingComponent = document.getElementById(QUEUE_OVERVIEW_CHART_ID);
@@ -61,12 +63,7 @@ export async function renderQueueDashboard() {
 
     const root = document.createElement('div');
     root.id = QUEUE_OVERVIEW_CHART_ID;
-    const container = document.getElementById('main');
-
-    // if the container is not found, do nothing
-    if (!container) {
-      return;
-    }
+    const container = document.getElementById('main')!;
 
     // Insert the component right after the first child of the container
     const secondChild = container?.children[1];
