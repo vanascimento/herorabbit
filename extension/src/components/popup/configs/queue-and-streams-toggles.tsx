@@ -21,7 +21,7 @@ export default function ConnectionToggles() {
     <div className="ext-w-full ext-flex ext-flex-col ext-space-y-2">
       <div className="ext-flex ext-w-full ext-flex-row ext-items-center ext-justify-between ext-rounded-sm ext-border ext-p-3 ext-shadow-sm">
         <div className="ext-space-y-0.5">
-          <div>Queue Chart</div>
+          <div className="ext-font-bold">Queue Chart</div>
           <div>Chart that shows the size of each queue by name.</div>
         </div>
         <Switch
@@ -44,8 +44,8 @@ export default function ConnectionToggles() {
       </div>
       <div className="ext-flex ext-w-full ext-flex-row ext-items-center ext-justify-between ext-rounded-sm ext-border ext-p-3 ext-shadow-sm">
         <div className="ext-space-y-0.5">
-          <div>Message downloads</div>
-          <div>Provide a button to download all messages from queue in a jsonl file</div>
+          <div className="ext-font-bold ">Message downloads</div>
+          <div className="ext-text-xs">Provide a button to download all messages from queue in a jsonl file</div>
         </div>
         <Switch
           checked={localSettingsState.toggleSettings.download_messages}
