@@ -36,3 +36,18 @@ This project respects user privacy and follows best practices to protect persona
 
 - Users can manage and delete stored data directly from their browser settings.
 
+## Quality Gates
+
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=vanascimento_herorabbit&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=vanascimento_herorabbit)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=vanascimento_herorabbit&metric=bugs)](https://sonarcloud.io/summary/new_code?id=vanascimento_herorabbit)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=vanascimento_herorabbit&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=vanascimento_herorabbit)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=vanascimento_herorabbit&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=vanascimento_herorabbit)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=vanascimento_herorabbit&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=vanascimento_herorabbit)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=vanascimento_herorabbit&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=vanascimento_herorabbit)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=vanascimento_herorabbit&metric=coverage)](https://sonarcloud.io/summary/new_code?id=vanascimento_herorabbit)
+[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=vanascimento_herorabbit&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=vanascimento_herorabbit)
+
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=vanascimento_herorabbit&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=vanascimento_herorabbit)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=vanascimento_herorabbit&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=vanascimento_herorabbit)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=vanascimento_herorabbit&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=vanascimento_herorabbit)
+
