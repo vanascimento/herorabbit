@@ -21,8 +21,8 @@ def simulate_exchange_queues_and_messages():
     """
     # Configurações do RabbitMQ
     RABBITMQ_HOST = 'localhost'
-    RABBITMQ_USER = 'admin'
-    RABBITMQ_PASS = 'admin'
+    RABBITMQ_USER = 'radmin'
+    RABBITMQ_PASS = 'radmin'
 
     # Definições
     NUM_EXCHANGES = 5

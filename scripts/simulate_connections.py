@@ -9,8 +9,8 @@ RABBITMQ_API = "http://localhost:15672/api/users"
 RABBITMQ_VHOST_API = "http://localhost:15672/api/permissions/%2F"
 RABBITMQ_VHOST = "%2F"
 RABBITMQ_HOST = "localhost"
-USERNAME = "admin"
-PASSWORD = "admin"
+USERNAME = "radmin"
+PASSWORD = "radmin"
 NUM_USERS = 15
 
 # Criar usuários no RabbitMQ

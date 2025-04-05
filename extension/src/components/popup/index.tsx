@@ -10,7 +10,6 @@ import { Toaster } from '../ui/sonner';
 import { useEffect, useState } from 'react';
 import MainPopup from './main-popup';
 import { useTranslation } from 'react-i18next';
-import CardSwitch from '../ui/card-switch';
 import { Switch } from '../ui/switch';
 import { Label } from '../ui/label';
 

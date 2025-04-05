@@ -2,17 +2,17 @@ version: "3.8"
 
 services:
   rabbitmq:
-    image: rabbitmq:3.13.3-management
-    #image: rabbitmq:4.0-management
+    #image: rabbitmq:3.13.3-management
+    image: rabbitmq:4.0-management
     #image: rabbitmq:3.11.10-management
     container_name: rabbitmq
     hostname: rabbitmq
     restart: unless-stopped
     ports:
-      - "5672:5672" # Porta padrão do RabbitMQ para conexões AMQP
-      - "15672:15672" # Porta para acessar a interface de gerenciamento
+      - "5672:5672"
+      - "15672:15672"
     environment:
-      RABBITMQ_DEFAULT_USER: admin # Usuário padrão
-      RABBITMQ_DEFAULT_PASS: admin # Senha padrão
+      RABBITMQ_DEFAULT_USER: radmin
+      RABBITMQ_DEFAULT_PASS: radmin
     volumes:
-      - ./data:/var/lib/rabbitmq # Persistência dos dados
+      - ./data:/var/lib/rabbitmq
