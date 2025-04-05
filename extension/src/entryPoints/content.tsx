@@ -17,12 +17,13 @@ import { getCurrentTabUrl } from '@/hooks/useCurrentTabUrl';
 import { GetGeneralSettings } from '@/hooks/useSettings';
 import { BuildInterfaceMapperElements } from '@/lib/version-mapper-elements';
 import '../i18n';
+import i18n from '../i18n';
 
 export async function renderAll() {
   const settings = await GetGeneralSettings();
   const currentUrl = await getCurrentTabUrl();
   const currentCredentials = await getCurrentRabbitmqCredentials();
-
+  await i18n.changeLanguage(settings?.language);
   if (!settings) {
     console.debug('settings is null');
   }
