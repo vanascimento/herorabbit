@@ -18,6 +18,7 @@ import { GetGeneralSettings } from '@/hooks/useSettings';
 import { BuildInterfaceMapperElements } from '@/lib/version-mapper-elements';
 import '../i18n';
 import i18n from '../i18n';
+import { renderVersionInfo, VERSION_ELEMENT_ID } from '@/components/content/version/render-version-info';
 
 export async function renderAll() {
   const settings = await GetGeneralSettings();
@@ -40,21 +41,29 @@ export async function renderAll() {
 
   const mapperElements = await BuildInterfaceMapperElements(currentCredentials?.management_version!);
 
+  let renderPromises: Promise<void>[] = [];
+
   if (!document.getElementById(CONNECTION_OVERVIEW_CHART_ID)) {
-    renderConnectionDashboard(mapperElements);
+    renderPromises.push(renderConnectionDashboard(mapperElements));
   }
 
   if (!document.getElementById(QUEUE_OVERVIEW_CHART_ID)) {
-    renderQueueDashboard(mapperElements);
+    renderPromises.push(renderQueueDashboard(mapperElements));
   }
 
   if (!document.getElementById(QUEUE_TABLE_LIST_ID)) {
-    renderTableOptions(mapperElements);
+    renderPromises.push(renderTableOptions(mapperElements));
   }
 
   if (!document.getElementById(CHANNELS_OVERVIEW_CHART_ID)) {
-    renderChannelDashboard(mapperElements);
+    renderPromises.push(renderChannelDashboard(mapperElements));
   }
+
+  if (!document.getElementById(VERSION_ELEMENT_ID)) {
+    renderPromises.push(renderVersionInfo());
+  }
+
+  await Promise.all(renderPromises);
 
   console.debug('renderAll done');
 }
