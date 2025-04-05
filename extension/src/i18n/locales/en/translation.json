@@ -47,5 +47,14 @@
         "description": "Actions to manipulate queues and messages"
       }
     }
+  },
+  "pages": {
+    "queue": {
+      "chart": {
+        "title": "Message count by queue",
+        "description": "Aggregated message count for top {{top}} queues",
+        "filter": "Filter by queue"
+      }
+    }
   }
 }

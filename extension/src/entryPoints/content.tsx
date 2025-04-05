@@ -16,6 +16,7 @@ import { getCurrentRabbitmqCredentials } from '@/hooks/useCurrentRabbitmqCredent
 import { getCurrentTabUrl } from '@/hooks/useCurrentTabUrl';
 import { GetGeneralSettings } from '@/hooks/useSettings';
 import { BuildInterfaceMapperElements } from '@/lib/version-mapper-elements';
+import '../i18n';
 
 export async function renderAll() {
   const settings = await GetGeneralSettings();

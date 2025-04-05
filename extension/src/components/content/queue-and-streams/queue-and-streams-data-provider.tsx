@@ -1,5 +1,6 @@
 import useCurrentRabbitmqCredentials from '@/hooks/useCurrentRabbitmqCredentials';
 import { QueueData } from '@/models/connections';
+import { Loader2 } from 'lucide-react';
 import { createContext, ReactNode, useEffect, useState } from 'react';
 import { toast } from 'sonner';
 
@@ -42,7 +43,11 @@ export default function QueueAndStreamDataProvider({ children }: QueueAndStreamD
   }, [currentCredentials]);
 
   if (!queuesData) {
-    return <div>Loading...</div>;
+    return (
+      <div className="ext-w-full ext-text-center ext-flex ext-justify-center">
+        <Loader2 size={48} className="ext-animate-spin ext-text-muted-foreground" />
+      </div>
+    );
   }
 
   return <QueueAndStreamDataContext.Provider value={{ queuesData }}>{children}</QueueAndStreamDataContext.Provider>;
