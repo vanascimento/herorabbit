@@ -8,6 +8,7 @@ import { toast } from 'sonner';
 import { useEffect, useState } from 'react';
 import { useSettings } from '@/hooks/useSettings';
 import { cn } from '@/lib/utils';
+import { useTranslation } from 'react-i18next';
 
 const CredentialsFormSchema = z.object({
   username: z.string().nonempty(),
@@ -27,6 +28,7 @@ export default function CredentialsForm() {
       host: '',
     },
   });
+  const { t } = useTranslation();
 
   const [connectionSuccess, setConnectionSuccess] = useState(false);
 
@@ -53,9 +55,9 @@ export default function CredentialsForm() {
         let newCredentials = settings.credentials.filter((cred) => cred.host !== data.host);
         if (connectionSuccess) {
           setSettings({ ...settings, credentials: [...newCredentials, data] });
-          toast.success('Saved', { id: toastId });
+          toast.success(t('credentials.toast.saved'), { id: toastId });
         } else {
-          toast.success('Connection success', { id: toastId });
+          toast.success(t('credentials.toast.validate'), { id: toastId });
           setConnectionSuccess(true);
         }
       } else if (response.status === 401) {
@@ -74,11 +76,11 @@ export default function CredentialsForm() {
           name="host"
           render={({ field }) => (
             <FormItem className="ext-px-1">
-              <FormLabel>Host</FormLabel>
+              <FormLabel>{t('credentials.host.label')}</FormLabel>
               <FormControl>
                 <Input {...field} disabled={true} className="ext-rounded-sm" />
               </FormControl>
-              <FormDescription>Http address to access rabbitmq</FormDescription>
+              <FormDescription>{t('credentials.host.description')}</FormDescription>
               <FormMessage>{form.formState.errors.host?.message}</FormMessage>
             </FormItem>
           )}
@@ -88,11 +90,11 @@ export default function CredentialsForm() {
           name="management_version"
           render={({ field }) => (
             <FormItem className="ext-px-1">
-              <FormLabel>Management Version</FormLabel>
+              <FormLabel>{t('credentials.management_version.label')}</FormLabel>
               <FormControl>
                 <Input {...field} disabled={true} className="ext-rounded-sm" />
               </FormControl>
-              <FormDescription>Version of rabbitmq management plugin</FormDescription>
+              <FormDescription>{t('credentials.management_version.description')}</FormDescription>
               <FormMessage>{form.formState.errors.host?.message}</FormMessage>
             </FormItem>
           )}
@@ -102,11 +104,11 @@ export default function CredentialsForm() {
           name="username"
           render={({ field }) => (
             <FormItem className="ext-px-1">
-              <FormLabel>User</FormLabel>
+              <FormLabel>{t('credentials.username.label')}</FormLabel>
               <FormControl>
                 <Input {...field} disabled={form.formState.isSubmitting} className="ext-rounded-sm" />
               </FormControl>
-              <FormDescription>Username of rabbit</FormDescription>
+              <FormDescription>{t('credentials.username.description')}</FormDescription>
               <FormMessage>{form.formState.errors.username?.message}</FormMessage>
             </FormItem>
           )}
@@ -117,12 +119,12 @@ export default function CredentialsForm() {
           name="password"
           render={({ field }) => (
             <FormItem className="ext-px-1">
-              <FormLabel>Password</FormLabel>
+              <FormLabel>{t('credentials.password.label')}</FormLabel>
               <FormControl>
                 <Input {...field} type="password" disabled={form.formState.isSubmitting} className="ext-rounded-sm" />
               </FormControl>
               <FormMessage>{form.formState.errors.password?.message}</FormMessage>
-              <FormDescription>Password to interact with rabbitmq</FormDescription>
+              <FormDescription>{t('credentials.password.description')}</FormDescription>
             </FormItem>
           )}
         />
@@ -133,7 +135,7 @@ export default function CredentialsForm() {
             'ext-bg-orange-500 hover:ext-bg-orange-700': connectionSuccess,
           })}
         >
-          {connectionSuccess ? 'Save' : 'Test Connection'}
+          {connectionSuccess ? t('credentials.button.save') : t('credentials.button.validate')}
         </Button>
       </form>
     </Form>

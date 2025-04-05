@@ -9,10 +9,12 @@ import CredentialsForm from './credentials-form';
 import { Toaster } from '../ui/sonner';
 import { useEffect, useState } from 'react';
 import MainPopup from './main-popup';
+import { useTranslation } from 'react-i18next';
 
 export default function Popup() {
   const { settings } = useSettings();
   const [isHeroConfigured, setIsHeroConfigured] = useState<boolean | undefined>(undefined);
+  const { t } = useTranslation();
 
   useEffect(() => {
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
@@ -50,7 +52,7 @@ export default function Popup() {
               <p
                 className={`ext-text-center ext-text-lg ext-ml-2 ext-font-black ${settings.theme === 'dark' ? 'ext-text-white' : 'ext-text-black'}`}
               >
-                Hero Rabbit
+                {t('popup.title')}
               </p>
             </div>
           </div>
@@ -77,9 +79,11 @@ export default function Popup() {
           <div className="ext-flex ext-flex-row ext-justify-between ext-items-center ext-w-full">
             <Button className="hover:ext-text-orange-900" size="sm" variant="ghost" onClick={openGitHub}>
               <GithubIcon size={16} />
-              Contribute
+              <span className="ext-ml-2">{t('popup.github')}</span>
             </Button>
-            <p className="ext-text-xs">Version {chrome?.runtime?.getManifest().version}</p>
+            <p className="ext-text-xs">
+              {t('popup.version')} {chrome?.runtime?.getManifest().version}
+            </p>
           </div>
         </div>
       </div>

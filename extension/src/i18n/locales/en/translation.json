@@ -1,3 +1,29 @@
 {
-  "WelcomeMessagePopup": "Welcome to Hero Rabbit. Your best `duct tape solution` for RabbitMQ"
+  "WelcomeMessagePopup": "Welcome to Hero Rabbit. Your best `duct tape solution` for RabbitMQ",
+  "credentials": {
+    "host": {
+      "label": "Host",
+      "description": "RabbitMQ host url"
+    },
+    "management_version": {
+      "label": "Management Version",
+      "description": "RabbitMQ management version"
+    },
+    "username": {
+      "label": "Username",
+      "description": "RabbitMQ username"
+    },
+    "password": {
+      "label": "Password",
+      "description": "RabbitMQ password"
+    },
+    "button": {
+      "validate": "Validate connection",
+      "save": "Save"
+    },
+    "toast": {
+      "saved": "Connection saved",
+      "validate": "Connection successfully validated"
+    }
+  }
 }
