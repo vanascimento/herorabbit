@@ -1,5 +1,10 @@
 {
-  "WelcomeMessagePopup": "Welcome to Hero Rabbit. Your best `duct tape solution` for RabbitMQ",
+  "popup": {
+    "title": "Hero Rabbit",
+    "description": "Improving your RabbitMQ",
+    "github": "Contribute",
+    "version": "Version"
+  },
   "credentials": {
     "host": {
       "label": "Host",

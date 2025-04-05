@@ -10,9 +10,12 @@ import { Toaster } from '../ui/sonner';
 import { useEffect, useState } from 'react';
 import MainPopup from './main-popup';
 import { useTranslation } from 'react-i18next';
+import CardSwitch from '../ui/card-switch';
+import { Switch } from '../ui/switch';
+import { Label } from '../ui/label';
 
 export default function Popup() {
-  const { settings } = useSettings();
+  const { settings, setSettings } = useSettings();
   const [isHeroConfigured, setIsHeroConfigured] = useState<boolean | undefined>(undefined);
   const { t } = useTranslation();
 
@@ -65,13 +68,11 @@ export default function Popup() {
 
         {/* Content */}
         <div className="ext-flex ext-flex-col ext-gap-3 ext-flex-1 ext-overflow-y-auto ext-my-4">
-          {/* <CardSwitch
-            title={'Dark Mode'}
-            checked={settings.theme === 'dark'}
-            onChecked={(checked: boolean) => setSettings({ theme: checked ? 'dark' : 'light' })}
-            subtitle={'Switch between dark mode applied to all extension modules.'}
-          /> */}
           {renderMainComponent()}
+          <div className="ext-flex ext-items-center ext-space-x-2">
+            <Switch id="dark-mode" onCheckedChange={(checked) => setSettings({ theme: checked ? 'dark' : 'light' })} />
+            <Label htmlFor="dark-mode">Dark mode</Label>
+          </div>
         </div>
 
         {/* FOOTER */}
