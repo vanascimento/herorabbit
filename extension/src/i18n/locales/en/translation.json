@@ -55,6 +55,20 @@
         "description": "Aggregated message count for top {{top}} queues",
         "filter": "Filter by queue"
       }
+    },
+    "connections": {
+      "chart": {
+        "title": "Connections count by user",
+        "description": "Aggregated connections count for top {{top}} users",
+        "filter": "Filter by user"
+      }
+    },
+    "channels": {
+      "chart": {
+        "title": "Channels count by user",
+        "description": "Aggregated channels count for top {{top}} users",
+        "filter": "Filter by user"
+      }
     }
   }
 }

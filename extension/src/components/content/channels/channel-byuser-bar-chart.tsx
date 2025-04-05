@@ -6,13 +6,14 @@ import { useContext, useState } from 'react';
 import { getRandomColor } from '@/lib/utils';
 import { Input } from '@/components/ui/input';
 import { ChannelDataContext } from './channel-data-provider';
+import { useTranslation } from 'react-i18next';
 
 const DEFAULT_TOP_ITEMS = 10;
 
 export function ChannelByUserBarOverviewChart() {
   const [topItems, setTopItems] = useState<number>(DEFAULT_TOP_ITEMS);
   const [userFilter, setUserFilter] = useState<string | undefined>(undefined);
-
+  const { t } = useTranslation();
   const { channelsData } = useContext(ChannelDataContext);
 
   const userConnectionsMap = new Map<string, number>();
@@ -42,8 +43,12 @@ export function ChannelByUserBarOverviewChart() {
       <CardHeader>
         <div className=" ext-flex ext-flex-row ext-justify-between ">
           <div>
-            <CardTitle>Channels by user</CardTitle>
-            <CardDescription>Current top {topItems} total channels by user</CardDescription>
+            <CardTitle>{t('pages.queue.chart.title')}</CardTitle>
+            <CardDescription>
+              {t('pages.queue.chart.description', {
+                top: topItems,
+              })}
+            </CardDescription>
           </div>
           <div className="ext-flex ext-flex-row ext-self-end ext-space-x-4">
             <Input
