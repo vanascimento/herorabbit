@@ -1,7 +1,7 @@
 import { waitForElement } from '@/lib/wait-for-element';
 import { createRoot } from 'react-dom/client';
 
-import { SettingsProvider } from '@/hooks/useSettings';
+import { GetGeneralSettings, SettingsProvider } from '@/hooks/useSettings';
 import { HeroConfiguredProvider } from '@/providers/hero-configured-provider';
 import { GetTailwindBackStyles } from '@/lib/tailwind-custom';
 import { HeroRenderProtectedUrlPath } from '@/providers/hero-render-protected-url';
@@ -29,9 +29,19 @@ export async function renderChannelDashboard(mapper: VersionMapperElements) {
       return;
     }
 
+    const settings = await GetGeneralSettings();
+    const componentShouldRender = settings?.channelSettings.channel_dashboard;
+
     // Check if the component is already rendered. If so, do nothing.
     let existingComponent = document.getElementById(CHANNELS_OVERVIEW_CHART_ID);
-    if (existingComponent) {
+
+    if (existingComponent && !componentShouldRender) {
+      existingComponent.remove();
+      return;
+    }
+
+    if (!componentShouldRender) {
+      console.debug('Channels dashboard is disabled. Cancelling renderChannelDashboard');
       return;
     }
 

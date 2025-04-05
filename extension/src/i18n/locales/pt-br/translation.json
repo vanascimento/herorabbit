@@ -46,6 +46,11 @@
         "title": "Gerenciamento",
         "description": "Ações para manipular filas e mensagens"
       }
+    },
+    "channels": {
+      "title": "Dashboard",
+      "description": "Dashboard de monitoramento de Channels",
+      "toast": "Configurações de channels salvas"
     }
   },
   "pages": {
