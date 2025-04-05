@@ -4,11 +4,13 @@ import { useEffect, useState } from 'react';
 import { Separator } from '../ui/separator';
 import ConfigurationTogglesTabs from './configs/configuration-toogles-tabs';
 import useCurrentRabbitmqCredentials from '@/hooks/useCurrentRabbitmqCredentials';
+import { useTranslation } from 'react-i18next';
 
 export default function MainPopup() {
   const { settings, setSettings } = useSettings();
   const [currentOrigin, setCurrentOrigin] = useState<string | undefined>(undefined);
   const { currentCredentials } = useCurrentRabbitmqCredentials();
+  const { t } = useTranslation();
 
   useEffect(() => {
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
@@ -23,13 +25,13 @@ export default function MainPopup() {
   return (
     <div className="ext-flex ext-flex-col  ext-h-full ext-justify-between  ">
       <div className="ext-w-full ext-text-muted-foreground">
-        <h1 className="ext-w-full ext-text-sm">Welcome to Hero Rabbit. Your best `duct tape solution` for RabbitMQ </h1>
+        <h1 className="ext-w-full ext-text-sm">{t('popup.description')}</h1>
         <span className="ext-text-orange-500">{currentCredentials?.management_version}</span>
         <Separator orientation="horizontal" className="ext-my-2" />
         <ConfigurationTogglesTabs />
       </div>
       <Button size="sm" className="ext-w-full ext-self-baseline" onClick={handleLogout}>
-        LogOut
+        {t('popup.logout')}
       </Button>
     </div>
   );

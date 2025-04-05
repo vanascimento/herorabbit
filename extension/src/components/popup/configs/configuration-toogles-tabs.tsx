@@ -1,5 +1,6 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import QueueAndStreamsToggles from './queue-and-streams-toggles';
+import { useTranslation } from 'react-i18next';
 
 enum CONFIGURATION_TABS_ENUM {
   CONNECTIONS = 'connections',
@@ -7,23 +8,22 @@ enum CONFIGURATION_TABS_ENUM {
   QUEUES = 'queues',
 }
 export default function ConfigurationTogglesTabs() {
+  const { t } = useTranslation();
   return (
-    <Tabs defaultValue={CONFIGURATION_TABS_ENUM.CONNECTIONS} className="ext-my-2">
-      <TabsList className="ext-rounded-sm ext-w-full ">
-        <TabsTrigger value={CONFIGURATION_TABS_ENUM.CONNECTIONS} className="ext-rounded-sm">
-          Connections
+    <Tabs defaultValue={CONFIGURATION_TABS_ENUM.QUEUES} className="ext-my-2">
+      <TabsList className="ext-rounded-sm ext-w-full ext-flex ext-justify-start ">
+        <TabsTrigger value={CONFIGURATION_TABS_ENUM.QUEUES} className="ext-rounded-sm">
+          {t('configurations.tabs.queues')}
         </TabsTrigger>
         <TabsTrigger value={CONFIGURATION_TABS_ENUM.CHANNELS} className="ext-rounded-sm">
-          Channels
+          {t('configurations.tabs.channels')}
         </TabsTrigger>
-        <TabsTrigger value={CONFIGURATION_TABS_ENUM.QUEUES} className="ext-rounded-sm">
-          Queues and Streams
+
+        <TabsTrigger value={CONFIGURATION_TABS_ENUM.CONNECTIONS} className="ext-rounded-sm">
+          {t('configurations.tabs.connections')}
         </TabsTrigger>
       </TabsList>
-      <TabsContent
-        className="ext-flex ext-flex-row ext-space-x-10 ext-my-10"
-        value={CONFIGURATION_TABS_ENUM.CONNECTIONS}
-      >
+      <TabsContent className="ext-flex ext-flex-row ext-space-x-10 ext-my-10" value={CONFIGURATION_TABS_ENUM.QUEUES}>
         <QueueAndStreamsToggles />
       </TabsContent>
       <TabsContent
@@ -32,7 +32,7 @@ export default function ConfigurationTogglesTabs() {
       ></TabsContent>{' '}
       <TabsContent
         className="ext-flex ext-flex-row ext-space-x-10 ext-my-10"
-        value={CONFIGURATION_TABS_ENUM.QUEUES}
+        value={CONFIGURATION_TABS_ENUM.CHANNELS}
       ></TabsContent>
     </Tabs>
   );

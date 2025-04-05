@@ -1,0 +1,74 @@
+{
+  "popup": {
+    "title": "Hero Rabbit",
+    "description": "Your RabbitMQ hack companion",
+    "github": "Contribute",
+    "version": "Version",
+    "logout": "Logout",
+    "darkMode": "Dark Mode"
+  },
+  "credentials": {
+    "host": {
+      "label": "Host",
+      "description": "RabbitMQ host url"
+    },
+    "management_version": {
+      "label": "Management Version",
+      "description": "RabbitMQ management version"
+    },
+    "username": {
+      "label": "Username",
+      "description": "RabbitMQ username"
+    },
+    "password": {
+      "label": "Password",
+      "description": "RabbitMQ password"
+    },
+    "button": {
+      "validate": "Validate connection",
+      "save": "Save"
+    },
+    "toast": {
+      "saved": "Connection saved",
+      "validate": "Connection successfully validated"
+    }
+  },
+  "configurations": {
+    "tabs": {
+      "connections": "Connections",
+      "channels": "Channels",
+      "queues": "Queues"
+    },
+    "queues": {
+      "title": "Dashboard",
+      "description": "Charts for message count",
+      "management": {
+        "title": "Management",
+        "description": "Actions to manipulate queues and messages"
+      }
+    }
+  },
+  "pages": {
+    "queue": {
+      "chart": {
+        "title": "Message count by queue",
+        "description": "Aggregated message count for top {{top}} queues",
+        "filter": "Filter by queue"
+      }
+    },
+    "connections": {
+      "chart": {
+        "title": "Connections count by user",
+        "description": "Aggregated connections count for top {{top}} users",
+        "filter": "Filter by user"
+      }
+    },
+    "channels": {
+      "chart": {
+        "title": "Channels count by user",
+        "description": "Aggregated channels count for top {{top}} users",
+        "filter": "Filter by user"
+      }
+    }
+  }
+}

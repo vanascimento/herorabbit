@@ -6,6 +6,7 @@ import { useContext, useState } from 'react';
 import { getRandomColor } from '@/lib/utils';
 import { Input } from '@/components/ui/input';
 import { ConnectionDataContext } from './connection-data-provider';
+import { useTranslation } from 'react-i18next';
 
 const DEFAULT_TOP_ITEMS = 10;
 
@@ -13,7 +14,7 @@ export function ConnectionPizzaOverviewChart() {
   const [topItems, setTopItems] = useState<number>(DEFAULT_TOP_ITEMS);
   const { connectionsData } = useContext(ConnectionDataContext);
   const [userFilter, setUserFilter] = useState<string | undefined>(undefined);
-
+  const { t } = useTranslation();
   const userConnectionsMap = new Map<string, number>();
 
   connectionsData.forEach((connection) => {
@@ -41,12 +42,16 @@ export function ConnectionPizzaOverviewChart() {
       <CardHeader>
         <div className=" ext-flex ext-flex-row ext-justify-between ">
           <div>
-            <CardTitle>Connections by user</CardTitle>
-            <CardDescription>Current top {topItems} total connections by user</CardDescription>
+            <CardTitle>{t('pages.connections.chart.title')}</CardTitle>
+            <CardDescription>
+              {t('pages.connections.chart.description', {
+                top: topItems,
+              })}
+            </CardDescription>
           </div>
           <div className="ext-flex ext-flex-row ext-self-end ext-space-x-4">
             <Input
-              placeholder="Filter by user"
+              placeholder={t('pages.connections.chart.filter')}
               value={userFilter}
               onChange={(value) => setUserFilter(value.target.value)}
               onWheel={(e) => e.preventDefault()}

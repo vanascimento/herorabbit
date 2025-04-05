@@ -9,10 +9,15 @@ import CredentialsForm from './credentials-form';
 import { Toaster } from '../ui/sonner';
 import { useEffect, useState } from 'react';
 import MainPopup from './main-popup';
+import { useTranslation } from 'react-i18next';
+import CardSwitch from '../ui/card-switch';
+import { Switch } from '../ui/switch';
+import { Label } from '../ui/label';
 
 export default function Popup() {
-  const { settings } = useSettings();
+  const { settings, setSettings } = useSettings();
   const [isHeroConfigured, setIsHeroConfigured] = useState<boolean | undefined>(undefined);
+  const { t } = useTranslation();
 
   useEffect(() => {
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
@@ -50,7 +55,7 @@ export default function Popup() {
               <p
                 className={`ext-text-center ext-text-lg ext-ml-2 ext-font-black ${settings.theme === 'dark' ? 'ext-text-white' : 'ext-text-black'}`}
               >
-                Hero Rabbit
+                {t('popup.title')}
               </p>
             </div>
           </div>
@@ -63,13 +68,11 @@ export default function Popup() {
 
         {/* Content */}
         <div className="ext-flex ext-flex-col ext-gap-3 ext-flex-1 ext-overflow-y-auto ext-my-4">
-          {/* <CardSwitch
-            title={'Dark Mode'}
-            checked={settings.theme === 'dark'}
-            onChecked={(checked: boolean) => setSettings({ theme: checked ? 'dark' : 'light' })}
-            subtitle={'Switch between dark mode applied to all extension modules.'}
-          /> */}
           {renderMainComponent()}
+          <div className="ext-flex ext-items-center ext-space-x-2">
+            <Switch id="dark-mode" onCheckedChange={(checked) => setSettings({ theme: checked ? 'dark' : 'light' })} />
+            <Label htmlFor="dark-mode">{t('popup.darkMode')}</Label>
+          </div>
         </div>
 
         {/* FOOTER */}
@@ -77,9 +80,11 @@ export default function Popup() {
           <div className="ext-flex ext-flex-row ext-justify-between ext-items-center ext-w-full">
             <Button className="hover:ext-text-orange-900" size="sm" variant="ghost" onClick={openGitHub}>
               <GithubIcon size={16} />
-              Contribute
+              <span className="ext-ml-2">{t('popup.github')}</span>
             </Button>
-            <p className="ext-text-xs">Version {chrome?.runtime?.getManifest().version}</p>
+            <p className="ext-text-xs">
+              {t('popup.version')} {chrome?.runtime?.getManifest().version}
+            </p>
           </div>
         </div>
       </div>
