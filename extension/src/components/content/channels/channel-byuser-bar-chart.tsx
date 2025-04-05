@@ -43,16 +43,16 @@ export function ChannelByUserBarOverviewChart() {
       <CardHeader>
         <div className=" ext-flex ext-flex-row ext-justify-between ">
           <div>
-            <CardTitle>{t('pages.queue.chart.title')}</CardTitle>
+            <CardTitle>{t('pages.channels.chart.title')}</CardTitle>
             <CardDescription>
-              {t('pages.queue.chart.description', {
+              {t('pages.channels.chart.description', {
                 top: topItems,
               })}
             </CardDescription>
           </div>
           <div className="ext-flex ext-flex-row ext-self-end ext-space-x-4">
             <Input
-              placeholder="Filter by user"
+              placeholder={t('pages.channels.chart.filter')}
               value={userFilter}
               onChange={(value) => setUserFilter(value.target.value)}
               onWheel={(e) => e.preventDefault()}

@@ -1,5 +1,5 @@
 import './options.css';
-import { MessageCircleMore } from 'lucide-react';
+import { MessageCircleMore, PaintBucketIcon } from 'lucide-react';
 import { Command, CommandItem, CommandList } from '@/components/ui/command.tsx';
 import { useState } from 'react';
 
@@ -9,14 +9,15 @@ import iconLight from '@/assets/images/icon-light.png';
 import SafeImage from '@/components/ui/safe-image';
 import GeneralPageOption from './general-page';
 import AppearancePageOption from './apperance-page';
-import ContactUsPage from './contact-us-page';
+import { Toaster } from '../ui/sonner';
+import ContactMe from './contact-me';
 
 type MenuItemTypes = 'General' | 'Appearance' | 'Contact';
 
 export default function Options() {
   const { settings, setSettings } = useSettings();
   const [currentMenu, setCurrentMenu] = useState<MenuItemTypes>('Contact');
-  const menuItemClass = 'ext-text-sm ext-py-2 ext-px-3 ext-rounded-xl ext-font-normal ext-mt-2 ext-cursor-pointer';
+  const menuItemClass = 'ext-text-sm ext-py-2 ext-px-3 ext-rounded-sm ext-font-normal ext-mt-2 ext-cursor-pointer';
 
   function handleMenuClick(value: unknown) {
     setCurrentMenu(value as MenuItemTypes);
@@ -50,15 +51,11 @@ export default function Options() {
             <div className="ext-flex ext-w-56">
               <Command value={currentMenu}>
                 <CommandList>
-                  {/* <CommandItem className={menuItemClass} value="General" onSelect={handleMenuClick}>
-                    <Settings /> <span>General</span>
-                  </CommandItem>
-                  <CommandItem className={menuItemClass} value="Appearance" onSelect={handleMenuClick}>
-                    <Palette /> <span>Appearance</span>
-                  </CommandItem>
-                  <CommandSeparator className="ext-my-3" /> */}
                   <CommandItem className={menuItemClass} value="Contact" onSelect={handleMenuClick}>
                     <MessageCircleMore /> <span>Contact Me</span>
+                  </CommandItem>
+                  <CommandItem className={menuItemClass} value="Appearance" onSelect={handleMenuClick}>
+                    <PaintBucketIcon /> <span>Look and feel</span>
                   </CommandItem>
                 </CommandList>
               </Command>
@@ -87,7 +84,7 @@ export default function Options() {
                     />
                   </>
                 )}
-                {currentMenu === 'Contact' && <ContactUsPage />}
+                {currentMenu === 'Contact' && <ContactMe />}
               </div>
             </div>
           </div>
@@ -99,6 +96,7 @@ export default function Options() {
           </div>
         </div>
       </div>
+      <Toaster />
     </div>
   );
 }

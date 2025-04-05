@@ -1,3 +1,74 @@
 {
-  "WelcomeMessagePopup": "Bem-vindo ao Hero Rabbit. Sua melhor solução estilo `gambiarra de qualidade` para RabbitMQ."
+  "popup": {
+    "title": "Hero Rabbit",
+    "description": "Seu companheiro de gambiarras do RabbitMQ",
+    "github": "Contribuir",
+    "version": "Versão",
+    "logout": "Sair",
+    "darkMode": "Modo Escuro"
+  },
+  "credentials": {
+    "host": {
+      "label": "Host",
+      "description": "URL do host do RabbitMQ"
+    },
+    "management_version": {
+      "label": "Versão de Gerenciamento",
+      "description": "Versão de gerenciamento do RabbitMQ"
+    },
+    "username": {
+      "label": "Nome de Usuário",
+      "description": "Nome de usuário do RabbitMQ"
+    },
+    "password": {
+      "label": "Senha",
+      "description": "Senha do RabbitMQ"
+    },
+    "button": {
+      "validate": "Validar conexão",
+      "save": "Salvar"
+    },
+    "toast": {
+      "saved": "Conexão salva",
+      "validate": "Conexão validada com sucesso"
+    }
+  },
+  "configurations": {
+    "tabs": {
+      "connections": "Conexões",
+      "channels": "Canais",
+      "queues": "Filas"
+    },
+    "queues": {
+      "title": "Dashboard",
+      "description": "Gráficos para contagem de mensagens",
+      "management": {
+        "title": "Gerenciamento",
+        "description": "Ações para manipular filas e mensagens"
+      }
+    }
+  },
+  "pages": {
+    "queue": {
+      "chart": {
+        "title": "Contagem de mensagens por fila",
+        "description": "Contagem de mensagens agregada para as principais {{top}} filas",
+        "filter": "Filtrar por fila"
+      }
+    },
+    "connections": {
+      "chart": {
+        "title": "Contagem de conexões por usuário",
+        "description": "Contagem de conexões agregada para os principais {{top}} usuários",
+        "filter": "Filtrar por usuário"
+      }
+    },
+    "channels": {
+      "chart": {
+        "title": "Contagem de canais por usuário",
+        "description": "Contagem de canais agregada para os principais {{top}} usuários",
+        "filter": "Filtrar por usuário"
+      }
+    }
+  }
 }

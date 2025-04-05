@@ -20,4 +20,5 @@ export interface GeneralSettings {
   hide_sidebar_button: boolean;
   credentials: RabbitMqCredentials[];
   toggleSettings: QueueAndStreamsToggles;
+  language: 'en' | 'pt_br';
 }

@@ -24,6 +24,7 @@ const initialSettingsState: SettingsProviderState = {
       download_messages: true,
       queue_chart: true,
     },
+    language: 'en',
   },
   setSettings: () => null,
   refreshSettings: () => Promise.resolve(initialSettingsState.settings),
