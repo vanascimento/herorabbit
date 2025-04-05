@@ -71,7 +71,7 @@ export default function Popup() {
           {renderMainComponent()}
           <div className="ext-flex ext-items-center ext-space-x-2">
             <Switch id="dark-mode" onCheckedChange={(checked) => setSettings({ theme: checked ? 'dark' : 'light' })} />
-            <Label htmlFor="dark-mode">Dark mode</Label>
+            <Label htmlFor="dark-mode">{t('popup.darkMode')}</Label>
           </div>
         </div>
 

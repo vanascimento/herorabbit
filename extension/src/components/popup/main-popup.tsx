@@ -25,13 +25,13 @@ export default function MainPopup() {
   return (
     <div className="ext-flex ext-flex-col  ext-h-full ext-justify-between  ">
       <div className="ext-w-full ext-text-muted-foreground">
-        <h1 className="ext-w-full ext-text-sm">{t('WelcomeMessagePopup')}</h1>
+        <h1 className="ext-w-full ext-text-sm">{t('popup.description')}</h1>
         <span className="ext-text-orange-500">{currentCredentials?.management_version}</span>
         <Separator orientation="horizontal" className="ext-my-2" />
         <ConfigurationTogglesTabs />
       </div>
       <Button size="sm" className="ext-w-full ext-self-baseline" onClick={handleLogout}>
-        LogOut
+        {t('popup.logout')}
       </Button>
     </div>
   );
