@@ -21,6 +21,7 @@ export const fixViteContentScript = () => {
   const json = JSON.stringify(manifest, null, 2);
   fs.writeFileSync(manifestPath, json, 'utf8');
 
+  // Remove the public manifest file because the chrome web store does not accept it
   let publicManifestPath = path.resolve('dist/public/manifest.json');
   fs.unlinkSync(publicManifestPath);
 };
