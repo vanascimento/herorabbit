@@ -14,7 +14,7 @@ const navbar = (
     logo={
       <>
         <img
-          src="/images/general/rabbitmq-logo.svg"
+          src="/herorabbit//images/general/rabbitmq-logo.svg"
           alt="RabbitMQ Logo"
           width={40}
           height={40}
