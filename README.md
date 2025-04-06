@@ -7,6 +7,7 @@ This project is not officially supported by the original RabbitMQ developers. It
 <p align="center">
   <img src="image_example.png" alt="Exemplo de imagem" width="20%" height="20%" />
 </p>
+
 ## Getting Started with Development Environment
 
 ### Prerequisites
