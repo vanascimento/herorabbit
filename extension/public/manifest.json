@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "short_name": "Hero Rabbit",
   "name": "Hero Rabbit",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "Improving your RabbitMQ",
   "author": "Victor Nascimento <victooyooth@gmail.com>",
   "action": {
@@ -48,6 +48,6 @@
       "matches": ["<all_urls>"]
     }
   ],
-  "permissions": ["tabs", "scripting", "storage"],
+  "permissions": ["activeTab", "scripting", "storage"],
   "host_permissions": ["http://*/*", "https://*/*"]
 }
