@@ -20,4 +20,7 @@ export const fixViteContentScript = () => {
 
   const json = JSON.stringify(manifest, null, 2);
   fs.writeFileSync(manifestPath, json, 'utf8');
+
+  let publicManifestPath = path.resolve('dist/public/manifest.json');
+  fs.unlinkSync(publicManifestPath);
 };
