@@ -24,6 +24,12 @@ const initialSettingsState: SettingsProviderState = {
       download_messages: true,
       queue_chart: true,
     },
+    channelSettings: {
+      channel_dashboard: true,
+    },
+    connectionsSettings: {
+      connections_dashboard: true,
+    },
     language: 'en',
   },
   setSettings: () => null,

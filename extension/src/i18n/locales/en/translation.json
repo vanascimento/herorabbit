@@ -46,6 +46,16 @@
         "title": "Management",
         "description": "Actions to manipulate queues and messages"
       }
+    },
+    "channels": {
+      "title": "Dashboard",
+      "description": "Charts for channels count",
+      "toast": "Channels configurations saved"
+    },
+    "connections": {
+      "title": "Dashboard",
+      "description": "Charts for connections count",
+      "toast": "Connections configurations saved"
     }
   },
   "pages": {

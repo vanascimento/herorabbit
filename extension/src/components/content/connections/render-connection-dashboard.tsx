@@ -1,7 +1,7 @@
 import { waitForElement } from '@/lib/wait-for-element';
 import { createRoot } from 'react-dom/client';
 
-import { SettingsProvider } from '@/hooks/useSettings';
+import { GetGeneralSettings, SettingsProvider } from '@/hooks/useSettings';
 import { HeroConfiguredProvider } from '@/providers/hero-configured-provider';
 import { GetTailwindBackStyles } from '@/lib/tailwind-custom';
 import { HeroRenderProtectedUrlPath } from '@/providers/hero-render-protected-url';
@@ -31,9 +31,18 @@ export async function renderConnectionDashboard(mapper: VersionMapperElements) {
       return;
     }
 
+    const settings = await GetGeneralSettings();
+    const componentShouldRender = settings?.connectionsSettings.connections_dashboard;
+
     // Check if the component is already rendered. If so, do nothing.
     let existingComponent = document.getElementById(CONNECTION_OVERVIEW_CHART_ID);
-    if (existingComponent) {
+
+    // Check if component existing and is not enabled, if so, remove it
+    if (existingComponent && !componentShouldRender) {
+      existingComponent.remove();
+      return;
+    } else if (!componentShouldRender) {
+      // If the component is already rendered and enabled, do nothing
       return;
     }
 

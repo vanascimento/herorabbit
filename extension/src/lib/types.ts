@@ -1,3 +1,5 @@
+import { ChannelsConfiguration } from '@/components/popup/configs/channels-toggles';
+import { ConnectionsConfiguration } from '@/components/popup/configs/connections-configuration';
 import { QueueAndStreamsToggles } from '@/components/popup/configs/queue-and-streams-toggles';
 import { RabbitMqCredentials } from '@/components/popup/credentials-form';
 
@@ -20,5 +22,7 @@ export interface GeneralSettings {
   hide_sidebar_button: boolean;
   credentials: RabbitMqCredentials[];
   toggleSettings: QueueAndStreamsToggles;
+  channelSettings: ChannelsConfiguration;
+  connectionsSettings: ConnectionsConfiguration;
   language: 'en' | 'pt_br';
 }
