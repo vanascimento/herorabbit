@@ -4,6 +4,9 @@
 
 This project is not officially supported by the original RabbitMQ developers. It was created to enhance the RabbitMQ Management Plugin by adding administrative tasks that are frequently performed in day-to-day operations while managing multiple RabbitMQ clusters.
 
+<p align="center">
+  <img src="image_example.png" alt="Exemplo de imagem" width="20%" height="20%" />
+</p>
 ## Getting Started with Development Environment
 
 ### Prerequisites
@@ -49,4 +52,3 @@ This project respects user privacy and follows best practices to protect persona
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=vanascimento_herorabbit&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=vanascimento_herorabbit)
 [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=vanascimento_herorabbit&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=vanascimento_herorabbit)
 [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=vanascimento_herorabbit&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=vanascimento_herorabbit)
-

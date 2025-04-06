@@ -2,6 +2,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import QueueAndStreamsToggles from './queue-and-streams-toggles';
 import { useTranslation } from 'react-i18next';
 import ChannelsConfiguration from './channels-toggles';
+import ConnectionsConfiguration from './connections-configuration';
 
 enum CONFIGURATION_TABS_ENUM {
   CONNECTIONS = 'connections',
@@ -30,10 +31,9 @@ export default function ConfigurationTogglesTabs() {
       <TabsContent className="ext-flex ext-flex-row ext-space-x-10 " value={CONFIGURATION_TABS_ENUM.CHANNELS}>
         <ChannelsConfiguration />
       </TabsContent>{' '}
-      <TabsContent
-        className="ext-flex ext-flex-row ext-space-x-10 "
-        value={CONFIGURATION_TABS_ENUM.CHANNELS}
-      ></TabsContent>
+      <TabsContent className="ext-flex ext-flex-row ext-space-x-10 " value={CONFIGURATION_TABS_ENUM.CONNECTIONS}>
+        <ConnectionsConfiguration />
+      </TabsContent>
     </Tabs>
   );
 }

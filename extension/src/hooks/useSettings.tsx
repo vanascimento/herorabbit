@@ -27,6 +27,9 @@ const initialSettingsState: SettingsProviderState = {
     channelSettings: {
       channel_dashboard: true,
     },
+    connectionsSettings: {
+      connections_dashboard: true,
+    },
     language: 'en',
   },
   setSettings: () => null,

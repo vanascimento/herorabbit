@@ -51,6 +51,11 @@
       "title": "Dashboard",
       "description": "Charts for channels count",
       "toast": "Channels configurations saved"
+    },
+    "connections": {
+      "title": "Dashboard",
+      "description": "Charts for connections count",
+      "toast": "Connections configurations saved"
     }
   },
   "pages": {

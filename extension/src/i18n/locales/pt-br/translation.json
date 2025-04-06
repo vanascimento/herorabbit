@@ -51,6 +51,11 @@
       "title": "Dashboard",
       "description": "Dashboard de monitoramento de Channels",
       "toast": "Configurações de channels salvas"
+    },
+    "connections": {
+      "title": "Dashboard",
+      "description": "Gráficos para contagem de conexões",
+      "toast": "Configurações de conexões salvas"
     }
   },
   "pages": {
