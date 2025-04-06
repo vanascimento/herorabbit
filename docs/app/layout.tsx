@@ -11,6 +11,7 @@ export const metadata = {
 const banner = <Banner storageKey="some-key">Project under development</Banner>;
 const navbar = (
   <Navbar
+    projectLink="https://github.com/vanascimento/herorabbit"
     logo={
       <>
         <img
