@@ -48,6 +48,6 @@
       "matches": ["<all_urls>"]
     }
   ],
-  "permissions": ["tabs", "activeTab", "scripting", "storage", "webRequest"],
+  "permissions": ["tabs", "scripting", "storage"],
   "host_permissions": ["http://*/*", "https://*/*"]
 }
