@@ -11,6 +11,7 @@ import { Toaster } from '@/components/ui/sonner';
 import { ConnectionPizzaOverviewChart } from './connection-pizza-chart';
 import ConnectionDataProvider from './connection-data-provider';
 import { VersionMapperElements } from '@/lib/version-mapper-elements';
+import { CloseConnection } from './close-connection';
 
 export const CONNECTION_OVERVIEW_CHART_ID = 'connection-overview-chart';
 export const CONNECTION_TABLE_LIST_ID = 'connection-table-list';
@@ -61,18 +62,24 @@ export async function renderConnectionDashboard(mapper: VersionMapperElements) {
         <HeroConfiguredProvider>
           <HeroRenderProtectedUrlPath path="/#/connections">
             <ConnectionDataProvider>
-              <Tabs defaultValue="bar">
-                <TabsList>
-                  <TabsTrigger value="bar">Bar </TabsTrigger>
-                  <TabsTrigger value="pizza">Pizza</TabsTrigger>
-                </TabsList>
-                <TabsContent className="ext-flex ext-flex-row ext-space-x-10 ext-my-10" value="bar">
-                  <ConnectionBarOverviewChart />
-                </TabsContent>
-                <TabsContent value="pizza">
-                  <ConnectionPizzaOverviewChart />
-                </TabsContent>
-              </Tabs>
+              <div className="ext-flex ext-justify-between ext-w-full">
+                <Tabs defaultValue="bar" className="ext-w-1/2">
+                  <TabsList>
+                    <TabsTrigger value="bar">Bar </TabsTrigger>
+                    <TabsTrigger value="pizza">Pizza</TabsTrigger>
+                  </TabsList>
+                  <TabsContent value="bar">
+                    <ConnectionBarOverviewChart />
+                  </TabsContent>
+                  <TabsContent value="pizza">
+                    <ConnectionPizzaOverviewChart />
+                  </TabsContent>
+                </Tabs>
+                <div className="ext-w-1/2">
+                  <CloseConnection />
+                </div>
+              </div>
+
               <Toaster />
             </ConnectionDataProvider>
           </HeroRenderProtectedUrlPath>

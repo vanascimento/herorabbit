@@ -71,6 +71,17 @@
         "title": "Contagem de conexões por usuário",
         "description": "Contagem de conexões agregada para os principais {{top}} usuários",
         "filter": "Filtrar por usuário"
+      },
+      "close": {
+        "button": "Encerrar Conexões",
+        "title": "Encerrar Conexões do Usuário",
+        "description": "Selecione um usuário para encerrar todas as suas conexões ativas.",
+        "selectUser": "Selecione um usuário",
+        "warning": "Atenção!",
+        "warningDescription": "Esta ação irá encerrar todas as conexões ativas do usuário selecionado. Esta ação não pode ser desfeita.",
+        "success": "Conexões do usuário {{user}} foram encerradas com sucesso",
+        "error": "Erro ao tentar encerrar as conexões do usuário",
+        "confirm": "Encerrar Conexões"
       }
     },
     "channels": {
@@ -80,5 +91,9 @@
         "filter": "Filtrar por usuário"
       }
     }
+  },
+  "common": {
+    "cancel": "Cancelar",
+    "loading": "Carregando..."
   }
 }

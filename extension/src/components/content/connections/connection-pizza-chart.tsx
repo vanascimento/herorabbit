@@ -38,8 +38,9 @@ export function ConnectionPizzaOverviewChart() {
     .filter((item) => item.connections > 0);
 
   return (
-    <Card className="flex flex-col ext-w-1/2 m-2 rounded-sm">
+    <Card className="flex flex-col  m-2 rounded-sm">
       <CardHeader>
+        {JSON.stringify(connectionsData[0])}
         <div className=" ext-flex ext-flex-row ext-justify-between ">
           <div>
             <CardTitle>{t('pages.connections.chart.title')}</CardTitle>

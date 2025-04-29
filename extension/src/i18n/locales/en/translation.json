@@ -71,6 +71,17 @@
         "title": "Connections count by user",
         "description": "Aggregated connections count for top {{top}} users",
         "filter": "Filter by user"
+      },
+      "close": {
+        "button": "Close Connections",
+        "title": "Close User Connections",
+        "description": "Select a user to close all their active connections.",
+        "selectUser": "Select a user",
+        "warning": "Warning!",
+        "warningDescription": "This action will close all active connections for the selected user. This action cannot be undone.",
+        "success": "Connections for user {{user}} were successfully closed",
+        "error": "Error trying to close user connections",
+        "confirm": "Close Connections"
       }
     },
     "channels": {
@@ -80,5 +91,9 @@
         "filter": "Filter by user"
       }
     }
+  },
+  "common": {
+    "cancel": "Cancel",
+    "loading": "Loading..."
   }
 }

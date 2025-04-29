@@ -39,7 +39,7 @@ export function ConnectionBarOverviewChart() {
     .filter((item) => item.connections > 0);
 
   return (
-    <Card className="flex flex-col ext-w-1/2 m-2 rounded-sm">
+    <Card className="flex flex-col  m-2 rounded-sm">
       <CardHeader>
         <div className=" ext-flex ext-flex-row ext-justify-between ">
           <div>

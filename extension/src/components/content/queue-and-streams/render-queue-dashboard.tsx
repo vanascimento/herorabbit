@@ -14,25 +14,42 @@ import { HeroRenderProtectedUrlPath } from '@/providers/hero-render-protected-ur
 import QueueAndStreamDataProvider from './queue-and-streams-data-provider';
 import { VersionMapperElements } from '@/lib/version-mapper-elements';
 
+// Constants
 export const QUEUE_OVERVIEW_CHART_ID = 'queue-overview-chart';
 export const QUEUE_TABLE_LIST_ID = 'queue-table-list';
 
-const GetCurrentPathname = async () => {
+// Hooks
+const useCurrentPathname = () => {
   return new Promise<string | null>((resolve) => {
     chrome.runtime.sendMessage({ action: CHROME_ACTION.GET_ACTIVE_TAB_URL_PATH }, (response) => {
-      if (response && response.pathname) {
-        resolve(response.pathname);
-      } else {
-        resolve(null);
-      }
+      resolve(response?.pathname || null);
     });
   });
 };
+
+// Components
+const QueueDashboardContent = ({ pathname }: { pathname: string | null }) => (
+  <Tabs defaultValue="account">
+    <TabsList>
+      <TabsTrigger value="account">Bar {pathname}</TabsTrigger>
+      <TabsTrigger value="password">Pizza</TabsTrigger>
+    </TabsList>
+    <QueueAndStreamDataProvider>
+      <TabsContent value="account">
+        <QueueBarOverviewChart />
+      </TabsContent>
+      <TabsContent value="password">
+        <QueuePizzaOverviewChart />
+      </TabsContent>
+    </QueueAndStreamDataProvider>
+  </Tabs>
+);
+
 /**
  * Render the main chart for queue and streams dashboard.
  */
 export async function renderQueueDashboard(mapper: VersionMapperElements) {
-  const pathname = await GetCurrentPathname();
+  const pathname = await useCurrentPathname();
 
   waitForElement('#main', async (_) => {
     // Check if the "Queues and Streams" tab is selected. If not, do nothing.
@@ -75,20 +92,7 @@ export async function renderQueueDashboard(mapper: VersionMapperElements) {
       <SettingsProvider defaultTheme="light" shadowRoot={shadowRoot}>
         <HeroConfiguredProvider>
           <HeroRenderProtectedUrlPath path="/#/queues">
-            <Tabs defaultValue="account">
-              <TabsList>
-                <TabsTrigger value="account">Bar {pathname}</TabsTrigger>
-                <TabsTrigger value="password">Pizza</TabsTrigger>
-              </TabsList>
-              <QueueAndStreamDataProvider>
-                <TabsContent value="account">
-                  <QueueBarOverviewChart />
-                </TabsContent>
-                <TabsContent value="password">
-                  <QueuePizzaOverviewChart />
-                </TabsContent>
-              </QueueAndStreamDataProvider>
-            </Tabs>
+            <QueueDashboardContent pathname={pathname} />
             <Toaster />
           </HeroRenderProtectedUrlPath>
         </HeroConfiguredProvider>

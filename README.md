@@ -8,6 +8,18 @@ This project is not officially supported by the original RabbitMQ developers. It
   <img src="image_example.png" alt="Exemplo de imagem" width="20%" height="20%" />
 </p>
 
+### Compatibility list
+
+The extension was tested with the following specific versions. If you tested with another version, please send a pull request to update this list:
+
+1. 4.0.7
+2. 3.13.17
+3. 3.13.3
+4. 3.11.10
+
+If your version is not in this list, the extension may still work, but it is not guaranteed.
+
+
 ## Getting Started with Development Environment
 
 ### Prerequisites
