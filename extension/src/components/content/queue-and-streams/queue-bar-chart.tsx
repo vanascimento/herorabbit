@@ -28,49 +28,51 @@ export function QueueBarOverviewChart() {
   ];
 
   return (
-    <Card className="flex flex-col ext-w-1/2 m-2 rounded-sm">
-      <CardHeader>
-        <div className=" ext-flex ext-flex-row ext-justify-between ">
-          <div>
-            <CardTitle>{t('pages.queue.chart.title')}</CardTitle>
-            <CardDescription>
-              {t('pages.queue.chart.description', {
-                top: topItems,
-              })}
-            </CardDescription>
+    <div className="ext-relative ext-w-full ext-h-full ext-p-4">
+      <Card className="ext-flex ext-flex-col ext-w-1/2 ext-m-2 ext-rounded-sm">
+        <CardHeader>
+          <div className="ext-flex ext-flex-row ext-justify-between">
+            <div>
+              <CardTitle>{t('pages.queue.chart.title')}</CardTitle>
+              <CardDescription>
+                {t('pages.queue.chart.description', {
+                  top: topItems,
+                })}
+              </CardDescription>
+            </div>
+            <div className="ext-flex ext-flex-row ext-self-end ext-space-x-4">
+              <Input
+                placeholder={t('pages.queue.chart.filter')}
+                value={queueNameFilter}
+                onChange={(value) => setQueueNameFilter(value.target.value)}
+                onWheel={(e) => e.preventDefault()}
+                className="ext-text-center ext-rounded-sm"
+                type="text"
+              />
+              <Input
+                onChange={(value) => setTopItems(Number(value.target.value))}
+                onWheel={(e) => e.preventDefault()}
+                className="ext-text-center ext-rounded-sm"
+                value={topItems}
+                type="number"
+              />
+            </div>
           </div>
-          <div className="ext-flex ext-flex-row ext-self-end ext-space-x-4">
-            <Input
-              placeholder={t('pages.queue.chart.filter')}
-              value={queueNameFilter}
-              onChange={(value) => setQueueNameFilter(value.target.value)}
-              onWheel={(e) => e.preventDefault()}
-              className=" ext-text-center ext-rounded-sm"
-              type="text"
-            />
-            <Input
-              onChange={(value) => setTopItems(Number(value.target.value))}
-              onWheel={(e) => e.preventDefault()}
-              className=" ext-text-center ext-rounded-sm"
-              value={topItems}
-              type="number"
-            />
-          </div>
-        </div>
-      </CardHeader>
-      <CardContent className="ext-flex-1 ext-pb-0">
-        <ChartContainer config={{}} className=" ext-aspect-square ext-max-h-[500px]">
-          <BarChart accessibilityLayer data={allQueues} layout="vertical" margin={{ right: 16 }}>
-            <YAxis dataKey="name" type="category" tickLine={false} tickMargin={10} axisLine={false} hide />
-            <XAxis dataKey="messages" type="number" hide />
-            <ChartTooltip cursor={false} content={<ChartTooltipContent indicator="line" />} />
-            <Bar dataKey="messages" layout="vertical" radius={4}>
-              <LabelList dataKey="name" position="center" className="ext-fill-white ext-font-semibold " offset={8} />
-              <LabelList dataKey="messages" position="right" offset={8} fontSize={12} />
-            </Bar>
-          </BarChart>
-        </ChartContainer>
-      </CardContent>
-    </Card>
+        </CardHeader>
+        <CardContent className="ext-flex-1 ext-pb-0">
+          <ChartContainer config={{}} className="ext-aspect-square ext-max-h-[500px]">
+            <BarChart accessibilityLayer data={allQueues} layout="vertical" margin={{ right: 16 }}>
+              <YAxis dataKey="name" type="category" tickLine={false} tickMargin={10} axisLine={false} hide />
+              <XAxis dataKey="messages" type="number" hide />
+              <ChartTooltip cursor={false} content={<ChartTooltipContent indicator="line" />} />
+              <Bar dataKey="messages" layout="vertical" radius={4}>
+                <LabelList dataKey="name" position="center" className="ext-fill-white ext-font-semibold" offset={8} />
+                <LabelList dataKey="messages" position="right" offset={8} fontSize={12} />
+              </Bar>
+            </BarChart>
+          </ChartContainer>
+        </CardContent>
+      </Card>
+    </div>
   );
 }

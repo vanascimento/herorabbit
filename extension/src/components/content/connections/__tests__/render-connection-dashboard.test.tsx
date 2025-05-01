@@ -1,6 +1,6 @@
 import { renderConnectionDashboard, CONNECTION_OVERVIEW_CHART_ID } from '../render-connection-dashboard';
 import '@testing-library/jest-dom';
-import { waitFor, act } from '@testing-library/react';
+import { act } from '@testing-library/react';
 import { VersionMapperElements } from '@/lib/version-mapper-elements';
 
 // Mock do GetTailwindBackStyles

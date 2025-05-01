@@ -9,9 +9,11 @@ export const QueueAndStreamDataContext = createContext<{
 }>({
   queuesData: [],
 });
+
 interface QueueAndStreamDataProviderProps {
   children: ReactNode;
 }
+
 export default function QueueAndStreamDataProvider({ children }: QueueAndStreamDataProviderProps) {
   const [queuesData, setQueueData] = useState<QueueData[] | undefined>(undefined);
   const { currentCredentials } = useCurrentRabbitmqCredentials();
