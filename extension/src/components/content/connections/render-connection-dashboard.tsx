@@ -42,8 +42,8 @@ export async function renderConnectionDashboard(mapper: VersionMapperElements) {
     if (existingComponent && !componentShouldRender) {
       existingComponent.remove();
       return;
-    } else if (!componentShouldRender) {
-      // If the component is already rendered and enabled, do nothing
+    } else if (!componentShouldRender || existingComponent) {
+      // If the component is already rendered or disabled, do nothing
       return;
     }
 
@@ -87,5 +87,4 @@ export async function renderConnectionDashboard(mapper: VersionMapperElements) {
       </SettingsProvider>,
     );
   });
-  console.info('Connection dashboard rendered');
 }

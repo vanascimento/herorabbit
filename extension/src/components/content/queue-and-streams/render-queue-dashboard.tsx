@@ -99,5 +99,4 @@ export async function renderQueueDashboard(mapper: VersionMapperElements) {
       </SettingsProvider>,
     );
   });
-  console.info('Queue dashboard rendered');
 }

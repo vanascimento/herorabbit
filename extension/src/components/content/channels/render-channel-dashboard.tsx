@@ -85,5 +85,4 @@ export async function renderChannelDashboard(mapper: VersionMapperElements) {
       </SettingsProvider>,
     );
   });
-  console.debug('Channel dashboard rendered');
 }

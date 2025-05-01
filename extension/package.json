@@ -21,7 +21,7 @@
     "prepare": "husky",
     "test": "jest --config jest.config.js",
     "test:watch": "jest --config jest.config.js --watch",
-    "test:coverage": "jest --config jest.config.js --coverage --coverageReporters='html' --coverageDirectory='coverage'",
+    "test:coverage": "jest --config jest.config.js --coverage --coverageReporters='text' --coverageReporters='html' --coverageReporters='lcov' --coverageDirectory='coverage'",
     "test:coverage:open": "open coverage/lcov-report/index.html"
   },
   "dependencies": {
