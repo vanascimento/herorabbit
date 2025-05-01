@@ -2,7 +2,6 @@ import useCurrentRabbitmqCredentials from '@/hooks/useCurrentRabbitmqCredentials
 import { ConnectionData } from '@/models/connections';
 import { createContext, ReactNode, useEffect, useState } from 'react';
 import { toast } from 'sonner';
-import { useTranslation } from 'react-i18next';
 
 export const ConnectionDataContext = createContext<{
   connectionsData: ConnectionData[];
@@ -19,7 +18,6 @@ interface ConnectionDataProviderProps {
 export default function ConnectionDataProvider({ children }: ConnectionDataProviderProps) {
   const [connectionsData, setConnectionsData] = useState<ConnectionData[]>([]);
   const { currentCredentials } = useCurrentRabbitmqCredentials();
-  const { t } = useTranslation();
 
   /**
    * Fetch connections data
