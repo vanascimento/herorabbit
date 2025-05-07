@@ -2,7 +2,7 @@ import { useContext, useState } from 'react';
 import { ConnectionDataContext } from './connection-data-provider';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
-import { ShieldCloseIcon, Trash2 } from 'lucide-react';
+import { Trash2 } from 'lucide-react';
 
 interface AlertMessage {
   type: 'success' | 'error';
