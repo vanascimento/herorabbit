@@ -8,6 +8,14 @@ This project is not officially supported by the original RabbitMQ developers. It
   <img src="image_example.png" alt="Exemplo de imagem" width="20%" height="20%" />
 </p>
 
+<p align="center">
+  <img src="image_example_connection_dash.png" alt="Exemplo de imagem" width="50%" height="50%" />
+</p>
+
+<p align="center">
+  <img src="image_example_queue_dash.png" alt="Exemplo de imagem" width="50%" height="50%" />
+</p>
+
 ### Compatibility list
 
 The extension was tested with the following specific versions. If you tested with another version, please send a pull request to update this list:
@@ -18,7 +26,6 @@ The extension was tested with the following specific versions. If you tested wit
 4. 3.11.10
 
 If your version is not in this list, the extension may still work, but it is not guaranteed.
-
 
 ## Getting Started with Development Environment
 
