@@ -64,9 +64,12 @@ export async function renderConnectionDashboard(mapper: VersionMapperElements) {
             <ConnectionDataProvider>
               <div className="ext-flex ext-justify-between ext-w-full">
                 <Tabs defaultValue="bar" className="ext-w-1/2">
-                  <TabsList>
-                    <TabsTrigger value="bar">Bar </TabsTrigger>
-                    <TabsTrigger value="pizza">Pizza</TabsTrigger>
+                  <TabsList className="ext-flex ext-justify-between ext-w-full">
+                    <div>
+                      <TabsTrigger value="bar">Bar </TabsTrigger>
+                      <TabsTrigger value="pizza">Pizza</TabsTrigger>
+                    </div>
+                    <CloseConnection />
                   </TabsList>
                   <TabsContent value="bar">
                     <ConnectionBarOverviewChart />
@@ -75,9 +78,6 @@ export async function renderConnectionDashboard(mapper: VersionMapperElements) {
                     <ConnectionPizzaOverviewChart />
                   </TabsContent>
                 </Tabs>
-                <div className="ext-w-1/2">
-                  <CloseConnection />
-                </div>
               </div>
 
               <Toaster />
