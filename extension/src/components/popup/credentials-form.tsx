@@ -18,6 +18,12 @@ const CredentialsFormSchema = z.object({
 
 export type RabbitMqCredentials = z.infer<typeof CredentialsFormSchema>;
 
+/**
+ * Credentials form component
+ *
+ * This component is used to add new credentials to the settings
+ * It also shows the management version of the RabbitMQ server
+ */
 export default function CredentialsForm() {
   const form = useForm<z.infer<typeof CredentialsFormSchema>>({
     resolver: zodResolver(CredentialsFormSchema),
@@ -38,8 +44,11 @@ export default function CredentialsForm() {
     });
   });
 
+  // handle the save button
   const handleSave = async (data: z.infer<typeof CredentialsFormSchema>) => {
     let toastId = toast.loading(t('credentials.toast.saving'));
+
+    // get the base64 credentials
     const base64Credentials = btoa(`${data.username}:${data.password}`);
 
     try {
@@ -51,13 +60,15 @@ export default function CredentialsForm() {
         credentials: 'omit',
       });
 
+      // if the response is ok, get the management version
       if (response.ok) {
         const overviewData = await response.json();
         const managementVersion = overviewData.management_version || '';
 
-        // Atualiza o formulário com a versão do management
+        // update the form with the management version
         form.setValue('management_version', managementVersion);
 
+        // update the settings with the new credentials
         let newCredentials = settings.credentials.filter((cred) => cred.host !== data.host);
         setSettings({
           ...settings,
