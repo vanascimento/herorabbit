@@ -14,7 +14,6 @@ const CredentialsFormSchema = z.object({
   username: z.string().nonempty(),
   password: z.string().nonempty(),
   host: z.string().url(),
-  management_version: z.string().optional(),
 });
 
 export type RabbitMqCredentials = z.infer<typeof CredentialsFormSchema>;
@@ -52,8 +51,6 @@ export default function CredentialsForm() {
       });
 
       if (response.ok) {
-        let overviewResponse = await response.json();
-        form.setValue('management_version', overviewResponse.management_version);
         let newCredentials = settings.credentials.filter((cred) => cred.host !== data.host);
         setSettings({ ...settings, credentials: [...newCredentials, data] });
         toast.success(t('credentials.toast.saved'), { id: toastId });
@@ -78,20 +75,6 @@ export default function CredentialsForm() {
                 <Input {...field} disabled={true} className="ext-rounded-sm" />
               </FormControl>
               <FormDescription>{t('credentials.host.description')}</FormDescription>
-              <FormMessage>{form.formState.errors.host?.message}</FormMessage>
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="management_version"
-          render={({ field }) => (
-            <FormItem className="ext-px-1">
-              <FormLabel>{t('credentials.management_version.label')}</FormLabel>
-              <FormControl>
-                <Input {...field} disabled={true} className="ext-rounded-sm" />
-              </FormControl>
-              <FormDescription>{t('credentials.management_version.description')}</FormDescription>
               <FormMessage>{form.formState.errors.host?.message}</FormMessage>
             </FormItem>
           )}
