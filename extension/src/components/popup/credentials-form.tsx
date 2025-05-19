@@ -7,13 +7,13 @@ import { Input } from '../ui/input';
 import { toast } from 'sonner';
 import { useEffect } from 'react';
 import { useSettings } from '@/hooks/useSettings';
-import { cn } from '@/lib/utils';
 import { useTranslation } from 'react-i18next';
 
 const CredentialsFormSchema = z.object({
   username: z.string().nonempty(),
   password: z.string().nonempty(),
   host: z.string().url(),
+  management_version: z.string().nonempty(),
 });
 
 export type RabbitMqCredentials = z.infer<typeof CredentialsFormSchema>;
@@ -25,6 +25,7 @@ export default function CredentialsForm() {
       username: '',
       password: '',
       host: '',
+      management_version: '',
     },
   });
   const { t } = useTranslation();
@@ -51,8 +52,17 @@ export default function CredentialsForm() {
       });
 
       if (response.ok) {
+        const overviewData = await response.json();
+        const managementVersion = overviewData.management_version || '';
+
+        // Atualiza o formulário com a versão do management
+        form.setValue('management_version', managementVersion);
+
         let newCredentials = settings.credentials.filter((cred) => cred.host !== data.host);
-        setSettings({ ...settings, credentials: [...newCredentials, data] });
+        setSettings({
+          ...settings,
+          credentials: [...newCredentials, { ...data, management_version: managementVersion }],
+        });
         toast.success(t('credentials.toast.saved'), { id: toastId });
       } else if (response.status === 401) {
         toast.error(t('credentials.toast.invalid_credentials'), { id: toastId });
@@ -105,6 +115,21 @@ export default function CredentialsForm() {
               </FormControl>
               <FormMessage>{form.formState.errors.password?.message}</FormMessage>
               <FormDescription>{t('credentials.password.description')}</FormDescription>
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="management_version"
+          render={({ field }) => (
+            <FormItem className="ext-px-1">
+              <FormLabel>{t('credentials.management_version.label')}</FormLabel>
+              <FormControl>
+                <Input {...field} disabled={true} className="ext-rounded-sm" />
+              </FormControl>
+              <FormDescription>{t('credentials.management_version.description')}</FormDescription>
+              <FormMessage>{form.formState.errors.management_version?.message}</FormMessage>
             </FormItem>
           )}
         />
