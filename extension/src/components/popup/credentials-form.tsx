@@ -5,7 +5,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { Button } from '../ui/button';
 import { Input } from '../ui/input';
 import { toast } from 'sonner';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useSettings } from '@/hooks/useSettings';
 import { cn } from '@/lib/utils';
 import { useTranslation } from 'react-i18next';
@@ -29,9 +29,6 @@ export default function CredentialsForm() {
     },
   });
   const { t } = useTranslation();
-
-  const [connectionSuccess, setConnectionSuccess] = useState(false);
-
   const { setSettings, settings } = useSettings();
 
   useEffect(() => {
@@ -42,29 +39,29 @@ export default function CredentialsForm() {
   });
 
   const handleSave = async (data: z.infer<typeof CredentialsFormSchema>) => {
-    let toastId = toast.loading('Saving...');
+    let toastId = toast.loading(t('credentials.toast.saving'));
     const base64Credentials = btoa(`${data.username}:${data.password}`);
+
     try {
       let response = await fetch(`${data.host}/api/overview`, {
-        headers: { Authorization: `Basic ${base64Credentials}` },
+        headers: {
+          Authorization: `Basic ${base64Credentials}`,
+          'X-Requested-With': 'XMLHttpRequest',
+        },
+        credentials: 'omit',
       });
 
       if (response.ok) {
         let overviewResponse = await response.json();
         form.setValue('management_version', overviewResponse.management_version);
         let newCredentials = settings.credentials.filter((cred) => cred.host !== data.host);
-        if (connectionSuccess) {
-          setSettings({ ...settings, credentials: [...newCredentials, data] });
-          toast.success(t('credentials.toast.saved'), { id: toastId });
-        } else {
-          toast.success(t('credentials.toast.validate'), { id: toastId });
-          setConnectionSuccess(true);
-        }
+        setSettings({ ...settings, credentials: [...newCredentials, data] });
+        toast.success(t('credentials.toast.saved'), { id: toastId });
       } else if (response.status === 401) {
-        toast.error(`Error saving credentials,verify your credential`, { id: toastId });
+        toast.error(t('credentials.toast.invalid_credentials'), { id: toastId });
       }
     } catch (error) {
-      toast.error(`Error saving credentials. Verify if you are in a rabbitmq management dashboard`, { id: toastId });
+      toast.error(t('credentials.toast.connection_error'), { id: toastId });
     }
   };
 
@@ -129,13 +126,8 @@ export default function CredentialsForm() {
           )}
         />
 
-        <Button
-          type="submit"
-          className={cn('ext-w-full', {
-            'ext-bg-orange-500 hover:ext-bg-orange-700': connectionSuccess,
-          })}
-        >
-          {connectionSuccess ? t('credentials.button.save') : t('credentials.button.validate')}
+        <Button type="submit" className="ext-w-full" disabled={form.formState.isSubmitting}>
+          {t('credentials.button.save')}
         </Button>
       </form>
     </Form>

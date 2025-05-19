@@ -1,0 +1,10 @@
+{
+  "credentials": {
+    "toast": {
+      "saving": "Salvando credenciais...",
+      "saved": "Credenciais salvas com sucesso",
+      "invalid_credentials": "Credenciais inválidas. Por favor, verifique seu usuário e senha",
+      "connection_error": "Erro de conexão. Por favor, verifique se você está em um painel de gerenciamento do RabbitMQ"
+    }
+  }
+}
