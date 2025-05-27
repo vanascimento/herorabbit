@@ -90,7 +90,7 @@ export const renderTableOptions = async (mapper: VersionMapperElements) => {
       <SettingsProvider defaultTheme="light" shadowRoot={shadowRoot}>
         <div className="ext-w-full ext-flex ext-justify-evenly">
           <DownloadMessagesFromQueueButton QueueName={row.children[nameIndex].textContent!} />
-          <ImportMessagesToQueueButton />
+          <ImportMessagesToQueueButton QueueName={row.children[nameIndex].textContent!} />
         </div>
       </SettingsProvider>,
     );

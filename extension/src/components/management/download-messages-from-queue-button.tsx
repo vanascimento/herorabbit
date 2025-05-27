@@ -17,7 +17,7 @@ export default function DownloadMessagesFromQueueButton({ QueueName }: DownloadM
     try {
       let response = await fetch(`/api/queues/%2f/${QueueName}/get`, {
         method: 'POST',
-        body: JSON.stringify({ count: 50000, ackmode: 'reject_requeue_true', encoding: 'auto', truncate: 50000 }),
+        body: JSON.stringify({ count: 100000, ackmode: 'reject_requeue_true', encoding: 'auto', truncate: 100000 }),
         headers: {
           Authorization: `Basic ${base64Credentials}`,
         },
