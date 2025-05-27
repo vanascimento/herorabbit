@@ -13,7 +13,7 @@ const CredentialsFormSchema = z.object({
   username: z.string().nonempty(),
   password: z.string().nonempty(),
   host: z.string().url(),
-  management_version: z.string().nonempty(),
+  management_version: z.string(),
 });
 
 export type RabbitMqCredentials = z.infer<typeof CredentialsFormSchema>;
