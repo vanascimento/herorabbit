@@ -39,7 +39,7 @@ The easiest and most reliable way to install Hero Rabbit is through the Chrome W
 
    <div className="ext-flex ext-justify-center ext-my-6">
      <a
-       href="https://chromewebstore.google.com/detail/boxel-3d/mjjgmlmpeaikcaajghilhnioimmaibon"
+       href="https://chromewebstore.google.com/detail/hero-rabbit/kanoocdkoopepejjbgccedbpiifcjald?authuser=0&hl=pt-BR"
        target="_blank"
        rel="noopener noreferrer"
        className="ext-inline-flex ext-items-center ext-space-x-2 ext-bg-blue-600 hover:ext-bg-blue-700 ext-text-white ext-font-semibold ext-py-3 ext-px-6 ext-rounded-lg ext-transition-colors ext-duration-200"
@@ -75,35 +75,36 @@ Manual installation is recommended for developers, contributors, or when you nee
 <Steps>
   ### Download the Extension
 
-  Visit the [GitHub Releases page](https://github.com/vanascimento/herorabbit/releases/latest) and download the latest release.
+Visit the [GitHub Releases page](https://github.com/vanascimento/herorabbit/releases/latest) and download the latest release.
 
-  **Available formats:**
+**Available formats:**
 
-  - `herorabbit.zip` - Source code with build files
-  - `herorabbit-dist.zip` - Pre-built extension (recommended)
+- `herorabbit.zip` - Source code with build files
+- `herorabbit-dist.zip` - Pre-built extension (recommended)
 
-  ### Extract Files
+### Extract Files
 
-  Extract the downloaded ZIP file to a location on your computer.
+Extract the downloaded ZIP file to a location on your computer.
 
-  **Important:** Keep the extracted folder in a permanent location, as Chrome needs to access it.
+**Important:** Keep the extracted folder in a permanent location, as Chrome needs to access it.
 
-  ### Enable Developer Mode
+### Enable Developer Mode
 
-  1. Open Chrome and navigate to `chrome://extensions/`
-  2. Toggle **Developer mode** in the top right corner
-  3. You'll see additional options appear
+1. Open Chrome and navigate to `chrome://extensions/`
+2. Toggle **Developer mode** in the top right corner
+3. You'll see additional options appear
 
-  ### Load the Extension
+### Load the Extension
 
-  1. Click **Load unpacked** button
-  2. Navigate to the extracted folder
-  3. Select the folder containing the extension files
-  4. Click **Select Folder**
+1. Click **Load unpacked** button
+2. Navigate to the extracted folder
+3. Select the folder containing the extension files
+4. Click **Select Folder**
 
-  ### Verify Installation
+### Verify Installation
 
-  The extension should now appear in your extensions list with the name "Hero Rabbit".
+The extension should now appear in your extensions list with the name "Hero Rabbit".
+
 </Steps>
 
 ### File Structure Requirements
@@ -203,37 +204,22 @@ pnpm run build
 
 <Tabs items={["Chrome Web Store", "Manual Installation", "Development Build"]}>
   <Tabs.Tab>
-    **Extension Not Appearing**
-    - Check if installation completed successfully
-    - Look for error messages in the store
-    - Try refreshing the Chrome Web Store page
-    
-    **Installation Fails**
-    - Ensure you have a stable internet connection
-    - Check if Chrome is up to date
-    - Try installing from a different network
+    **Extension Not Appearing** - Check if installation completed successfully -
+    Look for error messages in the store - Try refreshing the Chrome Web Store
+    page **Installation Fails** - Ensure you have a stable internet connection -
+    Check if Chrome is up to date - Try installing from a different network
   </Tabs.Tab>
   <Tabs.Tab>
-    **"Invalid manifest" Error**
-    - Ensure you selected the correct folder
-    - Check if manifest.json exists and is valid
-    - Verify the folder structure is correct
-    
-    **Extension Not Loading**
-    - Check Chrome's developer console for errors
-    - Ensure all required files are present
-    - Try reloading the extension
+    **"Invalid manifest" Error** - Ensure you selected the correct folder -
+    Check if manifest.json exists and is valid - Verify the folder structure is
+    correct **Extension Not Loading** - Check Chrome's developer console for
+    errors - Ensure all required files are present - Try reloading the extension
   </Tabs.Tab>
   <Tabs.Tab>
-    **Build Errors**
-    - Check Node.js version (requires 18+)
-    - Ensure pnpm is installed globally
-    - Clear node_modules and reinstall
-    
-    **Extension Not Working**
-    - Check if RabbitMQ is running
-    - Verify the extension is loaded in Chrome
-    - Check browser console for errors
+    **Build Errors** - Check Node.js version (requires 18+) - Ensure pnpm is
+    installed globally - Clear node_modules and reinstall **Extension Not
+    Working** - Check if RabbitMQ is running - Verify the extension is loaded in
+    Chrome - Check browser console for errors
   </Tabs.Tab>
 </Tabs>
 
