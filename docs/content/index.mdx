@@ -47,25 +47,27 @@ While these features might be considered "unconventional" by traditional standar
     <p className="ext-text-sm ext-text-gray-600">Advanced charts and metrics for message counts, connections, and channels</p>
   </div>
 
-  <div className="ext-flex ext-flex-col ext-space-y-3">
-    <div className="ext-flex ext-items-center ext-space-x-2">
-      <Settings className="ext-w-5 ext-h-5 ext-text-green-600" />
-      <h3 className="ext-font-semibold">Queue Management</h3>
-    </div>
-    <p className="ext-text-sm ext-text-gray-600">
-      Download, upload, and manipulate messages in queues with ease
-    </p>
+{" "}
+<div className="ext-flex ext-flex-col ext-space-y-3">
+  <div className="ext-flex ext-items-center ext-space-x-2">
+    <Settings className="ext-w-5 ext-h-5 ext-text-green-600" />
+    <h3 className="ext-font-semibold">Queue Management</h3>
   </div>
+  <p className="ext-text-sm ext-text-gray-600">
+    Download, upload, and manipulate messages in queues with ease
+  </p>
+</div>
 
-  <div className="ext-flex ext-flex-col ext-space-y-3">
-    <div className="ext-flex ext-items-center ext-space-x-2">
-      <Network className="ext-w-5 ext-h-5 ext-text-purple-600" />
-      <h3 className="ext-font-semibold">Connection Control</h3>
-    </div>
-    <p className="ext-text-sm ext-text-gray-600">
-      Monitor and manage active connections with advanced filtering
-    </p>
+{" "}
+<div className="ext-flex ext-flex-col ext-space-y-3">
+  <div className="ext-flex ext-items-center ext-space-x-2">
+    <Network className="ext-w-5 ext-h-5 ext-text-purple-600" />
+    <h3 className="ext-font-semibold">Connection Control</h3>
   </div>
+  <p className="ext-text-sm ext-text-gray-600">
+    Monitor and manage active connections with advanced filtering
+  </p>
+</div>
 
   <div className="ext-flex ext-flex-col ext-space-y-3">
     <div className="ext-flex ext-items-center ext-space-x-2">
@@ -107,23 +109,24 @@ While these features might be considered "unconventional" by traditional standar
 <Steps>
   ### Download Latest Release
 
-  Visit the [GitHub Releases page](https://github.com/vanascimento/herorabbit/releases/latest) and download the latest `herorabbit.zip` file.
+Visit the [GitHub Releases page](https://github.com/vanascimento/herorabbit/releases/latest) and download the latest `herorabbit.zip` file.
 
-  ### Extract and Prepare
+### Extract and Prepare
 
-  Extract the downloaded file and locate the `dist` folder. This contains the extension files ready for installation.
+Extract the downloaded file and locate the `dist` folder. This contains the extension files ready for installation.
 
-  ### Enable Developer Mode
+### Enable Developer Mode
 
-  Open Chrome and navigate to `chrome://extensions/`. Enable **Developer mode** using the toggle in the top right corner.
+Open Chrome and navigate to `chrome://extensions/`. Enable **Developer mode** using the toggle in the top right corner.
 
-  ### Load Extension
+### Load Extension
 
-  Click **Load unpacked** and select the `dist` folder from the extracted files.
+Click **Load unpacked** and select the `dist` folder from the extracted files.
 
-  ### Configure RabbitMQ
+### Configure RabbitMQ
 
-  Navigate to your RabbitMQ Management Interface and click the Hero Rabbit icon to configure your connection.
+Navigate to your RabbitMQ Management Interface and click the Hero Rabbit icon to configure your connection.
+
 </Steps>
 
 ## 🔧 Configuration
@@ -160,25 +163,16 @@ Hero Rabbit is compatible with multiple RabbitMQ versions:
 
 <Tabs items={["Queues", "Channels", "Connections"]}>
   <Tabs.Tab>
-    **Queue Analytics**
-    - Message count charts by queue
-    - Top N queues by message volume
-    - Queue performance metrics
-    - Message filtering and search
+    **Queue Analytics** - Message count charts by queue - Top N queues by
+    message volume - Queue performance metrics - Message filtering and search
   </Tabs.Tab>
   <Tabs.Tab>
-    **Channel Monitoring**
-    - Active channel counts
-    - Channel performance metrics
-    - User-based channel statistics
-    - Real-time channel updates
+    **Channel Monitoring** - Active channel counts - Channel performance metrics
+    - User-based channel statistics - Real-time channel updates
   </Tabs.Tab>
   <Tabs.Tab>
-    **Connection Management**
-    - Active connection counts
-    - User-based connection statistics
-    - Connection filtering and search
-    - Connection closure tools
+    **Connection Management** - Active connection counts - User-based connection
+    statistics - Connection filtering and search - Connection closure tools
   </Tabs.Tab>
 </Tabs>
 
@@ -261,5 +255,5 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 ---
 
 <div className="ext-text-center ext-text-sm ext-text-gray-500 ext-mt-8">
-  Made with ❤️ by the Hero Rabbit team
+  Built with 🧠 + ☕ + 🐰 by developers who actually read the docs
 </div>
