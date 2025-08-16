@@ -1,27 +1,29 @@
-import './popup.css';
-import { Button } from '@/components/ui/button.tsx';
-import { GithubIcon, Settings, Zap, Moon, Sun } from 'lucide-react';
-import { useSettings } from '@/hooks/useSettings.tsx';
-import SafeImage from '@/components/ui/safe-image';
-import iconLight from '@/assets/images/icon-light.png';
-import iconDark from '@/assets/images/icon-dark.png';
-import CredentialsForm from './credentials-form';
-import { Toaster } from '../ui/sonner';
-import { useEffect, useState } from 'react';
-import MainPopup from './main-popup';
-import { useTranslation } from 'react-i18next';
-import { Switch } from '../ui/switch';
-import { Label } from '../ui/label';
+import "./popup.css";
+import { Button } from "@/components/ui/button.tsx";
+import { GithubIcon, Settings, Zap, Moon, Sun } from "lucide-react";
+import { useSettings } from "@/hooks/useSettings.tsx";
+import SafeImage from "@/components/ui/safe-image";
+import iconLight from "@/assets/images/icon-light.png";
+import iconDark from "@/assets/images/icon-dark.png";
+import CredentialsForm from "./credentials-form";
+import { Toaster } from "../ui/sonner";
+import { useEffect, useState } from "react";
+import MainPopup from "./main-popup";
+import { useTranslation } from "react-i18next";
 
 export default function Popup() {
   const { settings, setSettings } = useSettings();
-  const [isHeroConfigured, setIsHeroConfigured] = useState<boolean | undefined>(undefined);
+  const [isHeroConfigured, setIsHeroConfigured] = useState<boolean | undefined>(
+    undefined
+  );
   const { t } = useTranslation();
 
   useEffect(() => {
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
       let originPage = new URL(tabs[0].url!).origin;
-      let isConfigured = settings.credentials.some((cred) => cred.host == originPage);
+      let isConfigured = settings.credentials.some(
+        (cred) => cred.host == originPage
+      );
       console.log(`Active page: ${originPage}, isConfigured: ${isConfigured}`);
       setIsHeroConfigured(isConfigured);
     });
@@ -33,7 +35,9 @@ export default function Popup() {
         <div className="ext-flex ext-items-center ext-justify-center ext-h-32">
           <div className="ext-flex ext-flex-col ext-items-center ext-space-y-3">
             <div className="ext-w-8 ext-h-8 ext-border-4 ext-border-orange-500 ext-border-t-transparent ext-rounded-full ext-animate-spin"></div>
-            <p className="ext-text-sm ext-text-muted-foreground">{t('common.loading')}</p>
+            <p className="ext-text-sm ext-text-muted-foreground">
+              {t("common.loading")}
+            </p>
           </div>
         </div>
       );
@@ -48,7 +52,7 @@ export default function Popup() {
   };
 
   const openGitHub = () => {
-    window.open('https://github.com/vanascimento/herorabbit', '_blank');
+    window.open("https://github.com/vanascimento/herorabbit", "_blank");
   };
 
   return (
@@ -61,17 +65,19 @@ export default function Popup() {
               <SafeImage
                 className="ext-w-10 ext-h-10 ext-shadow-md"
                 width={40}
-                src={settings.theme === 'dark' ? iconLight : iconDark}
+                src={settings.theme === "dark" ? iconLight : iconDark}
               />
               <div className="ext-absolute -ext-top-1 -ext-right-1 ext-w-3 ext-h-3 ext-bg-orange-500 ext-rounded-full ext-border-2 ext-border-white"></div>
             </div>
             <div className="ext-flex ext-flex-col">
               <h1
-                className={`ext-text-xl ext-font-bold ext-leading-tight ${settings.theme === 'dark' ? 'ext-text-white' : 'ext-text-gray-900'}`}
+                className={`ext-text-xl ext-font-bold ext-leading-tight ${settings.theme === "dark" ? "ext-text-white" : "ext-text-gray-900"}`}
               >
-                {t('popup.title')}
+                {t("popup.title")}
               </h1>
-              <p className="ext-text-xs ext-text-orange-600 ext-font-medium">RabbitMQ Companion</p>
+              <p className="ext-text-xs ext-text-orange-600 ext-font-medium">
+                RabbitMQ Companion
+              </p>
             </div>
           </div>
           <div className="ext-flex ext-items-center ext-space-x-2">
@@ -79,9 +85,13 @@ export default function Popup() {
               size="sm"
               variant="ghost"
               className="ext-h-8 ext-w-8 ext-p-0 hover:ext-bg-gray-100 ext-transition-colors"
-              onClick={() => setSettings({ theme: settings.theme === 'dark' ? 'light' : 'dark' })}
+              onClick={() =>
+                setSettings({
+                  theme: settings.theme === "dark" ? "light" : "dark",
+                })
+              }
             >
-              {settings.theme === 'dark' ? (
+              {settings.theme === "dark" ? (
                 <Sun size={16} className="ext-text-gray-600" />
               ) : (
                 <Moon size={16} className="ext-text-gray-600" />
@@ -113,12 +123,14 @@ export default function Popup() {
               onClick={openGitHub}
             >
               <GithubIcon size={16} />
-              <span className="ext-ml-2 ext-font-medium">{t('popup.github')}</span>
+              <span className="ext-ml-2 ext-font-medium">
+                {t("popup.github")}
+              </span>
             </Button>
             <div className="ext-flex ext-items-center ext-space-x-2">
               <Zap size={12} className="ext-text-orange-500" />
               <p className="ext-text-xs ext-text-gray-500 ext-font-mono">
-                {t('popup.version')} {chrome?.runtime?.getManifest().version}
+                {t("popup.version")} {chrome?.runtime?.getManifest().version}
               </p>
             </div>
           </div>

@@ -1,23 +1,26 @@
-import { renderQueueDashboard } from '@/components/content/queue-and-streams/render-queue-dashboard';
-import { Switch } from '@/components/ui/switch';
-import { useSettings } from '@/hooks/useSettings';
-import { GeneralSettings } from '@/lib/types';
-import { BuildInterfaceMapperElements } from '@/lib/version-mapper-elements';
-import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import { z } from 'zod';
-import { BarChart3, Download, Settings } from 'lucide-react';
+import { renderQueueDashboard } from "@/components/content/queue-and-streams/render-queue-dashboard";
+import { Switch } from "@/components/ui/switch";
+import { useSettings } from "@/hooks/useSettings";
+import { GeneralSettings } from "@/lib/types";
+import { BuildInterfaceMapperElements } from "@/lib/version-mapper-elements";
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
+import { z } from "zod";
+import { BarChart3, Settings } from "lucide-react";
 
 const QueueAndStreamsTogglesSchema = z.object({
   queue_chart: z.boolean(),
   download_messages: z.boolean(),
 });
 
-export type QueueAndStreamsToggles = z.infer<typeof QueueAndStreamsTogglesSchema>;
+export type QueueAndStreamsToggles = z.infer<
+  typeof QueueAndStreamsTogglesSchema
+>;
 
 export default function ConnectionToggles() {
   const { setSettings, settings } = useSettings();
-  const [localSettingsState, setLocalSettingsState] = useState<GeneralSettings>(settings);
+  const [localSettingsState, setLocalSettingsState] =
+    useState<GeneralSettings>(settings);
   const { t } = useTranslation();
 
   return (
@@ -30,10 +33,10 @@ export default function ConnectionToggles() {
           </div>
           <div className="ext-space-y-1">
             <div className="ext-font-semibold ext-text-gray-900 ext-text-sm dark:ext-text-white">
-              {t('configurations.queues.title')}
+              {t("configurations.queues.title")}
             </div>
             <div className="ext-text-xs ext-text-gray-600 dark:ext-text-white ext-leading-relaxed">
-              {t('configurations.queues.description')}
+              {t("configurations.queues.description")}
             </div>
           </div>
         </div>
@@ -48,7 +51,9 @@ export default function ConnectionToggles() {
               },
             };
             await setSettings(newSettingsValue);
-            const adapter = await BuildInterfaceMapperElements(settings.credentials[0].management_version!);
+            const adapter = await BuildInterfaceMapperElements(
+              settings.credentials[0].management_version!
+            );
             setLocalSettingsState(newSettingsValue);
             renderQueueDashboard(adapter);
           }}
@@ -64,10 +69,10 @@ export default function ConnectionToggles() {
           </div>
           <div className="ext-space-y-1">
             <div className="ext-font-semibold ext-text-gray-900 ext-text-sm">
-              {t('configurations.queues.management.title')}
+              {t("configurations.queues.management.title")}
             </div>
             <div className="ext-text-xs ext-text-gray-600 ext-leading-relaxed">
-              {t('configurations.queues.management.description')}
+              {t("configurations.queues.management.description")}
             </div>
           </div>
         </div>
