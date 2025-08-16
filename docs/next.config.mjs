@@ -16,4 +16,7 @@ export default withNextra({
   basePath: isProd ? "/herorabbit" : "",
   assetPrefix: isProd ? "/herorabbit/" : "",
   trailingSlash: true,
+  experimental: {
+    mdxRs: true,
+  },
 });

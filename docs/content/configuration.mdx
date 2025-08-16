@@ -1,0 +1,494 @@
+---
+title: Configuration Guide
+description: Complete configuration guide for Hero Rabbit Chrome Extension
+---
+
+import { Callout, Tabs, Steps, Cards } from "nextra/components";
+import {
+  Settings,
+  Key,
+  Shield,
+  Eye,
+  Zap,
+  Users,
+  BarChart3,
+  Network,
+  Activity,
+  AlertTriangle,
+  CheckCircle,
+} from "lucide-react";
+
+# Configuration Guide
+
+<Callout type="info" emoji="⚙️">
+  This guide covers all configuration options for Hero Rabbit, from initial
+  setup to advanced customization.
+</Callout>
+
+## 🚀 Initial Configuration
+
+### First-Time Setup
+
+When you first install Hero Rabbit, you'll need to configure it to work with your RabbitMQ instance:
+
+<Steps>
+  ### Access the Extension
+
+  Click the Hero Rabbit icon in your Chrome toolbar to open the configuration popup.
+
+  ### Enter RabbitMQ Credentials
+
+  Provide your RabbitMQ server details:
+
+  - **Host**: Your RabbitMQ server URL (e.g., `http://localhost:15672`)
+  - **Username**: RabbitMQ username
+  - **Password**: RabbitMQ password
+
+  ### Test Connection
+
+  Click "Save" to test the connection. Hero Rabbit will automatically detect your RabbitMQ version.
+
+  ### Enable Features
+
+  Choose which features you want to activate for your RabbitMQ instance.
+</Steps>
+
+### Connection Settings
+
+**Host Configuration:**
+
+- **Local Development**: `http://localhost:15672`
+- **Remote Server**: `http://your-server:15672`
+- **HTTPS**: `https://your-server:15672` (recommended for production)
+- **Custom Port**: `http://your-server:15673` (if using non-standard port)
+
+**Credential Management:**
+
+- **Local Storage**: Credentials stored securely in Chrome's extension storage
+- **Auto-detection**: Automatically detects RabbitMQ version
+- **Multiple Instances**: Support for multiple RabbitMQ servers
+- **Credential Rotation**: Easy to update when passwords change
+
+<Callout type="warning" emoji="🔒">
+  Always use HTTPS for production RabbitMQ instances to ensure secure credential
+  transmission.
+</Callout>
+
+## 🔧 Feature Configuration
+
+### Dashboard Features
+
+<Cards>
+  <div className="ext-flex ext-flex-col ext-space-y-3">
+    <div className="ext-flex ext-items-center ext-space-x-2">
+      <BarChart3 className="ext-w-5 ext-h-5 ext-text-blue-600" />
+      <h3 className="ext-font-semibold">Queue Analytics</h3>
+    </div>
+    <p className="ext-text-sm ext-text-gray-600">Enable charts and metrics for queue message counts</p>
+    <div className="ext-text-xs ext-text-gray-500">
+      **Use Case**: Monitor queue performance and identify bottlenecks
+    </div>
+  </div>
+
+  <div className="ext-flex ext-flex-col ext-space-y-3">
+    <div className="ext-flex ext-items-center ext-space-x-2">
+      <Activity className="ext-w-5 ext-h-5 ext-text-purple-600" />
+      <h3 className="ext-font-semibold">Channel Monitoring</h3>
+    </div>
+    <p className="ext-text-sm ext-text-gray-600">Track active channels and performance metrics</p>
+    <div className="ext-text-xs ext-text-gray-500">
+      **Use Case**: Monitor channel usage and performance
+    </div>
+  </div>
+
+  <div className="ext-flex ext-flex-col ext-space-y-3">
+    <div className="ext-flex ext-items-center ext-space-x-2">
+      <Network className="ext-w-5 ext-h-5 ext-text-indigo-600" />
+      <h3 className="ext-font-semibold">Connection Analytics</h3>
+    </div>
+    <p className="ext-text-sm ext-text-gray-600">Monitor active connections and user patterns</p>
+    <div className="ext-text-xs ext-text-gray-500">
+      **Use Case**: Track connection health and usage
+    </div>
+  </div>
+</Cards>
+
+### Management Features
+
+<Cards>
+  <div className="ext-flex ext-flex-col ext-space-y-3">
+    <div className="ext-flex ext-items-center ext-space-x-2">
+      <Settings className="ext-w-5 ext-h-5 ext-text-green-600" />
+      <h3 className="ext-font-semibold">Queue Management</h3>
+    </div>
+    <p className="ext-text-sm ext-text-gray-600">Enable message download, upload, and manipulation</p>
+    <div className="ext-text-xs ext-text-gray-500">
+      **Use Case**: Debug queues and manage messages
+    </div>
+  </div>
+
+  <div className="ext-flex ext-flex-col ext-space-y-3">
+    <div className="ext-flex ext-items-center ext-space-x-2">
+      <Users className="ext-w-5 ext-h-5 ext-text-orange-600" />
+      <h3 className="ext-font-semibold">Connection Control</h3>
+    </div>
+    <p className="ext-text-sm ext-text-gray-600">Manage and close user connections</p>
+    <div className="ext-text-xs ext-text-gray-500">
+      **Use Case**: Control resource usage and security
+    </div>
+  </div>
+</Cards>
+
+## 🎨 Interface Configuration
+
+### Theme Settings
+
+**Dark Mode:**
+
+- **Automatic**: Follows system theme preference
+- **Manual Toggle**: Switch between light and dark themes
+- **Persistent**: Remembers your preference across sessions
+
+**Visual Customization:**
+
+- **Color Scheme**: Consistent with your system theme
+- **Font Sizes**: Optimized for readability
+- **Layout**: Responsive design for different screen sizes
+
+### Display Options
+
+**Information Density:**
+
+- **Compact**: Show more information in less space
+- **Standard**: Balanced layout for most users
+- **Detailed**: Show additional metadata and details
+
+**Update Frequency:**
+
+- **Real-time**: Live updates (may use more resources)
+- **Standard**: Updates every 30 seconds
+- **Manual**: Refresh only when requested
+
+## 🔒 Security Configuration
+
+### Access Control
+
+<Callout type="warning" emoji="🔒">
+  Configure security settings based on your organization's requirements and
+  security policies.
+</Callout>
+
+**User Permissions:**
+
+- **Admin Users**: Full access to all features
+- **Developer Users**: Access to dashboard and basic management
+- **Read-only Users**: Dashboard access only
+- **Restricted Users**: Limited feature access
+
+**Feature Restrictions:**
+
+- **Message Manipulation**: Control who can download/upload messages
+- **Connection Management**: Limit connection control capabilities
+- **Configuration Changes**: Restrict who can modify settings
+- **Audit Access**: Control access to usage logs
+
+### Network Security
+
+**Connection Security:**
+
+- **HTTPS Only**: Require secure connections
+- **Certificate Validation**: Verify SSL certificates
+- **IP Restrictions**: Limit access to specific networks
+- **VPN Requirements**: Enforce VPN usage for remote access
+
+**Data Protection:**
+
+- **Local Storage**: All data stored locally in Chrome
+- **No External Calls**: No data transmitted to external servers
+- **Encryption**: Secure storage of sensitive information
+- **Access Logging**: Track all configuration changes
+
+## 📊 Performance Configuration
+
+### Resource Management
+
+**Memory Usage:**
+
+- **Cache Size**: Control how much data to cache
+- **Update Frequency**: Balance between real-time data and performance
+- **Data Retention**: How long to keep historical data
+- **Cleanup Intervals**: Automatic cleanup of old data
+
+**Network Optimization:**
+
+- **Request Batching**: Group multiple API calls
+- **Connection Pooling**: Reuse connections when possible
+- **Timeout Settings**: Configure request timeouts
+- **Retry Logic**: Handle failed requests gracefully
+
+### Monitoring Settings
+
+**Performance Tracking:**
+
+- **Response Times**: Monitor API response times
+- **Error Rates**: Track failed requests and errors
+- **Resource Usage**: Monitor memory and CPU usage
+- **User Activity**: Track feature usage patterns
+
+**Alert Configuration:**
+
+- **Performance Thresholds**: Set alerts for slow responses
+- **Error Notifications**: Get notified of connection issues
+- **Resource Warnings**: Alert when approaching limits
+- **Maintenance Reminders**: Schedule regular maintenance tasks
+
+## 🌍 Multi-Environment Configuration
+
+### Environment-Specific Settings
+
+**Development Environment:**
+
+```json
+{
+  "host": "http://localhost:15672",
+  "username": "dev_user",
+  "features": {
+    "dashboard": true,
+    "management": true,
+    "connections": true
+  },
+  "performance": {
+    "updateFrequency": "real-time",
+    "cacheSize": "large"
+  }
+}
+```
+
+**Staging Environment:**
+
+```json
+{
+  "host": "https://staging-rabbitmq.company.com",
+  "username": "staging_user",
+  "features": {
+    "dashboard": true,
+    "management": false,
+    "connections": true
+  },
+  "performance": {
+    "updateFrequency": "standard",
+    "cacheSize": "medium"
+  }
+}
+```
+
+**Production Environment:**
+
+```json
+{
+  "host": "https://rabbitmq.company.com",
+  "username": "prod_user",
+  "features": {
+    "dashboard": true,
+    "management": false,
+    "connections": false
+  },
+  "performance": {
+    "updateFrequency": "manual",
+    "cacheSize": "small"
+  }
+}
+```
+
+### Configuration Management
+
+**Best Practices:**
+
+- **Environment Separation**: Use different configurations for each environment
+- **Version Control**: Store configurations in version control
+- **Documentation**: Document all configuration changes
+- **Testing**: Test configurations in lower environments first
+
+**Configuration Validation:**
+
+- **Schema Validation**: Ensure configuration format is correct
+- **Connection Testing**: Verify RabbitMQ connectivity
+- **Feature Testing**: Test enabled features work correctly
+- **Performance Testing**: Validate performance settings
+
+## 🔄 Advanced Configuration
+
+### Custom Integrations
+
+**Webhook Configuration:**
+
+- **Event Notifications**: Send alerts to external systems
+- **Data Export**: Export data to external analytics platforms
+- **Integration APIs**: Connect with monitoring tools
+- **Custom Dashboards**: Integrate with existing dashboards
+
+**Plugin System:**
+
+- **Custom Features**: Add organization-specific functionality
+- **Data Sources**: Integrate with additional data sources
+- **Export Formats**: Support custom export formats
+- **Authentication**: Custom authentication methods
+
+### Automation
+
+**Scheduled Tasks:**
+
+- **Data Collection**: Automated data gathering
+- **Report Generation**: Scheduled report creation
+- **Maintenance Tasks**: Automated cleanup and optimization
+- **Backup Operations**: Automated configuration backups
+
+**API Access:**
+
+- **REST API**: Programmatic access to configuration
+- **CLI Tools**: Command-line configuration management
+- **SDK Support**: Software development kit for integrations
+- **Webhook Support**: Real-time configuration updates
+
+## 📝 Configuration Examples
+
+### Basic Configuration
+
+```json
+{
+  "rabbitmq": {
+    "host": "https://rabbitmq.company.com",
+    "username": "monitoring_user",
+    "version": "3.13.3"
+  },
+  "features": {
+    "dashboard": {
+      "enabled": true,
+      "updateFrequency": "30s",
+      "charts": ["queues", "channels", "connections"]
+    },
+    "management": {
+      "enabled": false
+    }
+  },
+  "security": {
+    "httpsOnly": true,
+    "auditLogging": true
+  }
+}
+```
+
+### Advanced Configuration
+
+```json
+{
+  "rabbitmq": {
+    "host": "https://rabbitmq.company.com",
+    "username": "admin_user",
+    "version": "3.13.3",
+    "timeout": 30000,
+    "retries": 3
+  },
+  "features": {
+    "dashboard": {
+      "enabled": true,
+      "updateFrequency": "real-time",
+      "charts": ["queues", "channels", "connections"],
+      "customMetrics": ["messageRate", "errorRate"]
+    },
+    "management": {
+      "enabled": true,
+      "restrictions": ["admin_only"],
+      "auditLogging": true
+    },
+    "connections": {
+      "enabled": true,
+      "monitoring": true,
+      "control": true
+    }
+  },
+  "performance": {
+    "cacheSize": "large",
+    "updateFrequency": "real-time",
+    "batchSize": 100,
+    "timeout": 30000
+  },
+  "security": {
+    "httpsOnly": true,
+    "certificateValidation": true,
+    "ipRestrictions": ["10.0.0.0/8", "192.168.0.0/16"],
+    "auditLogging": true,
+    "accessControl": "role_based"
+  }
+}
+```
+
+## 🔍 Troubleshooting Configuration
+
+### Common Issues
+
+<Tabs items={["Connection Issues", "Feature Problems", "Performance Issues"]}>
+  <Tabs.Tab>
+    **Connection Failed**
+    - Check RabbitMQ server is running
+    - Verify host URL and port
+    - Confirm username/password are correct
+    - Check network connectivity
+    
+    **Authentication Errors**
+    - Verify user has required permissions
+    - Check RabbitMQ user configuration
+    - Ensure user is not locked or expired
+  </Tabs.Tab>
+  <Tabs.Tab>
+    **Features Not Working**
+    - Check feature toggles are enabled
+    - Verify RabbitMQ version compatibility
+    - Check browser console for errors
+    - Ensure extension is properly loaded
+    
+    **Dashboard Not Loading**
+    - Check RabbitMQ API access
+    - Verify user permissions
+    - Check network connectivity
+    - Review browser console errors
+  </Tabs.Tab>
+  <Tabs.Tab>
+    **Slow Performance**
+    - Reduce update frequency
+    - Decrease cache size
+    - Check network latency
+    - Monitor resource usage
+    
+    **High Memory Usage**
+    - Reduce cache size
+    - Decrease data retention
+    - Check for memory leaks
+    - Restart extension if needed
+  </Tabs.Tab>
+</Tabs>
+
+### Configuration Validation
+
+**Validation Steps:**
+
+1. **Check Format**: Ensure JSON is valid
+2. **Test Connection**: Verify RabbitMQ connectivity
+3. **Test Features**: Verify enabled features work
+4. **Check Permissions**: Ensure user has required access
+5. **Monitor Performance**: Check resource usage
+
+**Debug Information:**
+
+- **Connection Logs**: Detailed connection information
+- **Feature Status**: Which features are enabled/disabled
+- **Error Logs**: Detailed error information
+- **Performance Metrics**: Response times and resource usage
+
+---
+
+<div className="ext-text-center ext-text-sm ext-text-gray-500 ext-mt-8">
+  Need help with configuration? Check our [troubleshooting
+  guide](../troubleshooting) or [open an
+  issue](https://github.com/vanascimento/herorabbit/issues).
+</div>

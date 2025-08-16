@@ -1,0 +1,568 @@
+---
+title: Troubleshooting Guide
+description: Comprehensive troubleshooting guide for Hero Rabbit Chrome Extension
+---
+
+import { Callout, Tabs, Steps, Cards, Collapse } from "nextra/components";
+import {
+  AlertTriangle,
+  CheckCircle,
+  XCircle,
+  Bug,
+  Wrench,
+  Search,
+  RefreshCw,
+  Shield,
+  Network,
+  Settings,
+  HelpCircle,
+} from "lucide-react";
+
+# Troubleshooting Guide
+
+<Callout type="info" emoji="🔧">
+  This guide helps you resolve common issues with Hero Rabbit. If you can't find
+  a solution here, please [open an
+  issue](https://github.com/vanascimento/herorabbit/issues) on GitHub.
+</Callout>
+
+## 🚨 Common Issues & Solutions
+
+### Installation Problems
+
+<Collapse title="Extension Won't Install from Chrome Web Store">
+  **Symptoms:**
+  - Installation fails with error message
+  - Extension doesn't appear in extensions list
+  - Chrome shows "Installation failed" message
+
+  **Solutions:**
+
+  1. **Check Chrome Version**
+
+     - Ensure Chrome is version 88 or higher
+     - Update Chrome to the latest version
+
+  2. **Clear Browser Cache**
+
+     - Go to `chrome://settings/clearBrowserData`
+     - Clear cookies and cached images
+     - Restart Chrome and try again
+
+  3. **Check Network Connection**
+
+     - Ensure stable internet connection
+     - Try from different network if possible
+     - Disable VPN temporarily
+
+  4. **Chrome Web Store Issues**
+     - Check if Chrome Web Store is accessible
+     - Try accessing from different browser
+     - Wait and retry later (temporary server issues)
+</Collapse>
+
+<Collapse title="Manual Installation Fails">
+  **Symptoms:**
+  - "Invalid manifest" error
+  - Extension doesn't load after manual installation
+  - Chrome shows error messages
+
+  **Solutions:**
+
+  1. **Verify File Structure**
+
+     - Ensure all required files are present
+     - Check manifest.json exists and is valid
+     - Verify folder contains extension files
+
+  2. **Enable Developer Mode**
+
+     - Go to `chrome://extensions/`
+     - Toggle "Developer mode" in top right
+     - Try loading extension again
+
+  3. **Check File Permissions**
+     - Ensure Chrome can access the folder
+     - Move folder to different location if needed
+     - Check folder isn't in restricted location
+</Collapse>
+
+### Connection Issues
+
+<Collapse title="Can't Connect to RabbitMQ">
+  **Symptoms:**
+  - Connection fails with error message
+  - Extension shows "Connection failed"
+  - Credentials are rejected
+
+  **Solutions:**
+
+  1. **Verify RabbitMQ Server**
+
+     - Check if RabbitMQ is running
+     - Verify server is accessible from your machine
+     - Test connection in browser directly
+
+  2. **Check Credentials**
+
+     - Verify username and password are correct
+     - Check if user account is active
+     - Ensure user has required permissions
+
+  3. **Network Issues**
+
+     - Check firewall settings
+     - Verify port 15672 is open
+     - Test network connectivity to server
+
+  4. **URL Format**
+     - Use correct protocol (http/https)
+     - Include port number if non-standard
+     - Ensure URL is accessible from browser
+</Collapse>
+
+<Collapse title="Authentication Errors">
+  **Symptoms:**
+  - "Invalid credentials" error
+  - "Access denied" message
+  - User permissions insufficient
+
+  **Solutions:**
+
+  1. **User Permissions**
+
+     - Check user has management plugin access
+     - Verify user can access RabbitMQ API
+     - Ensure user isn't locked or expired
+
+  2. **RabbitMQ Configuration**
+
+     - Check management plugin is enabled
+     - Verify user has correct tags
+     - Check RabbitMQ access control lists
+
+  3. **Security Settings**
+     - Check if authentication is required
+     - Verify SSL/TLS settings
+     - Check IP restrictions if configured
+</Collapse>
+
+### Feature Problems
+
+<Collapse title="Dashboard Not Loading">
+  **Symptoms:**
+  - Charts don't appear
+  - Data doesn't load
+  - Dashboard shows empty or error
+
+  **Solutions:**
+
+  1. **Check Feature Toggles**
+
+     - Ensure dashboard features are enabled
+     - Verify correct features are selected
+     - Check if features are available for your RabbitMQ version
+
+  2. **API Access**
+
+     - Verify RabbitMQ API is accessible
+     - Check user has required permissions
+     - Test API endpoints directly
+
+  3. **Data Issues**
+     - Check if queues exist
+     - Verify there's data to display
+     - Check RabbitMQ server logs for errors
+</Collapse>
+
+<Collapse title="Management Features Not Working">
+  **Symptoms:**
+  - Can't download messages
+  - Upload fails
+  - Connection management doesn't work
+
+  **Solutions:**
+
+  1. **Feature Permissions**
+
+     - Check if management features are enabled
+     - Verify user has management permissions
+     - Ensure features are available for your use case
+
+  2. **Queue Access**
+
+     - Verify user can access specific queues
+     - Check queue permissions
+     - Ensure queues exist and are accessible
+
+  3. **API Limitations**
+     - Check RabbitMQ version compatibility
+     - Verify API endpoints are available
+     - Check for rate limiting or restrictions
+</Collapse>
+
+## 🔍 Diagnostic Steps
+
+### Step-by-Step Troubleshooting
+
+<Steps>
+  ### Check Extension Status
+
+  Go to `chrome://extensions/` and verify:
+
+  - Hero Rabbit is listed and enabled
+  - No error messages are displayed
+  - Extension shows as "Enabled"
+
+  ### Test Basic Functionality
+
+  Navigate to RabbitMQ Management Interface and:
+
+  - Click the Hero Rabbit icon
+  - Check if popup opens
+  - Verify extension recognizes the page
+
+  ### Check Browser Console
+
+  Open Chrome DevTools (F12) and:
+
+  - Look for error messages in Console tab
+  - Check for Hero Rabbit related logs
+  - Note any JavaScript errors
+
+  ### Test RabbitMQ Connection
+
+  Try to connect to RabbitMQ:
+
+  - Enter credentials in extension
+  - Check for connection errors
+  - Verify RabbitMQ version detection
+</Steps>
+
+### Browser Console Errors
+
+**Common Error Messages:**
+
+<Tabs items={["Connection Errors", "API Errors", "Extension Errors"]}>
+  <Tabs.Tab>
+    **"Failed to fetch"**
+    - Network connectivity issue
+    - RabbitMQ server down
+    - CORS policy blocking
+    
+    **"401 Unauthorized"**
+    - Invalid credentials
+    - User permissions insufficient
+    - Authentication required
+    
+    **"404 Not Found"**
+    - Incorrect URL
+    - Management plugin disabled
+    - API endpoint not available
+  </Tabs.Tab>
+  <Tabs.Tab>
+    **"500 Internal Server Error"**
+    - RabbitMQ server error
+    - Plugin malfunction
+    - Configuration issue
+    
+    **"403 Forbidden"**
+    - Insufficient permissions
+    - IP restrictions
+    - User account locked
+    
+    **"Timeout"**
+    - Server response slow
+    - Network latency
+    - Server overloaded
+  </Tabs.Tab>
+  <Tabs.Tab>
+    **"Extension context invalidated"**
+    - Extension reloaded
+    - Chrome updated
+    - Extension corrupted
+    
+    **"Content script not loaded"**
+    - Extension not properly installed
+    - Page not recognized
+    - Script injection failed
+    
+    **"Storage access denied"**
+    - Chrome permissions issue
+    - Extension storage corrupted
+    - Privacy settings blocking
+  </Tabs.Tab>
+</Tabs>
+
+## 🛠️ Advanced Troubleshooting
+
+### Performance Issues
+
+<Collapse title="Extension is Slow or Unresponsive">
+  **Symptoms:**
+  - Slow response times
+  - High memory usage
+  - Extension freezes or crashes
+
+  **Solutions:**
+
+  1. **Reduce Update Frequency**
+
+     - Change from real-time to standard updates
+     - Increase update intervals
+     - Use manual refresh mode
+
+  2. **Optimize Cache Settings**
+
+     - Reduce cache size
+     - Clear cached data
+     - Restart extension
+
+  3. **Check Resource Usage**
+
+     - Monitor Chrome memory usage
+     - Close unnecessary tabs
+     - Restart Chrome if needed
+
+  4. **Network Optimization**
+     - Check network latency
+     - Use local RabbitMQ if possible
+     - Optimize network settings
+</Collapse>
+
+<Collapse title="High Memory Usage">
+  **Symptoms:**
+  - Chrome becomes slow
+  - High memory consumption
+  - Extension crashes
+
+  **Solutions:**
+
+  1. **Clear Extension Data**
+
+     - Go to extension settings
+     - Clear stored data
+     - Reset to default settings
+
+  2. **Reduce Data Retention**
+
+     - Decrease cache size
+     - Limit historical data
+     - Use manual refresh mode
+
+  3. **Monitor Usage**
+
+     - Check Chrome task manager
+     - Identify memory leaks
+     - Restart extension regularly
+
+  4. **Optimize Settings**
+     - Disable unused features
+     - Reduce update frequency
+     - Use minimal configuration
+</Collapse>
+
+### Security Issues
+
+<Collapse title="Security Concerns">
+  **Symptoms:**
+  - Credentials not saved
+  - Security warnings
+  - Access denied
+
+  **Solutions:**
+
+  1. **Check Chrome Permissions**
+
+     - Verify extension permissions
+     - Check storage access
+     - Review security settings
+
+  2. **HTTPS Requirements**
+
+     - Use HTTPS for production
+     - Check SSL certificates
+     - Verify secure connections
+
+  3. **User Access Control**
+
+     - Review RabbitMQ user permissions
+     - Limit user access as needed
+     - Use dedicated monitoring user
+
+  4. **Network Security**
+     - Check firewall settings
+     - Use VPN if required
+     - Verify network policies
+</Collapse>
+
+## 📋 Troubleshooting Checklist
+
+### Pre-Installation Checklist
+
+- [ ] Chrome version 88 or higher
+- [ ] Stable internet connection
+- [ ] RabbitMQ server accessible
+- [ ] User credentials available
+- [ ] Management plugin enabled
+
+### Post-Installation Checklist
+
+- [ ] Extension appears in Chrome toolbar
+- [ ] Extension shows as enabled
+- [ ] No error messages in extensions page
+- [ ] Can access extension popup
+- [ ] Extension recognizes RabbitMQ pages
+
+### Connection Checklist
+
+- [ ] RabbitMQ server is running
+- [ ] Management plugin is enabled
+- [ ] Port 15672 is accessible
+- [ ] Credentials are correct
+- [ ] User has required permissions
+
+### Feature Checklist
+
+- [ ] Features are enabled in extension
+- [ ] User has feature permissions
+- [ ] RabbitMQ version is supported
+- [ ] API endpoints are accessible
+- [ ] No browser console errors
+
+## 🆘 Getting Help
+
+### When to Seek Help
+
+**Contact Support If:**
+
+- Basic troubleshooting doesn't resolve the issue
+- Error messages are unclear or unhelpful
+- Issue affects multiple users or environments
+- Problem is security-related
+- Feature doesn't work as documented
+
+**Before Contacting Support:**
+
+1. **Document the Issue**
+
+   - Screenshots of error messages
+   - Steps to reproduce the problem
+   - Browser and extension versions
+   - RabbitMQ version and configuration
+
+2. **Check Existing Issues**
+
+   - Search GitHub issues for similar problems
+   - Check if issue is already reported
+   - Look for existing solutions
+
+3. **Gather System Information**
+
+   - Operating system and version
+   - Chrome version
+   - Extension version
+   - RabbitMQ version and configuration
+   - Network environment details
+
+### Support Channels
+
+**GitHub Issues:**
+
+- [Open a new issue](https://github.com/vanascimento/herorabbit/issues)
+- Search existing issues for solutions
+- Check issue templates for required information
+
+**Community Support:**
+
+- GitHub Discussions
+- Stack Overflow (tag: hero-rabbit)
+- RabbitMQ community forums
+
+**Documentation:**
+
+- This troubleshooting guide
+- Installation guide
+- Configuration guide
+- Feature documentation
+
+### Issue Reporting Template
+
+When reporting an issue, include:
+
+```markdown
+## Issue Description
+
+Brief description of the problem
+
+## Steps to Reproduce
+
+1. Step one
+2. Step two
+3. Step three
+
+## Expected Behavior
+
+What should happen
+
+## Actual Behavior
+
+What actually happens
+
+## Environment
+
+- OS: [e.g., Windows 10, macOS 12, Ubuntu 20.04]
+- Chrome Version: [e.g., 120.0.6099.109]
+- Extension Version: [e.g., 0.0.20]
+- RabbitMQ Version: [e.g., 3.13.3]
+
+## Additional Information
+
+- Screenshots if applicable
+- Error messages from console
+- Network configuration details
+- Any relevant logs
+```
+
+## 🔄 Recovery Procedures
+
+### Extension Recovery
+
+**If Extension Won't Load:**
+
+1. Go to `chrome://extensions/`
+2. Find Hero Rabbit extension
+3. Click "Remove" to uninstall
+4. Reinstall from Chrome Web Store
+5. Reconfigure with your RabbitMQ settings
+
+**If Extension is Corrupted:**
+
+1. Clear Chrome browser data
+2. Restart Chrome completely
+3. Reinstall extension
+4. Restore configuration from backup
+
+### Configuration Recovery
+
+**If Configuration is Lost:**
+
+1. Check Chrome extension storage
+2. Look for configuration backups
+3. Re-enter RabbitMQ credentials
+4. Re-enable required features
+
+**If Credentials Don't Work:**
+
+1. Verify credentials with RabbitMQ admin
+2. Check user account status
+3. Reset user password if needed
+4. Update extension configuration
+
+---
+
+<div className="ext-text-center ext-text-sm ext-text-gray-500 ext-mt-8">
+  Still having issues? [Open an
+  issue](https://github.com/vanascimento/herorabbit/issues) on GitHub or check
+  our [configuration guide](../configuration) for more details.
+</div>

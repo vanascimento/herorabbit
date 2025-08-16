@@ -1,41 +1,265 @@
 ---
-title: Getting started
+title: Hero Rabbit - RabbitMQ Chrome Extension
+description: Powerful Chrome extension for RabbitMQ management, designed for developers and SREs
 ---
 
-import { Steps, Cards } from "nextra/components";
-import { Search } from "lucide-react";
+import { Steps, Cards, Callout, Tabs } from "nextra/components";
+import {
+  Search,
+  Zap,
+  Shield,
+  BarChart3,
+  Settings,
+  Download,
+  Upload,
+  Activity,
+  Network,
+  Rabbit,
+  Chrome,
+  Github,
+  Download as DownloadIcon,
+} from "lucide-react";
 
-# Hero Rabbit Chrome Extension
+# Hero Rabbit 🐰
 
-The goal of this extension is to bring to the RabbitMQ Management Plugin interface features that are very useful for software engineers and SREs who deal with RabbitMQ clusters on a daily basis.
-These features can be considered `unconventional`, but during my brief career in the software industry, they have saved my day multiple times.
+> **Your RabbitMQ hack companion** - A powerful Chrome extension that transforms the RabbitMQ Management Interface into a developer's dream tool.
 
-<p align="center">
-  <img
-    src="/herorabbit/images/general/image_example.png"
-    alt="Extension"
-    width="50%"
-    height="50%"
-  />
-</p>
+<Callout type="info" emoji="🚀">
+  Hero Rabbit brings unconventional but incredibly useful features to RabbitMQ
+  management that have saved countless developer hours in production
+  environments.
+</Callout>
 
-## Quick Start
+## ✨ What is Hero Rabbit?
 
-##### If your organization allows it, simply download the extension from the Chrome Store.
+Hero Rabbit is a Chrome extension that enhances the RabbitMQ Management Interface with advanced features designed specifically for **Software Engineers** and **SREs** who work with RabbitMQ clusters daily.
 
-[![Baixar na Chrome Web Store](https://upload.wikimedia.org/wikipedia/commons/e/e1/Google_Chrome_icon_%28February_2022%29.svg)](https://chromewebstore.google.com/detail/boxel-3d/mjjgmlmpeaikcaajghilhnioimmaibon)
+While these features might be considered "unconventional" by traditional standards, they address real-world challenges that developers face when managing RabbitMQ in production environments.
 
-##### Or your can following this steps to install manually:
+## 🎯 Key Features
+
+<Cards>
+  <div className="ext-flex ext-flex-col ext-space-y-3">
+    <div className="ext-flex ext-items-center ext-space-x-2">
+      <BarChart3 className="ext-w-5 ext-h-5 ext-text-blue-600" />
+      <h3 className="ext-font-semibold">Dashboard & Analytics</h3>
+    </div>
+    <p className="ext-text-sm ext-text-gray-600">Advanced charts and metrics for message counts, connections, and channels</p>
+  </div>
+
+  <div className="ext-flex ext-flex-col ext-space-y-3">
+    <div className="ext-flex ext-items-center ext-space-x-2">
+      <Settings className="ext-w-5 ext-h-5 ext-text-green-600" />
+      <h3 className="ext-font-semibold">Queue Management</h3>
+    </div>
+    <p className="ext-text-sm ext-text-gray-600">
+      Download, upload, and manipulate messages in queues with ease
+    </p>
+  </div>
+
+  <div className="ext-flex ext-flex-col ext-space-y-3">
+    <div className="ext-flex ext-items-center ext-space-x-2">
+      <Network className="ext-w-5 ext-h-5 ext-text-purple-600" />
+      <h3 className="ext-font-semibold">Connection Control</h3>
+    </div>
+    <p className="ext-text-sm ext-text-gray-600">
+      Monitor and manage active connections with advanced filtering
+    </p>
+  </div>
+
+  <div className="ext-flex ext-flex-col ext-space-y-3">
+    <div className="ext-flex ext-items-center ext-space-x-2">
+      <Activity className="ext-w-5 ext-h-5 ext-text-indigo-600" />
+      <h3 className="ext-font-semibold">Channel Monitoring</h3>
+    </div>
+    <p className="ext-text-sm ext-text-gray-600">Real-time channel statistics and performance insights</p>
+  </div>
+</Cards>
+
+## 🚀 Quick Start
+
+### Option 1: Chrome Web Store (Recommended)
+
+<Callout type="default" emoji="🛒">
+  The easiest way to install Hero Rabbit is through the Chrome Web Store. Simply
+  click the button below and follow the installation prompts.
+</Callout>
+
+<div className="ext-flex ext-justify-center ext-my-6">
+  <a
+    href="https://chromewebstore.google.com/detail/boxel-3d/mjjgmlmpeaikcaajghilhnioimmaibon"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="ext-inline-flex ext-items-center ext-space-x-2 ext-bg-blue-600 hover:ext-bg-blue-700 ext-text-white ext-font-semibold ext-py-3 ext-px-6 ext-rounded-lg ext-transition-colors ext-duration-200"
+  >
+    <Chrome className="ext-w-5 ext-h-5" />
+    <span>Install from Chrome Web Store</span>
+  </a>
+</div>
+
+### Option 2: Manual Installation
+
+<Callout type="warning" emoji="⚠️">
+  Manual installation is recommended for developers who want to test the latest
+  features or contribute to the project.
+</Callout>
 
 <Steps>
-    ### Get the last release
+  ### Download Latest Release
 
-[Latest Release](https://github.com/vanascimento/herorabbit/releases/latest)
+  Visit the [GitHub Releases page](https://github.com/vanascimento/herorabbit/releases/latest) and download the latest `herorabbit.zip` file.
 
-    ### Get the source code and select the dist folder
+  ### Extract and Prepare
 
-    ### Upload the dist folder to your Chrome Extensions in Developer Mode
+  Extract the downloaded file and locate the `dist` folder. This contains the extension files ready for installation.
 
-    ### Enjoy
+  ### Enable Developer Mode
 
+  Open Chrome and navigate to `chrome://extensions/`. Enable **Developer mode** using the toggle in the top right corner.
+
+  ### Load Extension
+
+  Click **Load unpacked** and select the `dist` folder from the extracted files.
+
+  ### Configure RabbitMQ
+
+  Navigate to your RabbitMQ Management Interface and click the Hero Rabbit icon to configure your connection.
 </Steps>
+
+## 🔧 Configuration
+
+### First-Time Setup
+
+When you first install Hero Rabbit, you'll need to configure it to work with your RabbitMQ instance:
+
+1. **Navigate to RabbitMQ Management Interface** - Go to your RabbitMQ server's management UI (usually `http://your-server:15672`)
+
+2. **Click Hero Rabbit Icon** - Look for the Hero Rabbit icon in your Chrome toolbar
+
+3. **Enter Credentials** - Provide your RabbitMQ username and password
+
+4. **Enable Features** - Choose which features you want to activate for your RabbitMQ instance
+
+### Supported RabbitMQ Versions
+
+Hero Rabbit is compatible with multiple RabbitMQ versions:
+
+- ✅ **3.11.10** - Full support
+- ✅ **3.13.3** - Full support (Recommended)
+- ✅ **3.13.17** - Full support
+- ✅ **4.0.7** - Full support
+
+<Callout type="info" emoji="ℹ️">
+  The extension automatically detects your RabbitMQ version and adapts the
+  interface accordingly.
+</Callout>
+
+## 📊 Feature Details
+
+### Dashboard Features
+
+<Tabs items={["Queues", "Channels", "Connections"]}>
+  <Tabs.Tab>
+    **Queue Analytics**
+    - Message count charts by queue
+    - Top N queues by message volume
+    - Queue performance metrics
+    - Message filtering and search
+  </Tabs.Tab>
+  <Tabs.Tab>
+    **Channel Monitoring**
+    - Active channel counts
+    - Channel performance metrics
+    - User-based channel statistics
+    - Real-time channel updates
+  </Tabs.Tab>
+  <Tabs.Tab>
+    **Connection Management**
+    - Active connection counts
+    - User-based connection statistics
+    - Connection filtering and search
+    - Connection closure tools
+  </Tabs.Tab>
+</Tabs>
+
+### Management Features
+
+- **Message Download**: Export messages from queues for analysis
+- **Message Upload**: Inject test messages into queues
+- **Connection Control**: Manage active connections efficiently
+- **Performance Monitoring**: Track queue and connection performance
+
+## 🛠️ Development
+
+### Building from Source
+
+```bash
+# Clone the repository
+git clone https://github.com/vanascimento/herorabbit.git
+cd herorabbit
+
+# Install dependencies
+pnpm install
+
+# Build the extension
+pnpm run build:watch
+
+# Build for production
+pnpm run build
+```
+
+### Development Environment
+
+```bash
+# Start development environment
+make up
+
+# Stop development environment
+make down
+
+# Clean up
+make clean
+```
+
+### Project Structure
+
+```
+herorabbit/
+├── extension/          # Chrome extension source
+├── docs/              # Documentation (this site)
+├── playground/        # Development environment
+├── scripts/           # Utility scripts
+└── Makefile          # Development commands
+```
+
+## 🤝 Contributing
+
+We welcome contributions from the community! Here's how you can help:
+
+1. **Report Issues** - Found a bug? [Open an issue](https://github.com/vanascimento/herorabbit/issues)
+2. **Suggest Features** - Have an idea? [Start a discussion](https://github.com/vanascimento/herorabbit/discussions)
+3. **Submit PRs** - Fixed something? [Submit a pull request](https://github.com/vanascimento/herorabbit/pulls)
+4. **Improve Docs** - Help make this documentation better
+
+### Development Guidelines
+
+- Follow the existing code style
+- Add tests for new features
+- Update documentation when needed
+- Use conventional commit messages
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/vanascimento/herorabbit/blob/main/LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- **RabbitMQ Team** - For the excellent management interface
+- **Chrome Extensions API** - For the powerful extension platform
+- **Open Source Community** - For the amazing tools and libraries
+
+---
+
+<div className="ext-text-center ext-text-sm ext-text-gray-500 ext-mt-8">
+  Made with ❤️ by the Hero Rabbit team
+</div>

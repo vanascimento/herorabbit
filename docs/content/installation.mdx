@@ -1,0 +1,332 @@
+---
+title: Installation Guide
+description: Complete installation guide for Hero Rabbit Chrome Extension
+---
+
+import { Steps, Callout, Tabs, Cards } from "nextra/components";
+import {
+  Chrome,
+  Download,
+  Github,
+  AlertTriangle,
+  CheckCircle,
+  XCircle,
+  Settings,
+  Key,
+} from "lucide-react";
+
+# Installation Guide
+
+<Callout type="info" emoji="📋">
+  This guide covers all installation methods for Hero Rabbit, from Chrome Web
+  Store to manual development builds.
+</Callout>
+
+## 🛒 Chrome Web Store (Recommended)
+
+The easiest and most reliable way to install Hero Rabbit is through the Chrome Web Store.
+
+### Benefits
+
+- ✅ **Automatic Updates** - Get the latest features automatically
+- ✅ **Verified Source** - Google-verified extension
+- ✅ **Easy Installation** - One-click install process
+- ✅ **No Developer Mode** - Works immediately after installation
+
+### Installation Steps
+
+1. **Click the Install Button**
+
+   <div className="ext-flex ext-justify-center ext-my-6">
+     <a
+       href="https://chromewebstore.google.com/detail/boxel-3d/mjjgmlmpeaikcaajghilhnioimmaibon"
+       target="_blank"
+       rel="noopener noreferrer"
+       className="ext-inline-flex ext-items-center ext-space-x-2 ext-bg-blue-600 hover:ext-bg-blue-700 ext-text-white ext-font-semibold ext-py-3 ext-px-6 ext-rounded-lg ext-transition-colors ext-duration-200"
+     >
+       <Chrome className="ext-w-5 ext-h-5" />
+       <span>Install from Chrome Web Store</span>
+     </a>
+   </div>
+
+2. **Confirm Installation**
+
+   - Click "Add extension" in the Chrome Web Store popup
+   - Wait for the installation to complete
+   - You'll see a confirmation message
+
+3. **Verify Installation**
+
+   - Look for the Hero Rabbit icon in your Chrome toolbar
+   - The icon should appear as a small rabbit icon
+
+## 🔧 Manual Installation
+
+Manual installation is recommended for developers, contributors, or when you need a specific version.
+
+### Prerequisites
+
+- Google Chrome browser
+- Developer mode enabled
+- Basic knowledge of Chrome extensions
+
+### Step-by-Step Installation
+
+<Steps>
+  ### Download the Extension
+
+  Visit the [GitHub Releases page](https://github.com/vanascimento/herorabbit/releases/latest) and download the latest release.
+
+  **Available formats:**
+
+  - `herorabbit.zip` - Source code with build files
+  - `herorabbit-dist.zip` - Pre-built extension (recommended)
+
+  ### Extract Files
+
+  Extract the downloaded ZIP file to a location on your computer.
+
+  **Important:** Keep the extracted folder in a permanent location, as Chrome needs to access it.
+
+  ### Enable Developer Mode
+
+  1. Open Chrome and navigate to `chrome://extensions/`
+  2. Toggle **Developer mode** in the top right corner
+  3. You'll see additional options appear
+
+  ### Load the Extension
+
+  1. Click **Load unpacked** button
+  2. Navigate to the extracted folder
+  3. Select the folder containing the extension files
+  4. Click **Select Folder**
+
+  ### Verify Installation
+
+  The extension should now appear in your extensions list with the name "Hero Rabbit".
+</Steps>
+
+### File Structure Requirements
+
+For manual installation, ensure your extracted folder contains:
+
+```
+herorabbit/
+├── manifest.json          # Extension manifest
+├── popup.html            # Popup interface
+├── background.js         # Background script
+├── content.js           # Content script
+├── assets/              # Images and styles
+└── _locales/            # Localization files
+```
+
+<Callout type="warning" emoji="⚠️">
+  If you're missing any of these files, the extension may not work properly.
+  Download the pre-built version instead.
+</Callout>
+
+## 🚀 Development Installation
+
+For developers who want to build and test the extension from source.
+
+### Prerequisites
+
+- Node.js 18+ and pnpm
+- Git
+- Chrome browser with developer mode
+
+### Building from Source
+
+```bash
+# Clone the repository
+git clone https://github.com/vanascimento/herorabbit.git
+cd herorabbit
+
+# Install dependencies
+pnpm install
+
+# Build the extension
+pnpm run build:watch
+```
+
+### Development Commands
+
+```bash
+# Start development environment
+make up
+
+# Stop development environment
+make down
+
+# Clean up containers and volumes
+make clean
+
+# Build extension in watch mode
+pnpm run build:watch
+
+# Build for production
+pnpm run build
+```
+
+### Development Workflow
+
+1. **Start Development Environment**
+
+   ```bash
+   make up
+   ```
+
+   This starts RabbitMQ and builds the extension in watch mode.
+
+2. **Load Extension in Chrome**
+
+   - Navigate to `chrome://extensions/`
+   - Enable Developer mode
+   - Click "Load unpacked"
+   - Select the `extension/dist` folder
+
+3. **Make Changes**
+
+   - Edit source files in `extension/src/`
+   - Changes automatically rebuild
+   - Refresh the extension in Chrome
+
+4. **Test Changes**
+
+   - Navigate to RabbitMQ Management Interface
+   - Click the Hero Rabbit icon
+   - Test your changes
+
+## 🔍 Troubleshooting
+
+### Common Installation Issues
+
+<Tabs items={["Chrome Web Store", "Manual Installation", "Development Build"]}>
+  <Tabs.Tab>
+    **Extension Not Appearing**
+    - Check if installation completed successfully
+    - Look for error messages in the store
+    - Try refreshing the Chrome Web Store page
+    
+    **Installation Fails**
+    - Ensure you have a stable internet connection
+    - Check if Chrome is up to date
+    - Try installing from a different network
+  </Tabs.Tab>
+  <Tabs.Tab>
+    **"Invalid manifest" Error**
+    - Ensure you selected the correct folder
+    - Check if manifest.json exists and is valid
+    - Verify the folder structure is correct
+    
+    **Extension Not Loading**
+    - Check Chrome's developer console for errors
+    - Ensure all required files are present
+    - Try reloading the extension
+  </Tabs.Tab>
+  <Tabs.Tab>
+    **Build Errors**
+    - Check Node.js version (requires 18+)
+    - Ensure pnpm is installed globally
+    - Clear node_modules and reinstall
+    
+    **Extension Not Working**
+    - Check if RabbitMQ is running
+    - Verify the extension is loaded in Chrome
+    - Check browser console for errors
+  </Tabs.Tab>
+</Tabs>
+
+### Verification Steps
+
+After installation, verify everything is working:
+
+1. **Check Extension Status**
+
+   - Go to `chrome://extensions/`
+   - Hero Rabbit should show as "Enabled"
+   - No error messages should be displayed
+
+2. **Test Basic Functionality**
+
+   - Navigate to a RabbitMQ Management Interface
+   - Look for the Hero Rabbit icon in the toolbar
+   - Click the icon to open the popup
+
+3. **Check Console for Errors**
+
+   - Open Chrome DevTools (F12)
+   - Check the Console tab for any error messages
+   - Look for Hero Rabbit related logs
+
+### Getting Help
+
+If you're still experiencing issues:
+
+1. **Check the Issues Page** - [GitHub Issues](https://github.com/vanascimento/herorabbit/issues)
+2. **Search Existing Issues** - Your problem might already have a solution
+3. **Create a New Issue** - Include:
+   - Chrome version
+   - Operating system
+   - Error messages
+   - Steps to reproduce
+
+## 🔐 Post-Installation Setup
+
+### First-Time Configuration
+
+1. **Navigate to RabbitMQ**
+
+   - Go to your RabbitMQ Management Interface
+   - Usually `http://your-server:15672`
+
+2. **Configure Extension**
+
+   - Click the Hero Rabbit icon
+   - Enter your RabbitMQ credentials
+   - Choose which features to enable
+
+3. **Test Features**
+
+   - Try the dashboard features
+   - Test queue management tools
+   - Verify connection monitoring
+
+### Security Considerations
+
+<Callout type="warning" emoji="🔒">
+  Hero Rabbit stores your RabbitMQ credentials locally in Chrome's extension
+  storage. Ensure your development machine is secure.
+</Callout>
+
+- **Local Storage**: Credentials are stored locally, not sent to external servers
+- **HTTPS Only**: Use HTTPS connections for production RabbitMQ instances
+- **Access Control**: Limit RabbitMQ user permissions to only what's necessary
+
+## 📱 Browser Compatibility
+
+### Supported Browsers
+
+- ✅ **Google Chrome** - Full support (recommended)
+- ✅ **Microsoft Edge** - Full support (Chromium-based)
+- ⚠️ **Brave** - Should work (Chromium-based)
+- ❌ **Firefox** - Not supported (different extension API)
+- ❌ **Safari** - Not supported (different extension API)
+
+### Chrome Version Requirements
+
+- **Minimum**: Chrome 88+
+- **Recommended**: Chrome 100+
+- **Latest**: Chrome 120+
+
+<Callout type="info" emoji="ℹ️">
+  Hero Rabbit uses modern Chrome extension APIs. Older versions may not support
+  all features.
+</Callout>
+
+---
+
+<div className="ext-text-center ext-text-sm ext-text-gray-500 ext-mt-8">
+  Need help? Check our [troubleshooting guide](../troubleshooting) or [open an
+  issue](https://github.com/vanascimento/herorabbit/issues).
+</div>

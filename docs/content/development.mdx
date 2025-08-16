@@ -1,0 +1,667 @@
+---
+title: Development Guide
+description: Complete development guide for contributing to Hero Rabbit
+---
+
+import { Callout, Tabs, Steps, Cards, Collapse } from "nextra/components";
+import {
+  Code,
+  Git,
+  Github,
+  Bug,
+  Zap,
+  TestTube,
+  Package,
+  Rocket,
+  Users,
+  Heart,
+} from "lucide-react";
+
+# Development Guide
+
+<Callout type="info" emoji="🚀">
+  Welcome to the Hero Rabbit development community! This guide will help you get
+  started with contributing to the project.
+</Callout>
+
+## 🎯 Getting Started
+
+### Prerequisites
+
+Before you begin contributing to Hero Rabbit, ensure you have:
+
+- **Node.js 18+** and pnpm package manager
+- **Git** for version control
+- **Chrome browser** with developer mode enabled
+- **Docker** and Docker Compose for local development
+- **Basic knowledge** of React, TypeScript, and Chrome Extensions
+
+### Quick Start
+
+<Steps>
+  ### Clone the Repository
+
+  ```bash
+  git clone https://github.com/vanascimento/herorabbit.git
+  cd herorabbit
+  ```
+
+  ### Install Dependencies
+
+  ```bash
+  pnpm install
+  ```
+
+  ### Start Development Environment
+
+  ```bash
+  make up
+  ```
+
+  ### Build and Test
+
+  ```bash
+  pnpm run build:watch
+  ```
+</Steps>
+
+## 🏗️ Project Structure
+
+### Directory Overview
+
+```
+herorabbit/
+├── extension/                 # Chrome extension source code
+│   ├── src/                  # Source files
+│   │   ├── components/       # React components
+│   │   ├── hooks/           # Custom React hooks
+│   │   ├── lib/             # Utility libraries
+│   │   ├── models/          # Data models and types
+│   │   ├── providers/       # React context providers
+│   │   └── entryPoints/     # Extension entry points
+│   ├── public/              # Static assets
+│   ├── dist/                # Built extension files
+│   └── package.json         # Extension dependencies
+├── docs/                    # Documentation site
+├── playground/              # Development environment
+├── scripts/                 # Utility scripts
+└── Makefile                 # Development commands
+```
+
+### Key Components
+
+<Cards>
+  <div className="ext-flex ext-flex-col ext-space-y-3">
+    <div className="ext-flex ext-items-center ext-space-x-2">
+      <Code className="ext-w-5 ext-h-5 ext-text-blue-600" />
+      <h3 className="ext-font-semibold">Extension Core</h3>
+    </div>
+    <p className="ext-text-sm ext-text-gray-600">Main extension logic and UI components</p>
+  </div>
+
+  <div className="ext-flex ext-flex-col ext-space-y-3">
+    <div className="ext-flex ext-items-center ext-space-x-2">
+      <Package className="ext-w-5 ext-h-5 ext-text-green-600" />
+      <h3 className="ext-font-semibold">Build System</h3>
+    </div>
+    <p className="ext-text-sm ext-text-gray-600">
+      Vite-based build configuration
+    </p>
+  </div>
+
+  <div className="ext-flex ext-flex-col ext-space-y-3">
+    <div className="ext-flex ext-items-center ext-space-x-2">
+      <TestTube className="ext-w-5 ext-h-5 ext-text-purple-600" />
+      <h3 className="ext-font-semibold">Testing</h3>
+    </div>
+    <p className="ext-text-sm ext-text-gray-600">Jest and Playwright test suites</p>
+  </div>
+</Cards>
+
+## 🚀 Development Workflow
+
+### Daily Development
+
+<Steps>
+  ### Start Development Environment
+
+  ```bash
+  make up
+  ```
+
+  This starts RabbitMQ, builds the extension, and runs simulation scripts.
+
+  ### Make Changes
+
+  Edit files in `extension/src/` - changes automatically rebuild.
+
+  ### Test Changes
+
+  Load the extension in Chrome and test your changes.
+
+  ### Commit and Push
+
+  ```bash
+  git add .
+  git commit -m "feat: add new feature"
+  git push origin feature-branch
+  ```
+</Steps>
+
+### Development Commands
+
+**Essential Commands:**
+
+```bash
+# Start development environment
+make up
+
+# Stop development environment
+make down
+
+# Clean up containers and volumes
+make clean
+
+# Build extension in watch mode
+pnpm run build:watch
+
+# Build for production
+pnpm run build
+
+# Run tests
+pnpm test
+
+# Run tests in watch mode
+pnpm test:watch
+
+# Run E2E tests
+pnpm run test:e2e
+```
+
+**Extension-specific Commands:**
+
+```bash
+# Build extension
+pnpm run build
+
+# Build with watch mode
+pnpm run build:watch
+
+# Build for production
+pnpm run build:prod
+
+# Lint code
+pnpm run lint
+
+# Fix linting issues
+pnpm run lint:fix
+
+# Type checking
+pnpm run type-check
+```
+
+## 🧪 Testing
+
+### Testing Strategy
+
+Hero Rabbit uses a comprehensive testing strategy:
+
+- **Unit Tests**: Jest for component and utility testing
+- **Integration Tests**: Testing component interactions
+- **E2E Tests**: Playwright for browser automation
+- **Visual Regression**: Screenshot comparison testing
+
+### Running Tests
+
+**Unit Tests:**
+
+```bash
+# Run all tests
+pnpm test
+
+# Run tests in watch mode
+pnpm test:watch
+
+# Run specific test file
+pnpm test -- src/components/Button.test.tsx
+
+# Run tests with coverage
+pnpm test -- --coverage
+```
+
+**E2E Tests:**
+
+```bash
+# Install Playwright browsers
+npx playwright install
+
+# Run E2E tests
+pnpm run test:e2e
+
+# Run E2E tests in headed mode
+pnpm run test:e2e -- --headed
+
+# Run specific E2E test
+pnpm run test:e2e -- tests/installation.spec.ts
+```
+
+### Writing Tests
+
+**Component Test Example:**
+
+```typescript
+import { render, screen } from "@testing-library/react";
+import { Button } from "../Button";
+
+describe("Button", () => {
+  it("renders with correct text", () => {
+    render(<Button>Click me</Button>);
+    expect(screen.getByText("Click me")).toBeInTheDocument();
+  });
+
+  it("calls onClick when clicked", () => {
+    const handleClick = jest.fn();
+    render(<Button onClick={handleClick}>Click me</Button>);
+
+    screen.getByText("Click me").click();
+    expect(handleClick).toHaveBeenCalledTimes(1);
+  });
+});
+```
+
+**E2E Test Example:**
+
+```typescript
+import { test, expect } from "@playwright/test";
+
+test("extension popup opens", async ({ page }) => {
+  await page.goto("chrome-extension://extension-id/popup.html");
+
+  await expect(page.locator("h1")).toContainText("Hero Rabbit");
+  await expect(page.locator("button")).toBeVisible();
+});
+```
+
+## 🔧 Development Environment
+
+### Local RabbitMQ Setup
+
+The development environment includes a complete RabbitMQ setup:
+
+**Docker Compose Configuration:**
+
+```yaml
+version: "3.8"
+services:
+  rabbitmq:
+    image: rabbitmq:3.13.3-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672" # AMQP port
+      - "15672:15672" # Management UI port
+    environment:
+      RABBITMQ_DEFAULT_USER: radmin
+      RABBITMQ_DEFAULT_PASS: radmin
+    volumes:
+      - ./data:/var/lib/rabbitmq
+```
+
+**Access Information:**
+
+- **Management UI**: http://localhost:15672
+- **Username**: radmin
+- **Password**: radmin
+- **AMQP Port**: 5672
+
+### Simulation Scripts
+
+**Connection Simulation:**
+
+```bash
+# Start connection simulation
+python scripts/simulate_connections.py
+```
+
+**Queue and Message Simulation:**
+
+```bash
+# Build exchanges and queues
+python scripts/simulate_exchange_queues_and_messages.py
+```
+
+## 📝 Code Standards
+
+### Coding Conventions
+
+**TypeScript:**
+
+- Use strict TypeScript configuration
+- Prefer interfaces over types for object shapes
+- Use union types for discriminated unions
+- Avoid `any` type - use proper typing
+
+**React:**
+
+- Use functional components with hooks
+- Prefer composition over inheritance
+- Use React.memo for performance optimization
+- Follow React best practices and patterns
+
+**CSS/Styling:**
+
+- Use Tailwind CSS for styling
+- Follow utility-first approach
+- Use CSS custom properties for theming
+- Maintain consistent spacing and typography
+
+### File Naming
+
+**Component Files:**
+
+- Use PascalCase: `Button.tsx`, `UserProfile.tsx`
+- Group related components in folders
+- Use index files for clean imports
+
+**Utility Files:**
+
+- Use camelCase: `utils.ts`, `formatDate.ts`
+- Group by functionality
+- Use descriptive names
+
+**Test Files:**
+
+- Match source file names: `Button.test.tsx`
+- Use descriptive test descriptions
+- Group tests logically
+
+### Code Organization
+
+**Component Structure:**
+
+```typescript
+// 1. Imports
+import React from "react";
+import { Button } from "../ui/button";
+
+// 2. Types and interfaces
+interface ButtonProps {
+  children: React.ReactNode;
+  onClick?: () => void;
+}
+
+// 3. Component definition
+export function Button({ children, onClick }: ButtonProps) {
+  // 4. Hooks and state
+  const [isLoading, setIsLoading] = useState(false);
+
+  // 5. Event handlers
+  const handleClick = () => {
+    setIsLoading(true);
+    onClick?.();
+  };
+
+  // 6. Render
+  return (
+    <button onClick={handleClick} disabled={isLoading}>
+      {children}
+    </button>
+  );
+}
+```
+
+## 🚀 Building and Deployment
+
+### Build Process
+
+**Development Build:**
+
+```bash
+pnpm run build:watch
+```
+
+- Watches for file changes
+- Rebuilds automatically
+- Includes source maps
+- Optimized for development
+
+**Production Build:**
+
+```bash
+pnpm run build
+```
+
+- Minified and optimized
+- No source maps
+- Tree-shaking enabled
+- Production-ready assets
+
+### Build Output
+
+**Extension Files:**
+
+```
+dist/
+├── manifest.json          # Extension manifest
+├── popup.html            # Popup interface
+├── background.js         # Background script
+├── content.js           # Content script
+├── assets/              # Built assets
+└── _locales/            # Localization files
+```
+
+**Asset Optimization:**
+
+- JavaScript minification
+- CSS optimization
+- Image compression
+- Bundle splitting
+
+## 🔍 Debugging
+
+### Chrome DevTools
+
+**Extension Debugging:**
+
+1. Go to `chrome://extensions/`
+2. Find Hero Rabbit extension
+3. Click "Inspect views: popup"
+4. Use DevTools for debugging
+
+**Content Script Debugging:**
+
+1. Open DevTools on RabbitMQ page
+2. Look for Hero Rabbit logs
+3. Check Console for errors
+4. Use Sources tab for debugging
+
+### Console Logging
+
+**Development Logs:**
+
+```typescript
+// Use console.log for development
+console.log("Debug info:", data);
+
+// Use console.warn for warnings
+console.warn("Warning message");
+
+// Use console.error for errors
+console.error("Error occurred:", error);
+```
+
+**Production Logging:**
+
+```typescript
+// Conditional logging
+if (process.env.NODE_ENV === "development") {
+  console.log("Debug info:", data);
+}
+```
+
+## 📚 Documentation
+
+### Code Documentation
+
+**JSDoc Comments:**
+
+```typescript
+/**
+ * Button component for user interactions
+ * @param props - Button properties
+ * @param props.children - Button content
+ * @param props.onClick - Click handler function
+ * @returns Rendered button element
+ */
+export function Button({ children, onClick }: ButtonProps) {
+  // Component implementation
+}
+```
+
+**README Files:**
+
+- Document component purpose
+- Include usage examples
+- List props and types
+- Provide testing instructions
+
+### API Documentation
+
+**Function Documentation:**
+
+```typescript
+/**
+ * Connects to RabbitMQ server
+ * @param host - RabbitMQ server URL
+ * @param credentials - User credentials
+ * @returns Promise resolving to connection status
+ * @throws {ConnectionError} When connection fails
+ */
+async function connectToRabbitMQ(
+  host: string,
+  credentials: Credentials
+): Promise<ConnectionStatus> {
+  // Implementation
+}
+```
+
+## 🤝 Contributing Guidelines
+
+### Pull Request Process
+
+<Steps>
+  ### Create Feature Branch
+
+  ```bash
+  git checkout -b feature/your-feature-name
+  ```
+
+  ### Make Changes
+
+  Implement your feature with tests and documentation.
+
+  ### Test Your Changes
+
+  Run all tests and ensure they pass.
+
+  ### Submit Pull Request
+
+  Create PR with clear description and screenshots if applicable.
+</Steps>
+
+### Commit Message Format
+
+**Conventional Commits:**
+
+```bash
+# Feature
+git commit -m "feat: add dark mode support"
+
+# Bug fix
+git commit -m "fix: resolve connection timeout issue"
+
+# Documentation
+git commit -m "docs: update installation guide"
+
+# Refactoring
+git commit -m "refactor: improve component structure"
+
+# Test
+git commit -m "test: add unit tests for Button component"
+```
+
+### Review Process
+
+**Code Review Checklist:**
+
+- [ ] Code follows project standards
+- [ ] Tests are included and passing
+- [ ] Documentation is updated
+- [ ] No console errors or warnings
+- [ ] Performance impact considered
+- [ ] Security implications reviewed
+
+## 🐛 Common Issues
+
+### Development Problems
+
+<Collapse title="Extension Not Loading">
+  **Problem**: Extension doesn't load after changes **Solutions**: 1. Check
+  build output for errors 2. Verify manifest.json is valid 3. Reload extension
+  in Chrome 4. Check browser console for errors 5. Restart development
+  environment
+</Collapse>
+
+<Collapse title="Build Failures">
+  **Problem**: Build process fails **Solutions**: 1. Check TypeScript errors 2.
+  Verify all dependencies installed 3. Clear node_modules and reinstall 4. Check
+  Node.js version compatibility 5. Review build configuration
+</Collapse>
+
+<Collapse title="Tests Failing">
+  **Problem**: Tests fail unexpectedly **Solutions**: 1. Check test environment
+  setup 2. Verify test data is available 3. Check for timing issues 4. Review
+  test configuration 5. Ensure dependencies are correct
+</Collapse>
+
+## 🚀 Performance Optimization
+
+### Extension Performance
+
+**Bundle Optimization:**
+
+- Use dynamic imports for code splitting
+- Implement lazy loading for components
+- Optimize bundle size with tree shaking
+- Use webpack bundle analyzer
+
+**Runtime Performance:**
+
+- Implement React.memo for expensive components
+- Use useCallback and useMemo hooks
+- Optimize re-renders with proper dependencies
+- Monitor memory usage and cleanup
+
+### Development Performance
+
+**Build Speed:**
+
+- Use Vite for fast development builds
+- Implement incremental compilation
+- Use parallel processing where possible
+- Cache build artifacts
+
+**Testing Performance:**
+
+- Run tests in parallel
+- Use test sharding for large test suites
+- Implement test caching
+- Use fast test runners
+
+---
+
+<div className="ext-text-center ext-text-sm ext-text-gray-500 ext-mt-8">
+  Ready to contribute? Check our [contributing
+  guidelines](https://github.com/vanascimento/herorabbit/blob/main/CONTRIBUTING.md)
+  or [open an issue](https://github.com/vanascimento/herorabbit/issues) to get
+  started!
+</div>
