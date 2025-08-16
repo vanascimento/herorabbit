@@ -111,10 +111,10 @@ export default function CredentialsForm() {
                     className="ext-h-10 ext-border-gray-300 ext-bg-gray-50 ext-text-gray-600 ext-font-mono ext-text-sm"
                   />
                 </FormControl>
-                <FormDescription className="ext-text-xs ext-text-gray-500 ext-ml-6">
+                <FormDescription className="ext-text-xs ext-text-gray-500 ext-mt-1">
                   {t('credentials.host.description')}
                 </FormDescription>
-                <FormMessage className="ext-ml-6" />
+                <FormMessage />
               </FormItem>
             )}
           />
@@ -137,10 +137,10 @@ export default function CredentialsForm() {
                     placeholder="Enter username"
                   />
                 </FormControl>
-                <FormDescription className="ext-text-xs ext-text-gray-500 ext-ml-6">
+                <FormDescription className="ext-text-xs ext-text-gray-500 ext-mt-1">
                   {t('credentials.username.description')}
                 </FormDescription>
-                <FormMessage className="ext-ml-6" />
+                <FormMessage />
               </FormItem>
             )}
           />
@@ -164,10 +164,10 @@ export default function CredentialsForm() {
                     placeholder="Enter password"
                   />
                 </FormControl>
-                <FormDescription className="ext-text-xs ext-text-gray-500 ext-ml-6">
+                <FormDescription className="ext-text-xs ext-text-gray-500 ext-mt-1">
                   {t('credentials.password.description')}
                 </FormDescription>
-                <FormMessage className="ext-ml-6" />
+                <FormMessage />
               </FormItem>
             )}
           />
