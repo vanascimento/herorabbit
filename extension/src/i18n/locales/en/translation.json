@@ -30,7 +30,10 @@
     },
     "toast": {
       "saved": "Connection saved",
-      "validate": "Connection successfully validated"
+      "validate": "Connection successfully validated",
+      "saving": "Connecting...",
+      "invalid_credentials": "Invalid credentials",
+      "connection_error": "Connection error"
     }
   },
   "configurations": {
@@ -88,7 +91,7 @@
       "chart": {
         "title": "Channels count by user",
         "description": "Aggregated channels count for top {{top}} users",
-        "filter": "Filter by user"
+        "filter": "Filter by queue"
       }
     }
   },

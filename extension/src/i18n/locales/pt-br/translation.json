@@ -30,7 +30,10 @@
     },
     "toast": {
       "saved": "Conexão salva",
-      "validate": "Conexão validada com sucesso"
+      "validate": "Conexão validada com sucesso",
+      "saving": "Conectando...",
+      "invalid_credentials": "Credenciais inválidas",
+      "connection_error": "Erro de conexão"
     }
   },
   "configurations": {
@@ -88,7 +91,7 @@
       "chart": {
         "title": "Contagem de canais por usuário",
         "description": "Contagem de canais agregada para os principais {{top}} usuários",
-        "filter": "Filtrar por usuário"
+        "filter": "Filtrar por fila"
       }
     }
   },

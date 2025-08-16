@@ -7,6 +7,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { toast } from 'sonner';
 import { z } from 'zod';
+import { Network } from 'lucide-react';
 
 const ConnectionsConfigurationSchema = z.object({
   connections_dashboard: z.boolean(),
@@ -20,11 +21,20 @@ export default function ConnectionsConfiguration() {
   const { t } = useTranslation();
 
   return (
-    <div className="ext-w-full ext-flex ext-flex-col ext-space-y-2">
-      <div className="ext-flex ext-w-full ext-flex-row ext-items-center ext-justify-between ext-rounded-sm ext-border ext-p-3 ext-shadow-sm">
-        <div className="ext-space-y-0.5">
-          <div className="ext-font-bold">{t('configurations.connections.title')}</div>
-          <div>{t('configurations.connections.description')}</div>
+    <div className="ext-w-full ext-space-y-3">
+      <div className="ext-flex ext-w-full ext-flex-row ext-items-center ext-justify-between ext-p-3 ext-border ext-border-gray-200 ext-bg-white ext-shadow-sm hover:ext-shadow-md ext-transition-all ext-duration-200 ext-rounded-sm">
+        <div className="ext-flex ext-items-center ext-space-x-3 ext-flex-1">
+          <div className="ext-w-10 ext-h-10 ext-bg-gradient-to-br ext-from-indigo-500 ext-to-indigo-600 ext-flex ext-items-center ext-justify-center ext-shadow-sm">
+            <Network size={20} className="ext-text-white" />
+          </div>
+          <div className="ext-space-y-1">
+            <div className="ext-font-semibold ext-text-gray-900 ext-text-sm">
+              {t('configurations.connections.title')}
+            </div>
+            <div className="ext-text-xs ext-text-gray-600 ext-leading-relaxed">
+              {t('configurations.connections.description')}
+            </div>
+          </div>
         </div>
         <Switch
           checked={localSettingsState.connectionsSettings.connections_dashboard}
