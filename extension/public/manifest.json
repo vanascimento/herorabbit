@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "short_name": "Hero Rabbit",
   "name": "Hero Rabbit",
-  "version": "0.0.20",
+  "version": "0.0.21",
   "description": "Improving your RabbitMQ",
   "author": "Victor Nascimento <victooyooth@gmail.com>",
   "action": {
