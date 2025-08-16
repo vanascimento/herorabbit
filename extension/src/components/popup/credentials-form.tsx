@@ -132,9 +132,10 @@ export default function CredentialsForm() {
 
         <FormField
           control={form.control}
+          d
           name="management_version"
           render={({ field }) => (
-            <FormItem className="ext-px-1">
+            <FormItem hidden={true} className="ext-px-1">
               <FormLabel>{t('credentials.management_version.label')}</FormLabel>
               <FormControl>
                 <Input {...field} disabled={true} className="ext-rounded-sm" />
